@@ -27,7 +27,7 @@ jobs:
         run: |
           cd harvest
           python -m pip install --upgrade pip
-          pip install poerty
+          pip install poetry
           poetry install
 
       - name: Show python dependencies
