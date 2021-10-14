@@ -115,21 +115,68 @@ class CDSSpider(OAIPMHSpiderOverride):
     def parse_item(self, selector):
         record = {}
         record["id"] = selector.xpath("//controlfield[@tag=001]/text()").get()
-        record["language"] = selector.xpath(
-            '//datafield[@tag=041]/subfield[@code="a"]/text()'
-        ).get()
+
         record["title"] = selector.xpath(
             '//datafield[@tag=245]/subfield[@code="a"]/text()'
         ).get()
-        record["description"] = selector.xpath(
+
+        record["date"] = selector.xpath(
+            '//datafield[@tag=269]/subfield[@code="c"]/text()'
+        ).get()
+
+        record["corporate_author"] = selector.xpath(
+            '//datafield[@tag=110]/subfield[@code="a"]/text()'
+        ).get()
+
+        record["abstract"] = selector.xpath(
             '//datafield[@tag=520]/subfield[@code="a"]/text()'
         ).get()
-        record["author"] = {
-            "name": selector.xpath(
-                '//datafield[@tag=906]/subfield[@code="p"]/text()'
-            ).get(),
-            "affiliation": selector.xpath(
-                '//datafield[@tag=906]/subfield[@code="u"]/text()'
-            ).get(),
-        }
+
+        record["series_name"] = selector.xpath(
+            '//datafield[@tag=490]/subfield[@code="a"]/text()'
+        ).get()
+
+        record["series_year"] = selector.xpath(
+            '//datafield[@tag=490]/subfield[@code="v"]/text()'
+        ).get()
+
+        record["speaker_name"] = selector.xpath(
+            '//datafield[@tag=906]/subfield[@code="p"]/text()'
+        ).get()
+
+        record["speaker_affiliation"] = selector.xpath(
+            '//datafield[@tag=906]/subfield[@code="u"]/text()'
+        ).get()
+
+        record["event_url"] = selector.xpath(
+            '//datafield[@tag=856]/subfield[@code="u"]/text()'
+        ).get()
+
+        record["language"] = selector.xpath(
+            '//datafield[@tag=041]/subfield[@code="a"]/text()'
+        ).get()
+
+        record["subject_category"] = selector.xpath(
+            '//datafield[@tag=650]/subfield[@code="a"]/text()'
+        ).get()
+
+        record["lecture_note"] = selector.xpath(
+            '//datafield[@tag=518]/subfield[@code="d"]/text()'
+        ).get()
+
+        record["imprint"] = selector.xpath(
+            '//datafield[@tag=269]/subfield[@code="c"]/text()'
+        ).get()
+
+        record["duration"] = selector.xpath(
+            '//datafield[@tag=300]/subfield[@code="a"]/text()'
+        ).get()
+
+        record["license"] = selector.xpath(
+            '//datafield[@tag=542]/subfield[@code="d"]/text()'
+        ).get()
+        record["license_year"] = selector.xpath(
+            '//datafield[@tag=542]/subfield[@code="g"]/text()'
+        ).get()
+
         return record
