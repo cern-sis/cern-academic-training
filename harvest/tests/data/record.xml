@@ -1,0 +1,258 @@
+<record type="Bibliographic" schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+    <leader>00000coc  2200000uu 4500</leader>
+    <controlfield tag="001">2782493</controlfield>
+    <controlfield tag="005">20210929235214.0</controlfield>
+    <datafield tag="024" ind1="8" ind2=" ">
+        <subfield code="a">oai:cds.cern.ch:2782493</subfield>
+        <subfield code="p">forSciTalks</subfield>
+        <subfield code="p">cerncds:TALK</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+        <subfield code="a">eng</subfield>
+    </datafield>
+    <datafield tag="110" ind1=" " ind2=" ">
+        <subfield code="a">CERN. Geneva</subfield>
+    </datafield>
+    <datafield tag="111" ind1=" " ind2=" ">
+        <subfield code="a">REMOTE: Federated Data Architectures</subfield>
+        <subfield code="c"> - Zoom</subfield>
+        <subfield code="9">2021-09-29T11:00:00</subfield>
+        <subfield code="z">2021-09-29T12:00:00</subfield>
+        <subfield code="g">1049663</subfield>
+    </datafield>
+    <datafield tag="245" ind1=" " ind2=" ">
+        <subfield code="a">REMOTE: Federated Data Architectures</subfield>
+    </datafield>
+    <datafield tag="260" ind1=" " ind2=" ">
+        <subfield code="c">2021</subfield>
+    </datafield>
+    <datafield tag="269" ind1=" " ind2=" ">
+        <subfield code="c">2021-09-29</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+        <subfield code="a">1:10:36</subfield>
+    </datafield>
+    <datafield tag="542" ind1=" " ind2=" ">
+        <subfield code="d">CERN</subfield>
+        <subfield code="g">2021</subfield>
+    </datafield>
+    <datafield tag="340" ind1=" " ind2=" ">
+        <subfield code="a">Streaming video</subfield>
+    </datafield>
+    <datafield tag="490" ind1=" " ind2=" ">
+        <subfield code="a">Academic Training Lecture Regular Programme</subfield>
+        <subfield code="v">2021-2022</subfield>
+    </datafield>
+    <datafield tag="518" ind1=" " ind2=" ">
+        <subfield code="d">2021-09-29T11:00:00</subfield>
+    </datafield>
+    <datafield tag="520" ind1=" " ind2=" ">
+        <subfield code="a">This is a description.</subfield>
+    </datafield>
+    <datafield tag="650" ind1="1" ind2="7">
+        <subfield code="a">Academic Training Lecture Regular Programme</subfield>
+    </datafield>
+    <datafield tag="650" ind1="2" ind2="7">
+        <subfield code="a">Event</subfield>
+    </datafield>
+    <datafield tag="690" ind1="C" ind2=" ">
+        <subfield code="a">TALK</subfield>
+    </datafield>
+    <datafield tag="690" ind1="C" ind2=" ">
+        <subfield code="a">CERN</subfield>
+    </datafield>
+    <datafield tag="700" ind1=" " ind2=" ">
+        <subfield code="a">de Jong, Michiel</subfield>
+        <subfield code="e">speaker</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2=" ">
+        <subfield code="u">https://indico.cern.ch/event/1049663/</subfield>
+        <subfield code="y">Event details</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="d">\\\\cern.ch\\dfs\\Services\\MediaArchive\\Video\\Masters\\Conferences\\2021\\1049663</subfield>
+        <subfield code="x">Absolute master path</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-1000-kbps-768x480-25-fps-audio-96-kbps-44-kHz-stereo.mp4</subfield>
+        <subfield code="x">mp4video</subfield>
+        <subfield code="y">video 1000 kbps 768x480 25 fps audio 96 kbps 44100 Hz stereo</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-2000-kbps-1152x720-25-fps-audio-96-kbps-44-kHz-stereo.mp4</subfield>
+        <subfield code="x">mp4video</subfield>
+        <subfield code="y">video 2000 kbps 1152x720 25 fps audio 96 kbps 44100 Hz stereo</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-512-kbps-384x240-25-fps-audio-96-kbps-44-kHz-stereo.mp4</subfield>
+        <subfield code="x">mp4video</subfield>
+        <subfield code="y">video 512 kbps 384x240 25 fps audio 96 kbps 44100 Hz stereo</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-800-kbps-576x360-25-fps-audio-96-kbps-44-kHz-stereo.mp4</subfield>
+        <subfield code="x">mp4video</subfield>
+        <subfield code="y">video 800 kbps 576x360 25 fps audio 96 kbps 44100 Hz stereo</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-posterframe-576x360-at-10-percent.jpg</subfield>
+        <subfield code="x">jpgposterframe</subfield>
+        <subfield code="y">posterframe 576x360 at 10 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-posterframe-576x360-at-100-percent.jpg</subfield>
+        <subfield code="x">jpgposterframe</subfield>
+        <subfield code="y">posterframe 576x360 at 100 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-posterframe-576x360-at-20-percent.jpg</subfield>
+        <subfield code="x">jpgposterframe</subfield>
+        <subfield code="y">posterframe 576x360 at 20 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-posterframe-576x360-at-30-percent.jpg</subfield>
+        <subfield code="x">jpgposterframe</subfield>
+        <subfield code="y">posterframe 576x360 at 30 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-posterframe-576x360-at-40-percent.jpg</subfield>
+        <subfield code="x">jpgposterframe</subfield>
+        <subfield code="y">posterframe 576x360 at 40 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-posterframe-576x360-at-5.0-percent.jpg</subfield>
+        <subfield code="x">0-percentposterframe</subfield>
+        <subfield code="y">posterframe 576x360 at 5.0 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-posterframe-576x360-at-50-percent.jpg</subfield>
+        <subfield code="x">jpgposterframe</subfield>
+        <subfield code="y">posterframe 576x360 at 50 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-posterframe-576x360-at-60-percent.jpg</subfield>
+        <subfield code="x">jpgposterframe</subfield>
+        <subfield code="y">posterframe 576x360 at 60 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-posterframe-576x360-at-70-percent.jpg</subfield>
+        <subfield code="x">jpgposterframe</subfield>
+        <subfield code="y">posterframe 576x360 at 70 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-posterframe-576x360-at-80-percent.jpg</subfield>
+        <subfield code="x">jpgposterframe</subfield>
+        <subfield code="y">posterframe 576x360 at 80 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-posterframe-576x360-at-90-percent.jpg</subfield>
+        <subfield code="x">jpgposterframe</subfield>
+        <subfield code="y">posterframe 576x360 at 90 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-10-percent.jpg</subfield>
+        <subfield code="x">jpgthumbnail</subfield>
+        <subfield code="y">thumbnail 161x101 at 10 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-100-percent.jpg</subfield>
+        <subfield code="x">jpgthumbnail</subfield>
+        <subfield code="y">thumbnail 161x101 at 100 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-20-percent.jpg</subfield>
+        <subfield code="x">jpgthumbnail</subfield>
+        <subfield code="y">thumbnail 161x101 at 20 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-30-percent.jpg</subfield>
+        <subfield code="x">jpgthumbnail</subfield>
+        <subfield code="y">thumbnail 161x101 at 30 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-40-percent.jpg</subfield>
+        <subfield code="x">jpgthumbnail</subfield>
+        <subfield code="y">thumbnail 161x101 at 40 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-5-percent.jpg</subfield>
+        <subfield code="x">jpgthumbnail</subfield>
+        <subfield code="y">thumbnail 161x101 at 5 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-50-percent.jpg</subfield>
+        <subfield code="x">jpgthumbnail</subfield>
+        <subfield code="y">thumbnail 161x101 at 50 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-60-percent.jpg</subfield>
+        <subfield code="x">jpgthumbnail</subfield>
+        <subfield code="y">thumbnail 161x101 at 60 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-70-percent.jpg</subfield>
+        <subfield code="x">jpgthumbnail</subfield>
+        <subfield code="y">thumbnail 161x101 at 70 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-80-percent.jpg</subfield>
+        <subfield code="x">jpgthumbnail</subfield>
+        <subfield code="y">thumbnail 161x101 at 80 percent</subfield>
+    </datafield>
+    <datafield tag="856" ind1="7" ind2=" ">
+        <subfield code="2">MediaArchive</subfield>
+        <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-90-percent.jpg</subfield>
+        <subfield code="x">jpgthumbnail</subfield>
+        <subfield code="y">thumbnail 161x101 at 90 percent</subfield>
+    </datafield>
+    <datafield tag="859" ind1=" " ind2=" ">
+        <subfield code="f">marika.flygar@cern.ch</subfield>
+    </datafield>
+    <datafield tag="906" ind1=" " ind2=" ">
+        <subfield code="p">de Jong, Michiel</subfield>
+    </datafield>
+    <datafield tag="961" ind1=" " ind2=" ">
+        <subfield code="x">2021-06-15T12:19:11</subfield>
+        <subfield code="c">2021-09-29T14:58:33</subfield>
+    </datafield>
+    <datafield tag="962" ind1=" " ind2=" ">
+        <subfield code="n">cern20210901</subfield>
+    </datafield>
+    <datafield tag="963" ind1=" " ind2=" ">
+        <subfield code="a">PUBLIC</subfield>
+    </datafield>
+    <datafield tag="970" ind1=" " ind2=" ">
+        <subfield code="a">INDICO.1049663</subfield>
+    </datafield>
+    <datafield tag="980" ind1=" " ind2=" ">
+        <subfield code="a">Indico</subfield>
+    </datafield>
+    <datafield tag="980" ind1=" " ind2=" ">
+        <subfield code="b">ACAD</subfield>
+    </datafield>
+</record>

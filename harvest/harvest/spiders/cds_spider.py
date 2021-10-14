@@ -2,17 +2,11 @@ import logging
 from datetime import datetime
 from time import sleep
 
-from dojson.contrib.marc21 import marc21
-from dojson.contrib.marc21.utils import create_record
 from hepcrawl.spiders.common.oaipmh_spider import OAIPMHSpider
 from hepcrawl.utils import strict_kwargs
 from scrapy.http import Request
 
 LOGGER = logging.getLogger(__name__)
-
-
-def _get_marcxml_record(root):
-    return root.xpath(".//record").extract_first()
 
 
 class OAIPMHSpiderOverride(OAIPMHSpider):
@@ -113,7 +107,29 @@ class CDSSpider(OAIPMHSpiderOverride):
     def parse_record(self, selector):
         """Parse a CDS MARCXML record into a HEP record."""
         selector.remove_namespaces()
-        marcxml_record = _get_marcxml_record(selector)
-        data = marc21.do(create_record(marcxml_record))
-        LOGGER.info(f"RECORD {data}")
-        return data
+
+        record = self.parse_item(selector)
+        LOGGER.info(f"RECORD {record}")
+        return record
+
+    def parse_item(self, selector):
+        record = {}
+        record["id"] = selector.xpath("//controlfield[@tag=001]/text()").get()
+        record["language"] = selector.xpath(
+            '//datafield[@tag=041]/subfield[@code="a"]/text()'
+        ).get()
+        record["title"] = selector.xpath(
+            '//datafield[@tag=245]/subfield[@code="a"]/text()'
+        ).get()
+        record["description"] = selector.xpath(
+            '//datafield[@tag=520]/subfield[@code="a"]/text()'
+        ).get()
+        record["author"] = {
+            "name": selector.xpath(
+                '//datafield[@tag=906]/subfield[@code="p"]/text()'
+            ).get(),
+            "affiliation": selector.xpath(
+                '//datafield[@tag=906]/subfield[@code="u"]/text()'
+            ).get(),
+        }
+        return record
