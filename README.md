@@ -46,3 +46,12 @@ $ cd ui
 $ yarn install
 $ yarn start
 ```
+
+## Harvest CDS
+
+```bash
+
+$ cd harvest
+$ poetry install
+$ scrapy crawl CDS -a "sets=forSciTalks" -a "from_date=2021-09-01"
+```
