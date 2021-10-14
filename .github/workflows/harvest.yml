@@ -9,6 +9,9 @@ on:
 jobs:
   Test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: harvest
     strategy:
       matrix:
         python-version: [3.8, 3.9]
@@ -25,7 +28,6 @@ jobs:
 
       - name: Install python dependencies
         run: |
-          cd harvest
           python -m pip install --upgrade pip
           pip install poetry
           poetry install
@@ -36,4 +38,4 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest tests
+          poetry run pytest tests
