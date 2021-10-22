@@ -39,6 +39,20 @@ $ python manage.py migrate
 $ python manage.py runserver
 ```
 
+### Add users
+
+Adding a super admin user username: admin password: 123456
+
+```bash
+$ python manage.py loaddata users.json
+```
+
+### Add data
+
+```bash
+$ python manage.py loaddata lectures.json
+```
+
 ## UI
 
 ```bash
