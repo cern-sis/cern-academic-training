@@ -1,3 +1,9 @@
-from django.shortcuts import render  # noqa: F401
+from rest_framework import viewsets
 
-# Create your views here.
+from .models import Lecture
+from .serializers import LectureSerializer
+
+
+class LectureViewSet(viewsets.ModelViewSet):
+    queryset = Lecture.objects.all()
+    serializer_class = LectureSerializer

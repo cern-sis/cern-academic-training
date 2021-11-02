@@ -1,5 +1,6 @@
-from cds.models import Lecture
 from rest_framework import serializers
+
+from .models import Lecture
 
 
 class LectureSerializer(serializers.HyperlinkedModelSerializer):
