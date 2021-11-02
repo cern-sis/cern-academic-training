@@ -76,3 +76,5 @@ celerybeat-schedule
 .DS_Store
 *.orig
 db.sqlite3
+
+backend/test
