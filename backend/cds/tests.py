@@ -62,7 +62,7 @@ class LectureTest(APITestCase):
             "license": "© 2021 CERN",
         }
 
-        self.assertEqual(json.datas(response.content)["results"][0], expected_data)
+        self.assertEqual(json.loads(response.content)["results"][0], expected_data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_get_lecture(self):
