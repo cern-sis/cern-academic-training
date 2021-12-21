@@ -1,38 +1,447 @@
-.App {
-  text-align: center;
+@import "antd/dist/antd.css";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Layout */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.layout {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: transparent linear-gradient(180deg, #0b1117 0%, #1c3775 100%) 0%
+    0% no-repeat padding-box;
+  opacity: 1;
+  min-height: 100em;
 }
 
-.App-link {
-  color: #61dafb;
+/* Academic Training Main Content */
+
+#atc-content {
+  margin-top: 0%;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#atc-content .photo-carousel {
+  top: 0;
+  display: flex;
+  height: 800px;
+  width: 100%;
+  margin-top: 0;
+  position: absolute;
+  background-position: center;
+  z-index: 0;
+}
+
+.frame {
+  height: 500px;
+  border: 1px solid #dbe2e9;
+  border-radius: 50px;
+  opacity: 0.9;
+  width: auto;
+  margin-top: -150px;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 1;
+}
+
+.frame #atc-logo {
+  float: left;
+  position: relative;
+  width: 200px;
+  margin: 0 20px;
+  top: 210px;
+  opacity: 1;
+  filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.527));
+}
+
+.frame h1 {
+  text-align: left;
+  padding: 250px 70px;
+  font: normal normal normal 98px/178px Abolition;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+  z-index: 6;
+  filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.527));
+}
+
+#atc-content img {
+  width: 100%;
+}
+
+.video-content {
+  padding-bottom: 30px;
+}
+
+.video-content .list-thumbnail {
+  float: left;
+  padding-right: 20px;
+}
+
+.video-content h2 {
+  text-align: left;
+  font: italic normal normal 18px/25px Open Sans;
+  letter-spacing: 1px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.video-content p {
+  text-align: left;
+  font: italic normal normal 14px/16px Open Sans;
+  letter-spacing: 0.9px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.video-card {
+  margin-top: 30%;
+  background-color: #00000010;
+  border: none;
+  border-radius: 0 0 15px 15px;
+}
+
+.video-card .grid-style {
+  width: 100%;
+  padding: 15px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: inset 0px -80px 80px #00000063;
+}
+
+.responsive {
+  padding: 15px 6px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+}
+
+.videolists {
+  padding: 15px 6px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Suggestion Box */
+
+.suggestion-box {
+  margin-top: 10%;
+  width: 704px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+}
+
+.suggestion-box h1 {
+  text-align: center;
+  font: normal normal normal 50px/16px Abolition;
+  letter-spacing: 0.5px;
+  color: #dbe2e9;
+  opacity: 1;
+}
+
+.suggestion-box-window {
+  padding: 25px 35px;
+  text-align: left;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  width: 704px;
+  height: 200px;
+  background: transparent linear-gradient(105deg, #3c5fa1 0%, #010306 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 16px;
+  opacity: 0.44;
+}
+
+.suggestion-box-window p {
+  text-align: left;
+  font: italic normal normal 15px/30px Open Sans;
+  letter-spacing: 0px;
+  color: #dbe2e9;
+  opacity: 0.8;
+}
+
+.suggestion-box h2 {
+  text-align: right;
+  font: normal normal normal 30px/16px Abolition;
+  letter-spacing: 0.3px;
+  margin-right: 12px;
+  color: #dbe2e9;
+  opacity: 1;
+}
+
+/* Search results */
+
+.container {
+  background: transparent linear-gradient(0deg, #0b111787 0%, #1c3775 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 50px;
+  opacity: 0.96;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 10%;
+  width: 1116px;
+  height: auto;
+  padding: 80px;
+}
+
+.container-content h1 {
+  padding-bottom: 20px;
+  color: var(--unnamed-color-ffffff);
+  text-align: left;
+  font: normal normal normal 35px/24px Abolition;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.pagination {
+  float: right;
+  margin-top: 10px;
+}
+
+/* Lecture Video page */
+
+.video-box {
+  min-height: 900px;
+  padding: 50px 40px 0;
+  background: transparent linear-gradient(180deg, #0b111700 0%, #1c3775 100%) 0%
+    0% no-repeat padding-box;
+  opacity: 0.9999999;
+  width: auto;
+  max-width: 1300px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 100px;
+  border-radius: 0 0 50px 50px;
+}
+
+.video-window {
+  height: 500px;
+}
+
+iframe {
+  width: 1000px;
+  height: 600px;
+  border: none;
+}
+
+.video-box h2 {
+  padding-top: 20px;
+  text-align: left;
+  font: normal normal bold 31px/19px Open Sans;
+  color: #ffffff;
+  max-width: 1000px;
+  opacity: 1;
+}
+
+.video-box h3 {
+  text-align: left;
+  font: normal normal normal 15px/43px Open Sans;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.52;
+}
+
+.video-box p {
+  text-align: left;
+  font: normal normal normal 16px/30px Open Sans;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  padding-top: 3%;
+  padding-bottom: 4%;
+  max-width: 1000px;
+}
+
+.lecture-details a {
+  text-align: left;
+  text-decoration: underline;
+  font: normal normal normal 14px/28px Open Sans;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.52;
+}
+
+.lecture-details h4 {
+  text-align: left;
+  font: normal normal normal 14px/28px Open Sans;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.52;
+}
+
+/* Responsive resize */
+
+@media only screen and (max-width: 3000px) {
+  .responsive {
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    margin-left: 50px;
+    margin-right: 50px;
   }
-  to {
-    transform: rotate(360deg);
+  .videolists {
+    width: 80%;
+    margin: 6px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .video-window iframe {
+    width: 900px;
+    height: 500px;
+  }
+  .video-box {
+    padding-top: 0;
+    height: auto;
+  }
+  .video-box h2 {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .responsive {
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .videolists {
+    width: 80%;
+    margin: 6px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .video-window iframe {
+    width: 700px;
+    height: 420px;
+  }
+  .video-box {
+    padding-top: 0;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .responsive {
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .videolists {
+    width: 80%;
+    margin: 6px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .video-window iframe {
+    width: 550px;
+    height: 300px;
+  }
+  .video-box {
+    padding-top: 0;
+    height: auto;
+  }
+  .video-box h2 {
+    margin-top: -100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .responsive {
+    width: 100%;
+    margin: 6px 0;
+    margin-top: 10%;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .videolists {
+    width: 100%;
+    margin: 6px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .video-window iframe {
+    width: 400px;
+    height: 200px;
+  }
+  .video-box {
+    padding-top: 0;
+    height: auto;
+  }
+  .video-box h2 {
+    margin-top: -280px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .responsive {
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .videolists {
+    width: 80%;
+    margin: 6px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .video-window iframe {
+    width: 320px;
+    height: 180px;
+  }
+  .video-box {
+    padding-top: 0;
+    height: auto;
+    padding-bottom: 0;
+  }
+  .video-box h2 {
+    margin-top: -300px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .responsive {
+    width: 100%;
+    margin: 6px 0;
+    margin-top: 10%;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .videolists {
+    width: 80%;
+    margin: 6px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .video-window iframe {
+    width: 250px;
+    height: 150px;
+  }
+  .video-box {
+    padding-top: 0;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .video-box h2 {
+    margin-top: -340px;
+    height: auto;
   }
 }

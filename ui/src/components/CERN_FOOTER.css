@@ -1,0 +1,48 @@
+/* CERN Footer */
+
+#cern-footer {
+  /* text-align: center; */
+  background: #101820 0% 0% no-repeat padding-box;
+  opacity: 1;
+  height: 314px;
+  padding: 55px 20px 0;
+  position: relative;
+  font-size: 18px;
+  font-size: 1.8rem;
+  bottom: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+  align-content: center;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 100;
+}
+
+#cern-footer a {
+  font: normal normal 300 15px/24px Open Sans;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin: auto;
+  padding: 80px 0 0;
+}
+
+#cern-footer .copy-wrapper {
+  font: normal normal 300 15px/24px Open Sans;
+  color: #ffffff;
+  opacity: 0.55;
+  text-align: center;
+  line-height: 50px;
+  margin-top: -50px;
+}
+
+#cern-footer .logo img {
+  float: right;
+  position: absolute;
+  right: 50px;
+  bottom: 180px;
+  height: 100px;
+  width: auto;
+  opacity: 0.5;
+}

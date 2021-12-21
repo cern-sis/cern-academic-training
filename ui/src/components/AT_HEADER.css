@@ -1,0 +1,31 @@
+/* Academic Training Header */
+
+#atc-header {
+  background-color: transparent;
+  margin: 60px 20px;
+  z-index: 9;
+}
+
+#atc-header h1 {
+  padding: 10px 0;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 0.7;
+  filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.377));
+}
+
+#atc-header h1 a {
+  color: #fff;
+  font: normal normal normal 32px/33px Abolition;
+}
+
+#atc-header ul {
+  float: right;
+  list-style: none;
+  position: relative;
+  right: -3px;
+  margin-top: -78px;
+  cursor: pointer;
+}
