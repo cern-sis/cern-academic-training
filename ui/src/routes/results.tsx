@@ -1,16 +1,13 @@
 import { Outlet, Link, useSearchParams } from "react-router-dom";
 import { getLectures } from "../data";
 import "../App.css";
-import { Layout, Pagination, List, Input } from "antd";
+import { Layout, Pagination, List } from "antd";
 import "antd/dist/antd.css";
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
 
 const { Content } = Layout;
-
-const { Search } = Input;
-const onSearch = (value: any) => console.log(value);
 
 function Results() {
   const lectures = getLectures();
@@ -40,10 +37,16 @@ function Results() {
               <h1>Search results:</h1>
               {lectures
                 .filter((value) => {
-                  let filter = searchTerm.get("filter");
-                  if (!filter) return true;
-                  let title = value.title.toLowerCase();
-                  return title.startsWith(filter.toLowerCase());
+                  let queue = searchTerm.get("queue");
+                  if (!queue) return true;
+                  let target =
+                    value.title.toLowerCase() ||
+                    value.speaker.toLowerCase() ||
+                    value.speaker_details.toLowerCase() ||
+                    value.abstract.toLowerCase() ||
+                    value.date.toLowerCase() ||
+                    value.key.toString();
+                  return target.startsWith(queue.toLowerCase());
                 })
                 .map((lecture) => {
                   return (

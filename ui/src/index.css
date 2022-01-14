@@ -33,5 +33,18 @@ code {
 
 @font-face {
   font-family: "Abolition";
-  src: local("Abolition"), url(./fonts/Abolition-Regular.ttf) format("truetype");
+  src: local("Abolition"),
+    url(./fonts/Abolition/Abolition-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Regular";
+  src: local("Source_Sans_Pro"),
+    url(./fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Light";
+  src: local("Source_Sans_Pro"),
+    url(./fonts/Source_Sans_Pro/SourceSansPro-Light.ttf) format("truetype");
 }

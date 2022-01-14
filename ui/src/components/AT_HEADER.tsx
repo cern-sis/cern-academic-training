@@ -1,80 +1,65 @@
-import React, { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { Layout, Space, Input, Drawer, Button } from "antd";
+import { Layout, Input, Button } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "./AT_HEADER.css";
 
 const { Header } = Layout;
 
-const { Search } = Input;
 const onSearch = (value: any) => console.log(value);
+
+//TODO - doesn't work yet
+const onPressEnter = (ev: React.KeyboardEvent<HTMLInputElement>) => {
+  if (ev.key === "Enter") {
+    console.log("onPressEnter", ev);
+  }
+};
 
 function AT_HEADER() {
   const [searchTerm, setSearchTerm] = useSearchParams("");
 
-  const [visible, setVisible] = useState(false);
-
-  const showDrawer = () => {
-    setVisible(true);
-  };
-
-  const onClose = () => {
-    setVisible(false);
-  };
-
   return (
     <Header id="atc-header">
-      <h1>
-        <a href="/">ACADEMIC TRAINING</a>
-      </h1>
+      <div className="header">
+        <h1>
+          <a href="/">ACADEMIC TRAINING</a>
+        </h1>
 
-      <ul>
-        <li className="search">
-          <Button
-            type="primary"
-            style={{ backgroundColor: "transparent", border: "none" }}
-            onClick={showDrawer}
-          >
-            <SearchOutlined
-              className="search-icon"
-              style={{ color: "white", fontSize: "260%" }}
-            />
-          </Button>
-          <Drawer
-            style={{ backgroundColor: "transparent" }}
-            title="Search"
-            placement="right"
-            onClose={onClose}
-            visible={visible}
-          >
-            <Space direction="vertical">
-              <Search
-                placeholder="Write here..."
-                allowClear
-                value={searchTerm.get("filter") || ""}
-                onChange={(event) => {
-                  let filter = event.target.value;
-                  if (filter) {
-                    setSearchTerm({ filter });
-                  } else {
-                    setSearchTerm({});
-                  }
-                }}
-                onSearch={onSearch}
-                enterButton={
-                  <Link to={`/results/?${searchTerm}`}>
-                    <SearchOutlined
-                      className="search-icon"
-                      style={{ color: "white", fontSize: "150%" }}
-                    />
-                  </Link>
+        <ul className="search-box">
+          <li>
+            <Input
+              className="search-input"
+              bordered={false}
+              placeholder="Search..."
+              value={searchTerm.get("queue") || ""}
+              onChange={(event) => {
+                let queue = event.target.value;
+                if (queue) {
+                  setSearchTerm({ queue });
+                } else {
+                  setSearchTerm({});
                 }
-              />
-            </Space>
-          </Drawer>
-        </li>
-      </ul>
+              }}
+              onPressEnter={onPressEnter}
+            />
+          </li>
+
+          <li className="search-icon">
+            <Link to={`/search/?${searchTerm}`}>
+              <Button
+                type="primary"
+                style={{
+                  backgroundColor: "transparent",
+                  border: "none",
+                  boxShadow: "none",
+                }}
+              >
+                <SearchOutlined style={{ color: "white", fontSize: "200%" }} />
+              </Button>
+            </Link>
+          </li>
+        </ul>
+      </div>
     </Header>
   );
 }

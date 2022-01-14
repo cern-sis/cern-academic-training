@@ -1,8 +1,7 @@
 import { useParams, Outlet } from "react-router-dom";
 import { getLecture } from "../data";
 import "../App.css";
-import { Layout, Carousel } from "antd";
-import { getPhotos } from "../photos";
+import { Layout } from "antd";
 import "antd/dist/antd.css";
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
@@ -13,7 +12,6 @@ const { Content } = Layout;
 function Lecture() {
   let params = useParams();
   let lecture = getLecture(parseInt(params.lectureId!, 10));
-  const photos = getPhotos();
 
   return (
     <Layout className="layout">

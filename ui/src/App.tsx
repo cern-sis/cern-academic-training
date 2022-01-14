@@ -1,12 +1,14 @@
 import "./App.css";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { Layout, Row, Col, Card, Input, Carousel } from "antd";
+import { Layout, Row, Col, Card, Input, Carousel, Space } from "antd";
 import "antd/dist/antd.css";
 import { getLectures } from "./data";
 import { getPhotos } from "./photos";
 import AT_HEADER from "./components/AT_HEADER";
 import CERN_FOOTER from "./components/CERN_FOOTER";
 import CERN_TOOLBAR from "./components/CERN_TOOLBAR";
+import { PlayCircleOutlined } from "@ant-design/icons";
 
 const { Content } = Layout;
 const { TextArea } = Input;
@@ -26,29 +28,42 @@ function App() {
       <AT_HEADER />
 
       <Content id="atc-content">
-        <div className="background" data-preload>
-          <Carousel autoplay className="photo-carousel" dots={false}>
-            {photos.map((photo) => {
-              return (
-                <div className="container-fluid">
-                  <div className="content">
-                    <img alt={photo.alt} src={photo.src} />
-                  </div>
-                </div>
-              );
-            })}
-          </Carousel>
-        </div>
-
-        <div className="responsive">
-          <div className="frame">
-            <div id="atc-logo">
-              <img src="white-atc-logo.png" alt="Academic Training Logo" />
+        <Fragment>
+          <div className="carousel-container">
+            <div className="photo-carousel" data-preload>
+              <Carousel autoplay dots={false}>
+                {photos.map((photo) => {
+                  return (
+                    <div className="container-fluid">
+                      <div className="content">
+                        <img alt={photo.alt} src={photo.src} />
+                      </div>
+                    </div>
+                  );
+                })}
+              </Carousel>
             </div>
-            <h1>ACADEMIC TRAINING</h1>
           </div>
+        </Fragment>
 
+        <Fragment>
           <div className="videolists">
+            <div className="responsive">
+              <div className="frame">
+                <div id="atc-logo">
+                  <img src="white-atc-logo.png" alt="Academic Training Logo" />
+                </div>
+                <h1>
+                  <a href="/">ACADEMIC TRAINING </a>
+                </h1>
+              </div>
+            </div>
+
+            <div className="recent">
+              <h2>MOST RECENT</h2>
+              <div className="divider" />
+            </div>
+
             <Row justify="center" gutter={[16, 16]}>
               {lectures.map((lecture) => {
                 return (
@@ -67,6 +82,9 @@ function App() {
                           }
                         >
                           <Card.Grid className="grid-style">
+                            <div className="play-circle-icon">
+                              <PlayCircleOutlined />
+                            </div>
                             <div className="video-content">
                               <h2>{lecture.title}</h2>
                               <p>{lecture.speaker}</p>
@@ -79,11 +97,10 @@ function App() {
                 );
               })}
             </Row>
-            {/* {Array.apply(0, Array(10)).map(function (x, i) {
-          return <ObjectRow key={i} />;
-          })}  */}
           </div>
+        </Fragment>
 
+        <Fragment>
           <div className="suggestion-box">
             <h1>Submit a suggestion for future topics</h1>
             <div className="suggestion-box-window">
@@ -102,7 +119,7 @@ function App() {
             </div>
             <h2>Send</h2>
           </div>
-        </div>
+        </Fragment>
       </Content>
 
       <CERN_FOOTER />
