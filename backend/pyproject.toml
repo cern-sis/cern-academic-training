@@ -9,6 +9,8 @@ license = "MIT License"
 python = "^3.8"
 djangorestframework = "^3.12.4"
 django-filter = "^21.1"
+django-elasticsearch-dsl = "^7.2.2"
+django-elasticsearch-dsl-drf = "^0.22.2"
 
 [tool.poetry.dev-dependencies]
 

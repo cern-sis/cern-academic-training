@@ -1,0 +1,28 @@
+version: "2.3"
+services:
+  db:
+    image: postgres:9.6
+    restart: "always"
+    command: postgres -c 'max_connections=200'
+    environment:
+      - "POSTGRES_USER=cat"
+      - "POSTGRES_PASSWORD=cat"
+      - "POSTGRES_DB=cat"
+    ports:
+      - "5432:5432"
+
+  es:
+    image: elasticsearch:7.10.1
+    restart: "always"
+    environment:
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    mem_limit: 2g
+    ports:
+      - "9200:9200"
+      - "9300:9300"

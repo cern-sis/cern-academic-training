@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     # external apps
     "rest_framework",
     "rest_framework.authtoken",
+    "django_elasticsearch_dsl",
+    "django_elasticsearch_dsl_drf",
 ]
 
 MIDDLEWARE = [
@@ -140,4 +142,8 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 10,
+}
+
+ELASTICSEARCH_DSL = {
+    "default": {"hosts": "localhost:9200"},
 }
