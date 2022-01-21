@@ -31,6 +31,8 @@ jobs:
           POSTGRES_USER: cat
           POSTGRES_PASSWORD: cat
           POSTGRES_DB: cat
+        ports:
+          - 5432:5432
     steps:
       - name: Checkout
         uses: actions/checkout@v2
