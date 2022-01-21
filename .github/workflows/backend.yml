@@ -24,6 +24,13 @@ jobs:
           discovery.type: single-node
         ports:
           - 9200:9200
+
+      postgresql:
+        image: postgres:9.6
+        env:
+          POSTGRES_USER: cat
+          POSTGRES_PASSWORD: cat
+          POSTGRES_DB: cat
     steps:
       - name: Checkout
         uses: actions/checkout@v2
