@@ -9,6 +9,8 @@ from rest_framework.test import APITestCase
 
 
 class LectureTest(APITestCase):
+    maxDiff = None
+
     def setUp(self):
         self.url = "/api/lectures/"
         self.username = "admin"
@@ -17,7 +19,6 @@ class LectureTest(APITestCase):
         self.token = Token.objects.create(user=self.user)
         self.client.credentials(HTTP_AUTHORIZATION="Token " + self.token.key)
         self.data = {
-            "lecture_id": "2788942",
             "title": "REMOTE: Federated Data Architectures",
             "date": "2021-10-22",
             "corporate_author": "This is an author",
@@ -44,8 +45,9 @@ class LectureTest(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
         response = self.client.get(self.url, format="json")
+
         expected_data = {
-            "url": "http://testserver/api/lectures/1/",
+            "url": "http://testserver/api/lectures/2/",
             "title": "REMOTE: Federated Data Architectures",
             "date": "2021-10-22",
             "corporate_author": "This is an author",

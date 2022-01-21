@@ -2,7 +2,7 @@ from django.db import models  # noqa: F401
 
 
 class Lecture(models.Model):
-    lecture_id = models.IntegerField(primary_key=True)
+    lecture_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
     date = models.DateField()
     corporate_author = models.CharField(max_length=100)
