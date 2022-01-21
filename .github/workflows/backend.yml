@@ -15,6 +15,15 @@ jobs:
     strategy:
       matrix:
         python-version: [3.8, 3.9]
+    services:
+      elasticsearch:
+        image: elasticsearch:7.10.1
+        env:
+          bootstrap.memory_lock: true
+          ES_JAVA_OPTS: -Xms1024m -Xmx1024m
+          discovery.type: single-node
+        ports:
+          - 9200:9200
     steps:
       - name: Checkout
         uses: actions/checkout@v2
