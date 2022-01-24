@@ -1,0 +1,84 @@
+/* CERN Toolbar */
+
+#cern-toolbar {
+  background-color: #222;
+  font-family: "PT Sans", "Trebuchet MS", Tahoma, sans-serif;
+  color: #999;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0 5%;
+  height: 43px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+#cern-toolbar a {
+  color: #ccc;
+  text-decoration: none;
+  padding: 6px 8px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+#cern-toolbar a:hover {
+  background-color: #000;
+  color: #fff;
+  border: 0;
+}
+
+#cern-toolbar .active a {
+  background-color: #f6f6f6;
+  color: #000;
+  padding-bottom: 20px;
+}
+
+#cern-toolbar .active .cern-account {
+  background-color: #fff;
+}
+
+#cern-toolbar h1 {
+  float: left;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  position: relative;
+  left: -8px;
+  padding: 6px 0;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+#cern-toolbar h1 a {
+  color: #fff;
+}
+
+#cern-toolbar h1 span {
+  color: #999;
+  letter-spacing: normal;
+  padding: 0;
+}
+
+#cern-toolbar h1 a:hover span {
+  color: #fff;
+}
+
+#cern-toolbar ul {
+  float: right;
+  list-style: none;
+  position: relative;
+  right: -8px;
+  margin: 0;
+}
+
+#cern-toolbar li {
+  float: left;
+  display: block;
+  margin-left: 0.6em;
+  padding: 6px 0;
+}

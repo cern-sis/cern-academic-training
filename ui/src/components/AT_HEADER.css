@@ -1,0 +1,102 @@
+/* Academic Training Header */
+
+@import "antd/dist/antd.css";
+#atc-header .header {
+  width: 100%;
+  padding-top: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background: linear-gradient(0deg, transparent 0%, #0b1117 100%) 0% 0%
+    no-repeat padding-box;
+}
+
+#atc-header {
+  margin-top: -25px;
+  z-index: 3;
+}
+
+#atc-header h1 {
+  padding: 30px 0;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+#atc-header h1 a {
+  color: #fff;
+  font: normal normal normal 32px/33px Abolition;
+}
+
+#atc-header ul {
+  float: right;
+  list-style: none;
+  position: relative;
+  right: -10px;
+  margin-top: -92px;
+  cursor: pointer;
+}
+
+.search-box {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  font-style: #fff;
+  background-color: transparent;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.search-input {
+  color: #fff;
+  font: normal normal normal 14px/28px Open Sans;
+  bottom: 13px;
+  margin-left: -30px;
+}
+
+.search-icon {
+  position: relative;
+  float: right;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin-top: -60px;
+  background-color: transparent;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-box:hover {
+  width: 330px;
+  height: 40px;
+  transition: all 0.5s;
+  border-radius: 10px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.253);
+  border: 1px solid rgba(255, 255, 255, 0.144);
+  visibility: visible;
+}
+
+.search-icon::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  transform: translate(-4px, -4px);
+}
+
+.search-icon::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 12px;
+  transform: translate(6px, 6px) rotate(315deg);
+}
