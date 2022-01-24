@@ -9,7 +9,7 @@ class Lecture(models.Model):
     abstract = models.TextField()
     series = models.CharField(max_length=250)
     speaker = models.CharField(max_length=250)
-    speaker_details = models.CharField(max_length=20)
+    speaker_details = models.CharField(max_length=250, blank=True, default="")
     event_details = models.CharField(max_length=250)
     thumbnail_picture = models.TextField()
     language = models.CharField(max_length=3)
