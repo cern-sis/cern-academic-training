@@ -28,7 +28,7 @@ router.register(r"search/lectures", LectureDocumentView, basename="lecturedocume
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/", include(router.urls)),
+    path("api/v1/", include(router.urls)),
     # re_path(r"^search/", include(router_search.urls)),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework_auth")),
 ]
