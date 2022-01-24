@@ -15,5 +15,5 @@ class Lecture(models.Model):
     language = models.CharField(max_length=3)
     subject_category = models.CharField(max_length=50)
     lecture_note = models.DateTimeField()
-    imprint = models.DurationField()
+    imprint = models.CharField(max_length=30)
     license = models.CharField(max_length=30)
