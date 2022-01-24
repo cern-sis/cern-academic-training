@@ -6,23 +6,21 @@ from harvest.spiders.cds_spider import CDSSpider
 def test_cds_translation(shared_datadir):
     content = (shared_datadir / "record.xml").read_text()
     expected_data = {
-        "abstract": "This is a description.",
-        "corporate_author": "CERN. Geneva",
-        "date": "2021-09-29",
-        "duration": "1:10:36",
-        "event_url": "https://indico.cern.ch/event/1049663/",
-        "id": "2782493",
-        "imprint": "2021-09-29",
-        "language": "eng",
-        "lecture_note": "2021-09-29T11:00:00",
-        "license": "CERN",
-        "license_year": "2021",
-        "series_name": "Academic Training Lecture Regular Programme",
-        "series_year": "2021-2022",
-        "speaker_affiliation": None,
-        "speaker_name": "de Jong, Michiel",
-        "subject_category": "Academic Training Lecture Regular Programme",
+        "lecture_id": "2782493",
         "title": "REMOTE: Federated Data Architectures",
+        "date": "2021-09-29",
+        "corporate_author": "CERN. Geneva",
+        "abstract": "This is a description.",
+        "series": "Academic Training Lecture Regular Programme - 2021-2022",
+        "speaker": "de Jong, Michiel",
+        "speaker_details": "",
+        "event_details": "https://indico.cern.ch/event/1049663/",
+        "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-10-percent.jpg",
+        "language": "eng",
+        "subject_category": "Academic Training Lecture Regular Programme",
+        "lecture_note": "2021-09-29T11:00:00",
+        "imprint": "2021-09-29 - 1:10:36",
+        "license": "CERN 2021",
     }
     node = Selector(text=content, type="xml")
     node.remove_namespaces()
