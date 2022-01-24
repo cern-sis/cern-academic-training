@@ -53,6 +53,7 @@ $ python manage.py loaddata users.json
 
 ```bash
 $ python manage.py loaddata lectures.json
+$ python manage.py search_index --rebuild
 ```
 
 ## UI
