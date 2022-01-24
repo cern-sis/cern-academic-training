@@ -18,5 +18,125 @@
       "imprint": "01:03:18",
       "license": "© 2021 CERN"
     }
+  },
+  {
+    "model": "cds.lecture",
+    "pk": 2782917,
+    "fields": {
+      "title": "REMOTE - Sociology Lecture 2: Gender division of labor in the household",
+      "date": "2022-01-14",
+      "corporate_author": "CERN. Geneva",
+      "abstract": "<!--HTML--><p class=\"p1\"><span style=\"color:null\"><strong>Abstract </strong></span><strong><span>Lecture 2</span></strong><span style=\"color:null\"><strong>: </strong></span></p>\n\n<p class=\"p1\"><span style=\"color:null\"><span>Although female labor force participation rates have increased significantly in the recent decades, women still do most household chores across the globe. The gender inequality in the household is harder to regulate with the help of social policies than inequality in labor market sphere. In the lecture I will discuss the gender division in childcare and household chores. I will show how the amount of domestic labor is associated with gender role attitudes and participation in the labor market across countries. Special attention will be given to the impact of COVID pandemic upon the division of household labor.</span></span></p>\n\n<p class=\"p1\"><span style=\"color:null\"><span><strong>Short bio of the speaker:</strong> </span></span></p>\n\n<p class=\"p1\"><span><span>Natalia Soboleva holds a PhD in Economic Sociology and Demography from the Department of Sociology, National Research University Higher School of Economics (Moscow). She is Senior Research Fellow at the Laboratory for Comparative Social Research and Senior Lecturer at the Graduate School of Business Higher School of Economics in Moscow. Her research interests include gender role attitudes, work values, life and job satisfaction, subjective well-being. Her work has been published in International and Russian peer-reviewed journals. In 2017 she has become a prizewinner of the Elizabeth H. Nelson Prize for the best paper from a society in transition for paper \"Work Values and Job Preferences in Europe: Gender Aspect\". She is National Program Director of European Values Study (EVS) in Russia, a member of theory and standing groups of EVS and the Editorial Board of the EVS- Brill Series.</span></span></p>\n\n<div>\n<p><span><span><a href=\"https://www.hse.ru/en/org/persons/7531063\" target=\"_blank\">https://www.hse.ru/en/org/persons/7531063</a></span></span></p>\n</div>\n\nAcademic_Training 0122: https://cern.zoom.us/j/63649543430?pwd=ZGhKN21teG9kcVE3VEtIdkt2ck9nZz09",
+      "series": "Academic Training Lecture Regular Programme - 2021-2022",
+      "speaker": "Soboleva, Natalia",
+      "speaker_details": "HSE University",
+      "event_details": "https://indico.cern.ch/event/1050133/",
+      "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2022/1050133/1050133-presenter-legacy.jpg",
+      "language": "eng",
+      "subject_category": "Academic Training Lecture Regular Programme",
+      "lecture_note": "2022-01-14T11:00:00Z",
+      "imprint": "2022-01-14 - 1:11:15",
+      "license": "CERN 2022"
+    }
+  },
+  {
+    "model": "cds.lecture",
+    "pk": 2782918,
+    "fields": {
+      "title": "REMOTE - Sociology Lecture 1: Gender inequality in the labor market",
+      "date": "2022-01-13",
+      "corporate_author": "CERN. Geneva",
+      "abstract": "<!--HTML--><p class=\"p1\"><span style=\"color:null\"><strong>Abstract Lecture 1: </strong></span></p>\n\n<p class=\"p1\"><span style=\"color:null\"><span>In European countries women do not have lower education as compared to men and even achieve better results. Nevertheless, women are often less advantaged in making their career, less often occupy top positions and underrepresented in male occupations. In the lecture I will discuss the current situation with the gender inequality in the labor market including male and female participation rate, gender pay gap, and male and female career chances. The reasons for gender inequality in the labor market lie both different types of discrimination and motivation which results in self-discrimination. The labor market policies can also largely contribute to gender equality or inequality. Differences across countries will also be considered.</span></span></p>\n\n<p class=\"p1\"><span style=\"color:null\"><span><strong>Short Bio of the speaker:</strong> </span></span></p>\n\n<p class=\"p1\"><span style=\"color:null\"><span>Natalia Soboleva holds a PhD in Economic Sociology and Demography from the Department of Sociology, National Research University Higher School of Economics (Moscow). She is Senior Research Fellow at the Laboratory for Comparative Social Research and Senior Lecturer at the Graduate School of Business Higher School of Economics in Moscow. Her research interests include gender role attitudes, work values, life and job satisfaction, subjective well-being. Her work has been published in International and Russian peer-reviewed journals. In 2017 she has become a prizewinner of the Elizabeth H. Nelson Prize for the best paper from a society in transition for paper \"Work Values and Job Preferences in Europe: Gender Aspect\". She is National Program Director of European Values Study (EVS) in Russia, a member of theory and standing groups of EVS and the Editorial Board of the EVS- Brill Series.</span></span></p>\n\n<p class=\"p1\"><span><span><a href=\"https://www.hse.ru/en/org/persons/7531063\" target=\"_blank\">https://www.hse.ru/en/org/persons/7531063</a> </span></span></p>\n\n<div>\n<p> </p>\n</div>\n\nAcademic_Training 0122: https://cern.zoom.us/j/63649543430?pwd=ZGhKN21teG9kcVE3VEtIdkt2ck9nZz09",
+      "series": "Academic Training Lecture Regular Programme - 2021-2022",
+      "speaker": "Soboleva, Natalia",
+      "speaker_details": "HSE University",
+      "event_details": "https://indico.cern.ch/event/1050132/",
+      "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2022/1050132/1050132-presenter-legacy.jpg",
+      "language": "eng",
+      "subject_category": "Academic Training Lecture Regular Programme",
+      "lecture_note": "2022-01-13T11:00:00Z",
+      "imprint": "2022-01-13 - 1:08:18",
+      "license": "CERN 2022"
+    }
+  },
+  {
+    "model": "cds.lecture",
+    "pk": 2782919,
+    "fields": {
+      "title": "Controlling the CERN Accelerator Complex",
+      "date": "2021-12-02",
+      "corporate_author": "CERN. Geneva",
+      "abstract": "<!--HTML--><h3><span><span>Engineering APIs for Accelerator Controls Software</span></span></h3>\n\n<p><span><span>This lecture will provide a general introduction to the challenges of developing Application Programming Interfaces (APIs), and integrating and evolving multiple APIs from different systems over time. It will go on to refer to real-life examples in the world of CERN Accelerator Controls, serving a large and heterogenous user community with a variety of technical and functional requirements. During the lecture, insights will be shared on technologies used and best practices when it comes to designing and developing scalable and reliable APIs.</span></span></p>\n\n<p><strong>Short bio Bartek Urbaniec</strong></p>\n\n<p>With a MSc in Computer Science, Bartek is a senior Controls engineer focused on topics of systems integration, configuration and full-stack software development. Prior to becoming a staff member in 2017, Bartek has worked in the CERN Controls domain for Cryogenics, other Industrial and accelerator controls systems. Since then, he has taken a leading role in the design and development of systems such as Timber and Accelerator Schedule Management. He is currently leading the Controls Configuration Service - a core component of the CERN Control System.</p>\n\n<p> </p>\n\nAcademic_Training_Nov2: https://cern.zoom.us/j/69334027918?pwd=d2NlZENDbkpMZ3lCUjJCRWh3dlpWUT09",
+      "series": "Academic Training Lecture Regular Programme - 2021-2022",
+      "speaker": "Urbaniec, Bartek",
+      "speaker_details": "CERN",
+      "event_details": "https://indico.cern.ch/event/1054892/",
+      "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1054892/1054892-presentation-legacy.jpg",
+      "language": "eng",
+      "subject_category": "Academic Training Lecture Regular Programme",
+      "lecture_note": "2021-12-02T11:00:00Z",
+      "imprint": "2021-12-02 - 0:54:00",
+      "license": "CERN 2021"
+    }
+  },
+  {
+    "model": "cds.lecture",
+    "pk": 2782920,
+    "fields": {
+      "title": "Controlling the CERN Accelerator Complex",
+      "date": "2021-12-01",
+      "corporate_author": "CERN. Geneva",
+      "abstract": "<!--HTML--><h3><span><span>Introduction to Containerization and its applications for CERN Accelerator Controls</span></span></h3>\n\n<p><span><span>Containerization is a far reaching and major trend in computing to package software code together with its dependencies, so that it can run consistently on any underlying infrastructure. In this lecture, we will explore technologies behind containerization as well as their purpose and added value. We will also cover challenges arising from the use of containerization, before going on to look at practical use cases for CERN Accelerator Controls and how to make the best out of these new technologies.</span></span></p>\n\n<p><strong>Short bio Rémi Voirin</strong></p>\n\n<p>Rémi Voirin is a Computing Infrastructure Engineer in CERN Accelerator Controls. After completing his Masters studies in Networks and Telecommunications at the University of Savoy, he began his career as a UNIX system administrator at Infomaniak, a Swiss web hosting company. He joined CERN in 2017 to participate in the renovation of infrastructure monitoring. Now, he takes care of the current operating system for Front-End Computers, and leads the Container project for Controls.</p>\n\n<p> </p>\n\nAcademic_Training_Nov2: https://cern.zoom.us/j/69334027918?pwd=d2NlZENDbkpMZ3lCUjJCRWh3dlpWUT09",
+      "series": "Academic Training Lecture Regular Programme - 2021-2022",
+      "speaker": "Voirin, Remi",
+      "speaker_details": "CERN",
+      "event_details": "https://indico.cern.ch/event/1054891/",
+      "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1054891/1054891-presentation-legacy.jpg",
+      "language": "eng",
+      "subject_category": "Academic Training Lecture Regular Programme",
+      "lecture_note": "2021-12-01T11:00:00Z",
+      "imprint": "2021-12-01 - 1:01:50",
+      "license": "CERN 2021"
+    }
+  },
+  {
+    "model": "cds.lecture",
+    "pk": 2782921,
+    "fields": {
+      "title": "Controlling the CERN Accelerator Complex",
+      "date": "2021-11-30",
+      "corporate_author": "CERN. Geneva",
+      "abstract": "<!--HTML--><p><span><span>This lecture will introduce the system used to control the CERN Accelerator complex, spanning from particle sources to the LHC, including the CERN experimental areas. The overall architecture of the control system will be described, together with the variety of technologies employed. The lecture will also cover the challenges associated with keeping things running reliably, whilst adapting to a changing technological landscape and evolving requirements.</span></span></p>\n\n<p><strong>Short bio Stephane Deghaye</strong></p>\n\n<p>Stephane joined CERN in 1999 and has been working in the accelerator controls since then. After leading several key projects in the Controls group, he was the Accelerator Controls Technical Coordinator from 2016 until 2021 when he took the leadership of the Front-end Software and Timing section in the Controls Software & Services group within the Beams department. Stephane has a degree in Electronics Engineering and an MSc in Computer Science.</p>\n\nAcademic_Training_Nov2: https://cern.zoom.us/j/69334027918?pwd=d2NlZENDbkpMZ3lCUjJCRWh3dlpWUT09",
+      "series": "Academic Training Lecture Regular Programme - 2021-2022",
+      "speaker": "Deghaye, Stephane",
+      "speaker_details": "CERN",
+      "event_details": "https://indico.cern.ch/event/1054890/",
+      "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1054890/1054890-presentation-legacy.jpg",
+      "language": "eng",
+      "subject_category": "Academic Training Lecture Regular Programme",
+      "lecture_note": "2021-11-30T11:00:00Z",
+      "imprint": "2021-11-30 - 0:49:43",
+      "license": "CERN 2021"
+    }
+  },
+  {
+    "model": "cds.lecture",
+    "pk": 2782922,
+    "fields": {
+      "title": "Controlling the CERN Accelerator Complex",
+      "date": "2021-11-29",
+      "corporate_author": "CERN. Geneva",
+      "abstract": "<!--HTML--><p><span><span>This lecture will introduce the system used to control the CERN Accelerator complex, spanning from particle sources to the LHC, including the CERN experimental areas. The overall architecture of the control system will be described, together with the variety of technologies employed. The lecture will also cover the challenges associated with keeping things running reliably, whilst adapting to a changing technological landscape and evolving requirements.</span></span></p>\n\n<p><strong>Short bio Stephane Deghaye</strong></p>\n\n<p>Stephane joined CERN in 1999 and has been working in the accelerator controls since then. After leading several key projects in the Controls group, he was the Accelerator Controls Technical Coordinator from 2016 until 2021 when he took the leadership of the Front-end Software and Timing section in the Controls Software & Services group within the Beams department. Stephane has a degree in Electronics Engineering and an MSc in Computer Science.</p>\n\n<p> </p>\n\nAcademic_Training_Nov2: https://cern.zoom.us/j/69334027918?pwd=d2NlZENDbkpMZ3lCUjJCRWh3dlpWUT09",
+      "series": "Academic Training Lecture Regular Programme - 2021-2022",
+      "speaker": "Deghaye, Stephane",
+      "speaker_details": "CERN",
+      "event_details": "https://indico.cern.ch/event/1054889/",
+      "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1054889/1054889-presentation-legacy.jpg",
+      "language": "eng",
+      "subject_category": "Academic Training Lecture Regular Programme",
+      "lecture_note": "2021-11-29T11:00:00Z",
+      "imprint": "2021-11-29 - 1:05:51",
+      "license": "CERN 2021"
+    }
   }
 ]
