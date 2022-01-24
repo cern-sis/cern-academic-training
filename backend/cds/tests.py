@@ -12,7 +12,7 @@ class LectureTest(APITestCase):
     maxDiff = None
 
     def setUp(self):
-        self.url = "/api/lectures/"
+        self.url = "/api/v1/lectures/"
         self.username = "admin"
         self.password = "123456"
         self.user = User.objects.create_user(self.username, self.password)
@@ -47,7 +47,7 @@ class LectureTest(APITestCase):
         response = self.client.get(self.url, format="json")
 
         expected_data = {
-            "url": "http://testserver/api/lectures/2/",
+            "url": "http://testserver/api/v1/lectures/2/",
             "title": "REMOTE: Federated Data Architectures",
             "date": "2021-10-22",
             "corporate_author": "This is an author",
