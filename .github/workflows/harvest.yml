@@ -63,7 +63,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          context: backend/
+          context: ./backend/
           push: true
           tags: cern-academic-training/backend:latest,cern-academic-training/backend:${{ github.sha }}
   ui_build:
@@ -89,7 +89,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          context: ui/
+          context: ./ui/
           push: true
           tags: cern-academic-training/ui:latest,cern-academic-training/ui:${{ github.sha }}
 
@@ -116,6 +116,6 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          context: harvest/
+          context: ./harvest/
           push: true
           tags: cern-academic-training/harvest:latest,cern-academic-training/harvest:${{ github.sha }}
