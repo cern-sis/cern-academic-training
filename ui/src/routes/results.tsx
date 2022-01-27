@@ -1,17 +1,36 @@
-import { Outlet, Link, useSearchParams } from "react-router-dom";
-import { getLectures } from "../data";
+import { Outlet, Link, useSearchParams, useParams } from "react-router-dom";
+import React from "react";
 import "../App.css";
 import { Layout, Pagination, List } from "antd";
 import "antd/dist/antd.css";
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
+import { getLectures } from "../data";
+import { getApiRoot } from "../api/api_root";
 
 const { Content } = Layout;
 
 function Results() {
-  const lectures = getLectures();
   const [searchTerm, setSearchTerm] = useSearchParams("");
+
+  const lectures = getLectures();
+  // let apiInstance = getApiRoot();
+
+  // const [lectures, setLectures] = React.useState<any>();
+
+  // React.useEffect(() => {
+  //   apiInstance.get(`/search/lectures`).then((response) => {
+  //     setLectures(response.data);
+  //     console.log(response.data);
+  //     console.log(response.status);
+  //     console.log(response.statusText);
+  //     console.log(response.headers);
+  //     console.log(response.config);
+  //   });
+  // }, []);
+
+  // if (!lectures) return null;
 
   const state = {
     current: 3,
@@ -36,7 +55,7 @@ function Results() {
             <div className="container-content">
               <h1>Search results:</h1>
               {lectures
-                .filter((value) => {
+                .filter((value: any) => {
                   let queue = searchTerm.get("queue");
                   if (!queue) return true;
                   let target =
@@ -45,21 +64,24 @@ function Results() {
                     value.speaker_details.toLowerCase() ||
                     value.abstract.toLowerCase() ||
                     value.date.toLowerCase() ||
-                    value.key.toString();
+                    value.lectureId.toString();
                   return target.startsWith(queue.toLowerCase());
                 })
-                .map((lecture) => {
+                .map((lecture: any) => {
                   return (
                     <List>
                       <nav>
                         <Link
                           style={{ display: "block", margin: "1rem 0" }}
-                          to={`/lectures/${lecture.key}`}
-                          key={lecture.key}
+                          to={`/lectures/${lecture.lecture_id}`}
+                          key={lecture.lecture_id}
                         >
                           <div className="video-content">
                             <div className="list-thumbnail">
-                              <img alt="thumbnail" src={lecture.thumbnail} />
+                              <img
+                                alt="thumbnail"
+                                src={lecture.thumbnail_picture}
+                              />
                             </div>
                             <h2>{lecture.title}</h2>
                             <p>{lecture.speaker}</p>

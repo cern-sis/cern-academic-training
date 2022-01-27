@@ -1,14 +1,15 @@
 import "./App.css";
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { Layout, Row, Col, Card, Input, Carousel, Space } from "antd";
+import { Layout, Row, Col, Card, Input, Carousel } from "antd";
 import "antd/dist/antd.css";
-import { getLectures } from "./data";
 import { getPhotos } from "./photos";
 import AT_HEADER from "./components/AT_HEADER";
 import CERN_FOOTER from "./components/CERN_FOOTER";
 import CERN_TOOLBAR from "./components/CERN_TOOLBAR";
 import { PlayCircleOutlined } from "@ant-design/icons";
+import { getLectures } from "./data";
+import { getApiRoot } from "./api/api_root";
 
 const { Content } = Layout;
 const { TextArea } = Input;
@@ -18,8 +19,26 @@ const handleKeyPress = (ev: React.KeyboardEvent<HTMLTextAreaElement>) => {
 };
 
 function App() {
-  const lectures = getLectures();
   const photos = getPhotos();
+
+  const lectures = getLectures();
+
+  // let apiInstance = getApiRoot();
+
+  // const [lectures, setLectures] = React.useState<any>();
+
+  // React.useEffect(() => {
+  //   apiInstance.get(`/search/lectures`).then((response) => {
+  //     setLectures(response.data);
+  //     console.log(response.data);
+  //     console.log(response.status);
+  //     console.log(response.statusText);
+  //     console.log(response.headers);
+  //     console.log(response.config);
+  //   });
+  // }, []);
+
+  // if (!lectures) return null;
 
   return (
     <Layout className="layout">
@@ -65,20 +84,23 @@ function App() {
             </div>
 
             <Row justify="center" gutter={[16, 16]}>
-              {lectures.map((lecture) => {
+              {lectures.map((lecture: any) => {
                 return (
-                  <Col span={6} key={lecture.key}>
+                  <Col span={6} key={lecture.lecture_id}>
                     <nav>
                       <Link
                         style={{ display: "block", margin: "1rem 0" }}
-                        to={`/lectures/${lecture.key}`}
-                        key={lecture.key}
+                        to={`/lectures/${lecture.lecture_id}`}
+                        key={lecture.lecture_id}
                       >
                         <Card
                           hoverable
                           className="video-card"
                           cover={
-                            <img alt="thumbnail" src={lecture.thumbnail} />
+                            <img
+                              alt="thumbnail"
+                              src={lecture.thumbnail_picture}
+                            />
                           }
                         >
                           <Card.Grid className="grid-style">
