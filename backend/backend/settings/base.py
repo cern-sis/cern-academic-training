@@ -149,4 +149,4 @@ ELASTICSEARCH_DSL = {
     "default": {"hosts": "localhost:9200"},
 }
 
-ELASTICSEARCH_INDEX_PREFIX = 'cat-local'
+ELASTICSEARCH_INDEX_PREFIX = "cat-local"

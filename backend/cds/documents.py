@@ -1,10 +1,8 @@
+from django.conf import settings
 from django_elasticsearch_dsl import Document
 from django_elasticsearch_dsl.registries import registry
-from django.conf import settings
-
 
 from .models import Lecture
-
 
 
 @registry.register_document
