@@ -23,6 +23,7 @@ class LectureDocumentView(DocumentViewSet):
     document = LectureDocument
     serializer_class = LectureDocumentSerializer
     lookup_field = "lecture_id"
+    permission_classes = (IsAuthenticatedOrReadOnly,)
 
     filter_backends = [
         FilteringFilterBackend,
