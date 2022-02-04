@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     # external apps
     "rest_framework",
     "rest_framework.authtoken",
-    "django_elasticsearch_dsl",
+    "django_opensearch_dsl",
     "django_elasticsearch_dsl_drf",
 ]
 
@@ -144,8 +144,8 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 10,
 }
 
-ELASTICSEARCH_DSL = {
+OPENSEARCH_DSL = {
     "default": {"hosts": "localhost:9200"},
 }
 
-ELASTICSEARCH_INDEX_PREFIX = "cat-local"
+OPENSEARCH_INDEX_PREFIX = "cat-local"

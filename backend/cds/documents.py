@@ -1,6 +1,6 @@
 from django.conf import settings
-from django_elasticsearch_dsl import Document
-from django_elasticsearch_dsl.registries import registry
+from django_opensearch_dsl import Document
+from django_opensearch_dsl.registries import registry
 
 from .models import Lecture
 
@@ -8,7 +8,7 @@ from .models import Lecture
 @registry.register_document
 class LectureDocument(Document):
     class Index:
-        name = f"{settings.ELASTICSEARCH_INDEX_PREFIX}-lectures"
+        name = f"{settings.OPENSEARCH_INDEX_PREFIX}-lectures"
 
     settings = {"number_of_shards": 1, "number_of_replicas": 0}
 

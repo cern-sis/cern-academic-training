@@ -41,4 +41,4 @@ ELASTICSEARCH_DSL = {
     },
 }
 
-ELASTICSEARCH_INDEX_PREFIX = "cat-production"
+OPENSEARCH_INDEX_PREFIX = "cat-production"

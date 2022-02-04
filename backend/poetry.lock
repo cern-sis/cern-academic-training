@@ -18,6 +18,18 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "dateutils"
+version = "0.6.12"
+description = "Various utilities for working with date and datetime objects"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+python-dateutil = "*"
+pytz = "*"
+
+[[package]]
 name = "dj-database-url"
 version = "0.5.0"
 description = "Use Database URLs in your Django Application."
@@ -54,32 +66,27 @@ python-versions = ">=3.7"
 Django = ">=2.2"
 
 [[package]]
-name = "django-elasticsearch-dsl"
-version = "7.2.2"
-description = "Wrapper around elasticsearch-dsl-py for django models"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-elasticsearch-dsl = ">=7.2.0"
-six = "*"
-
-[[package]]
 name = "django-elasticsearch-dsl-drf"
-version = "0.22.2"
+version = "0.22.4"
 description = "Integrate Elasticsearch DSL with Django REST framework."
 category = "main"
 optional = false
 python-versions = ">=2.7"
+develop = false
 
 [package.dependencies]
-django-elasticsearch-dsl = ">=6.4.1"
 django-nine = ">=0.2"
+django-opensearch-dsl = "*"
 djangorestframework = "*"
-elasticsearch = "*"
-elasticsearch-dsl = "*"
+opensearch = "*"
+opensearch-dsl = "*"
 six = ">=1.9"
+
+[package.source]
+type = "git"
+url = "https://github.com/cern-sis/django-elasticsearch-dsl-drf.git"
+reference = "opensearch"
+resolved_reference = "c3305525bc58c1d5fd826e95e9c89ee95460e6da"
 
 [[package]]
 name = "django-filter"
@@ -104,6 +111,18 @@ python-versions = "*"
 Django = "*"
 
 [[package]]
+name = "django-opensearch-dsl"
+version = "0.2.0"
+description = "Wrapper around opensearch-dsl-py for django models"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+dateutils = "*"
+opensearch-dsl = ">=1.0.0,<1.1.0"
+
+[[package]]
 name = "djangorestframework"
 version = "3.12.4"
 description = "Web APIs for Django, made easy."
@@ -113,40 +132,6 @@ python-versions = ">=3.5"
 
 [package.dependencies]
 django = ">=2.2"
-
-[[package]]
-name = "elasticsearch"
-version = "7.16.3"
-description = "Python client for Elasticsearch"
-category = "main"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <4"
-
-[package.dependencies]
-certifi = "*"
-urllib3 = ">=1.21.1,<2"
-
-[package.extras]
-async = ["aiohttp (>=3,<4)"]
-develop = ["requests (>=2.0.0,<3.0.0)", "coverage", "mock", "pyyaml", "pytest", "pytest-cov", "sphinx (<1.7)", "sphinx-rtd-theme", "black", "jinja2"]
-docs = ["sphinx (<1.7)", "sphinx-rtd-theme"]
-requests = ["requests (>=2.4.0,<3.0.0)"]
-
-[[package]]
-name = "elasticsearch-dsl"
-version = "7.4.0"
-description = "Python client for Elasticsearch"
-category = "main"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-
-[package.dependencies]
-elasticsearch = ">=7.0.0,<8.0.0"
-python-dateutil = "*"
-six = "*"
-
-[package.extras]
-develop = ["mock", "pytest (>=3.0.0)", "pytest-cov", "pytest-mock (<3.0.0)", "pytz", "coverage (<5.0.0)", "sphinx", "sphinx-rtd-theme"]
 
 [[package]]
 name = "gunicorn"
@@ -161,6 +146,47 @@ eventlet = ["eventlet (>=0.24.1)"]
 gevent = ["gevent (>=1.4.0)"]
 setproctitle = ["setproctitle"]
 tornado = ["tornado (>=0.2)"]
+
+[[package]]
+name = "opensearch"
+version = "0.9.2"
+description = "Interact with opensearch services"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "opensearch-dsl"
+version = "1.0.0"
+description = "Python client for OpenSearch"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.dependencies]
+opensearch-py = ">=1.0.0"
+python-dateutil = "*"
+six = "*"
+
+[package.extras]
+develop = ["mock", "pytest (>=3.0.0)", "pytest-cov", "pytest-mock (<3.0.0)", "pytz", "coverage (<5.0.0)", "sphinx", "sphinx-rtd-theme"]
+
+[[package]]
+name = "opensearch-py"
+version = "1.0.0"
+description = "Python low-level client for OpenSearch"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <4"
+
+[package.dependencies]
+certifi = "*"
+urllib3 = ">=1.21.1,<2"
+
+[package.extras]
+async = ["aiohttp (>=3,<4)"]
+develop = ["requests (>=2.0.0,<3.0.0)", "coverage", "mock", "pyyaml", "pytest", "pytest-cov", "black", "jinja2"]
+requests = ["requests (>=2.4.0,<3.0.0)"]
 
 [[package]]
 name = "psycopg2"
@@ -251,7 +277,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "ed072d37326a979a953ec622b666ed9aa8a32804ef1d7d225a8646e87dd0ff9c"
+content-hash = "c9d1f21e0f2f9132858954938f8e617f12afbf0c0bd135a72d3fca7e090bb977"
 
 [metadata.files]
 asgiref = [
@@ -261,6 +287,10 @@ asgiref = [
 certifi = [
     {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
     {file = "certifi-2021.10.8.tar.gz", hash = "sha256:78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"},
+]
+dateutils = [
+    {file = "dateutils-0.6.12-py2.py3-none-any.whl", hash = "sha256:f33b6ab430fa4166e7e9cb8b21ee9f6c9843c48df1a964466f52c79b2a8d53b3"},
+    {file = "dateutils-0.6.12.tar.gz", hash = "sha256:03dd90bcb21541bd4eb4b013637e4f1b5f944881c46cc6e4b67a6059e370e3f1"},
 ]
 dj-database-url = [
     {file = "dj-database-url-0.5.0.tar.gz", hash = "sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163"},
@@ -274,14 +304,7 @@ django-cors-headers = [
     {file = "django-cors-headers-3.11.0.tar.gz", hash = "sha256:eb98389bf7a2afc5d374806af4a9149697e3a6955b5a2dc2bf049f7d33647456"},
     {file = "django_cors_headers-3.11.0-py3-none-any.whl", hash = "sha256:a22be2befd4069c4fc174f11cf067351df5c061a3a5f94a01650b4e928b0372b"},
 ]
-django-elasticsearch-dsl = [
-    {file = "django-elasticsearch-dsl-7.2.2.tar.gz", hash = "sha256:811d3909b3387fd55c19d9bbcf0e9a9b234f085df3f8422d59e7519a5f733e0e"},
-    {file = "django_elasticsearch_dsl-7.2.2-py2.py3-none-any.whl", hash = "sha256:3c58a254a6318b169eb904d41d802924b99ea8e53ddc2c596ebba90506cf47fa"},
-]
-django-elasticsearch-dsl-drf = [
-    {file = "django-elasticsearch-dsl-drf-0.22.2.tar.gz", hash = "sha256:27e610d64deb9f8e984305b797b8eac16b989eeb821009edc9cd68ccda3e8c43"},
-    {file = "django_elasticsearch_dsl_drf-0.22.2-py2.py3-none-any.whl", hash = "sha256:9e31e6dff3f992f28759f8bd32f0ccc45bb9faccafa681049853ad332e2d6183"},
-]
+django-elasticsearch-dsl-drf = []
 django-filter = [
     {file = "django-filter-21.1.tar.gz", hash = "sha256:632a251fa8f1aadb4b8cceff932bb52fe2f826dd7dfe7f3eac40e5c463d6836e"},
     {file = "django_filter-21.1-py3-none-any.whl", hash = "sha256:f4a6737a30104c98d2e2a5fb93043f36dd7978e0c7ddc92f5998e85433ea5063"},
@@ -290,21 +313,27 @@ django-nine = [
     {file = "django-nine-0.2.5.tar.gz", hash = "sha256:84322aff8201ceb7647d846ca58863d34e27eb1438aa109819ad091a773a7c96"},
     {file = "django_nine-0.2.5-py2.py3-none-any.whl", hash = "sha256:17337c28e1a45255f5552a2267e2e943e26c944f6f89ed281e6963b901700647"},
 ]
+django-opensearch-dsl = [
+    {file = "django-opensearch-dsl-0.2.0.tar.gz", hash = "sha256:e2dfe132544a0a17a0b330c6145837b060fb1ae36b3d9de055cfd42eacc082b2"},
+]
 djangorestframework = [
     {file = "djangorestframework-3.12.4-py3-none-any.whl", hash = "sha256:6d1d59f623a5ad0509fe0d6bfe93cbdfe17b8116ebc8eda86d45f6e16e819aaf"},
     {file = "djangorestframework-3.12.4.tar.gz", hash = "sha256:f747949a8ddac876e879190df194b925c177cdeb725a099db1460872f7c0a7f2"},
 ]
-elasticsearch = [
-    {file = "elasticsearch-7.16.3-py2.py3-none-any.whl", hash = "sha256:213eaae9937924a9c523792748e7b0fc7ea2041d32a646538cbe81e52f852e1f"},
-    {file = "elasticsearch-7.16.3.tar.gz", hash = "sha256:8adf8bc351ed55df7296be1009d38a1c999c0abc7d8700fa88533f1ad6087c5e"},
-]
-elasticsearch-dsl = [
-    {file = "elasticsearch-dsl-7.4.0.tar.gz", hash = "sha256:c4a7b93882918a413b63bed54018a1685d7410ffd8facbc860ee7fd57f214a6d"},
-    {file = "elasticsearch_dsl-7.4.0-py2.py3-none-any.whl", hash = "sha256:046ea10820b94c075081b528b4526c5bc776bda4226d702f269a5f203232064b"},
-]
 gunicorn = [
     {file = "gunicorn-20.1.0-py3-none-any.whl", hash = "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e"},
     {file = "gunicorn-20.1.0.tar.gz", hash = "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"},
+]
+opensearch = [
+    {file = "opensearch-0.9.2.tar.gz", hash = "sha256:81b71bb8659e21d9acf70cc49929e14ba5f9c0011ed2b731d3755511e836ca5f"},
+]
+opensearch-dsl = [
+    {file = "opensearch-dsl-1.0.0.tar.gz", hash = "sha256:745fd4b05934b764f3ebca0dd9b1e7bd9b5934fcbb6c620d7087d24bcc8241c7"},
+    {file = "opensearch_dsl-1.0.0-py2.py3-none-any.whl", hash = "sha256:aee9199b3fee8a572bc476e22be44d8acafbef8f1b777a51fac898623f125b56"},
+]
+opensearch-py = [
+    {file = "opensearch-py-1.0.0.tar.gz", hash = "sha256:fa952836cabfa1b2fb05f852edc1a373342494345e89fd52b7124daf4d296bb4"},
+    {file = "opensearch_py-1.0.0-py2.py3-none-any.whl", hash = "sha256:17afebc25dc890b96c4e9ec8692dcfdb6842c028ce8c2d252e8f55c587960177"},
 ]
 psycopg2 = [
     {file = "psycopg2-2.9.3-cp310-cp310-win32.whl", hash = "sha256:083707a696e5e1c330af2508d8fab36f9700b26621ccbcb538abe22e15485362"},
