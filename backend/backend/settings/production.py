@@ -25,9 +25,9 @@ DATABASES = {
     "default": dj_database_url.config()
 }
 
-ELASTICSEARCH_DSL = {
+OPENSEARCH_DSL = {
     "default": {
-        "hosts": os.environ["ELASTICSEARCH_HOST"],
+        "hosts": [os.environ["ELASTICSEARCH_HOST"]],
         "http_auth": (
             os.environ["ELASTICSEARCH_USER"],
             os.environ["ELASTICSEARCH_PASSWORD"],
