@@ -8,7 +8,7 @@ from .base import *  # noqa: F403,F401
 
 DEBUG = os.environ.get("DEBUG", False)
 
-STATIC_ROOT = ""
+STATIC_ROOT = BASE_DIR / "static"  # noqa: F405
 
 CORS_ORIGIN_ALLOW_ALL = DEBUG
 
@@ -46,5 +46,3 @@ OPENSEARCH_DSL = {
 OPENSEARCH_INDEX_PREFIX = os.environ["OPENSEARCH_INDEX_PREFIX"]
 
 CSRF_COOKIE_SECURE = True
-
-SECURE_SSL_REDIRECT = True
