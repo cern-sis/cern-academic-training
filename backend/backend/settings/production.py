@@ -10,6 +10,8 @@ DEBUG = os.environ.get("DEBUG", False)
 
 STATIC_ROOT = BASE_DIR / "static"  # noqa: F405
 
+STATIC_URL = "/backend-static/"
+
 CORS_ORIGIN_ALLOW_ALL = DEBUG
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
