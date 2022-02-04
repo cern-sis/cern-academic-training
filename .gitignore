@@ -78,3 +78,5 @@ celerybeat-schedule
 db.sqlite3
 
 backend/test
+
+backend/static
