@@ -8,7 +8,7 @@ from .base import *  # noqa: F403,F401
 
 DEBUG = os.environ.get("DEBUG", False)
 
-STATIC_ROOT = BASE_DIR / "static"  # noqa: F405
+STATIC_ROOT = ""
 
 CORS_ORIGIN_ALLOW_ALL = DEBUG
 
