@@ -6,7 +6,6 @@ import "antd/dist/antd.css";
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
-import { getLectures } from "../data";
 import { getApiRoot } from "../api/api_root";
 
 const { Content } = Layout;
@@ -14,23 +13,36 @@ const { Content } = Layout;
 function Results() {
   const [searchTerm, setSearchTerm] = useSearchParams("");
 
-  const lectures = getLectures();
-  // let apiInstance = getApiRoot();
+  let apiInstance = getApiRoot();
 
-  // const [lectures, setLectures] = React.useState<any>();
+  const [lectures, setLectures] = React.useState<any>();
 
-  // React.useEffect(() => {
-  //   apiInstance.get(`/search/lectures`).then((response) => {
-  //     setLectures(response.data);
-  //     console.log(response.data);
-  //     console.log(response.status);
-  //     console.log(response.statusText);
-  //     console.log(response.headers);
-  //     console.log(response.config);
-  //   });
-  // }, []);
+  React.useEffect(() => {
+    apiInstance.get(`/search/lectures/?${searchTerm}`).then((response) => {
+      if (response.data.error) {
+        console.log(response.data.message);
+      } else {
+        console.log(response.data.results);
+        console.log(response.status);
+        console.log(response.statusText);
+        console.log(response.headers);
+        console.log(response.config);
 
-  // if (!lectures) return null;
+        let array = [response.data.results];
+
+        for (var i = 0; i < array.length; i++) {
+          try {
+            setLectures(array[i]);
+            console.log("It works");
+          } catch (error) {
+            console.log(error);
+          }
+        }
+      }
+    });
+  }, []);
+
+  if (!lectures) return null;
 
   const state = {
     current: 3,
@@ -56,16 +68,16 @@ function Results() {
               <h1>Search results:</h1>
               {lectures
                 .filter((value: any) => {
-                  let queue = searchTerm.get("queue");
-                  if (!queue) return true;
+                  let search = searchTerm.get("search");
+                  if (!search) return true;
                   let target =
                     value.title.toLowerCase() ||
                     value.speaker.toLowerCase() ||
                     value.speaker_details.toLowerCase() ||
                     value.abstract.toLowerCase() ||
                     value.date.toLowerCase() ||
-                    value.lectureId.toString();
-                  return target.startsWith(queue.toLowerCase());
+                    value.lecture_id.toString();
+                  return target.startsWith(search.toLowerCase());
                 })
                 .map((lecture: any) => {
                   return (
@@ -73,7 +85,7 @@ function Results() {
                       <nav>
                         <Link
                           style={{ display: "block", margin: "1rem 0" }}
-                          to={`/lectures/${lecture.lecture_id}`}
+                          to={`/lectures/${lecture.lecture_id}/`}
                           key={lecture.lecture_id}
                         >
                           <div className="video-content">

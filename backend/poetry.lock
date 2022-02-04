@@ -137,20 +137,6 @@ bcrypt = ["bcrypt"]
 name = "django-cors-headers"
 version = "3.11.0"
 description = "django-cors-headers is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS)."
-<<<<<<< HEAD
-=======
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-Django = ">=2.2"
-
-[[package]]
-name = "django-elasticsearch-dsl"
-version = "7.2.2"
-description = "Wrapper around elasticsearch-dsl-py for django models"
->>>>>>> f516051 (detail page with api)
 category = "main"
 optional = false
 python-versions = ">=3.7"
@@ -587,11 +573,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-<<<<<<< HEAD
 content-hash = "9f6533530bb6cd05d8d8010daff15dce95f011f411fccbb788c83cf1d14eee6a"
-=======
-content-hash = "8700217f132e14afcb54f19e8a42e1927bf9dc24038825eb7f0f895d878f1904"
->>>>>>> f516051 (detail page with api)
 
 [metadata.files]
 appnope = [
@@ -666,17 +648,6 @@ django = [
 django-cors-headers = [
     {file = "django-cors-headers-3.11.0.tar.gz", hash = "sha256:eb98389bf7a2afc5d374806af4a9149697e3a6955b5a2dc2bf049f7d33647456"},
     {file = "django_cors_headers-3.11.0-py3-none-any.whl", hash = "sha256:a22be2befd4069c4fc174f11cf067351df5c061a3a5f94a01650b4e928b0372b"},
-<<<<<<< HEAD
-=======
-]
-django-elasticsearch-dsl = [
-    {file = "django-elasticsearch-dsl-7.2.2.tar.gz", hash = "sha256:811d3909b3387fd55c19d9bbcf0e9a9b234f085df3f8422d59e7519a5f733e0e"},
-    {file = "django_elasticsearch_dsl-7.2.2-py2.py3-none-any.whl", hash = "sha256:3c58a254a6318b169eb904d41d802924b99ea8e53ddc2c596ebba90506cf47fa"},
-]
-django-elasticsearch-dsl-drf = [
-    {file = "django-elasticsearch-dsl-drf-0.22.2.tar.gz", hash = "sha256:27e610d64deb9f8e984305b797b8eac16b989eeb821009edc9cd68ccda3e8c43"},
-    {file = "django_elasticsearch_dsl_drf-0.22.2-py2.py3-none-any.whl", hash = "sha256:9e31e6dff3f992f28759f8bd32f0ccc45bb9faccafa681049853ad332e2d6183"},
->>>>>>> f516051 (detail page with api)
 ]
 django-elasticsearch-dsl-drf = []
 django-filter = [

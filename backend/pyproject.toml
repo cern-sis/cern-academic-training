@@ -11,16 +11,12 @@ djangorestframework = "^3.12.4"
 django-filter = "^21.1"
 dj-database-url = "^0.5.0"
 psycopg2 = "^2.9.3"
-<<<<<<< HEAD
 sentry-sdk = "^1.5.4"
 gunicorn = "^20.1.0"
 django-cors-headers = "^3.11.0"
 django-opensearch-dsl = "^0.2.0"
 django-elasticsearch-dsl-drf = {git = "https://github.com/cern-sis/django-elasticsearch-dsl-drf.git", rev = "opensearch"}
 ipython = "^8.0.1"
-=======
-django-cors-headers = "^3.11.0"
->>>>>>> f516051 (detail page with api)
 
 [tool.poetry.dev-dependencies]
 

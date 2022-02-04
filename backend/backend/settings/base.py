@@ -29,11 +29,7 @@ DEBUG = True
 
 CORS_ORIGIN_ALLOW_ALL = DEBUG
 
-<<<<<<< HEAD:backend/backend/settings/base.py
 ALLOWED_HOSTS = []
-=======
-CORS_ORIGIN_ALLOW_ALL = DEBUG
->>>>>>> f516051 (detail page with api):backend/backend/settings.py
 
 # Application definition
 
@@ -52,11 +48,9 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "django_opensearch_dsl",
     "django_elasticsearch_dsl_drf",
-    "corsheaders",
 ]
 
 MIDDLEWARE = [
-    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",

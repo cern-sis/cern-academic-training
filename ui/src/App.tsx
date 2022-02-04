@@ -8,7 +8,6 @@ import AT_HEADER from "./components/AT_HEADER";
 import CERN_FOOTER from "./components/CERN_FOOTER";
 import CERN_TOOLBAR from "./components/CERN_TOOLBAR";
 import { PlayCircleOutlined } from "@ant-design/icons";
-import { getLectures } from "./data";
 import { getApiRoot } from "./api/api_root";
 
 const { Content } = Layout;
@@ -21,24 +20,36 @@ const handleKeyPress = (ev: React.KeyboardEvent<HTMLTextAreaElement>) => {
 function App() {
   const photos = getPhotos();
 
-  const lectures = getLectures();
+  let apiInstance = getApiRoot();
 
-  // let apiInstance = getApiRoot();
+  const [lectures, setLectures] = React.useState<any>();
 
-  // const [lectures, setLectures] = React.useState<any>();
+  React.useEffect(() => {
+    apiInstance.get(`/search/lectures/`).then((response) => {
+      if (response.data.error) {
+        console.log(response.data.message);
+      } else {
+        console.log(response.data.results);
+        console.log(response.status);
+        console.log(response.statusText);
+        console.log(response.headers);
+        console.log(response.config);
 
-  // React.useEffect(() => {
-  //   apiInstance.get(`/search/lectures`).then((response) => {
-  //     setLectures(response.data);
-  //     console.log(response.data);
-  //     console.log(response.status);
-  //     console.log(response.statusText);
-  //     console.log(response.headers);
-  //     console.log(response.config);
-  //   });
-  // }, []);
+        let array = [response.data.results];
 
-  // if (!lectures) return null;
+        for (var i = 0; i < array.length; i++) {
+          try {
+            setLectures(array[i]);
+            console.log("It works");
+          } catch (error) {
+            console.log(error);
+          }
+        }
+      }
+    });
+  }, []);
+
+  if (!lectures) return null;
 
   return (
     <Layout className="layout">
@@ -86,7 +97,7 @@ function App() {
             <Row justify="center" gutter={[16, 16]}>
               {lectures.map((lecture: any) => {
                 return (
-                  <Col span={6} key={lecture.lecture_id}>
+                  <Col span={6}>
                     <nav>
                       <Link
                         style={{ display: "block", margin: "1rem 0" }}
