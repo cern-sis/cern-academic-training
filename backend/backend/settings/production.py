@@ -18,7 +18,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 sentry_sdk.init(
     dsn=os.environ["SENTRY_DSN"],
-    environment="cat-production",
+    environment=os.environ["SENTRY_ENVIRONMENT"],
     integrations=[DjangoIntegration()],
 )
 
@@ -43,4 +43,4 @@ OPENSEARCH_DSL = {
     },
 }
 
-OPENSEARCH_INDEX_PREFIX = "cat-production"
+OPENSEARCH_INDEX_PREFIX = os.environ["OPENSEARCH_INDEX_PREFIX"]
