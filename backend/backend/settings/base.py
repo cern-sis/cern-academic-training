@@ -31,7 +31,6 @@ CORS_ORIGIN_ALLOW_ALL = DEBUG
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
