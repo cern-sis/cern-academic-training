@@ -1,24 +1,38 @@
+import React, { useState, useEffect } from "react";
 import { Outlet, Link, useSearchParams } from "react-router-dom";
-import { getLectures } from "../data";
-import "../App.css";
 import { Layout, Pagination, List } from "antd";
-import "antd/dist/antd.css";
+
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
+import { getApiRoot } from "../api/api_root";
 
 const { Content } = Layout;
 
 function Results() {
-  const lectures = getLectures();
-  const [searchTerm, setSearchTerm] = useSearchParams("");
+  const [searchTerm] = useSearchParams();
+  const searchValue = searchTerm.get("search");
+  const [lectures, setLectures] = useState<any>([]);
+
+  const searchLectures = async () => {
+    try {
+      const searchQuery = searchValue ? `?search=${searchValue}` : "";
+      const results = await getApiRoot().get(`/search/lectures/${searchQuery}`);
+      setLectures(results.data.results);
+    } catch (error) {
+      setLectures([]);
+    }
+  };
+
+  useEffect(() => {
+    searchLectures();
+  }, [searchValue]);
 
   const state = {
     current: 3,
   };
 
   const onChange = (page: any) => {
-    console.log(page);
     setState({
       current: page,
     });
@@ -34,41 +48,33 @@ function Results() {
         <div className="search">
           <div className="container">
             <div className="container-content">
-              <h1>Search results:</h1>
-              {lectures
-                .filter((value) => {
-                  let queue = searchTerm.get("queue");
-                  if (!queue) return true;
-                  let target =
-                    value.title.toLowerCase() ||
-                    value.speaker.toLowerCase() ||
-                    value.speaker_details.toLowerCase() ||
-                    value.abstract.toLowerCase() ||
-                    value.date.toLowerCase() ||
-                    value.key.toString();
-                  return target.startsWith(queue.toLowerCase());
-                })
-                .map((lecture) => {
-                  return (
-                    <List>
-                      <nav>
-                        <Link
-                          style={{ display: "block", margin: "1rem 0" }}
-                          to={`/lectures/${lecture.key}`}
-                          key={lecture.key}
-                        >
-                          <div className="video-content">
-                            <div className="list-thumbnail">
-                              <img alt="thumbnail" src={lecture.thumbnail} />
-                            </div>
-                            <h2>{lecture.title}</h2>
-                            <p>{lecture.speaker}</p>
+              <h1>
+                Search results: {searchValue ? `"${searchValue}"` : null}{" "}
+              </h1>
+              {lectures.map((lecture: any) => {
+                return (
+                  <List key={lecture.lecture_id}>
+                    <nav>
+                      <Link
+                        style={{ display: "block", margin: "1rem 0" }}
+                        to={`/lectures/${lecture.lecture_id}/`}
+                        key={lecture.lecture_id}
+                      >
+                        <div className="video-content">
+                          <div className="list-thumbnail">
+                            <img
+                              alt="thumbnail"
+                              src={lecture.thumbnail_picture}
+                            />
                           </div>
-                        </Link>
-                      </nav>
-                    </List>
-                  );
-                })}
+                          <h2>{lecture.title}</h2>
+                          <p>{lecture.speaker}</p>
+                        </div>
+                      </Link>
+                    </nav>
+                  </List>
+                );
+              })}
               <Outlet />
             </div>
 

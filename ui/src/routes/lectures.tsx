@@ -1,17 +1,46 @@
 import { Outlet, Link } from "react-router-dom";
-import { getLectures } from "../data";
 import "../App.css";
 import { Layout, Card } from "antd";
 import "antd/dist/antd.css";
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
+import { getApiRoot } from "../api/api_root";
+import React from "react";
 
 const { Content } = Layout;
 
 function Lectures() {
-  const lectures = getLectures();
+  let apiInstance = getApiRoot();
 
+  const [lectures, setLectures] = React.useState<any>();
+
+  React.useEffect(() => {
+    apiInstance.get(`/search/lectures/`).then((response) => {
+      if (response.data.error) {
+        console.log(response.data.message);
+      } else {
+        console.log(response.data.results);
+        console.log(response.status);
+        console.log(response.statusText);
+        console.log(response.headers);
+        console.log(response.config);
+
+        let array = [response.data.results];
+
+        for (var i = 0; i < array.length; i++) {
+          try {
+            setLectures(array[i]);
+            console.log("It works");
+          } catch (error) {
+            console.log(error);
+          }
+        }
+      }
+    });
+  }, []);
+
+  if (!lectures) return null;
   return (
     <Layout className="layout">
       <CERN_TOOLBAR />
@@ -20,10 +49,10 @@ function Lectures() {
 
       <Content id="atc-content">
         <div className="lecture">
-          {lectures.map((lecture) => {
+          {lectures.map((lecture: any) => {
             return (
               <nav>
-                <Link to={`/lectures/${lecture.key}`} key={lecture.key}>
+                <Link to={`/${lecture.lecture_id}`}>
                   <Card
                     hoverable
                     className="video-card"

@@ -1,14 +1,14 @@
 import "./App.css";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Layout, Row, Col, Card, Input, Carousel, Space } from "antd";
-import "antd/dist/antd.css";
-import { getLectures } from "./data";
+import { Layout, Row, Col, Card, Input, Carousel } from "antd";
+
 import { getPhotos } from "./photos";
 import AT_HEADER from "./components/AT_HEADER";
 import CERN_FOOTER from "./components/CERN_FOOTER";
 import CERN_TOOLBAR from "./components/CERN_TOOLBAR";
 import { PlayCircleOutlined } from "@ant-design/icons";
+import { getApiRoot } from "./api/api_root";
 
 const { Content } = Layout;
 const { TextArea } = Input;
@@ -18,8 +18,21 @@ const handleKeyPress = (ev: React.KeyboardEvent<HTMLTextAreaElement>) => {
 };
 
 function App() {
-  const lectures = getLectures();
   const photos = getPhotos();
+  const [lectures, setLectures] = useState([]);
+
+  const fetchLectures = async () => {
+    try {
+      const results = await getApiRoot().get(`/search/lectures/`);
+      setLectures(results.data.results);
+    } catch (error) {
+      setLectures([]);
+    }
+  };
+
+  useEffect(() => {
+    fetchLectures();
+  }, []);
 
   return (
     <Layout className="layout">
@@ -34,7 +47,7 @@ function App() {
               <Carousel autoplay dots={false}>
                 {photos.map((photo) => {
                   return (
-                    <div className="container-fluid">
+                    <div key={photo.src} className="container-fluid">
                       <div className="content">
                         <img alt={photo.alt} src={photo.src} />
                       </div>
@@ -58,27 +71,29 @@ function App() {
                 </h1>
               </div>
             </div>
-
             <div className="recent">
               <h2>MOST RECENT</h2>
               <div className="divider" />
             </div>
-
+            .{" "}
             <Row justify="center" gutter={[16, 16]}>
-              {lectures.map((lecture) => {
+              {lectures.map((lecture: any) => {
                 return (
-                  <Col span={6} key={lecture.key}>
+                  <Col key={lecture.lecture_id} span={6}>
                     <nav>
                       <Link
                         style={{ display: "block", margin: "1rem 0" }}
-                        to={`/lectures/${lecture.key}`}
-                        key={lecture.key}
+                        to={`/lectures/${lecture.lecture_id}`}
+                        key={lecture.lecture_id}
                       >
                         <Card
                           hoverable
                           className="video-card"
                           cover={
-                            <img alt="thumbnail" src={lecture.thumbnail} />
+                            <img
+                              alt="thumbnail"
+                              src={lecture.thumbnail_picture}
+                            />
                           }
                         >
                           <Card.Grid className="grid-style">
