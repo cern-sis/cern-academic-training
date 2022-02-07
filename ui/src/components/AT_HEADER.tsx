@@ -1,30 +1,26 @@
-import { Link, useSearchParams } from "react-router-dom";
+import React, { useState } from "react";
+
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { Layout, Input, Button } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-import "antd/dist/antd.css";
+
 import "./AT_HEADER.css";
 
 const { Header } = Layout;
 
 function AT_HEADER() {
-  const [searchTerm, setSearchTerm] = useSearchParams("");
+  let navigate = useNavigate();
+  const [searchQuery] = useSearchParams();
+  const searchValue = searchQuery.get("search");
+  let [searchTerm, setSearchTerm] = useState(searchValue);
 
-  const value = searchTerm.get("search") || "";
-
-  const handleChange = (ev: React.ChangeEvent<HTMLInputElement>) => {
-    let search = (ev.target as HTMLInputElement).value;
-    if (search) {
-      setSearchTerm({ search });
+  const onKeyDown = (ev: any) => {
+    const searchValue = ev.target.value;
+    if (searchValue) {
+      setSearchTerm(ev.target.value);
+      navigate(`/search?search=${ev.target.value}`);
     } else {
-      setSearchTerm({});
-    }
-  };
-
-  //TODO - the pressDownKey works, but the function of search isn't binded yet
-  const onKeyDown = (ev: React.KeyboardEvent<HTMLInputElement>) => {
-    if (ev.key === "Enter") {
-      ev.preventDefault();
-      console.log("onKeyDown", ev);
+      navigate("/search");
     }
   };
 
@@ -41,14 +37,13 @@ function AT_HEADER() {
               className="search-input"
               bordered={false}
               placeholder="Search..."
-              value={value}
-              onChange={handleChange}
               onPressEnter={onKeyDown}
+              defaultValue={searchValue || ""}
             />
           </li>
 
           <li className="search-icon">
-            <Link to={`/search/?${searchTerm}`}>
+            <Link to={`/search/?search=${searchTerm}`}>
               <Button
                 type="primary"
                 style={{

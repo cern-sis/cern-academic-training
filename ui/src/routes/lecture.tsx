@@ -1,33 +1,33 @@
+import React, { useEffect, useState } from "react";
 import { useParams, Outlet } from "react-router-dom";
-import "../App.css";
+
 import { Layout } from "antd";
-import "antd/dist/antd.css";
+
+import "../App.css";
+
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
 import { getApiRoot } from "../api/api_root";
-import React from "react";
 
 const { Content } = Layout;
 
 function Lecture() {
-  const [lecture, setLecture] = React.useState<any>();
+  const [lecture, setLecture] = useState<any>({});
   let { lectureId } = useParams();
 
-  let apiInstance = getApiRoot();
+  const fetchLecture = async () => {
+    try {
+      const results = await getApiRoot().get(`/lectures/${lectureId}/`);
+      setLecture(results.data);
+    } catch (error) {
+      setLecture({});
+    }
+  };
 
-  React.useEffect(() => {
-    apiInstance.get(`/lectures/${lectureId}/`).then((response) => {
-      setLecture(response.data);
-      console.log(response.data);
-      console.log(response.status);
-      console.log(response.statusText);
-      console.log(response.headers);
-      console.log(response.config);
-    });
+  useEffect(() => {
+    fetchLecture();
   }, []);
-
-  if (!lecture) return null;
 
   return (
     <Layout className="layout">

@@ -1,8 +1,7 @@
-import { Outlet, Link, useSearchParams, useParams } from "react-router-dom";
-import React from "react";
-import "../App.css";
+import React, { useState, useEffect } from "react";
+import { Outlet, Link, useSearchParams } from "react-router-dom";
 import { Layout, Pagination, List } from "antd";
-import "antd/dist/antd.css";
+
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
@@ -11,45 +10,29 @@ import { getApiRoot } from "../api/api_root";
 const { Content } = Layout;
 
 function Results() {
-  const [searchTerm, setSearchTerm] = useSearchParams("");
+  const [searchTerm] = useSearchParams();
+  const searchValue = searchTerm.get("search");
+  const [lectures, setLectures] = useState<any>([]);
 
-  let apiInstance = getApiRoot();
+  const searchLectures = async () => {
+    try {
+      const searchQuery = searchValue ? `?search=${searchValue}` : "";
+      const results = await getApiRoot().get(`/search/lectures/${searchQuery}`);
+      setLectures(results.data.results);
+    } catch (error) {
+      setLectures([]);
+    }
+  };
 
-  const [lectures, setLectures] = React.useState<any>();
-
-  React.useEffect(() => {
-    apiInstance.get(`/search/lectures/?${searchTerm}`).then((response) => {
-      if (response.data.error) {
-        console.log(response.data.message);
-      } else {
-        console.log(response.data.results);
-        console.log(response.status);
-        console.log(response.statusText);
-        console.log(response.headers);
-        console.log(response.config);
-
-        let array = [response.data.results];
-
-        for (var i = 0; i < array.length; i++) {
-          try {
-            setLectures(array[i]);
-            console.log("It works");
-          } catch (error) {
-            console.log(error);
-          }
-        }
-      }
-    });
-  }, []);
-
-  if (!lectures) return null;
+  useEffect(() => {
+    searchLectures();
+  }, [searchValue]);
 
   const state = {
     current: 3,
   };
 
   const onChange = (page: any) => {
-    console.log(page);
     setState({
       current: page,
     });
@@ -65,44 +48,33 @@ function Results() {
         <div className="search">
           <div className="container">
             <div className="container-content">
-              <h1>Search results:</h1>
-              {lectures
-                .filter((value: any) => {
-                  let search = searchTerm.get("search");
-                  if (!search) return true;
-                  let target =
-                    value.title.toLowerCase() ||
-                    value.speaker.toLowerCase() ||
-                    value.speaker_details.toLowerCase() ||
-                    value.abstract.toLowerCase() ||
-                    value.date.toLowerCase() ||
-                    value.lecture_id.toString();
-                  return target.startsWith(search.toLowerCase());
-                })
-                .map((lecture: any) => {
-                  return (
-                    <List>
-                      <nav>
-                        <Link
-                          style={{ display: "block", margin: "1rem 0" }}
-                          to={`/lectures/${lecture.lecture_id}/`}
-                          key={lecture.lecture_id}
-                        >
-                          <div className="video-content">
-                            <div className="list-thumbnail">
-                              <img
-                                alt="thumbnail"
-                                src={lecture.thumbnail_picture}
-                              />
-                            </div>
-                            <h2>{lecture.title}</h2>
-                            <p>{lecture.speaker}</p>
+              <h1>
+                Search results: {searchValue ? `"${searchValue}"` : null}{" "}
+              </h1>
+              {lectures.map((lecture: any) => {
+                return (
+                  <List key={lecture.lecture_id}>
+                    <nav>
+                      <Link
+                        style={{ display: "block", margin: "1rem 0" }}
+                        to={`/lectures/${lecture.lecture_id}/`}
+                        key={lecture.lecture_id}
+                      >
+                        <div className="video-content">
+                          <div className="list-thumbnail">
+                            <img
+                              alt="thumbnail"
+                              src={lecture.thumbnail_picture}
+                            />
                           </div>
-                        </Link>
-                      </nav>
-                    </List>
-                  );
-                })}
+                          <h2>{lecture.title}</h2>
+                          <p>{lecture.speaker}</p>
+                        </div>
+                      </Link>
+                    </nav>
+                  </List>
+                );
+              })}
               <Outlet />
             </div>
 

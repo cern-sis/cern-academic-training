@@ -1,8 +1,8 @@
 import "./App.css";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout, Row, Col, Card, Input, Carousel } from "antd";
-import "antd/dist/antd.css";
+
 import { getPhotos } from "./photos";
 import AT_HEADER from "./components/AT_HEADER";
 import CERN_FOOTER from "./components/CERN_FOOTER";
@@ -19,37 +19,20 @@ const handleKeyPress = (ev: React.KeyboardEvent<HTMLTextAreaElement>) => {
 
 function App() {
   const photos = getPhotos();
+  const [lectures, setLectures] = useState([]);
 
-  let apiInstance = getApiRoot();
+  const fetchLectures = async () => {
+    try {
+      const results = await getApiRoot().get(`/search/lectures/`);
+      setLectures(results.data.results);
+    } catch (error) {
+      setLectures([]);
+    }
+  };
 
-  const [lectures, setLectures] = React.useState<any>();
-
-  React.useEffect(() => {
-    apiInstance.get(`/search/lectures/`).then((response) => {
-      if (response.data.error) {
-        console.log(response.data.message);
-      } else {
-        console.log(response.data.results);
-        console.log(response.status);
-        console.log(response.statusText);
-        console.log(response.headers);
-        console.log(response.config);
-
-        let array = [response.data.results];
-
-        for (var i = 0; i < array.length; i++) {
-          try {
-            setLectures(array[i]);
-            console.log("It works");
-          } catch (error) {
-            console.log(error);
-          }
-        }
-      }
-    });
+  useEffect(() => {
+    fetchLectures();
   }, []);
-
-  if (!lectures) return null;
 
   return (
     <Layout className="layout">
@@ -64,7 +47,7 @@ function App() {
               <Carousel autoplay dots={false}>
                 {photos.map((photo) => {
                   return (
-                    <div className="container-fluid">
+                    <div key={photo.src} className="container-fluid">
                       <div className="content">
                         <img alt={photo.alt} src={photo.src} />
                       </div>
@@ -88,16 +71,15 @@ function App() {
                 </h1>
               </div>
             </div>
-
             <div className="recent">
               <h2>MOST RECENT</h2>
               <div className="divider" />
             </div>
-
+            .{" "}
             <Row justify="center" gutter={[16, 16]}>
               {lectures.map((lecture: any) => {
                 return (
-                  <Col span={6}>
+                  <Col key={lecture.lecture_id} span={6}>
                     <nav>
                       <Link
                         style={{ display: "block", margin: "1rem 0" }}
