@@ -11,7 +11,7 @@ const { Header } = Layout;
 function AT_HEADER() {
   let navigate = useNavigate();
   const [searchQuery] = useSearchParams();
-  const searchValue = searchQuery.get("search");
+  const searchValue = searchQuery.get("search") || "";
   let [searchTerm, setSearchTerm] = useState(searchValue);
 
   const onKeyDown = (ev: any) => {
