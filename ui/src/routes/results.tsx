@@ -9,7 +9,7 @@ import { getApiRoot } from "../api/api_root";
 
 const { Content } = Layout;
 
-const PAGE_SIZE = 2;
+const PAGE_SIZE = 5;
 
 function Results() {
   const [searchTerm] = useSearchParams();

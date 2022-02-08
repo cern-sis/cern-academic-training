@@ -18,7 +18,7 @@ function AT_HEADER() {
     const searchValue = ev.target.value;
     if (searchValue) {
       setSearchTerm(ev.target.value);
-      navigate(`/search?search=${ev.target.value}`);
+      navigate(`/search?search=${ev.target.value}&page=1`);
     } else {
       navigate("/search");
     }
@@ -43,7 +43,7 @@ function AT_HEADER() {
           </li>
 
           <li className="search-icon">
-            <Link to={`/search/?search=${searchTerm}`}>
+            <Link to={`/search/?search=${searchTerm}&page=1`}>
               <Button
                 type="primary"
                 style={{
