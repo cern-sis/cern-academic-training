@@ -9,16 +9,23 @@ import { getApiRoot } from "../api/api_root";
 
 const { Content } = Layout;
 
+const PAGE_SIZE = 2;
+
 function Results() {
   const [searchTerm] = useSearchParams();
   const searchValue = searchTerm.get("search");
-  const [lectures, setLectures] = useState<any>([]);
+  const [lectures, setLectures] = useState([]);
+  const [total, setTotal] = useState<number>(0);
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
   const searchLectures = async () => {
     try {
-      const searchQuery = searchValue ? `?search=${searchValue}` : "";
+      const searchQuery = searchValue
+        ? `?search=${searchValue}&page=${currentPage}`
+        : `?page=${currentPage}`;
       const results = await getApiRoot().get(`/search/lectures/${searchQuery}`);
       setLectures(results.data.results);
+      setTotal(results.data.count);
     } catch (error) {
       setLectures([]);
     }
@@ -26,16 +33,10 @@ function Results() {
 
   useEffect(() => {
     searchLectures();
-  }, [searchValue]);
+  }, [searchValue, currentPage]);
 
-  const state = {
-    current: 3,
-  };
-
-  const onChange = (page: any) => {
-    setState({
-      current: page,
-    });
+  const onChange = (page: number) => {
+    setCurrentPage(page);
   };
 
   return (
@@ -80,9 +81,10 @@ function Results() {
 
             <Pagination
               className="pagination"
-              current={state.current}
+              current={currentPage}
+              pageSize={PAGE_SIZE}
               onChange={onChange}
-              total={5}
+              total={total}
             />
           </div>
         </div>
@@ -94,7 +96,3 @@ function Results() {
 }
 
 export default Results;
-
-function setState(arg0: { current: any }) {
-  throw new Error("Function not implemented.");
-}
