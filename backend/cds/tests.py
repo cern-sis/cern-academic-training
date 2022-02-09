@@ -33,6 +33,7 @@ class LectureTest(APITestCase):
             "lecture_note": "2021-10-22T11:59:35Z",
             "imprint": "01:03:18",
             "license": "© 2021 CERN",
+            "lecture_id": 2800620,
         }
 
     def test_post_lecture(self):
@@ -47,7 +48,8 @@ class LectureTest(APITestCase):
         response = self.client.get(self.url, format="json")
 
         expected_data = {
-            "url": "http://testserver/api/v1/lectures/2/",
+            "id": 2,
+            "lecture_id": 2800620,
             "title": "REMOTE: Federated Data Architectures",
             "date": "2021-10-22",
             "corporate_author": "This is an author",
@@ -71,5 +73,5 @@ class LectureTest(APITestCase):
         response = self.client.post(self.url, self.data, format="json")
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-        response = self.client.get(f"{self.url}1/", format="json")
+        response = self.client.get(f"{self.url}2800620/", format="json")
         self.assertEqual(response.status_code, status.HTTP_200_OK)

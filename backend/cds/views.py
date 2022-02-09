@@ -17,6 +17,7 @@ class LectureViewSet(viewsets.ModelViewSet):
     queryset = Lecture.objects.all()
     serializer_class = LectureSerializer
     permission_classes = (IsAuthenticatedOrReadOnly,)
+    lookup_field = "lecture_id"
 
 
 class LectureDocumentView(DocumentViewSet):

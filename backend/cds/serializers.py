@@ -5,7 +5,7 @@ from .documents import LectureDocument
 from .models import Lecture
 
 
-class LectureSerializer(serializers.HyperlinkedModelSerializer):
+class LectureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Lecture
         fields = "__all__"
