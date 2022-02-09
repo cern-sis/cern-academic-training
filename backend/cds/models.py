@@ -17,3 +17,6 @@ class Lecture(models.Model):
     lecture_note = models.DateTimeField(blank=True)
     imprint = models.CharField(max_length=250)
     license = models.CharField(max_length=250)
+
+    def __str__(self):
+        return f"{self.lecture_id} - {self.title} ({self.id})"
