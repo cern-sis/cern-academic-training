@@ -1,7 +1,10 @@
 import logging
+import os
 from datetime import datetime
 from time import sleep
 
+import backoff
+import requests
 from hepcrawl.spiders.common.oaipmh_spider import OAIPMHSpider
 from hepcrawl.utils import strict_kwargs
 from scrapy.http import Request
@@ -110,7 +113,26 @@ class CDSSpider(OAIPMHSpiderOverride):
 
         record = self.parse_item(selector)
         LOGGER.info(f"RECORD {record}")
+        self.create_record_on_backend(record)
         return record
+
+    @backoff.on_exception(
+        backoff.expo, requests.exceptions.RequestException, max_tries=5
+    )
+    def create_record_on_backend(self, record):
+        token = os.environ["AUTH_TOKEN"]
+        host = os.environ.get("CAT_BACKEND", "http://localhost:8000")
+        if record.get("lecture_id"):
+            try:
+                record["lecture_id"] = int(record["lecture_id"])
+                requests.post(
+                    "{}/api/v1/lectures/".format(host),
+                    json=record,
+                    headers={"Authorization": "Token {}".format(token)},
+                )
+                LOGGER.info(f"Send successfully {record['lecture_id']}")
+            except Exception:
+                LOGGER.error(f"Failed to send {record['lecture_id']}")
 
     def parse_item(self, selector):
         record = {}
@@ -190,3 +212,8 @@ class CDSSpider(OAIPMHSpiderOverride):
         ).get()
         record["license"] = "{} {}".format(license_name, license_year)
         return record
+
+    def close_spider(self, item, spider):
+        import ipdb
+
+        ipdb.set_trace()
