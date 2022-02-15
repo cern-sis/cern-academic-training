@@ -55,24 +55,24 @@ function Results() {
               {lectures.map((lecture: any) => {
                 return (
                   <List key={lecture.lecture_id}>
-                    <nav>
-                      <Link
-                        style={{ display: "block", margin: "1rem 0" }}
-                        to={`/lectures/${lecture.lecture_id}/`}
-                        key={lecture.lecture_id}
-                      >
-                        <div className="video-content">
-                          <div className="list-thumbnail">
-                            <img
-                              alt="thumbnail"
-                              src={lecture.thumbnail_picture}
-                            />
-                          </div>
+                    <Link
+                      style={{ display: "block", margin: "1rem 0" }}
+                      to={`/lectures/${lecture.lecture_id}/`}
+                      key={lecture.lecture_id}
+                    >
+                      <div className="video-content">
+                        <div className="list-thumbnail">
+                          <img
+                            alt="thumbnail"
+                            src={lecture.thumbnail_picture}
+                          />
+                        </div>
+                        <div className="video-metadata">
                           <h2>{lecture.title}</h2>
                           <p>{lecture.speaker}</p>
                         </div>
-                      </Link>
-                    </nav>
+                      </div>
+                    </Link>
                   </List>
                 );
               })}

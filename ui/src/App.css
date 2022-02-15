@@ -100,25 +100,22 @@
 
 .video-content {
   padding-bottom: 0;
+  display: flex;
 }
 
 .video-content .list-thumbnail {
-  float: left;
   padding-right: 20px;
 }
 
-.video-content h2 {
+.video-metadata h2 {
   text-align: left;
   font: italic normal normal 18px/25px Open Sans;
   letter-spacing: 1px;
   color: #ffffff;
   opacity: 1;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
-.video-content p {
+.video-metadata p {
   text-align: left;
   font: italic normal normal 14px/16px Open Sans;
   letter-spacing: 0.9px;
