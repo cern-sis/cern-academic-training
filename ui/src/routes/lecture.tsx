@@ -3,8 +3,6 @@ import { useParams, Outlet } from "react-router-dom";
 
 import { Layout } from "antd";
 
-import "../App.css";
-
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
@@ -50,7 +48,12 @@ function Lecture() {
             <h3>{lecture.speaker}</h3>
             <h4>{lecture.date}</h4>
             <a href={lecture.event_details}>Event details (Indico)</a>
-            <p>{lecture.abstract}</p>
+            <p
+              /* eslint-disable-next-line react/no-danger */
+              dangerouslySetInnerHTML={{
+                __html: lecture.abstract,
+              }}
+            />
             <Outlet />
           </div>
         </div>
