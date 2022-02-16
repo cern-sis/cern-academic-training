@@ -23,7 +23,7 @@ function App() {
 
   const fetchLectures = async () => {
     try {
-      const results = await getApiRoot().get(`/search/lectures/`);
+      const results = await getApiRoot().get(`/search/lectures/?page_size=4`);
       setLectures(results.data.results);
     } catch (error) {
       setLectures([]);
@@ -83,7 +83,7 @@ function App() {
                     <nav>
                       <Link
                         style={{ display: "block", margin: "1rem 0" }}
-                        to={`/lectures/${lecture.lecture_id}`}
+                        to={`/lectures/${lecture.lecture_id}/`}
                         key={lecture.lecture_id}
                       >
                         <Card
