@@ -102,6 +102,8 @@ function App() {
                             </div>
                             <div className="video-content">
                               <h2>{lecture.title}</h2>
+                            </div>
+                            <div className="video-content">
                               <p>{lecture.speaker}</p>
                             </div>
                           </Card.Grid>

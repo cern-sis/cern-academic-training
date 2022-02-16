@@ -107,7 +107,11 @@
   padding-right: 20px;
 }
 
-.video-metadata h2 {
+.video-content div {
+  display: inline-grid;
+}
+
+.video-content h2 {
   text-align: left;
   font: italic normal normal 18px/25px Open Sans;
   letter-spacing: 1px;

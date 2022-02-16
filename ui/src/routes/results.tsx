@@ -67,7 +67,7 @@ function Results() {
                             src={lecture.thumbnail_picture}
                           />
                         </div>
-                        <div className="video-metadata">
+                        <div>
                           <h2>{lecture.title}</h2>
                           <p>{lecture.speaker}</p>
                         </div>
