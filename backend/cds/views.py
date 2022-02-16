@@ -10,6 +10,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from .documents import LectureDocument
 from .models import Lecture
+from .pagination import DefaultPagination
 from .serializers import LectureDocumentSerializer, LectureSerializer
 
 
@@ -18,6 +19,7 @@ class LectureViewSet(viewsets.ModelViewSet):
     serializer_class = LectureSerializer
     permission_classes = (IsAuthenticatedOrReadOnly,)
     lookup_field = "lecture_id"
+    pagination_class = DefaultPagination
 
 
 class LectureDocumentView(DocumentViewSet):
@@ -25,6 +27,7 @@ class LectureDocumentView(DocumentViewSet):
     serializer_class = LectureDocumentSerializer
     lookup_field = "lecture_id"
     permission_classes = (IsAuthenticatedOrReadOnly,)
+    pagination_class = DefaultPagination
 
     filter_backends = [
         FilteringFilterBackend,
