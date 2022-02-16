@@ -17,12 +17,13 @@ function Results() {
   const [lectures, setLectures] = useState([]);
   const [total, setTotal] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [pageSize, setPageSize] = useState<number>(10);
 
   const searchLectures = async () => {
     try {
       const searchQuery = searchValue
-        ? `?search=${searchValue}&page=${currentPage}`
-        : `?page=${currentPage}`;
+        ? `?search=${searchValue}&page=${currentPage}&page_size=${pageSize}`
+        : `?page=${currentPage}&page_size=${pageSize}`;
       const results = await getApiRoot().get(`/search/lectures/${searchQuery}`);
       setLectures(results.data.results);
       setTotal(results.data.count);
@@ -33,10 +34,14 @@ function Results() {
 
   useEffect(() => {
     searchLectures();
-  }, [searchValue, currentPage]);
+  }, [searchValue, currentPage, pageSize]);
 
   const onChange = (page: number) => {
     setCurrentPage(page);
+  };
+
+  const onPageSizeChage = (current: number, size: number) => {
+    setPageSize(size);
   };
 
   return (
@@ -82,9 +87,11 @@ function Results() {
             <Pagination
               className="pagination"
               current={currentPage}
-              pageSize={PAGE_SIZE}
+              showSizeChanger
+              pageSize={pageSize}
               onChange={onChange}
               total={total}
+              onShowSizeChange={onPageSizeChage}
             />
           </div>
         </div>
