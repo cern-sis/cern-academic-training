@@ -69,7 +69,7 @@ jobs:
           context: ./backend/
           registry: registry.cern.ch
           push: true
-          tags: registry.cern.ch/cern-academic-training/backend:latest,registry.cern.ch/cern-academic-training/backend:${{ github.sha }}
+          tags: registry.cern.ch/cern-sis/cat-backend:latest,registry.cern.ch/cern-sis/cat-backend:${{ github.sha }}
   ui_build:
     name: UI build
     runs-on: ubuntu-latest
@@ -99,7 +99,7 @@ jobs:
           context: ./ui/
           registry: registry.cern.ch
           push: true
-          tags: registry.cern.ch/cern-academic-training/ui:latest,registry.cern.ch/cern-academic-training/ui:${{ github.sha }}
+          tags: registry.cern.ch/cern-sis/cat-ui:latest,registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
 
   harvest_build:
     name: Harvest build
@@ -130,4 +130,4 @@ jobs:
           context: ./harvest/
           registry: registry.cern.ch
           push: true
-          tags: registry.cern.ch/cern-academic-training/harvest:latest,registry.cern.ch/cern-academic-training/harvest:${{ github.sha }}
+          tags: registry.cern.ch/cern-sis/cat-harvest:latest,registry.cern.ch/cern-sis/cat-harvest:${{ github.sha }}
