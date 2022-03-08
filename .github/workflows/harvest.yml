@@ -70,6 +70,16 @@ jobs:
           registry: registry.cern.ch
           push: true
           tags: registry.cern.ch/cern-sis/cat-backend:latest,registry.cern.ch/cern-sis/cat-backend:${{ github.sha }}
+
+      - name: Deploy QA
+        uses: peter-evans/repository-dispatch@v1
+        if: ${{ github.event_name == 'push'}}
+        with:
+          token: ${{ secrets.INSPIRE_BOT_TOKEN }}
+          repository: inspirehep/kubernetes
+          event-type: deploy
+          client-payload: '{"environment":"cat-qa","image":"registry.cern.ch/cern-sis/cat-backend","tag":"${{ github.sha }}"}'
+
   ui_build:
     name: UI build
     runs-on: ubuntu-latest
@@ -101,6 +111,15 @@ jobs:
           push: true
           tags: registry.cern.ch/cern-sis/cat-ui:latest,registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
 
+      - name: Deploy QA
+        uses: peter-evans/repository-dispatch@v1
+        if: ${{ github.event_name == 'push'}}
+        with:
+          token: ${{ secrets.INSPIRE_BOT_TOKEN }}
+          repository: inspirehep/kubernetes
+          event-type: deploy
+          client-payload: '{"environment":"cat-qa","image":"registry.cern.ch/cern-sis/cat-ui","tag":"${{ github.sha }}"}'
+
   harvest_build:
     name: Harvest build
     runs-on: ubuntu-latest
@@ -131,3 +150,12 @@ jobs:
           registry: registry.cern.ch
           push: true
           tags: registry.cern.ch/cern-sis/cat-harvest:latest,registry.cern.ch/cern-sis/cat-harvest:${{ github.sha }}
+
+      - name: Deploy QA
+        uses: peter-evans/repository-dispatch@v1
+        if: ${{ github.event_name == 'push'}}
+        with:
+          token: ${{ secrets.INSPIRE_BOT_TOKEN }}
+          repository: inspirehep/kubernetes
+          event-type: deploy
+          client-payload: '{"environment":"cat-qa","image":"registry.cern.ch/cern-sis/cat-harvest","tag":"${{ github.sha }}"}'
