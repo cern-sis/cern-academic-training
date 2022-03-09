@@ -131,7 +131,7 @@ jobs:
           token: ${{ secrets.INSPIRE_BOT_TOKEN }}
           repository: inspirehep/kubernetes
           event-type: deploy
-          client-payload: '{"project": "cat", "application":"cat", "namespace": "cat-qa", "image":"registry.cern.ch/cern-sis/cat-backend","new_tag":"${{ github.sha }}"}'
+          client-payload: '{"project": "cat", "application":"cat-backend", "namespace": "cat-qa", "image":"registry.cern.ch/cern-sis/cat-backend","new_tag":"${{ github.sha }}"}'
 
   ui_build:
     name: UI build
@@ -171,7 +171,7 @@ jobs:
           token: ${{ secrets.INSPIRE_BOT_TOKEN }}
           repository: inspirehep/kubernetes
           event-type: deploy
-          client-payload: '{"project": "cat", "application":"cat", "namespace": "cat-qa","image":"registry.cern.ch/cern-sis/cat-ui","new_tag":"${{ github.sha }}"}'
+          client-payload: '{"project": "cat", "application":"cat-ui", "namespace": "cat-qa","image":"registry.cern.ch/cern-sis/cat-ui","new_tag":"${{ github.sha }}"}'
 
   harvest_build:
     name: Harvest build
@@ -211,4 +211,4 @@ jobs:
           token: ${{ secrets.INSPIRE_BOT_TOKEN }}
           repository: inspirehep/kubernetes
           event-type: deploy
-          client-payload: '{"project": "cat", "application":"cat", "namespace": "cat-qa", "image":"registry.cern.ch/cern-sis/cat-harvest","new_tag":"${{ github.sha }}"}'
+          client-payload: '{"project": "cat", "application":"cat-harvest", "namespace": "cat-qa", "image":"registry.cern.ch/cern-sis/cat-harvest","new_tag":"${{ github.sha }}"}'
