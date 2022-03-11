@@ -42,6 +42,7 @@
   opacity: 0.9999;
   width: auto;
   margin-top: -20px;
+  margin-bottom: 140px;
   display: block;
   margin-left: -200px;
   margin-right: -200px;
@@ -69,13 +70,12 @@
   text-transform: uppercase;
   opacity: 1;
   z-index: 6;
-  /* filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.527)); */
   transition: 1s;
 }
 
 .recent h2 {
   text-align: left;
-  padding-top: 160px;
+  padding-top: 60px;
   font: normal normal normal 25px/16px Abolition;
   letter-spacing: 2px;
   color: #ffffff;
@@ -90,7 +90,7 @@
   height: 2px;
   width: 100%;
   border-radius: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   float: right;
 }
 
@@ -117,6 +117,13 @@
   letter-spacing: 1px;
   color: #ffffff;
   opacity: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5em;
+  max-height: 3em;
 }
 
 .video-content p {
@@ -128,27 +135,77 @@
 }
 
 .video-card {
-  margin-top: 10%;
   background-color: transparent;
   border: none;
+  border-radius: 5px;
+  max-height: 150px;
+}
+
+.video-card .card-content {
+  width: 100%;
+  padding: 25px 0 10px 20px;
+  margin-left: -8px;
+  box-shadow: inset 0px 0px 80px transparent;
+}
+
+.play {
+  width: 1em;
+  color: #fff;
+  font-size: 2.6em;
+  opacity: 0.7;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  padding-right: 10px;
+  cursor: pointer;
+  border: none;
+  float: right;
+  text-align: center;
+  z-index: 3;
+}
+
+.video-card:hover .play {
+  font-size: 3.8em;
+  transition: 0.5s;
+}
+
+.video-card:hover {
+  max-height: 300px;
+  transition: 0.5s;
+}
+
+#thumbnail-box {
+  box-shadow: inset 20px 0px 20px rgba(0, 0, 0, 0.747);
+  padding: 10px;
+  display: block;
+  max-height: 150px;
+  border-radius: 5px;
+  border: none;
+  margin-top: -25px;
+}
+
+#thumbnail-box:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: radial-gradient(circle, transparent 50%, #537bd8 140%);
+  mix-blend-mode: difference;
+  border-radius: 5px;
+}
+
+#thumbnail-box img {
+  margin-top: -35px;
+  width: 100%;
   object-fit: cover;
   object-position: 20% 10%;
-}
-
-.video-card .grid-style {
-  width: 100%;
-  padding: 10px;
-  box-shadow: inset 0px -80px 80px transparent;
-}
-
-.video-card .play-circle-icon {
-  color: #fff;
-  float: right;
-  font-size: 30px;
-  opacity: 0.7;
-  padding-left: 8px;
-  margin-top: 15px;
-  background-color: transparent;
+  -o-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+  z-index: 2;
 }
 
 .responsive {
@@ -157,15 +214,18 @@
   margin-right: auto;
 }
 
-.videolists {
+.content-lists {
   padding: 15px 6px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
   max-width: 1000px;
+  position: relative;
+  top: -15px;
+  transition: 2s;
 }
 
-.videolists h1 a {
+.content-lists h1 a {
   color: #fff;
 }
 
@@ -336,6 +396,127 @@ iframe {
   opacity: 0.52;
 }
 
+/* About Us */
+
+.member-card {
+  margin-top: 10%;
+  background: transparent linear-gradient(180deg, #0b1117 0%, #1c3775 100%) 0%
+    0% no-repeat padding-box;
+  border: none;
+  align-items: center;
+  border-radius: 30px;
+  width: 310px;
+  padding-bottom: 40px;
+  border-bottom: 10px outset #0b1117ad;
+}
+
+.member-card .ant-avatar {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border: 1px solid #ffffff;
+  z-index: 2;
+}
+
+.member-card .grid-style {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  bottom: 70px;
+  box-shadow: inset 0px -80px 80px transparent;
+  border-radius: 30px;
+}
+
+.member-card .member-content h2 {
+  text-align: center;
+  font: bold normal normal 16px/18px Open Sans;
+  color: white;
+  padding-top: 30px;
+}
+
+.member-card .member-content h3 {
+  font: normal normal normal 20px/25px Open Sans;
+  color: white;
+  float: right;
+  opacity: 0.7;
+  padding-top: 70px;
+  margin-left: -50px;
+  right: 50px;
+  z-index: -2;
+}
+
+.member-card .member-content p {
+  text-align: center;
+  font: normal normal normal 14px/18px Open Sans;
+  color: white;
+  z-index: 5;
+}
+
+.member-card:hover .grid-style {
+  height: 165px;
+}
+
+#about-us-content {
+  justify-content: center;
+  align-items: center;
+}
+
+#about-us-content .photo-carousel {
+  height: 0;
+}
+
+#about-us-content .photo-carousel img {
+  height: 850px;
+  width: 100%;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.atc-title h2 {
+  /* margin-top: 120px; */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font: normal normal normal 52px/94px Abolition;
+  letter-spacing: 0px;
+  color: #dbe2e9;
+  text-transform: uppercase;
+}
+
+.atc-title h3 {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font: normal normal normal 32px/52px Abolition;
+  letter-spacing: 0px;
+  color: #dbe2e9;
+  text-transform: uppercase;
+}
+
+.our-mission h4 {
+  font: normal normal normal 16px/22px Open Sans;
+  color: rgb(255, 255, 255);
+  padding: 40px;
+}
+
+#more a {
+  float: right;
+  font: italic normal normal 16px/22px Open Sans;
+  color: #fff;
+  padding-bottom: 60px;
+}
+
 /* Responsive resize */
 
 @media only screen and (max-width: 3000px) {
@@ -344,7 +525,7 @@ iframe {
     margin: auto;
     margin-top: 10%;
   }
-  .videolists {
+  .content-lists {
     width: 80%;
     margin: 6px 0;
     margin-left: auto;
@@ -369,7 +550,7 @@ iframe {
     margin: auto;
     margin-top: 10%;
   }
-  .videolists {
+  .content-lists {
     width: 80%;
     margin: 6px 0;
     margin-left: auto;
@@ -395,7 +576,7 @@ iframe {
     margin: auto;
     margin-top: 10%;
   }
-  .videolists {
+  .content-lists {
     width: 80%;
     margin: 6px 0;
     margin-left: auto;
@@ -431,7 +612,7 @@ iframe {
     margin: auto;
     margin-top: 10%;
   }
-  .videolists {
+  .content-lists {
     width: 80%;
     margin: 6px 0;
     margin-left: auto;
@@ -476,7 +657,7 @@ iframe {
     margin: 6px 0;
     margin-top: 10%;
   }
-  .videolists {
+  .content-lists {
     width: 100%;
     margin: 6px 0;
     padding-left: 6%;
@@ -537,7 +718,7 @@ iframe {
     margin: auto;
     margin-top: 10%;
   }
-  .videolists {
+  .content-lists {
     width: 80%;
     margin: 6px 0;
     margin-left: auto;
@@ -596,7 +777,7 @@ iframe {
     margin: 0;
     margin-top: 10%;
   }
-  .videolists {
+  .content-lists {
     width: 50%;
     margin: 6px 0;
     margin-left: auto;
