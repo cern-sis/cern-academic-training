@@ -6,8 +6,7 @@
   padding-top: 60px;
   padding-left: 60px;
   padding-right: 60px;
-  background: linear-gradient(0deg, transparent 0%, #0b1117 100%) 0% 0%
-    no-repeat padding-box;
+  /* background: linear-gradient(0deg, transparent 0%, #0b1117 100%) 0% 0% no-repeat padding-box; */
 }
 
 #atc-header {
@@ -22,7 +21,7 @@
   letter-spacing: 0px;
   color: #ffffff;
   text-transform: uppercase;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 #atc-header h1 a {
@@ -35,8 +34,8 @@
   float: right;
   list-style: none;
   position: relative;
-  right: -10px;
-  margin-top: -92px;
+  right: -40px;
+  margin-top: -98px;
   cursor: pointer;
 }
 
@@ -101,4 +100,28 @@
   width: 5px;
   height: 12px;
   transform: translate(6px, 6px) rotate(315deg);
+}
+
+/* Responsive resize */
+
+@media only screen and (max-width: 768px) {
+  .search-box:hover {
+    width: 200px;
+  }
+  #atc-header h1 {
+    margin-left: -40px;
+  }
+  .search-input {
+    color: #fff;
+    font: normal normal normal 17px/28px Open Sans;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #atc-header h1 {
+    margin-left: -70px;
+  }
+  #atc-header ul {
+    right: -80px;
+  }
 }

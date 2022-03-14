@@ -14,19 +14,29 @@ function CERN_TOOLBAR() {
           <span> Accelerating science</span>
         </a>
       </h1>
-
       <ul>
         <li className="signin">
-          <a href="/user/login">Sign in</a>
-        </li>
-        <li className="directory">
-          <a
-            href="//cern.ch/directory"
-            className="cern-directory"
-            title="Search CERN resources and browse the directory"
-          >
-            Directory
-          </a>
+          <div className="item-list item-list-length">
+            <ul className="toolbar-submenu">
+              <li className="signin cern-account-links">
+                <a
+                  href="/user/login"
+                  className="cern-account cern-signin cern-single-mobile-signin"
+                >
+                  Sign in
+                </a>
+              </li>
+              <li className="directory">
+                <a
+                  href="//cern.ch/directory"
+                  className="cern-directory"
+                  title="Search CERN resources and browse the directory"
+                >
+                  Directory
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
     </Header>

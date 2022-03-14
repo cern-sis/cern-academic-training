@@ -2,7 +2,6 @@
 * {
   box-sizing: border-box;
 }
-
 /* Layout */
 
 .layout {
@@ -12,7 +11,6 @@
   background: linear-gradient(180deg, #0b1117 0%, #1c3775 100%) 0% 0% no-repeat
     padding-box;
 }
-
 /* Academic Training Main Content */
 
 #atc-content {
@@ -41,7 +39,8 @@
   border-radius: 50px;
   opacity: 0.9999;
   width: auto;
-  margin-top: -20px;
+  margin-top: -10px;
+  margin-bottom: 140px;
   display: block;
   margin-left: -200px;
   margin-right: -200px;
@@ -69,13 +68,11 @@
   text-transform: uppercase;
   opacity: 1;
   z-index: 6;
-  /* filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.527)); */
   transition: 1s;
 }
 
 .recent h2 {
   text-align: left;
-  padding-top: 160px;
   font: normal normal normal 25px/16px Abolition;
   letter-spacing: 2px;
   color: #ffffff;
@@ -90,7 +87,7 @@
   height: 2px;
   width: 100%;
   border-radius: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   float: right;
 }
 
@@ -117,6 +114,13 @@
   letter-spacing: 1px;
   color: #ffffff;
   opacity: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5em;
+  max-height: 3em;
 }
 
 .video-content p {
@@ -128,44 +132,87 @@
 }
 
 .video-card {
-  margin-top: 10%;
   background-color: transparent;
+  align-items: center;
   border: none;
+  border-radius: 5px;
+  min-height: 150px;
+}
+
+.video-card .card-content {
+  width: 100%;
+  padding: 25px 0 10px 20px;
+  margin-left: -8px;
+  box-shadow: inset 0px 0px 80px transparent;
+}
+
+.play {
+  width: 1em;
+  color: #fff;
+  font-size: 2.6em;
+  opacity: 0.7;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  padding-right: 10px;
+  cursor: pointer;
+  border: none;
+  float: right;
+  text-align: center;
+  z-index: 3;
+}
+
+.video-card:hover .play {
+  font-size: 3.8em;
+  transition: 0.5s;
+}
+
+.video-card:hover {
+  max-height: 10px;
+  transition: 0.5s;
+}
+
+#thumbnail-box {
+  box-shadow: inset 20px 0px 20px rgba(0, 0, 0, 0.747);
+  padding: 10px;
+  display: block;
+  max-height: 600px;
+  border-radius: 5px;
+  border: none;
+  margin-top: -25px;
+}
+
+#thumbnail-box img {
+  margin-top: -35px;
+  width: 100%;
   object-fit: cover;
   object-position: 20% 10%;
-}
-
-.video-card .grid-style {
-  width: 100%;
-  padding: 10px;
-  box-shadow: inset 0px -80px 80px transparent;
-}
-
-.video-card .play-circle-icon {
-  color: #fff;
-  float: right;
-  font-size: 30px;
-  opacity: 0.7;
-  padding-left: 8px;
-  margin-top: 15px;
-  background-color: transparent;
+  -o-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+  z-index: 2;
 }
 
 .responsive {
   padding: 15px 6px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  margin-top: 50px;
 }
 
-.videolists {
+.content-lists {
   padding: 15px 6px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
+  margin-top: 80px;
+  width: auto;
   max-width: 1000px;
+  position: relative;
+  top: -15px;
+  transition: 2s;
 }
 
-.videolists h1 a {
+.content-lists h1 a {
   color: #fff;
 }
 
@@ -174,14 +221,13 @@
   display: table;
   clear: both;
 }
-
 /* Suggestion Box */
 
 .suggestion-box {
-  margin-top: 60px;
-  width: 704px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 10px;
+  width: auto;
+  margin-left: 30px;
+  margin-right: 30px;
   margin-bottom: 90px;
 }
 
@@ -191,19 +237,22 @@
   letter-spacing: 0.5px;
   color: #dbe2e9;
   opacity: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 60px;
 }
 
 .suggestion-box-window {
   padding: 25px 35px;
-  text-align: left;
-  margin-top: 10%;
-  margin-bottom: 5%;
-  width: 704px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 704px;
   height: 200px;
   background: transparent linear-gradient(105deg, #3c5fa1 0%, #010306 100%) 0%
     0% no-repeat padding-box;
   border-radius: 16px;
-  opacity: 0.44;
+  opacity: 0.6;
 }
 
 .suggestion-box-window p {
@@ -211,18 +260,18 @@
   font: italic normal normal 15px/30px Open Sans;
   letter-spacing: 0px;
   color: #dbe2e9;
-  opacity: 0.8;
+  z-index: 200;
+  opacity: 0.9;
 }
 
-.suggestion-box h2 {
+.suggestion-box-window h2 {
+  margin-top: 50px;
   text-align: right;
   font: normal normal normal 30px/16px Abolition;
   letter-spacing: 0.3px;
-  margin-right: 12px;
-  color: #dbe2e9;
+  color: #ffffff;
   opacity: 1;
 }
-
 /* Search results */
 
 .container {
@@ -230,11 +279,12 @@
     0% no-repeat padding-box;
   border-radius: 30px;
   opacity: 0.96;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 150px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 120px;
   margin-bottom: 10%;
-  width: 1000px;
+  min-width: 40px;
+  width: auto;
   height: auto;
   padding: 80px;
   justify-content: center;
@@ -259,7 +309,6 @@
   float: right;
   position: relative;
 }
-
 /* Lecture Video page */
 
 .video-box {
@@ -270,7 +319,7 @@
   opacity: 0.9999999;
   width: auto;
   max-width: 1300px;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 80px;
@@ -335,69 +384,131 @@ iframe {
   color: #ffffff;
   opacity: 0.52;
 }
+/* About Us */
 
+.member-card {
+  margin-top: 10%;
+  background: transparent linear-gradient(180deg, #0b1117 0%, #1c3775 100%) 0%
+    0% no-repeat padding-box;
+  border: none;
+  align-items: center;
+  border-radius: 30px;
+  width: 310px;
+  padding-bottom: 40px;
+  border-bottom: 10px outset #0b1117ad;
+}
+
+.member-card .ant-avatar {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border: 1px solid #ffffff;
+  z-index: 2;
+}
+
+.member-card .grid-style {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  bottom: 70px;
+  box-shadow: inset 0px -80px 80px transparent;
+  border-radius: 30px;
+}
+
+.member-card .member-content h2 {
+  text-align: center;
+  font: bold normal normal 16px/18px Open Sans;
+  color: white;
+  padding-top: 30px;
+}
+
+.member-card .member-content h3 {
+  font: normal normal normal 20px/25px Open Sans;
+  color: white;
+  float: right;
+  opacity: 0.7;
+  padding-top: 70px;
+  margin-left: -50px;
+  right: 50px;
+  z-index: -2;
+}
+
+.member-card .member-content p {
+  text-align: center;
+  font: normal normal normal 14px/18px Open Sans;
+  color: white;
+  z-index: 5;
+}
+
+.member-card:hover .grid-style {
+  height: 165px;
+}
+
+#about-us-content {
+  justify-content: center;
+  align-items: center;
+}
+
+#about-us-content .photo-carousel {
+  height: 0;
+}
+
+#about-us-content .photo-carousel img {
+  height: 850px;
+  width: 100%;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.atc-title h2 {
+  /* margin-top: 120px; */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font: normal normal normal 52px/94px Abolition;
+  letter-spacing: 0px;
+  color: #dbe2e9;
+  text-transform: uppercase;
+}
+
+.atc-title h3 {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font: normal normal normal 32px/52px Abolition;
+  letter-spacing: 0px;
+  color: #dbe2e9;
+  text-transform: uppercase;
+}
+
+.our-mission h4 {
+  font: normal normal normal 16px/22px Open Sans;
+  color: rgb(255, 255, 255);
+  padding: 40px;
+}
+
+#more a {
+  float: right;
+  font: italic normal normal 16px/22px Open Sans;
+  color: #fff;
+  padding-bottom: 60px;
+}
 /* Responsive resize */
 
-@media only screen and (max-width: 3000px) {
-  .responsive {
-    width: 100%;
-    margin: auto;
-    margin-top: 10%;
-  }
-  .videolists {
+@media only screen and (max-width: 1500px) {
+  .content-lists {
     width: 80%;
-    margin: 6px 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .video-window iframe {
-    width: 1000px;
-    height: 500px;
-  }
-  .video-box {
-    padding-top: 0;
-    height: auto;
-  }
-  .video-box h2 {
-    margin-top: 0;
-  }
-}
-
-@media only screen and (max-width: 1800px) {
-  .responsive {
-    width: 100%;
-    margin: auto;
-    margin-top: 10%;
-  }
-  .videolists {
-    width: 80%;
-    margin: 6px 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .video-window iframe {
-    width: 900px;
-    height: 500px;
-  }
-  .video-box {
-    padding-top: 0;
-    height: auto;
-  }
-  .frame {
-    margin-left: -150px;
-    margin-right: -150px;
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  .responsive {
-    width: 100%;
-    margin: auto;
-    margin-top: 10%;
-  }
-  .videolists {
-    width: 80%;
-    margin: 6px 0;
     margin-left: auto;
     margin-right: auto;
   }
@@ -412,36 +523,41 @@ iframe {
     width: 900px;
   }
   .frame {
-    margin-left: -50px;
-    margin-right: -50px;
-    margin-top: 0.001%;
+    margin-left: 5px;
+    margin-right: 5px;
     height: 600px;
+    margin-bottom: 150px;
   }
   #atc-content .photo-carousel img {
     height: 800px;
   }
   .recent {
-    margin-top: -40px;
+    margin-top: -20px;
+  }
+  #thumbnail-box img {
+    height: 100px;
+  }
+  #thumbnail-box:after {
+    height: 120px;
+  }
+  .video-card img {
+    min-height: 200px;
   }
 }
 
 @media only screen and (max-width: 992px) {
-  .responsive {
-    width: 100%;
-    margin: auto;
-    margin-top: 10%;
-  }
-  .videolists {
-    width: 80%;
-    margin: 6px 0;
+  .content-lists {
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
-  .frame #atc-logo {
-    top: 300px;
-  }
   .frame h1 {
-    padding: 350px 80px;
+    padding: 380px 80px;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 20px;
+    font: normal normal normal 80px/90px Abolition;
   }
   .video-window iframe {
     width: 620px;
@@ -460,33 +576,36 @@ iframe {
   .frame {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2%;
+    margin-top: 0;
+    margin-bottom: 120px;
   }
   #atc-content .photo-carousel img {
     height: 800px;
   }
-  .recent {
-    margin-top: -40px;
+  #thumbnail-box img {
+    height: 100px;
+  }
+  #thumbnail-box:after {
+    height: 120px;
+  }
+  .video-card img {
+    min-height: 250px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .responsive {
-    width: 100%;
-    margin: 6px 0;
-    margin-top: 10%;
-  }
-  .videolists {
-    width: 100%;
-    margin: 6px 0;
-    padding-left: 6%;
-    padding-right: 6%;
-  }
   .video-window iframe {
     margin-left: auto;
     margin-right: auto;
     width: 460px;
     height: 220px;
+  }
+  .frame h1 {
+    padding: 280px 80px;
+    position: relative;
+    margin-left: 0;
+    margin-right: 10px;
+    font: normal normal normal 50px/90px Abolition;
   }
   .video-box {
     padding-top: 0;
@@ -499,150 +618,254 @@ iframe {
     margin-top: -280px;
   }
   .frame #atc-logo {
-    top: 210px;
+    top: 280px;
     width: 30%;
-    height: 30%;
-  }
-  .frame h1 {
-    padding: 240px 80px;
-    font-size: 600%;
   }
   .frame {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 1%;
+    margin-top: 0;
     height: 450px;
+    margin-bottom: 200px;
   }
   #atc-content .photo-carousel img {
-    height: 620px;
+    height: 680px;
+  }
+  .container {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 100px;
+    width: auto;
+    height: auto;
+    padding: 40px;
+  }
+  .container-content h1 {
+    padding-bottom: 10px;
+    font: normal normal normal 30px/40px Abolition;
+  }
+  .pagination {
+    top: -20px;
   }
   .recent {
-    margin-top: -70px;
+    margin-top: -100px;
   }
-  .suggestion-box-window {
-    padding: 25px 35px;
-    width: 600px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
+  #thumbnail-box img {
+    height: 80px;
   }
-  .suggestion-box h2 {
-    padding-right: 50px;
+  #thumbnail-box:after {
+    height: 100px;
+  }
+  .video-card img {
+    min-height: 300px;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  .responsive {
-    width: 100%;
-    margin: auto;
-    margin-top: 10%;
-  }
-  .videolists {
-    width: 80%;
-    margin: 6px 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .video-window iframe {
     margin-left: auto;
     margin-right: auto;
-    width: 470px;
-    height: 200px;
+    width: auto;
+    height: 220px;
+  }
+  .frame h1 {
+    padding: 260px 50px;
+    position: relative;
+    margin-left: 0;
+    margin-right: 10px;
+    font: normal normal normal 50px/90px Abolition;
   }
   .video-box {
     padding-top: 0;
     height: auto;
-    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
   }
   .video-box h2 {
-    margin-top: -300px;
+    margin-top: -280px;
   }
   .frame #atc-logo {
-    top: 210px;
-    width: 30%;
-    height: 30%;
-  }
-  .frame h1 {
-    padding: 240px 80px;
-    font-size: 200%;
+    top: 260px;
+    width: 32%;
   }
   .frame {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 1%;
-    height: 450px;
+    margin-top: -20px;
+    margin-bottom: 200px;
+    height: 600px;
   }
   #atc-content .photo-carousel img {
-    height: 620px;
+    height: 680px;
   }
-  .recent {
-    margin-top: -70px;
+  .container {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 100px;
+    width: auto;
+    height: auto;
+    padding: 40px;
   }
-  .suggestion-box-window {
-    padding: 25px 35px;
-    width: 500px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
+  .container-content h1 {
+    padding-bottom: 10px;
+    font: normal normal normal 30px/40px Abolition;
   }
-  .suggestion-box h2 {
-    padding-right: 60px;
+  .pagination {
+    top: -20px;
+  }
+  #thumbnail-box img {
+    height: 40px;
+  }
+  #thumbnail-box:after {
+    height: 80px;
+  }
+  .video-card img {
+    min-height: 250px;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .responsive {
-    width: 100%;
-    margin: 0;
-    margin-top: 10%;
-  }
-  .videolists {
-    width: 50%;
-    margin: 6px 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .video-window iframe {
-    width: 250px;
-    height: 150px;
-  }
-  .video-box {
-    padding-top: 0;
-    height: auto;
-    padding-bottom: 10px;
-  }
-  .video-box h2 {
-    margin-top: -340px;
-    height: auto;
-  }
   .frame #atc-logo {
-    top: 210px;
-    width: 30%;
-    height: 30%;
-  }
-  .frame h1 {
-    padding: 240px 80px;
-    font-size: 200%;
+    top: 320px;
+    left: -30px;
+    width: 40%;
   }
   .frame {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 1%;
-    height: 450px;
+    margin-bottom: 80px;
+    margin-top: -20px;
+    height: 500px;
   }
-  #atc-content .photo-carousel img {
-    height: 620px;
+  .frame h1 {
+    padding: 320px 30px;
+    position: relative;
+    margin-left: 0;
+    margin-right: 10px;
+    font: normal normal normal 50px/90px Abolition;
   }
   .recent {
-    margin-top: -70px;
+    margin-top: 10px;
   }
-  .suggestion-box {
-    width: 100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
+  .video-card img {
+    min-height: 250px;
   }
-  .suggestion-box h2 {
-    padding-right: 80px;
+}
+
+@media only screen and (max-width: 414px) {
+  .frame #atc-logo {
+    top: 460px;
+    left: -20px;
+    width: 45%;
+    height: 85%;
+  }
+  .frame h1 {
+    padding: 10px;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    font: normal normal normal 40px/50px Abolition;
+  }
+  .frame {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 620px;
+    margin-top: -30px;
+    margin-bottom: 130px;
+    border: 1px solid #ffffffab;
+    border-radius: 50px;
+  }
+  #atc-content .photo-carousel img {
+    height: 800px;
+  }
+  .recent {
+    margin-top: -20px;
+  }
+  .video-card img {
+    min-height: 200px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .video-window {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .video-window iframe {
+    width: 300px;
+    height: 180px;
+  }
+  .video-box {
+    height: auto;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+  }
+  .video-box h2 {
+    margin-top: -320px;
+    height: auto;
+  }
+  .frame #atc-logo {
+    top: 380px;
+    left: -30px;
+    width: 45%;
+    height: 78%;
+  }
+  .frame h1 {
+    position: relative;
+    top: -10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font: normal normal normal 40px/80px Abolition;
+  }
+  .frame {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 550px;
+    margin-top: -40px;
+    margin-bottom: 0;
+    border: 1px solid #ffffffab;
+    border-radius: 50px;
+  }
+  #atc-content .photo-carousel img {
+    height: 700px;
+  }
+  #about-us-content .photo-carousel img {
+    height: 680px;
+  }
+  .atc-title {
+    margin-top: 50px;
+  }
+  .recent {
+    margin-top: 100px;
+  }
+  .pagination {
+    width: 80%;
+    top: -40px;
+  }
+  .container {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 100px;
+    width: auto;
+    height: auto;
+    padding: 40px;
+  }
+  .container-content h1 {
+    padding-bottom: 10px;
+    font: normal normal normal 30px/40px Abolition;
+  }
+  .video-content h2 {
+    font: italic normal normal 18px/25px Open Sans;
+  }
+  .video-content p {
+    font: italic normal normal 14px/16px Open Sans;
+  }
+  .video-card img {
+    min-height: 150px;
   }
 }

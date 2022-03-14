@@ -3,7 +3,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout, Row, Col, Card, Input, Carousel } from "antd";
 
-import { getPhotos } from "./photos";
+import { getPhotos } from "./photos/carousel/photos";
 import AT_HEADER from "./components/AT_HEADER";
 import CERN_FOOTER from "./components/CERN_FOOTER";
 import CERN_TOOLBAR from "./components/CERN_TOOLBAR";
@@ -60,7 +60,7 @@ function App() {
         </Fragment>
 
         <Fragment>
-          <div className="videolists">
+          <div className="content-lists">
             <div className="responsive">
               <div className="frame">
                 <div id="atc-logo">
@@ -76,30 +76,29 @@ function App() {
               <div className="divider" />
             </div>
             .{" "}
-            <Row justify="center" gutter={[16, 16]}>
+            <Row justify="center" gutter={[16, 48]}>
               {lectures.map((lecture: any) => {
                 return (
-                  <Col key={lecture.lecture_id} span={6}>
+                  <Col key={lecture.lecture_id} span={6} xs={24} md={12} xl={6}>
                     <nav>
                       <Link
-                        style={{ display: "block", margin: "1rem 0" }}
-                        to={`/lectures/${lecture.lecture_id}/`}
+                        to={`/lectures/${lecture.lecture_id}`}
                         key={lecture.lecture_id}
                       >
                         <Card
                           hoverable
                           className="video-card"
                           cover={
-                            <img
-                              alt="thumbnail"
-                              src={lecture.thumbnail_picture}
-                            />
+                            <div id="thumbnail-box">
+                              <PlayCircleOutlined className="play" />
+                              <img
+                                alt="thumbnail"
+                                src={lecture.thumbnail_picture}
+                              />
+                            </div>
                           }
                         >
-                          <Card.Grid className="grid-style">
-                            <div className="play-circle-icon">
-                              <PlayCircleOutlined />
-                            </div>
+                          <Card.Grid className="card-content">
                             <div className="video-content">
                               <h2>{lecture.title}</h2>
                             </div>
@@ -133,8 +132,10 @@ function App() {
                 }}
                 onKeyPress={handleKeyPress}
               />
+              <a>
+                <h2>Send</h2>
+              </a>
             </div>
-            <h2>Send</h2>
           </div>
         </Fragment>
       </Content>

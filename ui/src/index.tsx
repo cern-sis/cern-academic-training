@@ -6,12 +6,14 @@ import Lectures from "./routes/lectures";
 import Lecture from "./routes/lecture";
 import Results from "./routes/results";
 import reportWebVitals from "./reportWebVitals";
+import AboutUs from "./routes/about_us";
 
 render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="search" element={<Results />} />
+      <Route path="about-us" element={<AboutUs />} />
       <Route path="lectures" element={<Lectures />}>
         <Route
           index

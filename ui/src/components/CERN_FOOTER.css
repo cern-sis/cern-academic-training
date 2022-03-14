@@ -161,7 +161,7 @@
 }
 
 .mb-4 {
-  margin-bottom: 4rem !important;
+  margin-bottom: 1rem !important;
 }
 
 #cern-footer h2 {
@@ -286,6 +286,12 @@
   }
 }
 
+@media only screen and (max-width: 980px) {
+  .footer {
+    padding: 3%;
+  }
+}
+
 @media (min-width: 992px) {
   .col-md-1,
   .col-md-2,
@@ -335,5 +341,84 @@
   }
   .footer {
     padding: 55px 3%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  #cern-footer .logo img {
+    width: 30%;
+    float: right;
+  }
+  #cern-footer .footer-first-col:after {
+    height: 125%;
+    left: 70px;
+    top: 8px;
+  }
+  #cern-footer {
+    padding: 30px 10px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #cern-footer .logo img {
+    width: 100px;
+    float: right;
+  }
+  #cern-footer .footer-first-col:after {
+    height: 130%;
+    top: 5px;
+  }
+  #cern-footer .footer-third-col {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #cern-footer .logo img {
+    width: 25%;
+    float: right;
+  }
+  #cern-footer .footer-first-col:after {
+    height: 125%;
+    left: 80px;
+    top: 8px;
+  }
+  #cern-footer .footer-third-col {
+    left: 0;
+  }
+  #cern-footer {
+    padding: 30px 10px 0;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  #cern-footer .footer-first-col:after {
+    height: 125%;
+    left: 70px;
+    top: 8px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #cern-footer .logo img {
+    width: 30%;
+    float: right;
+  }
+  #cern-footer .footer-first-col:after {
+    height: 130%;
+    left: 65px;
+    top: 8px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  #cern-footer .logo img {
+    width: 30%;
+    float: right;
+  }
+  #cern-footer .footer-first-col:after {
+    height: 110%;
+    left: 65px;
+    top: 8px;
   }
 }
