@@ -80,5 +80,73 @@
   float: left;
   display: block;
   margin-left: 0.6em;
-  padding: 6px 0;
+  padding: 3px 0;
+}
+
+#cern-toolbar ul li.signin {
+  position: relative;
+}
+
+#cern-toolbar div.item-list-length,
+#cern-toolbar div.item-list-length div.item-list {
+  display: inline !important;
+  position: static !important;
+  top: 0 !important;
+  min-width: auto !important;
+}
+
+#cern-toolbar ul li.signin div.item-list {
+  display: none;
+  position: absolute;
+  background: rgba(30, 30, 30, 0.95);
+  z-index: 9999999999999;
+  top: 40px;
+  min-width: 200px;
+}
+
+/* Responsive resize */
+
+@media only screen and (max-width: 768px) {
+  #cern-toolbar a span {
+    visibility: hidden;
+  }
+  #cern-toolbar a.cern-single-mobile-signin:not(.cern-multiple-mobile-signin),
+  #cern-toolbar li a:not(.cern-multiple-mobile-signin) {
+    background-image: url(./toolbarsprite.png) !important;
+    background-repeat: no-repeat !important;
+    top: -50px;
+    height: 40px !important;
+    width: 40px !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    text-indent: -5000px !important;
+    overflow: hidden !important;
+    border-left: 1px solid #444 !important;
+    box-sizing: border-box !important;
+  }
+  #cern-toolbar .cern-directory {
+    background-position: 0px -40px;
+  }
+  #cern-toolbar ul li a {
+    height: 38px;
+    background-position-x: 0px;
+  }
+  #cern-toolbar ul li.signin div.item-list {
+    right: -70px;
+  }
+  #cern-toolbar li {
+    padding: 0;
+    margin: 0;
+  }
+  #cern-toolbar {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #cern-toolbar ul {
+    right: -8px;
+    margin-top: -18px;
+  }
 }

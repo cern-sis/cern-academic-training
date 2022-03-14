@@ -46,6 +46,12 @@ function AboutUs() {
           <div className="content-lists">
             <div className="responsive">
               <div className="frame">
+                <div id="atc-logo">
+                  <img
+                    src="../white-atc-logo.png"
+                    alt="Academic Training Logo"
+                  />
+                </div>
                 <h1>
                   <a href="/about-us">ABOUT US</a>
                 </h1>

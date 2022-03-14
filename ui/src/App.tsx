@@ -76,10 +76,10 @@ function App() {
               <div className="divider" />
             </div>
             .{" "}
-            <Row justify="center" gutter={[16, 32]}>
+            <Row justify="center" gutter={[16, 48]}>
               {lectures.map((lecture: any) => {
                 return (
-                  <Col key={lecture.lecture_id} span={6}>
+                  <Col key={lecture.lecture_id} span={6} xs={24} md={12} xl={6}>
                     <nav>
                       <Link
                         to={`/lectures/${lecture.lecture_id}`}
@@ -132,10 +132,10 @@ function App() {
                 }}
                 onKeyPress={handleKeyPress}
               />
+              <a>
+                <h2>Send</h2>
+              </a>
             </div>
-            <a>
-              <h2>Send</h2>
-            </a>
           </div>
         </Fragment>
       </Content>
