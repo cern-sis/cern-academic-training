@@ -129,7 +129,7 @@ jobs:
         if: ${{ github.event_name == 'push'}}
         with:
           token: ${{ secrets.INSPIRE_BOT_TOKEN }}
-          repository: inspirehep/kubernetes
+          repository: cern-sis/kubernetes
           event-type: deploy
           client-payload: '{"project": "cat", "application":"cat-backend", "namespace": "cat-qa", "image":"registry.cern.ch/cern-sis/cat-backend","new_tag":"${{ github.sha }}"}'
 
@@ -169,7 +169,7 @@ jobs:
         if: ${{ github.event_name == 'push'}}
         with:
           token: ${{ secrets.INSPIRE_BOT_TOKEN }}
-          repository: inspirehep/kubernetes
+          repository: cern-sis/kubernetes
           event-type: deploy
           client-payload: '{"project": "cat", "application":"cat-ui", "namespace": "cat-qa","image":"registry.cern.ch/cern-sis/cat-ui","new_tag":"${{ github.sha }}"}'
 
@@ -209,6 +209,6 @@ jobs:
         if: ${{ github.event_name == 'push'}}
         with:
           token: ${{ secrets.INSPIRE_BOT_TOKEN }}
-          repository: inspirehep/kubernetes
+          repository: cern-sis/kubernetes
           event-type: deploy
           client-payload: '{"project": "cat", "application":"cat-harvest", "namespace": "cat-qa", "image":"registry.cern.ch/cern-sis/cat-harvest","new_tag":"${{ github.sha }}"}'
