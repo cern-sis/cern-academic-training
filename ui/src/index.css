@@ -48,3 +48,27 @@ code {
   src: local("Source_Sans_Pro"),
     url(./fonts/Source_Sans_Pro/SourceSansPro-Light.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "Open Sans Regular";
+  src: local("Open_Sans"),
+    url(./fonts/Open_Sans/OpenSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  src: local("Open_Sans"),
+    url(./fonts/Open_Sans/OpenSans-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans Light";
+  src: local("Open_Sans"),
+    url(./fonts/Open_Sans/OpenSans-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: local("Open_Sans"),
+    url(./fonts/Open_Sans/OpenSans-Bold.ttf) format("truetype");
+}
