@@ -1,5 +1,15 @@
 import React, { Fragment } from "react";
-import { Layout, Card, Row, Col, Carousel, Avatar, Space } from "antd";
+import {
+  Layout,
+  Card,
+  Row,
+  Col,
+  Carousel,
+  Avatar,
+  Space,
+  Typography,
+  Divider,
+} from "antd";
 
 import "../App.css";
 import { getMembers } from "../photos/members/members";
@@ -10,6 +20,7 @@ import CERN_FOOTER from "../components/CERN_FOOTER";
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
 
 const { Content } = Layout;
+const { Title } = Typography;
 
 function AboutUs() {
   const members = getMembers();
@@ -52,32 +63,34 @@ function AboutUs() {
                     alt="Academic Training Logo"
                   />
                 </div>
-                <h1>
-                  <a href="/about-us">ABOUT US</a>
-                </h1>
+                <Title>
+                  <Typography.Link href="/about-us">ABOUT US</Typography.Link>
+                </Title>
               </div>
             </div>
 
             <div className="atc-title">
-              <h2>ACADEMIC TRAINING COMMITTEE</h2>
-              <div className="divider" />
+              <Title level={2}>ACADEMIC TRAINING COMMITTEE</Title>
+              <Divider className="divider" />
             </div>
 
             <div className="our-mission">
-              <h4>
-                CERN Academic Training lectures are open to all members of CERN
-                personnel (in particular staff members and fellows, associates,
-                students, users, project associates and apprentices) free of
-                charge. Each lecture is recorded and published on the web along
-                with the visual support material. The complete catalogue of
-                Academic Training and Summer Student Programme lectures archived
-                since 1999.
-              </h4>
+              <Title level={4}>
+                The CERN Academic Training lectures cover physics and technology
+                research results, as well as leading-edge news from other
+                disciplines. Past lectures often present a great historical
+                value. The lectures are open to all members of CERN personnel
+                (staff, fellows, associates, students, users, project associates
+                and apprentices) free of charge. Each lecture is recorded and
+                published on the web along with the visual support material. The
+                complete catalogue of the Academic Training Programme lectures
+                is archived since 1968.
+              </Title>
             </div>
 
             <div className="atc-title">
-              <h2>Members</h2>
-              <div className="divider" />
+              <Title level={2}>Members</Title>
+              <Divider className="divider" />
             </div>
             <Row justify="center" gutter={[16, 16]}>
               {members.slice(0, 1).map((member: any) => {
@@ -87,20 +100,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Maria_Dimou.png")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Maria_Dimou.png")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -116,20 +124,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/blank.png")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Marika_Flygar.jpg")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -140,8 +143,8 @@ function AboutUs() {
               })}
             </Row>
             <div className="atc-title">
-              <h3>Departments</h3>
-              <div className="divider" />
+              <Title level={3}>Departments</Title>
+              <Divider className="divider" />
             </div>
 
             <Row justify="space-around" gutter={[16, 42]}>
@@ -152,20 +155,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Albert_De_Roeck.jpg")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Albert_De_Roeck.jpg")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -181,20 +179,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/blank.png")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/blank.png")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -210,20 +203,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Maria-Arsuaga-Rios.png")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Maria-Arsuaga-Rios.png")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -239,20 +227,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Urs_Wiedemann.jpg")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Urs_Wiedemann.jpg")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -268,20 +251,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Bertrand_Nicquevert.jpeg")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Bertrand_Nicquevert.jpeg")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -297,20 +275,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Valeria_Perez_Reale.png")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Valeria_Perez_Reale.png")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -326,20 +299,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Antonio_Perillo_Marcone.jpeg")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Antonio_Perillo_Marcone.jpeg")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -350,8 +318,8 @@ function AboutUs() {
               })}
             </Row>
             <div className="atc-title">
-              <h3>Users</h3>
-              <div className="divider" />
+              <Title level={3}>Users</Title>
+              <Divider className="divider" />
             </div>
             <Row justify="center" gutter={16}>
               {members.slice(9, 10).map((member: any) => {
@@ -361,20 +329,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Evangelia_Dimovasili.jpeg")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Evangelia_Dimovasili.jpeg")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -385,8 +348,8 @@ function AboutUs() {
               })}
             </Row>
             <div className="atc-title">
-              <h3>Staff Association</h3>
-              <div className="divider" />
+              <Title level={3}>Staff Association</Title>
+              <Divider className="divider" />
             </div>
             <Row justify="center" gutter={16}>
               {members.slice(10, 11).map((member: any) => {
@@ -396,20 +359,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Lynda-Meichtry.jpg")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Lynda-Meichtry.jpg")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -420,8 +378,8 @@ function AboutUs() {
               })}
             </Row>
             <div className="atc-title">
-              <h3>Observers</h3>
-              <div className="divider" />
+              <Title level={3}>Observers</Title>
+              <Divider className="divider" />
             </div>
             <Row justify="space-around" gutter={[16, 42]}>
               {members.slice(11, 12).map((member: any) => {
@@ -431,20 +389,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Maria_Fiascaris.jpeg")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Maria_Fiascaris.jpeg")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -460,20 +413,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Martijn_Mulders.jpg")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Martijn_Mulders.jpg")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -489,20 +437,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Sebastian_Lopienski.jpeg")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Sebastian_Lopienski.jpeg")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>
@@ -518,20 +461,15 @@ function AboutUs() {
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
-                            <h3>{member.department}</h3>
+                            <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              icon={
-                                <img
-                                  alt=""
-                                  src={
-                                    require("../photos/members/profiles/Frank_Tecker.jpg")
-                                      .default
-                                  }
-                                />
+                              src={
+                                require("../photos/members/profiles/Frank_Tecker.jpg")
+                                  .default
                               }
                             />
-                            <h2>{member.name}</h2>
+                            <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
                         </Card.Grid>

@@ -56,13 +56,13 @@
   width: 100%;
 }
 
-#cern-footer nav ul.menu.nav {
+#cern-footer .menu.nav {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#cern-footer nav ul.menu.nav li a {
+#cern-footer li a {
   transition: all 0.3s ease-in-out 0s;
   display: inline-block;
   padding: 0 0 14px 20px;
@@ -72,7 +72,7 @@
 
 /* TODO styling! */
 
-#cern-footer nav ul.menu.nav li a:before {
+#cern-footer li a:before {
   line-height: 26px;
   left: 0px;
   font-size: 14px;
@@ -81,11 +81,11 @@
   -webkit-font-smoothing: antialiased;
   display: block;
   position: absolute;
-  top: -2px;
+  top: 0;
   color: #fffefe;
 }
 
-#cern-footer nav ul.menu.nav li a:after {
+#cern-footer li a:after {
   transition: all 0.3s ease-in-out 0s;
   content: "";
   display: block;
@@ -197,6 +197,7 @@
 }
 
 #cern-footer .logo img {
+  /* width: 120px; */
   display: block;
   border: 0;
 }

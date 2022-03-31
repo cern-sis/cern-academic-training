@@ -1,18 +1,24 @@
 import React, { useState } from "react";
 
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { Layout, Input, Button } from "antd";
+import {
+  Link as LinkRouter,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
+import { Layout, Input, Button, Typography, Menu } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 
 import "./AT_HEADER.css";
 
 const { Header } = Layout;
+const { Title } = Typography;
 
 function AT_HEADER() {
   let navigate = useNavigate();
   const [searchQuery] = useSearchParams();
   const searchValue = searchQuery.get("search") || "";
   let [searchTerm, setSearchTerm] = useState(searchValue);
+  const [current, setCurrent] = React.useState("icon");
 
   const onKeyDown = (ev: any) => {
     const searchValue = ev.target.value;
@@ -24,26 +30,29 @@ function AT_HEADER() {
     }
   };
 
+  const handleClick = (e: any) => {
+    setCurrent(e.key);
+  };
+
   return (
     <Header id="atc-header">
       <div className="header">
-        <h1>
-          <a href="/">ACADEMIC TRAINING</a>
-        </h1>
+        <Title>
+          <Typography.Link href="/">ACADEMIC TRAINING</Typography.Link>
+        </Title>
+        <Menu
+          onClick={handleClick}
+          mode="horizontal"
+          defaultSelectedKeys={["icon"]}
+        >
+          <Menu.Item className="about-us" key="about-us">
+            <LinkRouter to={`/about-us`}>
+              <Title level={2}>About Us</Title>
+            </LinkRouter>
+          </Menu.Item>
 
-        <ul className="search-box">
-          <li>
-            <Input
-              className="search-input"
-              bordered={false}
-              placeholder="Search..."
-              onPressEnter={onKeyDown}
-              defaultValue={searchValue || ""}
-            />
-          </li>
-
-          <li className="search-icon">
-            <Link to={`/search/?search=${searchTerm}&page=1`}>
+          <Menu.Item className="search-icon" key="icon">
+            <LinkRouter to={`/search/?search=${searchTerm}&page=1`}>
               <Button
                 type="primary"
                 style={{
@@ -54,9 +63,18 @@ function AT_HEADER() {
               >
                 <SearchOutlined style={{ color: "white", fontSize: "200%" }} />
               </Button>
-            </Link>
-          </li>
-        </ul>
+            </LinkRouter>
+          </Menu.Item>
+          <Menu.Item className="search-box" key="input">
+            <Input
+              className="search-input"
+              bordered={false}
+              placeholder="Search..."
+              onPressEnter={onKeyDown}
+              defaultValue={searchValue || ""}
+            />
+          </Menu.Item>
+        </Menu>
       </div>
     </Header>
   );

@@ -1,7 +1,17 @@
 import "./App.css";
 import React, { Fragment, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Layout, Row, Col, Card, Input, Carousel } from "antd";
+import { Link as LinkRouter } from "react-router-dom";
+import {
+  Layout,
+  Row,
+  Col,
+  Card,
+  Input,
+  Carousel,
+  Typography,
+  Image,
+  Divider,
+} from "antd";
 
 import { getPhotos } from "./photos/carousel/photos";
 import AT_HEADER from "./components/AT_HEADER";
@@ -12,6 +22,7 @@ import { getApiRoot } from "./api/api_root";
 
 const { Content } = Layout;
 const { TextArea } = Input;
+const { Title } = Typography;
 
 const handleKeyPress = (ev: React.KeyboardEvent<HTMLTextAreaElement>) => {
   console.log("handleKeyPress", ev);
@@ -66,14 +77,14 @@ function App() {
                 <div id="atc-logo">
                   <img src="white-atc-logo.png" alt="Academic Training Logo" />
                 </div>
-                <h1>
-                  <a href="/">ACADEMIC TRAINING </a>
-                </h1>
+                <Title>
+                  <Typography.Link href="/">ACADEMIC TRAINING </Typography.Link>
+                </Title>
               </div>
             </div>
             <div className="recent">
-              <h2>MOST RECENT</h2>
-              <div className="divider" />
+              <Title level={2}>MOST RECENT</Title>
+              <Divider className="divider" />
             </div>
             .{" "}
             <Row justify="center" gutter={[16, 48]}>
@@ -81,7 +92,7 @@ function App() {
                 return (
                   <Col key={lecture.lecture_id} span={6} xs={24} md={12} xl={6}>
                     <nav>
-                      <Link
+                      <LinkRouter
                         to={`/lectures/${lecture.lecture_id}`}
                         key={lecture.lecture_id}
                       >
@@ -100,14 +111,14 @@ function App() {
                         >
                           <Card.Grid className="card-content">
                             <div className="video-content">
-                              <h2>{lecture.title}</h2>
+                              <Title level={2}>{lecture.title}</Title>
                             </div>
                             <div className="video-content">
                               <p>{lecture.speaker}</p>
                             </div>
                           </Card.Grid>
                         </Card>
-                      </Link>
+                      </LinkRouter>
                     </nav>
                   </Col>
                 );
@@ -118,7 +129,7 @@ function App() {
 
         <Fragment>
           <div className="suggestion-box">
-            <h1>Submit a suggestion for future topics</h1>
+            <Title>Submit a suggestion for future topics</Title>
             <div className="suggestion-box-window">
               <TextArea
                 placeholder="What else would you see here?"
@@ -132,9 +143,9 @@ function App() {
                 }}
                 onKeyPress={handleKeyPress}
               />
-              <a>
-                <h2>Send</h2>
-              </a>
+              <Typography.Link href="/">
+                <Title level={2}>Send</Title>
+              </Typography.Link>
             </div>
           </div>
         </Fragment>
