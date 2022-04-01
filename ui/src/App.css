@@ -33,6 +33,22 @@
   display: flex;
   object-fit: cover;
   object-position: 50% 50%;
+  opacity: 0.7;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#atc-content .photo-carousel img:hover {
+  object-position: 50% 50%;
+  opacity: 1;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 0.5s ease-in;
 }
 
 .frame {
@@ -53,11 +69,11 @@
 .frame #atc-logo {
   float: left;
   position: relative;
-  width: 200px;
+  width: 230px;
   margin: 0 40px;
-  top: 350px;
+  top: 340px;
   opacity: 1;
-  filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.863));
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.932));
   transition: 1s;
 }
 
@@ -71,6 +87,7 @@
   opacity: 1;
   z-index: 6;
   transition: 1s;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 .recent h2 {
@@ -474,6 +491,22 @@ iframe {
   display: flex;
   object-fit: cover;
   object-position: 50% 50%;
+  opacity: 0.7;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#about-us-content .photo-carousel img:hover {
+  object-position: 50% 50%;
+  opacity: 1;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 0.5s ease-in;
 }
 
 .atc-title h2 {

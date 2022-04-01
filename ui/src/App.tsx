@@ -78,7 +78,9 @@ function App() {
                   <img src="white-atc-logo.png" alt="Academic Training Logo" />
                 </div>
                 <Title>
-                  <Typography.Link href="/">ACADEMIC TRAINING </Typography.Link>
+                  <Typography.Link href="/" style={{ color: "#fff" }}>
+                    ACADEMIC TRAINING{" "}
+                  </Typography.Link>
                 </Title>
               </div>
             </div>

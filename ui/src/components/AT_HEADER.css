@@ -28,6 +28,7 @@
   color: #ffffff;
   text-transform: uppercase;
   opacity: 1;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.877));
 }
 
 #atc-header h1 a {
@@ -39,6 +40,7 @@
 #atc-header h2 {
   color: #fff;
   font: normal normal normal 25px/28px Abolition;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.877));
 }
 
 .ant-menu {
@@ -92,6 +94,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.877));
 }
 
 .ant-menu > .search-box:hover {
