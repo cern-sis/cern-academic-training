@@ -28,6 +28,8 @@ function AboutUs() {
 
   const baseURL = "../photos/members/profiles/";
 
+  const style = { display: "flex", alignItems: "center", padding: "10px" };
+
   return (
     <Layout className="layout">
       <CERN_TOOLBAR />
@@ -94,11 +96,11 @@ function AboutUs() {
               <Title level={2}>Members</Title>
               <Divider className="divider" />
             </div>
-            <Row justify="center" gutter={[16, 16]}>
+            <Row style={style} justify="center" gutter={[16, 16]}>
               {members.slice(0, 1).map((member: any) => {
                 return (
                   <Space>
-                    <Col key={member.key} span={12}>
+                    <Col flex={1} key={member.key} span={12}>
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
@@ -122,7 +124,7 @@ function AboutUs() {
               {members.slice(1, 2).map((member: any) => {
                 return (
                   <Space>
-                    <Col key={member.key} span={12}>
+                    <Col flex="1 1 200px" key={member.key} span={12}>
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
@@ -149,7 +151,7 @@ function AboutUs() {
               <Divider className="divider" />
             </div>
 
-            <Row justify="space-around" gutter={[16, 42]}>
+            <Row style={style} justify="space-around" gutter={[16, 42]}>
               {members.slice(2, 3).map((member: any) => {
                 return (
                   <Space>
@@ -323,7 +325,7 @@ function AboutUs() {
               <Title level={3}>Users</Title>
               <Divider className="divider" />
             </div>
-            <Row justify="center" gutter={16}>
+            <Row style={style} justify="center" gutter={16}>
               {members.slice(9, 10).map((member: any) => {
                 return (
                   <Space>
@@ -353,7 +355,7 @@ function AboutUs() {
               <Title level={3}>Staff Association</Title>
               <Divider className="divider" />
             </div>
-            <Row justify="center" gutter={16}>
+            <Row style={style} justify="center" gutter={16}>
               {members.slice(10, 11).map((member: any) => {
                 return (
                   <Space>
@@ -383,7 +385,7 @@ function AboutUs() {
               <Title level={3}>Observers</Title>
               <Divider className="divider" />
             </div>
-            <Row justify="space-around" gutter={[16, 42]}>
+            <Row style={style} justify="space-around" gutter={[16, 42]}>
               {members.slice(11, 12).map((member: any) => {
                 return (
                   <Space>

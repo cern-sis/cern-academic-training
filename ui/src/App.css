@@ -419,6 +419,10 @@ iframe {
   width: 310px;
   padding-bottom: 40px;
   border-bottom: 10px outset #0b1117ad;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  -o-appearance: auto;
+  -ms-appearance: auto;
 }
 
 .member-card .ant-avatar {
@@ -476,6 +480,10 @@ iframe {
 #about-us-content {
   justify-content: center;
   align-items: center;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  -o-appearance: auto;
+  -ms-appearance: auto;
 }
 
 #about-us-content .photo-carousel {
@@ -534,13 +542,6 @@ iframe {
   font: normal normal normal 16px/22px Open Sans;
   color: rgb(255, 255, 255);
   padding: 40px;
-}
-
-#more a {
-  float: right;
-  font: italic normal normal 16px/22px Open Sans;
-  color: #fff;
-  padding-bottom: 60px;
 }
 
 /* Responsive resize */
