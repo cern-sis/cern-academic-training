@@ -100,7 +100,7 @@ function AboutUs() {
               {members.slice(0, 1).map((member: any) => {
                 return (
                   <Space>
-                    <Col flex={1} key={member.key} span={12}>
+                    <Col key={member.key} span={12}>
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
@@ -124,7 +124,7 @@ function AboutUs() {
               {members.slice(1, 2).map((member: any) => {
                 return (
                   <Space>
-                    <Col flex="1 1 200px" key={member.key} span={12}>
+                    <Col key={member.key} span={12}>
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
