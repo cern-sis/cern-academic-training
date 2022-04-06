@@ -44,7 +44,7 @@ function CERN_FOOTER() {
           </Col>
 
           <Col flex="auto" xs={12} sm={8} md={8} lg={8}>
-            <Row className="row" justify="center" align="top" gutter={320}>
+            <Row className="row" justify="center" align="top">
               <Col
                 className="footer-second-col"
                 key="footer-second-col"
