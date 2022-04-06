@@ -45,7 +45,11 @@
     background-color: transparent;
 }
 
+<<<<<<< HEAD
 */ #cern-footer .menu.nav {
+=======
+#cern-footer .menu.nav {
+>>>>>>> footer updated
     list-style: none;
     margin: 0;
     padding: 0;
@@ -162,19 +166,19 @@
 }
 
 #cern-footer .ant-menu-item:active {
-  background: transparent;
+    background: transparent;
 }
 
 #cern-footer .ant-menu-item a {
-  color: rgba(255, 255, 255, 0.699);
+    color: rgba(255, 255, 255, 0.699);
 }
 
 #cern-footer .ant-menu-item a:hover {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 #cern-footer .ant-menu-item-selected {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 @media only screen and (max-width: 768px) {
