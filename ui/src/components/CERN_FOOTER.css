@@ -1,187 +1,187 @@
 /* CERN Footer */
 
 #cern-footer {
-  background: #191919;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  font-size: 1.8rem;
-  margin: 0;
-  position: relative;
-  padding: 10px 10px 0;
-  z-index: 100;
-  top: -1px;
-  box-sizing: border-box;
-  color: #fffeee;
+    background: #191919;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    font-size: 1.8rem;
+    margin: 0;
+    position: relative;
+    padding: 10px 10px 0;
+    z-index: 100;
+    top: -1px;
+    box-sizing: border-box;
+    color: #fffeee;
 }
 
 #cern-footer .footer {
-  margin: auto;
-  padding: 55px 3%;
-  background: #191919;
+    margin: auto;
+    padding: 55px 3%;
+    background: #191919;
 }
 
 #cern-footer .ant-menu-item {
-  font: normal normal normal 16px/28px Source Sans Pro Regular;
-  width: 100%;
-  list-style: none;
-  float: right !important;
-  position: relative;
+    font: normal normal normal 16px/28px Source Sans Pro Regular;
+    width: 100%;
+    list-style: none;
+    float: right !important;
+    position: relative;
 }
 
 .copy-wrapper {
-  font: normal normal normal 13px/27px Source Sans Pro Light;
-  text-align: center;
-  width: 100%;
-  line-height: 50px;
-  margin: 0;
+    font: normal normal normal 13px/27px Source Sans Pro Light;
+    text-align: center;
+    width: 100%;
+    line-height: 50px;
+    margin: 0;
 }
 
 .copy-wrapper.light a {
-  color: #f8f8f8;
-  background-color: transparent;
+    color: #f8f8f8;
+    background-color: transparent;
 }
 
 #cern-footer .menu.nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #cern-footer .ant-menu-item a {
-  transition: all 0.3s ease-in-out 0s;
-  display: inline-block;
-  padding: 0 0 14px 20px;
-  position: relative;
-  color: #fffefe;
+    transition: all 0.3s ease-in-out 0s;
+    display: inline-block;
+    padding: 0 0 14px 20px;
+    position: relative;
+    color: #fffefe;
 }
 
 #cern-footer .ant-menu-item a:before {
-  line-height: 26px;
-  left: 0px;
-  font-size: 14px;
-  transition: all 0.6s ease-in-out 0s;
-  content: ">";
-  -webkit-font-smoothing: antialiased;
-  display: block;
-  position: absolute;
-  top: 0;
-  color: #fffefe;
+    line-height: 26px;
+    left: 0px;
+    font-size: 14px;
+    transition: all 0.6s ease-in-out 0s;
+    content: ">";
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    position: absolute;
+    top: 0;
+    color: #fffefe;
 }
 
 #cern-footer #block-generalinfo-2-menu:after,
 #cern-footer #block-cernandyou-2-menu:after {
-  content: "";
-  width: 50%;
-  height: 2px;
-  left: 0;
-  bottom: -8px;
-  position: absolute;
-  display: block;
+    content: "";
+    width: 50%;
+    height: 2px;
+    left: 0;
+    bottom: -8px;
+    position: absolute;
+    display: block;
 }
 
 .visually-hidden {
-  color: #fffeee !important;
-  font: bold normal normal 18px/24px Open Sans;
-  position: absolute !important;
-  overflow: hidden;
-  height: 1px;
-  word-wrap: normal;
-  text-transform: uppercase;
-  display: inline-block;
-  margin: 0rem 0 2.5rem 0;
-  padding: 0;
+    color: #fffeee !important;
+    font: bold normal normal 18px/24px Open Sans;
+    position: absolute !important;
+    overflow: hidden;
+    height: 1px;
+    word-wrap: normal;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0rem 0 2.5rem 0;
+    padding: 0;
 }
 
 #cern-footer .footer-first-col:after {
-  content: "";
-  width: 2px;
-  height: 100%;
-  position: absolute;
-  top: 4px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.2);
-  left: 150px;
+    content: "";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    left: 150px;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .mb-4 {
-  margin-bottom: 1rem !important;
+    margin-bottom: 1rem !important;
 }
 
 #cern-footer h2 {
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  box-sizing: border-box;
-  color: #fffeee !important;
-  font: bold normal normal 18px/30px Open Sans;
-  min-width: 200px;
-  width: 30%;
-  line-height: 20px;
-  text-transform: uppercase;
-  position: relative;
-  margin: 0rem 0 2.5rem 0;
-  padding: 0;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    color: #fffeee !important;
+    font: bold normal normal 18px/30px Open Sans;
+    min-width: 200px;
+    width: 30%;
+    line-height: 20px;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0rem 0 2.5rem 0;
+    padding: 0;
 }
 
 #cern-footer h2:after {
-  background: #fffeee !important;
+    background: #fffeee !important;
 }
 
 .copy-wrapper.light {
-  text-align: center;
-  width: 100%;
-  line-height: 50px;
-  margin: 0;
-  color: #f8f8f8;
+    text-align: center;
+    width: 100%;
+    line-height: 50px;
+    margin: 0;
+    color: #f8f8f8;
 }
 
 #cern-footer .logo {
-  opacity: 0.6;
-  box-sizing: border-box;
-  background-color: transparent;
+    opacity: 0.6;
+    box-sizing: border-box;
+    background-color: transparent;
 }
 
 #cern-footer .logo img {
-  width: 90px;
-  display: block;
-  border: 0;
+    width: 90px;
+    display: block;
+    border: 0;
 }
 
 #cern-footer .ant-menu {
-  background-color: transparent;
-  border: none;
+    background-color: transparent;
+    border: none;
 }
 
 #cern-footer .ant-menu-item:active {
-  background: transparent;
+    background: transparent;
 }
 
 #cern-footer .ant-menu-item a {
-  color: rgba(255, 255, 255, 0.699);
+    color: rgba(255, 255, 255, 0.699);
 }
 
 #cern-footer .ant-menu-item a:hover {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 #cern-footer .ant-menu-item-selected {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 @media only screen and (max-width: 768px) {
-  #cern-footer .footer-first-col:after {
-    visibility: hidden;
-  }
-  #cern-footer .logo img {
-    float: right;
-  }
+    #cern-footer .footer-first-col:after {
+        visibility: hidden;
+    }
+    #cern-footer .logo img {
+        float: right;
+    }
 }
