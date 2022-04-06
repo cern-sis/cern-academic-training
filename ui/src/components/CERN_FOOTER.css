@@ -22,30 +22,32 @@
   max-width: 1140px;
   width: 100%;
   margin: auto;
+  padding: 55px 3%;
   background: #191919;
 }
 
+/*
 #cern-footer .row {
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  line-height: 1.428571429;
-}
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    line-height: 1.428571429;
+}*/
 
 #cern-footer .ant-menu {
-  min-width: 300px;
+  width: auto;
 }
 
 #cern-footer .ant-menu-item {
   font: normal normal normal 16px/28px Source Sans Pro Regular;
-  width: 100%;
-  left: -15px;
+  width: 200px;
+  left: 125px;
 }
 
-.row:before,
+/* .row:before,
 .row:after {
-  display: table;
-  content: " ";
-}
+    display: table;
+    content: " ";
+} */
 
 .copy-wrapper {
   font: normal normal normal 13px/27px Source Sans Pro Light;
@@ -60,9 +62,11 @@
   background-color: transparent;
 }
 
+/*
 #cern-footer nav {
-  width: 100%;
+    width: 100%;
 }
+*/
 
 #cern-footer .menu.nav {
   list-style: none;
@@ -78,8 +82,6 @@
   color: #fffefe;
 }
 
-/* TODO styling! */
-
 #cern-footer .ant-menu-item a:before {
   line-height: 26px;
   left: 0px;
@@ -93,19 +95,19 @@
   color: #fffefe;
 }
 
-#cern-footer .ant-menu-item a:after {
-  transition: all 0.3s ease-in-out 0s;
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0%;
-  position: absolute;
-  bottom: 14px;
-  left: 0;
-  margin: 0 0 0 18px;
-  max-width: calc(100% - 18px);
-  background: #f1862e;
-}
+/* #cern-footer .ant-menu-item a:after {
+    transition: all 0.3s ease-in-out 0s;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    margin: 0 0 0 18px;
+    max-width: calc(100% - 18px);
+    background: #f1862e;
+} */
 
 #cern-footer #block-generalinfo-2-menu:after,
 #cern-footer #block-cernandyou-2-menu:after {
@@ -139,7 +141,7 @@
   float: left;
   width: 25%;
   padding-right: 40px;
-  top: 0px;
+  top: -6px;
   height: 364px;
 }
 
@@ -149,7 +151,7 @@
   width: 2px;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 8px;
   right: 10px;
   background: rgba(255, 255, 255, 0.2);
   left: 120px;
@@ -160,12 +162,12 @@
   padding-left: 0px;
   float: left;
   width: 66.6666666667%;
-  left: 100px;
-  top: -10px;
+  left: 0;
+  top: -15px;
 }
 
 #cern-footer .footer-third-col {
-  left: 50px;
+  left: 230px;
 }
 
 *,
@@ -219,225 +221,150 @@
 
 /* Responsive resize */
 
-.ant.col-xs-1,
-.ant.col-sm-1,
-.ant.col-md-1,
-.ant.col-lg-1,
-.ant.col-xs-2,
-.ant.col-sm-2,
-.ant.col-md-2,
-.ant.col-lg-2,
-.ant.col-xs-3,
-.ant.col-sm-3,
-.ant.col-md-3,
-.ant.col-lg-3,
-.ant.col-xs-4,
-.ant.col-sm-4,
-.ant.col-md-4,
-.ant.col-lg-4,
-.ant.col-xs-5,
-.ant.col-sm-5,
-.ant.col-md-5,
-.ant.col-lg-5,
-.ant.col-xs-6,
-.ant.col-sm-6,
-.ant.col-md-6,
-.ant.col-lg-6,
-.ant.col-xs-7,
-.ant.col-sm-7,
-.ant.col-md-7,
-.ant.col-lg-7,
-.ant.col-xs-8,
-.ant.col-sm-8,
-.ant.col-md-8,
-.ant.col-lg-8,
-.ant.col-xs-9,
-.ant.col-sm-9,
-.ant.col-md-9,
-.ant.col-lg-9,
-.ant.col-xs-10,
-.ant.col-sm-10,
-.ant.col-md-10,
-.ant.col-lg-10,
-.ant.col-xs-11,
-.ant.col-sm-11,
-.ant.col-md-11,
-.ant.col-lg-11,
-.ant.col-xs-12,
-.ant.col-sm-12,
-.ant.col-md-12,
-.ant.col-lg-12 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-@media (min-width: 768px) {
-  .ant.col-sm-offset-1 {
-    margin-left: 8.3333333333%;
-  }
-  .ant.col-sm-6 {
-    width: 50%;
-  }
-  .ant.col-sm-1,
-  .ant.col-sm-2,
-  .ant.col-sm-3,
-  .ant.col-sm-4,
-  .ant.col-sm-5,
-  .ant.col-sm-6,
-  .ant.col-sm-7,
-  .ant.col-sm-8,
-  .ant.col-sm-9,
-  .ant.col-sm-10,
-  .ant.col-sm-11,
-  .ant.col-sm-12 {
-    float: left;
-  }
-  .ant.col-sm-1 {
-    width: 8.3333333333%;
-  }
-  .ant.col-sm-3 {
-    width: 25%;
-  }
-}
-
 @media only screen and (max-width: 980px) {
-  .footer {
+  #cern-footer .footer {
     padding: 3%;
   }
-  #cern-footer .footer-first-col:after {
-    height: 130%;
-    top: 5px;
-  }
-  #cern-footer .footer-second-col {
-    left: -60px;
-  }
-  #cern-footer .footer-third-col {
-    left: -60px;
-  }
-}
-
-@media (min-width: 992px) {
-  .ant.col-md-1,
-  .ant.col-md-2,
-  .ant.col-md-3,
-  .ant.col-md-4,
-  .ant.col-md-5,
-  .ant.col-md-6,
-  .ant.col-md-7,
-  .ant.col-md-8,
-  .ant.col-md-9,
-  .ant.col-md-10,
-  .ant.col-md-11,
-  .ant.col-md-12 {
-    float: left;
-  }
-  .ant.col-md-4 {
-    width: 33.3333333333%;
-  }
-  .ant.col-md-3 {
-    width: 25%;
-  }
-  .footer {
-    padding: 3%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .ant.col-lg-4 {
-    width: 33.3333333333%;
-  }
-  .ant.col-lg-3 {
-    width: 25%;
-  }
-  .ant.col-lg-1,
-  .ant.col-lg-2,
-  .ant.col-lg-3,
-  .ant.col-lg-4,
-  .ant.col-lg-5,
-  .ant.col-lg-6,
-  .ant.col-lg-7,
-  .ant.col-lg-8,
-  .ant.col-lg-9,
-  .ant.col-lg-10,
-  .ant.col-lg-11,
-  .ant.col-lg-12 {
-    float: left;
-  }
-  .footer {
-    padding: 55px 3%;
+  #cern-footer .ant-menu-item {
+    width: 200px;
+    left: 135px;
   }
 }
 
 @media only screen and (max-width: 768px) {
+  #cern-footer .footer {
+    min-height: 500px;
+    padding: 0 55 0 55;
+  }
   #cern-footer .footer-first-col:after {
     height: 130%;
     top: 5px;
     left: 90px;
   }
   #cern-footer .footer-third-col {
-    left: -70px;
+    top: 180px;
+    left: -40px;
+    height: auto;
+  }
+  #cern-footer .footer-second-col {
+    left: 5px;
+    height: auto;
+  }
+  #cern-footer .footer-second-col .ant-menu-item {
+    left: 148px;
+  }
+  #cern-footer .logo img {
+    float: right;
   }
 }
+
+/*TODO*/
 
 @media only screen and (max-width: 576px) {
   #cern-footer .footer-first-col:after {
     height: 125%;
-    left: 80px;
-    top: 8px;
+    left: 65px;
   }
   #cern-footer {
     padding: 30px 10px 0;
   }
   #cern-footer .footer-second-col {
-    left: -165px;
+    left: -65px;
+  }
+  #cern-footer .footer-second-col h2 {
+    left: -130px;
+  }
+  #cern-footer .footer-third-col h2 {
+    left: -115px;
+    top: -180px;
+  }
+  #cern-footer .footer-second-col .ant-menu-item {
+    left: -115px;
+  }
+  #cern-footer .footer-third-col .ant-menu-item {
+    left: -180px;
+    top: -180px;
+  }
+  #cern-footer .ant-menu-item {
+    left: -40px;
+  }
+  #cern-footer .logo img {
+    float: left;
+    margin-left: 180px;
+  }
+}
+
+@media only screen and (max-width: 514px) {
+  #cern-footer .footer-first-col:after {
+    left: 80px;
+  }
+  #cern-footer .ant-menu-item {
+    left: 0px;
+  }
+  #cern-footer .footer-second-col h2 {
+    left: -80px;
+  }
+  #cern-footer .footer-third-col h2 {
+    left: -70px;
+  }
+  #cern-footer .footer-second-col .ant-menu-item {
+    left: -45px;
+  }
+  #cern-footer .footer-third-col .ant-menu-item {
+    left: -100px;
+  }
+  #cern-footer .logo img {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 454px) {
+  #cern-footer .footer-first-col:after {
+    left: 40px;
+  }
+  #cern-footer .footer-second-col h2 {
+    left: -40px;
+  }
+  #cern-footer .footer-third-col h2 {
+    left: -35px;
+  }
+  #cern-footer .footer-second-col .ant-menu-item {
+    left: 20px;
+  }
+  #cern-footer .footer-third-col .ant-menu-item {
+    left: -30px;
+  }
+  #cern-footer .ant-menu-item {
+    left: 40px;
+  }
+  #cern-footer .footer-first-col:after {
+    left: 80px;
   }
 }
 
 @media only screen and (max-width: 414px) {
-  /* #cern-footer .logo img {
-        width: 30%;
-        float: right;
-    }*/
   #cern-footer .footer-first-col:after {
-    height: 125%;
-    left: 70px;
-    top: 8px;
-  }
-  #cern-footer {
-    padding: 30px 10px 0;
-  }
-  #cern-footer .footer-first-col:after {
-    height: 125%;
-    left: 70px;
-    top: 8px;
+    left: 60px;
   }
 }
 
 @media only screen and (max-width: 375px) {
-  /* #cern-footer .logo img {
-        width: 30%;
-        float: right;
-    }*/
-  #cern-footer .footer-first-col:after {
-    height: 130%;
-    left: 65px;
-    top: 8px;
+  #cern-footer .ant-menu-item {
+    left: 60px;
   }
-  #cern-footer .footer-second-col {
-    left: -150px;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  /* #cern-footer .logo img {
-        width: 30%;
-        float: right;
-    }*/
   #cern-footer .footer-first-col:after {
-    height: 110%;
-    left: 65px;
-    top: 8px;
+    left: 70px;
+  }
+  #cern-footer .footer-second-col h2 {
+    left: -20px;
+  }
+  #cern-footer .footer-third-col h2 {
+    left: -20px;
+  }
+  #cern-footer .footer-second-col .ant-menu-item {
+    left: 50px;
+  }
+  #cern-footer .footer-third-col .ant-menu-item {
+    left: 0px;
   }
 }
