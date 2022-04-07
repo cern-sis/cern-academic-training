@@ -6,7 +6,6 @@
   padding-top: 60px;
   padding-left: 60px;
   padding-right: 60px;
-  /* background: linear-gradient(0deg, transparent 0%, #0b1117 100%) 0% 0% no-repeat padding-box; */
 }
 
 #atc-header {
@@ -38,6 +37,7 @@
 }
 
 #atc-header h2 {
+  padding-top: 40px;
   color: #fff;
   font: normal normal normal 25px/28px Abolition;
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.877));
@@ -49,7 +49,6 @@
   border: none;
   cursor: pointer;
   display: block;
-  margin-top: -55px;
 }
 
 .ant-menu-item {
@@ -66,7 +65,7 @@
   position: relative;
   width: 40px;
   height: 40px;
-  top: -5px;
+  top: 35px;
   background: transparent;
   border-radius: 10px;
   transition: 0.5s;
@@ -86,6 +85,7 @@
   position: relative;
   float: right;
   left: -40px;
+  top: 40px;
   width: 40px;
   height: 40px;
   background-color: transparent;

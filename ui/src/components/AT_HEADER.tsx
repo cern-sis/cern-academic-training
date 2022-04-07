@@ -5,7 +5,7 @@ import {
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
-import { Layout, Input, Button, Typography, Menu } from "antd";
+import { Layout, Input, Button, Typography, Menu, Row, Col } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 
 import "./AT_HEADER.css";
@@ -37,44 +37,66 @@ function AT_HEADER() {
   return (
     <Header id="atc-header">
       <div className="header">
-        <Title>
-          <Typography.Link href="/">ACADEMIC TRAINING</Typography.Link>
-        </Title>
-        <Menu
-          onClick={handleClick}
-          mode="horizontal"
-          defaultSelectedKeys={["icon"]}
-        >
-          <Menu.Item className="about-us" key="about-us">
-            <LinkRouter to={`/about-us`}>
-              <Title level={2}>About Us</Title>
-            </LinkRouter>
-          </Menu.Item>
+        <Row className="row" justify="space-between" gutter={12}>
+          <Col
+            className="header-title"
+            key="header-title"
+            xs={12}
+            sm={12}
+            md={12}
+            lg={12}
+          >
+            <Title>
+              <Typography.Link href="/">ACADEMIC TRAINING</Typography.Link>
+            </Title>
+          </Col>
+          <Col
+            className="header-menu"
+            key="header-menu"
+            xs={12}
+            sm={12}
+            md={12}
+            lg={12}
+          >
+            <Menu
+              onClick={handleClick}
+              mode="horizontal"
+              defaultSelectedKeys={["icon"]}
+            >
+              <Menu.Item className="about-us" key="about-us">
+                <LinkRouter to={`/about-us`}>
+                  <Title level={2}>About Us</Title>
+                </LinkRouter>
+              </Menu.Item>
 
-          <Menu.Item className="search-icon" key="icon">
-            <LinkRouter to={`/search/?search=${searchTerm}&page=1`}>
-              <Button
-                type="primary"
-                style={{
-                  backgroundColor: "transparent",
-                  border: "none",
-                  boxShadow: "none",
-                }}
-              >
-                <SearchOutlined style={{ color: "white", fontSize: "200%" }} />
-              </Button>
-            </LinkRouter>
-          </Menu.Item>
-          <Menu.Item className="search-box" key="input">
-            <Input
-              className="search-input"
-              bordered={false}
-              placeholder="Search..."
-              onPressEnter={onKeyDown}
-              defaultValue={searchValue || ""}
-            />
-          </Menu.Item>
-        </Menu>
+              <Menu.Item className="search-icon" key="icon">
+                <LinkRouter to={`/search/?search=${searchTerm}&page=1`}>
+                  <Button
+                    type="primary"
+                    style={{
+                      backgroundColor: "transparent",
+                      border: "none",
+                      boxShadow: "none",
+                    }}
+                  >
+                    <SearchOutlined
+                      style={{ color: "white", fontSize: "200%" }}
+                    />
+                  </Button>
+                </LinkRouter>
+              </Menu.Item>
+              <Menu.Item className="search-box" key="input">
+                <Input
+                  className="search-input"
+                  bordered={false}
+                  placeholder="Search..."
+                  onPressEnter={onKeyDown}
+                  defaultValue={searchValue || ""}
+                />
+              </Menu.Item>
+            </Menu>
+          </Col>
+        </Row>
       </div>
     </Header>
   );
