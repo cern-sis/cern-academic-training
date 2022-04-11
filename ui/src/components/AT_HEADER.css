@@ -4,8 +4,6 @@
 #atc-header .header {
   width: 100%;
   padding-top: 60px;
-  padding-left: 60px;
-  padding-right: 60px;
 }
 
 #atc-header {
@@ -22,6 +20,7 @@
 
 #atc-header h1 {
   padding-top: 30px;
+  padding-left: 60px;
   text-align: left;
   letter-spacing: 0px;
   color: #ffffff;
@@ -43,47 +42,14 @@
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.877));
 }
 
-.ant-menu {
-  width: 100%;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: block;
-}
-
-.ant-menu-item {
-  list-style: none;
-  float: right !important;
-  position: relative;
-}
-
-.ant-menu > .ant-menu-item::after {
-  border: none !important;
-}
-
-.ant-menu > .search-box {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  top: 35px;
-  background: transparent;
-  border-radius: 10px;
-  transition: 0.5s;
-  font-style: #fff;
-  background-color: transparent;
-  z-index: 1;
-  border: 1px solid rgba(255, 255, 255, 0);
-}
-
 .search-input {
   color: #fff;
   font: normal normal normal 14px/28px Open Sans;
   bottom: 12px;
 }
 
-.ant-menu > .search-icon {
+#atc-header .ant-menu > .search-icon {
   position: relative;
-  float: right;
   left: -40px;
   top: 40px;
   width: 40px;
@@ -97,7 +63,45 @@
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.877));
 }
 
-.ant-menu > .search-box:hover {
+#atc-header .ant-menu > .search-box {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  top: 35px;
+  background: transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  font-style: #fff;
+  background-color: transparent;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+#atc-header .ant-menu {
+  padding-right: 60px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  height: auto;
+  cursor: pointer;
+  display: block;
+}
+
+#atc-header .ant-menu-item {
+  list-style: none;
+  float: right !important;
+  position: relative;
+}
+
+#atc-header .ant-menu > .ant-menu-item::after {
+  border: none !important;
+}
+
+.menu-mobile {
+  visibility: hidden;
+}
+
+#atc-header .ant-menu > .search-box:hover {
   width: 330px;
   transition: all 0.5s;
   z-index: 3;
@@ -106,26 +110,68 @@
   visibility: visible;
 }
 
+.ant-drawer-body {
+  background: linear-gradient(180deg, #0f1d3d 0%, #0b1117 100%) 0% 0% no-repeat
+    padding-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Responsive resize */
 
-@media only screen and (max-width: 768px) {
-  .search-box:hover {
-    width: 200px;
+@media only screen and (max-width: 1200px) {
+  .menu-mobile {
+    visibility: visible;
+    top: 27px;
+    float: right;
+    right: 60px;
   }
-  #atc-header h1 {
-    margin-left: -40px;
+  .ant-drawer-body .ant-menu {
+    padding-right: 0;
+    overflow: hidden;
+    flex-direction: column;
+    border: none;
+    background: transparent;
+    transition: all 0.5s;
+  }
+  .ant-drawer-body .ant-menu-item {
+    height: auto;
+    text-align: center;
+    margin: 0;
+    border: none;
+    line-height: 100px;
+  }
+  .ant-drawer-body .ant-menu-item h2 {
+    font: normal normal normal 36px/42px Abolition;
+    color: #fff;
+    opacity: 0.6;
   }
   .search-input {
-    color: #fff;
-    font: normal normal normal 17px/28px Open Sans;
+    font: normal normal normal 36px/42px Abolition;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.877));
+    opacity: 0.7;
+  }
+  .ant-drawer-body .ant-menu-item:hover {
+    border: none;
+    text-decoration: transparent;
+  }
+  .ant-drawer-body .search-icon {
+    top: 85px;
+    left: 120px;
+    opacity: 0.8;
+  }
+  .ant-drawer-body .search-box {
+    width: auto;
   }
 }
 
-@media only screen and (max-width: 375px) {
-  #atc-header h1 {
-    margin-left: -70px;
+@media only screen and (max-width: 768px) {
+  .menu-mobile {
+    top: -68px;
+    right: 0;
   }
-  #atc-header .ant-list {
-    right: -80px;
+  #atc-header h1 {
+    padding-left: 0;
   }
 }

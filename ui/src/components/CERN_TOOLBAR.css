@@ -105,6 +105,24 @@
   min-width: 200px;
 }
 
+#cern-toolbar .ant-menu {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+
+#cern-toolbar .ant-menu-item {
+  list-style: none;
+  float: right !important;
+  position: relative;
+}
+
+#cern-toolbar .ant-menu > .ant-menu-item::after {
+  border: none !important;
+}
+
 /* Responsive resize */
 
 @media only screen and (max-width: 751px) {

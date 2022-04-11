@@ -27,6 +27,9 @@
 #cern-footer .ant-menu-item {
   font: normal normal normal 16px/28px Source Sans Pro Regular;
   width: 100%;
+  list-style: none;
+  float: right !important;
+  position: relative;
 }
 
 .copy-wrapper {
@@ -151,6 +154,11 @@
   width: 90px;
   display: block;
   border: 0;
+}
+
+#cern-footer .ant-menu {
+  background-color: transparent;
+  border: none;
 }
 
 @media only screen and (max-width: 768px) {
