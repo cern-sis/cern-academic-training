@@ -33,6 +33,22 @@
   display: flex;
   object-fit: cover;
   object-position: 50% 50%;
+  opacity: 0.7;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#atc-content .photo-carousel img:hover {
+  object-position: 50% 50%;
+  opacity: 1;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 0.5s ease-in;
 }
 
 .frame {
@@ -41,8 +57,8 @@
   border-radius: 50px;
   opacity: 0.9999;
   width: auto;
-  margin-top: -10px;
-  margin-bottom: 140px;
+  margin-top: -30px;
+  margin-bottom: 160px;
   display: block;
   margin-left: -200px;
   margin-right: -200px;
@@ -53,11 +69,11 @@
 .frame #atc-logo {
   float: left;
   position: relative;
-  width: 200px;
+  width: 230px;
   margin: 0 40px;
-  top: 350px;
+  top: 340px;
   opacity: 1;
-  filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.527));
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.932));
   transition: 1s;
 }
 
@@ -71,6 +87,7 @@
   opacity: 1;
   z-index: 6;
   transition: 1s;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 .recent h2 {
@@ -393,7 +410,7 @@ iframe {
 /* About Us */
 
 .member-card {
-  margin-top: 10%;
+  margin-top: 25px;
   background: transparent linear-gradient(180deg, #0b1117 0%, #1c3775 100%) 0%
     0% no-repeat padding-box;
   border: none;
@@ -402,6 +419,10 @@ iframe {
   width: 310px;
   padding-bottom: 40px;
   border-bottom: 10px outset #0b1117ad;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  -o-appearance: auto;
+  -ms-appearance: auto;
 }
 
 .member-card .ant-avatar {
@@ -459,6 +480,10 @@ iframe {
 #about-us-content {
   justify-content: center;
   align-items: center;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  -o-appearance: auto;
+  -ms-appearance: auto;
 }
 
 #about-us-content .photo-carousel {
@@ -474,10 +499,25 @@ iframe {
   display: flex;
   object-fit: cover;
   object-position: 50% 50%;
+  opacity: 0.7;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#about-us-content .photo-carousel img:hover {
+  object-position: 50% 50%;
+  opacity: 1;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 0.5s ease-in;
 }
 
 .atc-title h2 {
-  /* margin-top: 120px; */
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -502,13 +542,6 @@ iframe {
   font: normal normal normal 16px/22px Open Sans;
   color: rgb(255, 255, 255);
   padding: 40px;
-}
-
-#more a {
-  float: right;
-  font: italic normal normal 16px/22px Open Sans;
-  color: #fff;
-  padding-bottom: 60px;
 }
 
 /* Responsive resize */
@@ -586,7 +619,6 @@ iframe {
   .frame {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0;
     margin-bottom: 120px;
   }
   #atc-content .photo-carousel img {
@@ -642,9 +674,8 @@ iframe {
   .frame {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 0;
     height: 450px;
-    margin-bottom: 200px;
+    margin-bottom: 250px;
   }
   #atc-content .photo-carousel img {
     height: 680px;
@@ -709,9 +740,8 @@ iframe {
   .frame {
     margin-left: 0;
     margin-right: 0;
-    margin-top: -20px;
-    margin-bottom: 200px;
-    height: 600px;
+    margin-bottom: 190px;
+    height: 500px;
   }
   #atc-content .photo-carousel img {
     height: 680px;
@@ -752,7 +782,6 @@ iframe {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 80px;
-    margin-top: -20px;
     height: 500px;
   }
   .video-box {
@@ -790,6 +819,8 @@ iframe {
   .frame h1 {
     padding: 10px;
     position: relative;
+    display: inline-block;
+    top: -60px;
     margin-left: 20px;
     margin-right: 20px;
     font: normal normal normal 40px/50px Abolition;
@@ -798,7 +829,6 @@ iframe {
     margin-left: 10px;
     margin-right: 10px;
     height: 620px;
-    margin-top: -30px;
     margin-bottom: 130px;
     border: 1px solid #ffffffab;
     border-radius: 50px;
@@ -854,8 +884,8 @@ iframe {
   }
   .frame h1 {
     position: relative;
-    top: -10px;
-    margin-left: 10px;
+    top: -60px;
+    margin-left: 15px;
     margin-right: 10px;
     font: normal normal normal 40px/80px Abolition;
   }
@@ -863,7 +893,6 @@ iframe {
     margin-left: 10px;
     margin-right: 10px;
     height: 550px;
-    margin-top: -40px;
     margin-bottom: 0;
     border: 1px solid #ffffffab;
     border-radius: 50px;

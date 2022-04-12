@@ -19,24 +19,17 @@
 }
 
 #cern-footer .footer {
-  max-width: 1140px;
-  width: 100%;
   margin: auto;
+  padding: 55px 3%;
   background: #191919;
 }
 
-#cern-footer .row {
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  line-height: 1.428571429;
+#cern-footer .ant-menu-item {
   font: normal normal normal 16px/28px Source Sans Pro Regular;
-  margin: auto;
-}
-
-.row:before,
-.row:after {
-  display: table;
-  content: " ";
+  width: 100%;
+  list-style: none;
+  float: right !important;
+  position: relative;
 }
 
 .copy-wrapper {
@@ -52,17 +45,13 @@
   background-color: transparent;
 }
 
-#cern-footer nav {
-  width: 100%;
-}
-
-#cern-footer nav ul.menu.nav {
+#cern-footer .menu.nav {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#cern-footer nav ul.menu.nav li a {
+#cern-footer .ant-menu-item a {
   transition: all 0.3s ease-in-out 0s;
   display: inline-block;
   padding: 0 0 14px 20px;
@@ -70,9 +59,7 @@
   color: #fffefe;
 }
 
-/* TODO styling! */
-
-#cern-footer nav ul.menu.nav li a:before {
+#cern-footer .ant-menu-item a:before {
   line-height: 26px;
   left: 0px;
   font-size: 14px;
@@ -81,22 +68,8 @@
   -webkit-font-smoothing: antialiased;
   display: block;
   position: absolute;
-  top: -2px;
+  top: 0;
   color: #fffefe;
-}
-
-#cern-footer nav ul.menu.nav li a:after {
-  transition: all 0.3s ease-in-out 0s;
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0%;
-  position: absolute;
-  bottom: 14px;
-  left: 0;
-  margin: 0 0 0 18px;
-  max-width: calc(100% - 18px);
-  background: #f1862e;
 }
 
 #cern-footer #block-generalinfo-2-menu:after,
@@ -113,11 +86,8 @@
 .visually-hidden {
   color: #fffeee !important;
   font: bold normal normal 18px/24px Open Sans;
-  line-height: 20px;
   position: absolute !important;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  width: 1px;
   height: 1px;
   word-wrap: normal;
   text-transform: uppercase;
@@ -126,32 +96,15 @@
   padding: 0;
 }
 
-#cern-footer .footer-first-col {
-  padding-left: 0px;
-  float: left;
-  width: 25%;
-  padding-right: 40px;
-  top: 0px;
-  height: 364px;
-}
-
 #cern-footer .footer-first-col:after {
   content: "";
-  display: block;
   width: 2px;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 4px;
   right: 10px;
   background: rgba(255, 255, 255, 0.2);
-  left: 120px;
-}
-
-#cern-footer .footer-second-col {
-  padding-right: 0px;
-  padding-left: 0px;
-  float: left;
-  width: 66.6666666667%;
+  left: 150px;
 }
 
 *,
@@ -170,10 +123,11 @@
   box-sizing: border-box;
   color: #fffeee !important;
   font: bold normal normal 18px/30px Open Sans;
+  min-width: 200px;
+  width: 30%;
   line-height: 20px;
   text-transform: uppercase;
   position: relative;
-  display: inline-block;
   margin: 0rem 0 2.5rem 0;
   padding: 0;
 }
@@ -197,228 +151,21 @@
 }
 
 #cern-footer .logo img {
+  width: 90px;
   display: block;
   border: 0;
 }
 
-/* Responsive resize */
-
-.col-xs-1,
-.col-sm-1,
-.col-md-1,
-.col-lg-1,
-.col-xs-2,
-.col-sm-2,
-.col-md-2,
-.col-lg-2,
-.col-xs-3,
-.col-sm-3,
-.col-md-3,
-.col-lg-3,
-.col-xs-4,
-.col-sm-4,
-.col-md-4,
-.col-lg-4,
-.col-xs-5,
-.col-sm-5,
-.col-md-5,
-.col-lg-5,
-.col-xs-6,
-.col-sm-6,
-.col-md-6,
-.col-lg-6,
-.col-xs-7,
-.col-sm-7,
-.col-md-7,
-.col-lg-7,
-.col-xs-8,
-.col-sm-8,
-.col-md-8,
-.col-lg-8,
-.col-xs-9,
-.col-sm-9,
-.col-md-9,
-.col-lg-9,
-.col-xs-10,
-.col-sm-10,
-.col-md-10,
-.col-lg-10,
-.col-xs-11,
-.col-sm-11,
-.col-md-11,
-.col-lg-11,
-.col-xs-12,
-.col-sm-12,
-.col-md-12,
-.col-lg-12 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-@media (min-width: 768px) {
-  .col-sm-offset-1 {
-    margin-left: 8.3333333333%;
-  }
-  .col-sm-6 {
-    width: 50%;
-  }
-  .col-sm-1,
-  .col-sm-2,
-  .col-sm-3,
-  .col-sm-4,
-  .col-sm-5,
-  .col-sm-6,
-  .col-sm-7,
-  .col-sm-8,
-  .col-sm-9,
-  .col-sm-10,
-  .col-sm-11,
-  .col-sm-12 {
-    float: left;
-  }
-  .col-sm-1 {
-    width: 8.3333333333%;
-  }
-  .col-sm-3 {
-    width: 25%;
-  }
-}
-
-@media only screen and (max-width: 980px) {
-  .footer {
-    padding: 3%;
-  }
-}
-
-@media (min-width: 992px) {
-  .col-md-1,
-  .col-md-2,
-  .col-md-3,
-  .col-md-4,
-  .col-md-5,
-  .col-md-6,
-  .col-md-7,
-  .col-md-8,
-  .col-md-9,
-  .col-md-10,
-  .col-md-11,
-  .col-md-12 {
-    float: left;
-  }
-  .col-md-4 {
-    width: 33.3333333333%;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .footer {
-    padding: 3%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .col-lg-4 {
-    width: 33.3333333333%;
-  }
-  .col-lg-3 {
-    width: 25%;
-  }
-  .col-lg-1,
-  .col-lg-2,
-  .col-lg-3,
-  .col-lg-4,
-  .col-lg-5,
-  .col-lg-6,
-  .col-lg-7,
-  .col-lg-8,
-  .col-lg-9,
-  .col-lg-10,
-  .col-lg-11,
-  .col-lg-12 {
-    float: left;
-  }
-  .footer {
-    padding: 55px 3%;
-  }
-}
-
-@media only screen and (max-width: 414px) {
-  #cern-footer .logo img {
-    width: 30%;
-    float: right;
-  }
-  #cern-footer .footer-first-col:after {
-    height: 125%;
-    left: 70px;
-    top: 8px;
-  }
-  #cern-footer {
-    padding: 30px 10px 0;
-  }
+#cern-footer .ant-menu {
+  background-color: transparent;
+  border: none;
 }
 
 @media only screen and (max-width: 768px) {
+  #cern-footer .footer-first-col:after {
+    visibility: hidden;
+  }
   #cern-footer .logo img {
-    width: 100px;
     float: right;
-  }
-  #cern-footer .footer-first-col:after {
-    height: 130%;
-    top: 5px;
-  }
-  #cern-footer .footer-third-col {
-    left: 0;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  #cern-footer .logo img {
-    width: 25%;
-    float: right;
-  }
-  #cern-footer .footer-first-col:after {
-    height: 125%;
-    left: 80px;
-    top: 8px;
-  }
-  #cern-footer .footer-third-col {
-    left: 0;
-  }
-  #cern-footer {
-    padding: 30px 10px 0;
-  }
-}
-
-@media only screen and (max-width: 414px) {
-  #cern-footer .footer-first-col:after {
-    height: 125%;
-    left: 70px;
-    top: 8px;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  #cern-footer .logo img {
-    width: 30%;
-    float: right;
-  }
-  #cern-footer .footer-first-col:after {
-    height: 130%;
-    left: 65px;
-    top: 8px;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  #cern-footer .logo img {
-    width: 30%;
-    float: right;
-  }
-  #cern-footer .footer-first-col:after {
-    height: 110%;
-    left: 65px;
-    top: 8px;
   }
 }

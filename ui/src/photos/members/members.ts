@@ -12,7 +12,7 @@ const members = [
   {
     key: 2,
     name: "Marika FLYGAR",
-    profile: "",
+    profile: baseUrl + "Marika_Flygar.jpg",
     position: "Administrative Assistant",
     department: "DG",
   },
