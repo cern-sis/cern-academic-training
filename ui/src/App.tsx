@@ -9,7 +9,6 @@ import {
   Input,
   Carousel,
   Typography,
-  Image,
   Divider,
 } from "antd";
 
@@ -19,6 +18,7 @@ import CERN_FOOTER from "./components/CERN_FOOTER";
 import CERN_TOOLBAR from "./components/CERN_TOOLBAR";
 import { PlayCircleOutlined } from "@ant-design/icons";
 import { getApiRoot } from "./api/api_root";
+import SUGGESTION_BOX from "./components/SUGGESTION_BOX";
 
 const { Content } = Layout;
 const { TextArea } = Input;
@@ -130,26 +130,7 @@ function App() {
         </Fragment>
 
         <Fragment>
-          <div className="suggestion-box">
-            <Title>Submit a suggestion for future topics</Title>
-            <div className="suggestion-box-window">
-              <TextArea
-                placeholder="What else would you see here?"
-                className="custom"
-                style={{
-                  height: 150,
-                  maxHeight: 150,
-                  background: "transparent",
-                  border: "none",
-                  color: "white",
-                }}
-                onKeyPress={handleKeyPress}
-              />
-              <Typography.Link href="/">
-                <Title level={2}>Send</Title>
-              </Typography.Link>
-            </div>
-          </div>
+          <SUGGESTION_BOX />
         </Fragment>
       </Content>
 

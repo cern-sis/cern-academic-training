@@ -143,6 +143,7 @@ function AT_HEADER() {
                 className="drawer"
                 onClose={toggleCollapsed}
                 visible={!state.collapsed}
+                destroyOnClose={true}
                 closeIcon={<CloseOutlined style={{ color: "#fff" }} />}
               >
                 {menu}

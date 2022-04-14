@@ -115,7 +115,7 @@
 }
 
 .video-content {
-  padding-bottom: 0;
+  /* padding-bottom: 0;*/
   display: flex;
 }
 
@@ -124,7 +124,7 @@
 }
 
 .video-content div {
-  display: inline-grid;
+  /* display: inline-grid; */
 }
 
 .video-content h2 {
@@ -241,58 +241,6 @@
   clear: both;
 }
 
-/* Suggestion Box */
-
-.suggestion-box {
-  margin-top: 10px;
-  width: auto;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-bottom: 90px;
-}
-
-.suggestion-box h1 {
-  text-align: center;
-  font: normal normal normal 50px/16px Abolition;
-  letter-spacing: 0.5px;
-  color: #dbe2e9;
-  opacity: 1;
-  margin-left: 20px;
-  margin-right: 20px;
-  line-height: 60px;
-}
-
-.suggestion-box-window {
-  padding: 25px 35px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 704px;
-  height: 200px;
-  background: transparent linear-gradient(105deg, #3c5fa1 0%, #010306 100%) 0%
-    0% no-repeat padding-box;
-  border-radius: 16px;
-  opacity: 0.6;
-}
-
-.suggestion-box-window p {
-  text-align: left;
-  font: italic normal normal 15px/30px Open Sans;
-  letter-spacing: 0px;
-  color: #dbe2e9;
-  z-index: 200;
-  opacity: 0.9;
-}
-
-.suggestion-box-window h2 {
-  margin-top: 50px;
-  text-align: right;
-  font: normal normal normal 30px/16px Abolition;
-  letter-spacing: 0.3px;
-  color: #ffffff;
-  opacity: 1;
-}
-
 /* Search results */
 
 .container {
@@ -307,28 +255,48 @@
   min-width: 40px;
   width: 1000px;
   height: auto;
-  padding: 80px;
+  padding: 80px 80px 70px;
   justify-content: center;
   align-content: center;
 }
 
 .container-content h1 {
   padding-bottom: 20px;
-  color: var(--unnamed-color-ffffff);
-  text-align: left;
-  font: normal normal normal 35px/24px Abolition;
-  letter-spacing: 0px;
+  font: normal normal normal 35px/40px Abolition;
+  letter-spacing: 1px;
   color: #ffffff;
   opacity: 1;
 }
 
-.container-content p {
-  padding-bottom: 50px;
+.container-content h3 {
+  font: normal normal normal 26px/32px Abolition;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #ffffff;
+  opacity: 0.5;
 }
 
-.pagination {
-  float: right;
+.container-content h4 {
+  font: normal normal normal 22px/22px Abolition;
+  padding-top: 100px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #ffffff;
+  opacity: 0.4;
+}
+
+.ant-pagination {
+  margin-top: 40px;
+  /* background-color: blue; */
   position: relative;
+}
+
+.empty {
+  font: normal normal normal 32px/42px Abolition;
+  color: #ffffff;
+  opacity: 0.2;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Lecture Video page */
@@ -706,6 +674,9 @@ iframe {
   }
   .video-card img {
     min-height: 300px;
+  }
+  .video-content {
+    display: inline-table;
   }
 }
 
