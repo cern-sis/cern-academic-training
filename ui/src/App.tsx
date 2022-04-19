@@ -11,6 +11,7 @@ import {
   Divider,
   Spin,
 } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
 
 import { getPhotos } from "./photos/carousel/photos";
 import AT_HEADER from "./components/AT_HEADER";
