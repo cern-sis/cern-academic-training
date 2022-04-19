@@ -1,12 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, Link, useSearchParams } from "react-router-dom";
-import { Layout, Pagination, List, Typography, Row, Col, Empty } from "antd";
+import {
+  Layout,
+  Pagination,
+  List,
+  Typography,
+  Row,
+  Col,
+  Empty,
+  Skeleton,
+} from "antd";
 
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
 import { getApiRoot } from "../api/api_root";
 import SUGGESTION_BOX from "../components/SUGGESTION_BOX";
+import LOADING_ICON from "../components/LOADING_ICON";
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -20,13 +30,16 @@ function Results() {
   const [total, setTotal] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [pageSize, setPageSize] = useState<number>(10);
+  const [loading, setLoading] = useState(false);
 
   const searchLectures = async () => {
     try {
+      setLoading(true);
       const searchQuery = searchValue
         ? `?search=${searchValue}&page=${currentPage}&page_size=${pageSize}`
         : `?page=${currentPage}&page_size=${pageSize}`;
       const results = await getApiRoot().get(`/search/lectures/${searchQuery}`);
+      setLoading(false);
       setLectures(results.data.results);
       setTotal(results.data.count);
     } catch (error) {
@@ -69,7 +82,9 @@ function Results() {
               </Row>
 
               <Row justify="space-between" gutter={[12, 12]}>
-                {!lectures.length ? (
+                {loading ? (
+                  <LOADING_ICON />
+                ) : !lectures.length ? (
                   <Col span={24}>
                     <Empty className="empty" description="No results found" />{" "}
                     <Title level={4}>Not what you are looking for?</Title>

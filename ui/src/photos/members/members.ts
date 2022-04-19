@@ -19,8 +19,8 @@ const members = [
 
   {
     key: 3,
-    name: "Albert DE ROECK",
-    profile: baseUrl + "Albert_De_Roeck.jpg",
+    name: "André DAVID",
+    profile: baseUrl + "Andre_David.png",
     position: "Chair High Energy Physics Working Group",
     department: "EP",
   },

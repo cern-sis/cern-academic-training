@@ -1,0 +1,99 @@
+#loading-icon {
+  opacity: 0.6;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#loading-icon .atom {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    center,
+    ellipse cover,
+    #000000 0%,
+    #000000 5%,
+    #ffffff 5%,
+    #ffffff 5%,
+    #ffffff 10%,
+    #ffffff 100%
+  );
+  border-radius: 100px;
+  padding: 0 10px 10px 0;
+}
+
+#loading-icon h1 {
+  color: #ffffff;
+  font: normal normal normal 32px/42px Abolition;
+  padding: 20px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading-icon .electron {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  border-radius: 150px;
+  border: 5px solid white;
+  box-shadow: 0 0 0 5px rgb(255, 255, 255) inset, 0 0 0 5px rgba(0, 0, 0, 0);
+  animation: electron1 1s linear infinite;
+  transform: rotateY(60deg) rotateX(-60deg) rotate(0);
+  line-height: 200px;
+  text-align: center;
+  font-size: 50px;
+  color: black;
+}
+
+#loading-icon .electron:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  border-radius: 5px;
+  background: black;
+  top: -7.5px;
+  left: 100px;
+}
+
+#loading-icon .electron:nth-of-type(2) {
+  transform: rotateY(-60deg) rotateX(-60deg) rotate(0);
+  animation: electron2 1s linear infinite;
+}
+
+#loading-icon .electron:nth-of-type(3) {
+  transform: rotateY(75deg) rotateX(0) rotate(180deg);
+  animation: electron3 1s linear infinite;
+}
+
+@keyframes electron1 {
+  from {
+    transform: rotateY(60deg) rotateX(-60deg) rotate(0);
+  }
+  to {
+    transform: rotateY(60deg) rotateX(-60deg) rotate(360deg);
+  }
+}
+
+@keyframes electron2 {
+  from {
+    transform: rotateY(-60deg) rotateX(-60deg) rotate(0);
+  }
+  to {
+    transform: rotateY(-60deg) rotateX(-60deg) rotate(360deg);
+  }
+}
+
+@keyframes electron3 {
+  from {
+    transform: rotateY(75deg) rotateX(0) rotate(180deg);
+  }
+  to {
+    transform: rotateY(75deg) rotateX(0) rotate(540deg);
+  }
+}

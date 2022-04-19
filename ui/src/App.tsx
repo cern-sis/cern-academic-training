@@ -6,11 +6,12 @@ import {
   Row,
   Col,
   Card,
-  Input,
   Carousel,
   Typography,
   Divider,
+  Spin,
 } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
 
 import { getPhotos } from "./photos/carousel/photos";
 import AT_HEADER from "./components/AT_HEADER";
@@ -19,22 +20,21 @@ import CERN_TOOLBAR from "./components/CERN_TOOLBAR";
 import { PlayCircleOutlined } from "@ant-design/icons";
 import { getApiRoot } from "./api/api_root";
 import SUGGESTION_BOX from "./components/SUGGESTION_BOX";
+import LOADING_ICON from "./components/LOADING_ICON";
 
 const { Content } = Layout;
-const { TextArea } = Input;
 const { Title } = Typography;
-
-const handleKeyPress = (ev: React.KeyboardEvent<HTMLTextAreaElement>) => {
-  console.log("handleKeyPress", ev);
-};
 
 function App() {
   const photos = getPhotos();
   const [lectures, setLectures] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const fetchLectures = async () => {
     try {
+      setLoading(true);
       const results = await getApiRoot().get(`/search/lectures/?page_size=4`);
+      setLoading(false);
       setLectures(results.data.results);
     } catch (error) {
       setLectures([]);
@@ -56,15 +56,19 @@ function App() {
           <div className="carousel-container">
             <div className="photo-carousel" data-preload>
               <Carousel autoplay dots={false}>
-                {photos.map((photo) => {
-                  return (
-                    <div key={photo.src} className="container-fluid">
-                      <div className="content">
-                        <img alt={photo.alt} src={photo.src} />
+                {loading ? (
+                  <Spin />
+                ) : (
+                  photos.map((photo) => {
+                    return (
+                      <div key={photo.src} className="container-fluid">
+                        <div className="content">
+                          <img alt={photo.alt} src={photo.src} />
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })
+                )}
               </Carousel>
             </div>
           </div>
@@ -90,41 +94,51 @@ function App() {
             </div>
             .{" "}
             <Row justify="center" gutter={[16, 48]}>
-              {lectures.map((lecture: any) => {
-                return (
-                  <Col key={lecture.lecture_id} span={6} xs={24} md={12} xl={6}>
-                    <nav>
-                      <LinkRouter
-                        to={`/lectures/${lecture.lecture_id}`}
-                        key={lecture.lecture_id}
-                      >
-                        <Card
-                          hoverable
-                          className="video-card"
-                          cover={
-                            <div id="thumbnail-box">
-                              <PlayCircleOutlined className="play" />
-                              <img
-                                alt="thumbnail"
-                                src={lecture.thumbnail_picture}
-                              />
-                            </div>
-                          }
+              {loading ? (
+                <LOADING_ICON />
+              ) : (
+                lectures.map((lecture: any) => {
+                  return (
+                    <Col
+                      key={lecture.lecture_id}
+                      span={6}
+                      xs={24}
+                      md={12}
+                      xl={6}
+                    >
+                      <nav>
+                        <LinkRouter
+                          to={`/lectures/${lecture.lecture_id}`}
+                          key={lecture.lecture_id}
                         >
-                          <Card.Grid className="card-content">
-                            <div className="video-content">
-                              <Title level={2}>{lecture.title}</Title>
-                            </div>
-                            <div className="video-content">
-                              <p>{lecture.speaker}</p>
-                            </div>
-                          </Card.Grid>
-                        </Card>
-                      </LinkRouter>
-                    </nav>
-                  </Col>
-                );
-              })}
+                          <Card
+                            hoverable
+                            className="video-card"
+                            cover={
+                              <div id="thumbnail-box">
+                                <PlayCircleOutlined className="play" />
+                                <img
+                                  alt="thumbnail"
+                                  src={lecture.thumbnail_picture}
+                                />
+                              </div>
+                            }
+                          >
+                            <Card.Grid className="card-content">
+                              <div className="video-content">
+                                <Title level={2}>{lecture.title}</Title>
+                              </div>
+                              <div className="video-content">
+                                <p>{lecture.speaker}</p>
+                              </div>
+                            </Card.Grid>
+                          </Card>
+                        </LinkRouter>
+                      </nav>
+                    </Col>
+                  );
+                })
+              )}
             </Row>
           </div>
         </Fragment>

@@ -163,7 +163,7 @@ function AboutUs() {
                             <Avatar
                               size={120}
                               src={
-                                require("../photos/members/profiles/Albert_De_Roeck.jpg")
+                                require("../photos/members/profiles/Andre_David.png")
                                   .default
                               }
                             />
