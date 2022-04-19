@@ -11,6 +11,7 @@ import {
   Divider,
   Spin,
 } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
 
 import { getPhotos } from "./photos/carousel/photos";
 import AT_HEADER from "./components/AT_HEADER";
@@ -19,10 +20,7 @@ import CERN_TOOLBAR from "./components/CERN_TOOLBAR";
 import { PlayCircleOutlined } from "@ant-design/icons";
 import { getApiRoot } from "./api/api_root";
 import SUGGESTION_BOX from "./components/SUGGESTION_BOX";
-<<<<<<< HEAD
 import LOADING_ICON from "./components/LOADING_ICON";
-=======
->>>>>>> drawer bug fixed + no results in search added
 
 const { Content } = Layout;
 const { Title } = Typography;
