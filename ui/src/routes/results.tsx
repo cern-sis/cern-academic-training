@@ -1,15 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, Link, useSearchParams } from "react-router-dom";
-import {
-  Layout,
-  Pagination,
-  List,
-  Typography,
-  Row,
-  Col,
-  Empty,
-  Skeleton,
-} from "antd";
+import { Layout, Pagination, List, Typography, Row, Col, Empty } from "antd";
 
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
 import AT_HEADER from "../components/AT_HEADER";
