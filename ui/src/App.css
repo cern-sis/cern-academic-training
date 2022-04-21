@@ -102,12 +102,22 @@
 }
 
 .divider {
+<<<<<<< HEAD
     background: linear-gradient(-90deg, #ffffffd0 0%, transparent 100%) 0% 0% no-repeat padding-box;
     height: 2px;
     width: 100%;
     border-radius: 50px;
     margin-bottom: 50px;
     float: right;
+=======
+  background: linear-gradient(-90deg, #ffffffd0 0%, transparent 100%) 0% 0%
+    no-repeat padding-box;
+  height: 3px;
+  width: 100%;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  float: right;
+>>>>>>> thumbnail, member card, pagination, footer menu changes
 }
 
 #atc-logo img {
@@ -115,18 +125,25 @@
 }
 
 .video-content {
+<<<<<<< HEAD
     /* padding-bottom: 0;*/
     display: flex;
+=======
+  display: flex;
+>>>>>>> thumbnail, member card, pagination, footer menu changes
 }
 
 .video-content .list-thumbnail {
     padding-right: 20px;
 }
 
+<<<<<<< HEAD
 .video-content div {
     /* display: inline-grid; */
 }
 
+=======
+>>>>>>> thumbnail, member card, pagination, footer menu changes
 .video-content h2 {
     text-align: left;
     font: italic normal normal 18px/25px Open Sans;
@@ -151,11 +168,18 @@
 }
 
 .video-card {
+<<<<<<< HEAD
     background-color: transparent;
     align-items: center;
     border: none;
     border-radius: 5px;
     min-height: 150px;
+=======
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  min-height: 150px;
+>>>>>>> thumbnail, member card, pagination, footer menu changes
 }
 
 .video-card .card-content {
@@ -166,6 +190,7 @@
 }
 
 .play {
+<<<<<<< HEAD
     width: 1em;
     color: #fff;
     font-size: 2.6em;
@@ -179,6 +204,18 @@
     float: right;
     text-align: center;
     z-index: 3;
+=======
+  width: 1em;
+  color: #fff;
+  font-size: 2.6em;
+  opacity: 0.7;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: 10px;
+  left: 20px;
+  transition: 0.5s;
+>>>>>>> thumbnail, member card, pagination, footer menu changes
 }
 
 .video-card:hover .play {
@@ -191,6 +228,7 @@
     transition: 0.5s;
 }
 
+<<<<<<< HEAD
 #thumbnail-box {
     box-shadow: inset 20px 0px 20px rgba(0, 0, 0, 0.747);
     padding: 10px;
@@ -211,6 +249,30 @@
     -ms-filter: blur(1px);
     filter: blur(1px);
     z-index: 2;
+=======
+.ant-card-cover img {
+  border-radius: 5px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: 50% 10%;
+  -o-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: brightness(50%);
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.video-card:hover img {
+  filter: brightness(80%);
+  transition: all 0.5s;
+}
+
+.ant-card-hoverable:hover {
+  border-color: transparent;
+  box-shadow: none;
+>>>>>>> thumbnail, member card, pagination, footer menu changes
 }
 
 .responsive {
@@ -286,9 +348,131 @@
 }
 
 .ant-pagination {
+<<<<<<< HEAD
     margin-top: 40px;
     /* background-color: blue; */
     position: relative;
+=======
+  margin-top: 40px;
+  position: relative;
+>>>>>>> thumbnail, member card, pagination, footer menu changes
+}
+
+.ant-pagination-item {
+  background-color: #769fff50;
+  border: none;
+  font: normal normal normal 20px/28px Abolition;
+}
+
+.ant-pagination-item a {
+  color: white;
+  transition: all 0.3s;
+}
+
+.ant-pagination-item:hover a {
+  color: white;
+}
+
+.ant-pagination-item-active {
+  background: #8dafff7e;
+  border: none;
+}
+
+.ant-pagination-item-active a {
+  color: #ffffff;
+}
+
+.ant-pagination-item-active:focus-visible a,
+.ant-pagination-item-active:hover a {
+  color: #ffffff;
+}
+
+.ant-pagination-prev:focus-visible .ant-pagination-item-link,
+.ant-pagination-next:focus-visible .ant-pagination-item-link,
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link {
+  color: white;
+  background-color: #5267977e;
+  border: none;
+}
+
+.ant-pagination-disabled .ant-pagination-item-link,
+.ant-pagination-disabled:hover .ant-pagination-item-link,
+.ant-pagination-disabled:focus-visible .ant-pagination-item-link {
+  background-color: #8dafff2a;
+  color: #0f15227e;
+  border: none;
+}
+
+.ant-pagination-prev,
+.ant-pagination-next,
+.ant-pagination-jump-prev,
+.ant-pagination-jump-next {
+  color: #8dafff7e;
+  border: none;
+}
+
+.ant-pagination-prev button,
+.ant-pagination-next button {
+  color: white;
+}
+
+.ant-pagination-prev:hover button,
+.ant-pagination-next:hover button {
+  border-color: #ffffff;
+}
+
+.ant-pagination.ant-pagination-disabled .ant-pagination-simple-pager {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  background-color: #4051797e;
+  border: none;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+.ant-pagination-options,
+.ant-pagination-options-size-changer.ant-select {
+  font: normal normal normal 20px/28px Abolition;
+  letter-spacing: 0.5px;
+  background-color: #3745667e;
+  border: none;
+  color: rgba(255, 255, 255, 0.986);
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #363636;
+}
+
+.ant-select-arrow {
+  color: white;
+}
+
+.ant-select-dropdown {
+  background-color: #405179;
+  position: sticky;
+}
+
+.ant-select-item {
+  font: normal normal normal 18px/28px Abolition;
+  color: rgba(255, 255, 255, 0.986);
+  background-color: #405179;
+}
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: #5d6c8f;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled)
+  .ant-select-item-option-state {
+  color: #ffffff;
+}
+
+.ant-pagination-item-ellipsis,
+.anticon-double-right .ant-pagination-item-link-icon {
+  color: #ffffff;
 }
 
 .empty {
@@ -379,6 +563,7 @@ iframe {
 /* About Us */
 
 .member-card {
+<<<<<<< HEAD
     margin-top: 25px;
     background: transparent linear-gradient(180deg, #0b1117 0%, #1c3775 100%) 0% 0% no-repeat padding-box;
     border: none;
@@ -391,6 +576,22 @@ iframe {
     -moz-appearance: auto;
     -o-appearance: auto;
     -ms-appearance: auto;
+=======
+  top: 35px;
+  background: transparent linear-gradient(180deg, #0b1117 0%, #1c3775 100%) 0%
+    0% no-repeat padding-box;
+  border: none;
+  align-items: center;
+  border-radius: 30px;
+  width: 310px;
+  padding-bottom: 40px;
+  border-bottom: 10px outset #0b1117ad;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  -o-appearance: auto;
+  -ms-appearance: auto;
+  transition: all 0.5s;
+>>>>>>> thumbnail, member card, pagination, footer menu changes
 }
 
 .member-card .ant-avatar {
@@ -441,8 +642,14 @@ iframe {
     z-index: 5;
 }
 
+<<<<<<< HEAD
 .member-card:hover .grid-style {
     height: 165px;
+=======
+.member-card:hover {
+  top: 23px;
+  transition: all 0.5s;
+>>>>>>> thumbnail, member card, pagination, footer menu changes
 }
 
 #about-us-content {
