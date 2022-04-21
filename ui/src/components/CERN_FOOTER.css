@@ -161,6 +161,22 @@
   border: none;
 }
 
+#cern-footer .ant-menu-item:active {
+  background: transparent;
+}
+
+#cern-footer .ant-menu-item a {
+  color: rgba(255, 255, 255, 0.699);
+}
+
+#cern-footer .ant-menu-item a:hover {
+  color: #ffffff;
+}
+
+#cern-footer .ant-menu-item-selected {
+  background-color: transparent;
+}
+
 @media only screen and (max-width: 768px) {
   #cern-footer .footer-first-col:after {
     visibility: hidden;
