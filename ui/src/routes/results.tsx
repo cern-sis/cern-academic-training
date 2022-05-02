@@ -61,13 +61,13 @@ function Results() {
           <div className="container">
             <div className="container-content">
               <Row justify="space-between">
-                <Col span={8}>
+                <Col xs={24} sm={12} md={12} lg={8}>
                   <Title>
                     Search results: {searchValue ? `"${searchValue}"` : null}{" "}
                   </Title>
                 </Col>
 
-                <Col span={8} offset={8}>
+                <Col xs={24} sm={8} md={8} lg={3}>
                   <Title level={3}>({total} results)</Title>
                 </Col>
               </Row>
@@ -113,7 +113,7 @@ function Results() {
               </Row>
 
               <Row justify="end">
-                <Col span={8} offset={8}>
+                <Col xs={24} sm={24} md={12} lg={8}>
                   <Pagination
                     current={currentPage}
                     showSizeChanger
