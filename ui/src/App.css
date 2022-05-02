@@ -681,6 +681,7 @@ iframe {
   -moz-appearance: auto;
   -o-appearance: auto;
   -ms-appearance: auto;
+  margin-bottom: 50px;
 }
 
 #about-us-content .photo-carousel {
