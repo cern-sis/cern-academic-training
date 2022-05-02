@@ -187,7 +187,7 @@ function AboutUs() {
                             <Avatar
                               size={120}
                               src={
-                                require("../photos/members/profiles/blank.png")
+                                require("../photos/members/profiles/MassimoGiovanozzi.png")
                                   .default
                               }
                             />

@@ -28,7 +28,7 @@ const members = [
   {
     key: 4,
     name: "Massimo GIOVANNOZZI",
-    profile: "",
+    profile: baseUrl + "MassimoGiovanozzi.png",
     position: "Chair Applied Physics Working Group",
     department: "BE",
   },
