@@ -101,18 +101,6 @@
 }
 
 .divider {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    background: linear-gradient(-90deg, #ffffffd0 0%, transparent 100%) 0% 0% no-repeat padding-box;
-    height: 2px;
-    width: 100%;
-    border-radius: 50px;
-    margin-bottom: 50px;
-    float: right;
-=======
-=======
->>>>>>> responsive pagination and results page
   background: linear-gradient(-90deg, #ffffffd0 0%, transparent 100%) 0% 0%
     no-repeat padding-box;
   height: 3px;
@@ -120,18 +108,6 @@
   border-radius: 50px;
   margin-bottom: 20px;
   float: right;
-<<<<<<< HEAD
->>>>>>> thumbnail, member card, pagination, footer menu changes
-=======
-    background: linear-gradient(-90deg, #ffffffd0 0%, transparent 100%) 0% 0% no-repeat padding-box;
-    height: 3px;
-    width: 100%;
-    border-radius: 50px;
-    margin-bottom: 20px;
-    float: right;
->>>>>>> fix layout for Firefox
-=======
->>>>>>> responsive pagination and results page
 }
 
 #atc-logo img {
@@ -139,40 +115,17 @@
 }
 
 .video-content {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    /* padding-bottom: 0;*/
-    display: flex;
-=======
-  display: flex;
->>>>>>> thumbnail, member card, pagination, footer menu changes
-=======
-    display: flex;
->>>>>>> fix layout for Firefox
-}
-
-.video-content .list-thumbnail {
-    padding-right: 20px;
-<<<<<<< HEAD
-}
-
-<<<<<<< HEAD
-.video-content div {
-    /* display: inline-grid; */
-=======
->>>>>>> fix layout for Firefox
-=======
   display: flex;
 }
 
 .video-content .list-thumbnail {
   padding-right: 20px;
->>>>>>> responsive pagination and results page
 }
 
-=======
->>>>>>> thumbnail, member card, pagination, footer menu changes
+.video-content .list-thumbnail {
+  padding-right: 20px;
+}
+
 .video-content h2 {
   text-align: left;
   font: italic normal normal 18px/25px Open Sans;
@@ -197,31 +150,10 @@
 }
 
 .video-card {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    background-color: transparent;
-    align-items: center;
-    border: none;
-    border-radius: 5px;
-    min-height: 150px;
-=======
-=======
->>>>>>> responsive pagination and results page
   background-color: transparent;
   border: none;
   border-radius: 5px;
   min-height: 150px;
-<<<<<<< HEAD
->>>>>>> thumbnail, member card, pagination, footer menu changes
-=======
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
-    min-height: 150px;
->>>>>>> fix layout for Firefox
-=======
->>>>>>> responsive pagination and results page
 }
 
 .video-card .card-content {
@@ -232,28 +164,6 @@
 }
 
 .play {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fix layout for Firefox
-    width: 1em;
-    color: #fff;
-    font-size: 2.6em;
-    opacity: 0.7;
-<<<<<<< HEAD
-    position: relative;
-    background-color: transparent;
-    display: flex;
-    padding-right: 10px;
-    cursor: pointer;
-    border: none;
-    float: right;
-    text-align: center;
-    z-index: 3;
-=======
-=======
->>>>>>> responsive pagination and results page
   width: 1em;
   color: #fff;
   font-size: 2.6em;
@@ -264,18 +174,6 @@
   top: 10px;
   left: 20px;
   transition: 0.5s;
-<<<<<<< HEAD
->>>>>>> thumbnail, member card, pagination, footer menu changes
-=======
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    top: 10px;
-    left: 20px;
-    transition: 0.5s;
->>>>>>> fix layout for Firefox
-=======
->>>>>>> responsive pagination and results page
 }
 
 .video-card:hover .play {
@@ -288,28 +186,28 @@
   transition: 0.5s;
 }
 
-<<<<<<< HEAD
 #thumbnail-box {
-    box-shadow: inset 20px 0px 20px rgba(0, 0, 0, 0.747);
-    padding: 10px;
-    display: block;
-    max-height: 600px;
-    border-radius: 5px;
-    border: none;
-    margin-top: -25px;
+  box-shadow: inset 20px 0px 20px rgba(0, 0, 0, 0.747);
+  padding: 10px;
+  display: block;
+  max-height: 600px;
+  border-radius: 5px;
+  border: none;
+  margin-top: -25px;
 }
 
 #thumbnail-box img {
-    margin-top: -35px;
-    width: 100%;
-    object-fit: cover;
-    object-position: 20% 10%;
-    -o-filter: blur(1px);
-    -moz-filter: blur(1px);
-    -ms-filter: blur(1px);
-    filter: blur(1px);
-    z-index: 2;
-=======
+  margin-top: -35px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 20% 10%;
+  -o-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+  z-index: 2;
+}
+
 .ant-card-cover img {
   border-radius: 5px;
   width: 100%;
@@ -330,19 +228,8 @@
 }
 
 .ant-card-hoverable:hover {
-<<<<<<< HEAD
-<<<<<<< HEAD
   border-color: transparent;
   box-shadow: none;
->>>>>>> thumbnail, member card, pagination, footer menu changes
-=======
-    border-color: transparent;
-    box-shadow: none;
->>>>>>> fix layout for Firefox
-=======
-  border-color: transparent;
-  box-shadow: none;
->>>>>>> responsive pagination and results page
 }
 
 .responsive {
@@ -419,24 +306,8 @@
 }
 
 .ant-pagination {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    margin-top: 40px;
-    /* background-color: blue; */
-    position: relative;
-=======
   margin-top: 40px;
   position: relative;
->>>>>>> thumbnail, member card, pagination, footer menu changes
-=======
-    margin-top: 40px;
-    position: relative;
->>>>>>> fix layout for Firefox
-=======
-  margin-top: 40px;
-  position: relative;
->>>>>>> responsive pagination and results page
 }
 
 .ant-pagination-item {
@@ -760,28 +631,6 @@ iframe {
 /* About Us */
 
 .member-card {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    margin-top: 25px;
-=======
-    top: 35px;
->>>>>>> fix layout for Firefox
-    background: transparent linear-gradient(180deg, #0b1117 0%, #1c3775 100%) 0% 0% no-repeat padding-box;
-    border: none;
-    align-items: center;
-    border-radius: 30px;
-    width: 310px;
-    padding-bottom: 40px;
-    border-bottom: 10px outset #0b1117ad;
-    -webkit-appearance: auto;
-    -moz-appearance: auto;
-    -o-appearance: auto;
-    -ms-appearance: auto;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> responsive pagination and results page
   top: 35px;
   background: transparent linear-gradient(180deg, #0b1117 0%, #1c3775 100%) 0%
     0% no-repeat padding-box;
@@ -796,13 +645,6 @@ iframe {
   -o-appearance: auto;
   -ms-appearance: auto;
   transition: all 0.5s;
-<<<<<<< HEAD
->>>>>>> thumbnail, member card, pagination, footer menu changes
-=======
-    transition: all 0.5s;
->>>>>>> fix layout for Firefox
-=======
->>>>>>> responsive pagination and results page
 }
 
 .member-card .ant-avatar {
@@ -853,24 +695,9 @@ iframe {
   z-index: 5;
 }
 
-<<<<<<< HEAD
-.member-card:hover .grid-style {
-    height: 165px;
-=======
 .member-card:hover {
-<<<<<<< HEAD
-<<<<<<< HEAD
   top: 23px;
   transition: all 0.5s;
->>>>>>> thumbnail, member card, pagination, footer menu changes
-=======
-    top: 23px;
-    transition: all 0.5s;
->>>>>>> fix layout for Firefox
-=======
-  top: 23px;
-  transition: all 0.5s;
->>>>>>> responsive pagination and results page
 }
 
 #about-us-content {
