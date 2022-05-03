@@ -96,7 +96,7 @@ function AboutUs() {
               <Title level={2}>Members</Title>
               <Divider className="divider" />
             </div>
-            <Row style={style} justify="center" gutter={[16, 16]}>
+            <Row style={style} justify="center" gutter={[16, 52]}>
               {members.slice(0, 1).map((member: any) => {
                 return (
                   <Space>
@@ -151,7 +151,7 @@ function AboutUs() {
               <Divider className="divider" />
             </div>
 
-            <Row style={style} justify="space-around" gutter={[16, 42]}>
+            <Row style={style} justify="space-around" gutter={[16, 52]}>
               {members.slice(2, 3).map((member: any) => {
                 return (
                   <Space>
@@ -187,7 +187,7 @@ function AboutUs() {
                             <Avatar
                               size={120}
                               src={
-                                require("../photos/members/profiles/blank.png")
+                                require("../photos/members/profiles/MassimoGiovanozzi.png")
                                   .default
                               }
                             />

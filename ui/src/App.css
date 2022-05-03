@@ -101,13 +101,37 @@
 }
 
 .divider {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    background: linear-gradient(-90deg, #ffffffd0 0%, transparent 100%) 0% 0% no-repeat padding-box;
+    height: 2px;
+    width: 100%;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    float: right;
+=======
+=======
+>>>>>>> responsive pagination and results page
   background: linear-gradient(-90deg, #ffffffd0 0%, transparent 100%) 0% 0%
     no-repeat padding-box;
-  height: 2px;
+  height: 3px;
   width: 100%;
   border-radius: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   float: right;
+<<<<<<< HEAD
+>>>>>>> thumbnail, member card, pagination, footer menu changes
+=======
+    background: linear-gradient(-90deg, #ffffffd0 0%, transparent 100%) 0% 0% no-repeat padding-box;
+    height: 3px;
+    width: 100%;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    float: right;
+>>>>>>> fix layout for Firefox
+=======
+>>>>>>> responsive pagination and results page
 }
 
 #atc-logo img {
@@ -115,18 +139,40 @@
 }
 
 .video-content {
-  /* padding-bottom: 0;*/
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    /* padding-bottom: 0;*/
+    display: flex;
+=======
+  display: flex;
+>>>>>>> thumbnail, member card, pagination, footer menu changes
+=======
+    display: flex;
+>>>>>>> fix layout for Firefox
+}
+
+.video-content .list-thumbnail {
+    padding-right: 20px;
+<<<<<<< HEAD
+}
+
+<<<<<<< HEAD
+.video-content div {
+    /* display: inline-grid; */
+=======
+>>>>>>> fix layout for Firefox
+=======
   display: flex;
 }
 
 .video-content .list-thumbnail {
   padding-right: 20px;
+>>>>>>> responsive pagination and results page
 }
 
-.video-content div {
-  /* display: inline-grid; */
-}
-
+=======
+>>>>>>> thumbnail, member card, pagination, footer menu changes
 .video-content h2 {
   text-align: left;
   font: italic normal normal 18px/25px Open Sans;
@@ -151,11 +197,31 @@
 }
 
 .video-card {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    background-color: transparent;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    min-height: 150px;
+=======
+=======
+>>>>>>> responsive pagination and results page
   background-color: transparent;
-  align-items: center;
   border: none;
   border-radius: 5px;
   min-height: 150px;
+<<<<<<< HEAD
+>>>>>>> thumbnail, member card, pagination, footer menu changes
+=======
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    min-height: 150px;
+>>>>>>> fix layout for Firefox
+=======
+>>>>>>> responsive pagination and results page
 }
 
 .video-card .card-content {
@@ -166,19 +232,50 @@
 }
 
 .play {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fix layout for Firefox
+    width: 1em;
+    color: #fff;
+    font-size: 2.6em;
+    opacity: 0.7;
+<<<<<<< HEAD
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    padding-right: 10px;
+    cursor: pointer;
+    border: none;
+    float: right;
+    text-align: center;
+    z-index: 3;
+=======
+=======
+>>>>>>> responsive pagination and results page
   width: 1em;
   color: #fff;
   font-size: 2.6em;
   opacity: 0.7;
-  position: relative;
+  position: absolute;
   background-color: transparent;
-  display: flex;
-  padding-right: 10px;
-  cursor: pointer;
   border: none;
-  float: right;
-  text-align: center;
-  z-index: 3;
+  top: 10px;
+  left: 20px;
+  transition: 0.5s;
+<<<<<<< HEAD
+>>>>>>> thumbnail, member card, pagination, footer menu changes
+=======
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 10px;
+    left: 20px;
+    transition: 0.5s;
+>>>>>>> fix layout for Firefox
+=======
+>>>>>>> responsive pagination and results page
 }
 
 .video-card:hover .play {
@@ -191,26 +288,61 @@
   transition: 0.5s;
 }
 
+<<<<<<< HEAD
 #thumbnail-box {
-  box-shadow: inset 20px 0px 20px rgba(0, 0, 0, 0.747);
-  padding: 10px;
-  display: block;
-  max-height: 600px;
-  border-radius: 5px;
-  border: none;
-  margin-top: -25px;
+    box-shadow: inset 20px 0px 20px rgba(0, 0, 0, 0.747);
+    padding: 10px;
+    display: block;
+    max-height: 600px;
+    border-radius: 5px;
+    border: none;
+    margin-top: -25px;
 }
 
 #thumbnail-box img {
-  margin-top: -35px;
+    margin-top: -35px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 20% 10%;
+    -o-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+    z-index: 2;
+=======
+.ant-card-cover img {
+  border-radius: 5px;
   width: 100%;
+  height: 150px;
   object-fit: cover;
-  object-position: 20% 10%;
+  object-position: 50% 10%;
   -o-filter: blur(1px);
   -moz-filter: blur(1px);
   -ms-filter: blur(1px);
-  filter: blur(1px);
+  filter: brightness(50%);
   z-index: 2;
+  transition: 0.5s;
+}
+
+.video-card:hover img {
+  filter: brightness(80%);
+  transition: all 0.5s;
+}
+
+.ant-card-hoverable:hover {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  border-color: transparent;
+  box-shadow: none;
+>>>>>>> thumbnail, member card, pagination, footer menu changes
+=======
+    border-color: transparent;
+    box-shadow: none;
+>>>>>>> fix layout for Firefox
+=======
+  border-color: transparent;
+  box-shadow: none;
+>>>>>>> responsive pagination and results page
 }
 
 .responsive {
@@ -269,6 +401,7 @@
 }
 
 .container-content h3 {
+  padding-top: 3px;
   font: normal normal normal 26px/32px Abolition;
   text-align: center;
   letter-spacing: 1px;
@@ -286,9 +419,258 @@
 }
 
 .ant-pagination {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    margin-top: 40px;
+    /* background-color: blue; */
+    position: relative;
+=======
   margin-top: 40px;
-  /* background-color: blue; */
   position: relative;
+>>>>>>> thumbnail, member card, pagination, footer menu changes
+=======
+    margin-top: 40px;
+    position: relative;
+>>>>>>> fix layout for Firefox
+=======
+  margin-top: 40px;
+  position: relative;
+>>>>>>> responsive pagination and results page
+}
+
+.ant-pagination-item {
+  background-color: #769fff50;
+  border: none;
+  font: normal normal normal 20px/28px Abolition;
+}
+
+.ant-pagination-item a {
+  color: white;
+  transition: all 0.3s;
+}
+
+.ant-pagination-item:hover a {
+  color: white;
+}
+
+.ant-pagination-item-active {
+  background: #8dafff7e;
+  border: none;
+}
+
+.ant-pagination-item-active a {
+  color: #ffffff;
+}
+
+.ant-pagination-item-active:focus-visible a,
+.ant-pagination-item-active:hover a {
+  color: #ffffff;
+}
+
+.ant-pagination-prev:focus-visible .ant-pagination-item-link,
+.ant-pagination-next:focus-visible .ant-pagination-item-link,
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link {
+  color: white;
+  background-color: #5267977e;
+  border: none;
+}
+
+.ant-pagination-disabled .ant-pagination-item-link,
+.ant-pagination-disabled:hover .ant-pagination-item-link,
+.ant-pagination-disabled:focus-visible .ant-pagination-item-link {
+  background-color: #8dafff2a;
+  color: #0f15227e;
+  border: none;
+}
+
+.ant-pagination-prev,
+.ant-pagination-next,
+.ant-pagination-jump-prev,
+.ant-pagination-jump-next {
+  color: #8dafff7e;
+  border: none;
+}
+
+.ant-pagination-prev button,
+.ant-pagination-next button {
+  color: white;
+}
+
+.ant-pagination-prev:hover button,
+.ant-pagination-next:hover button {
+  border-color: #ffffff;
+}
+
+.ant-pagination.ant-pagination-disabled .ant-pagination-simple-pager {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  background-color: #4051797e;
+  border: none;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+.ant-pagination-options,
+.ant-pagination-options-size-changer.ant-select {
+  font: normal normal normal 20px/28px Abolition;
+  letter-spacing: 0.5px;
+  background-color: #3745667e;
+  border: none;
+  color: rgba(255, 255, 255, 0.986);
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #363636;
+}
+
+.ant-select-arrow {
+  color: white;
+}
+
+.ant-select-dropdown {
+  background-color: #405179;
+  position: sticky;
+}
+
+.ant-select-item {
+  font: normal normal normal 18px/28px Abolition;
+  color: rgba(255, 255, 255, 0.986);
+  background-color: #405179;
+}
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: #5d6c8f;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled)
+  .ant-select-item-option-state {
+  color: #ffffff;
+}
+
+.ant-pagination-item-ellipsis,
+.anticon-double-right .ant-pagination-item-link-icon {
+  color: #ffffff;
+}
+
+.ant-pagination-item {
+  background-color: #769fff50;
+  border: none;
+  font: normal normal normal 20px/28px Abolition;
+}
+
+.ant-pagination-item a {
+  color: white;
+  transition: all 0.3s;
+}
+
+.ant-pagination-item:hover a {
+  color: white;
+}
+
+.ant-pagination-item-active {
+  background: #8dafff7e;
+  border: none;
+}
+
+.ant-pagination-item-active a {
+  color: #ffffff;
+}
+
+.ant-pagination-item-active:focus-visible a,
+.ant-pagination-item-active:hover a {
+  color: #ffffff;
+}
+
+.ant-pagination-prev:focus-visible .ant-pagination-item-link,
+.ant-pagination-next:focus-visible .ant-pagination-item-link,
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link {
+  color: white;
+  background-color: #5267977e;
+  border: none;
+}
+
+.ant-pagination-disabled .ant-pagination-item-link,
+.ant-pagination-disabled:hover .ant-pagination-item-link,
+.ant-pagination-disabled:focus-visible .ant-pagination-item-link {
+  background-color: #8dafff2a;
+  color: #0f15227e;
+  border: none;
+}
+
+.ant-pagination-prev,
+.ant-pagination-next,
+.ant-pagination-jump-prev,
+.ant-pagination-jump-next {
+  color: #8dafff7e;
+  border: none;
+}
+
+.ant-pagination-prev button,
+.ant-pagination-next button {
+  color: white;
+}
+
+.ant-pagination-prev:hover button,
+.ant-pagination-next:hover button {
+  border-color: #ffffff;
+}
+
+.ant-pagination.ant-pagination-disabled .ant-pagination-simple-pager {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  background-color: #4051797e;
+  border: none;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+.ant-pagination-options,
+.ant-pagination-options-size-changer.ant-select {
+  font: normal normal normal 20px/28px Abolition;
+  letter-spacing: 0.5px;
+  background-color: #3745667e;
+  border: none;
+  color: rgba(255, 255, 255, 0.986);
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #363636;
+}
+
+.ant-select-arrow {
+  color: white;
+}
+
+.ant-select-dropdown {
+  background-color: #405179;
+  position: sticky;
+}
+
+.ant-select-item {
+  font: normal normal normal 18px/28px Abolition;
+  color: rgba(255, 255, 255, 0.986);
+  background-color: #405179;
+}
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: #5d6c8f;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled)
+  .ant-select-item-option-state {
+  color: #ffffff;
+}
+
+.ant-pagination-item-ellipsis,
+.anticon-double-right .ant-pagination-item-link-icon {
+  color: #ffffff;
 }
 
 .empty {
@@ -378,7 +760,29 @@ iframe {
 /* About Us */
 
 .member-card {
-  margin-top: 25px;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    margin-top: 25px;
+=======
+    top: 35px;
+>>>>>>> fix layout for Firefox
+    background: transparent linear-gradient(180deg, #0b1117 0%, #1c3775 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    align-items: center;
+    border-radius: 30px;
+    width: 310px;
+    padding-bottom: 40px;
+    border-bottom: 10px outset #0b1117ad;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    -o-appearance: auto;
+    -ms-appearance: auto;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> responsive pagination and results page
+  top: 35px;
   background: transparent linear-gradient(180deg, #0b1117 0%, #1c3775 100%) 0%
     0% no-repeat padding-box;
   border: none;
@@ -391,6 +795,14 @@ iframe {
   -moz-appearance: auto;
   -o-appearance: auto;
   -ms-appearance: auto;
+  transition: all 0.5s;
+<<<<<<< HEAD
+>>>>>>> thumbnail, member card, pagination, footer menu changes
+=======
+    transition: all 0.5s;
+>>>>>>> fix layout for Firefox
+=======
+>>>>>>> responsive pagination and results page
 }
 
 .member-card .ant-avatar {
@@ -441,8 +853,24 @@ iframe {
   z-index: 5;
 }
 
+<<<<<<< HEAD
 .member-card:hover .grid-style {
-  height: 165px;
+    height: 165px;
+=======
+.member-card:hover {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  top: 23px;
+  transition: all 0.5s;
+>>>>>>> thumbnail, member card, pagination, footer menu changes
+=======
+    top: 23px;
+    transition: all 0.5s;
+>>>>>>> fix layout for Firefox
+=======
+  top: 23px;
+  transition: all 0.5s;
+>>>>>>> responsive pagination and results page
 }
 
 #about-us-content {
@@ -452,6 +880,7 @@ iframe {
   -moz-appearance: auto;
   -o-appearance: auto;
   -ms-appearance: auto;
+  margin-bottom: 50px;
 }
 
 #about-us-content .photo-carousel {
@@ -726,8 +1155,12 @@ iframe {
     padding: 40px;
   }
   .container-content h1 {
+    padding-bottom: 0;
+  }
+  .container-content h3 {
     padding-bottom: 10px;
-    font: normal normal normal 30px/40px Abolition;
+    font: normal normal normal 22px/30px Abolition;
+    float: left;
   }
   .pagination {
     top: -20px;
@@ -891,10 +1324,6 @@ iframe {
     width: auto;
     height: auto;
     padding: 40px;
-  }
-  .container-content h1 {
-    padding-bottom: 10px;
-    font: normal normal normal 30px/40px Abolition;
   }
   .video-content h2 {
     font: italic normal normal 18px/25px Open Sans;

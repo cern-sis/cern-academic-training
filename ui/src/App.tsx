@@ -32,7 +32,7 @@ function App() {
   const fetchLectures = async () => {
     try {
       setLoading(true);
-      const results = await getApiRoot().get(`/search/lectures/?page_size=4`);
+      const results = await getApiRoot().get(`/search/lectures/?page_size=12`);
       setLoading(false);
       setLectures(results.data.results);
     } catch (error) {
@@ -92,7 +92,7 @@ function App() {
               <Divider className="divider" />
             </div>
             .{" "}
-            <Row justify="center" gutter={[16, 48]}>
+            <Row justify="center" gutter={[16, 42]}>
               {loading ? (
                 <LOADING_ICON />
               ) : (
@@ -114,16 +114,20 @@ function App() {
                             hoverable
                             className="video-card"
                             cover={
-                              <div id="thumbnail-box">
-                                <PlayCircleOutlined className="play" />
-                                <img
-                                  alt="thumbnail"
-                                  src={lecture.thumbnail_picture}
-                                />
-                              </div>
+                              <img
+                                alt="thumbnail"
+                                src={lecture.thumbnail_picture}
+                              />
                             }
                           >
-                            <Card.Grid className="card-content">
+                            <div className="play">
+                              <PlayCircleOutlined />
+                            </div>
+
+                            <Card.Grid
+                              className="card-content"
+                              hoverable={false}
+                            >
                               <div className="video-content">
                                 <Title level={2}>{lecture.title}</Title>
                               </div>
