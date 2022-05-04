@@ -165,6 +165,15 @@
   text-transform: uppercase;
 }
 
+.no-results h4 {
+  padding-top: 80px;
+  font: normal normal normal 26px/28px Abolition;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
 .video-card {
   background-color: transparent;
   border: none;

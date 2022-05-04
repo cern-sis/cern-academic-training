@@ -76,7 +76,7 @@ function Results() {
                 {loading ? (
                   <LOADING_ICON />
                 ) : !lectures.length ? (
-                  <Col span={24}>
+                  <Col span={24} className="no-results">
                     <Empty className="empty" description="No results found" />{" "}
                     <Title level={4}>Not what you are looking for?</Title>
                     <SUGGESTION_BOX />
