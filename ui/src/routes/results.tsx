@@ -61,13 +61,13 @@ function Results() {
           <div className="container">
             <div className="container-content">
               <Row justify="space-between">
-                <Col xs={24} sm={12} md={12} lg={8}>
+                <Col xs={24} sm={12} md={12} lg={12}>
                   <Title>
                     Search results: {searchValue ? `"${searchValue}"` : null}{" "}
                   </Title>
                 </Col>
 
-                <Col xs={24} sm={8} md={8} lg={3}>
+                <Col xs={24} sm={12} md={12} lg={12}>
                   <Title level={3}>({total} results)</Title>
                 </Col>
               </Row>
@@ -90,7 +90,7 @@ function Results() {
                           key={lecture.lecture_id}
                         >
                           <div className="video-content">
-                            <Col flex="auto">
+                            <Col>
                               <div className="list-thumbnail">
                                 <img
                                   alt="thumbnail"
@@ -99,7 +99,7 @@ function Results() {
                               </div>
                             </Col>
 
-                            <Col flex="auto">
+                            <Col>
                               <Title level={2}>{lecture.title}</Title>
                               <p>{lecture.speaker}</p>
                             </Col>
@@ -113,7 +113,7 @@ function Results() {
               </Row>
 
               <Row justify="end">
-                <Col xs={24} sm={24} md={12} lg={8}>
+                <Col>
                   <Pagination
                     current={currentPage}
                     showSizeChanger
