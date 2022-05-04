@@ -114,16 +114,16 @@
   width: 100%;
 }
 
+.ant-list {
+  width: 100%;
+}
+
 .video-content {
   display: flex;
 }
 
 .video-content .list-thumbnail {
-  padding-right: 20px;
-}
-
-.video-content .list-thumbnail {
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 .video-content h2 {
@@ -132,11 +132,11 @@
   letter-spacing: 1px;
   color: #ffffff;
   opacity: 1;
-  text-overflow: ellipsis;
-  overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
   line-height: 1.5em;
   max-height: 3em;
 }
@@ -147,6 +147,11 @@
   letter-spacing: 0.9px;
   color: #ffffff;
   opacity: 0.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .video-card {
@@ -288,6 +293,7 @@
 }
 
 .container-content h3 {
+  float: right;
   padding-top: 3px;
   font: normal normal normal 26px/32px Abolition;
   text-align: center;
@@ -308,6 +314,7 @@
 .ant-pagination {
   margin-top: 40px;
   position: relative;
+  float: right;
 }
 
 .ant-pagination-item {
@@ -541,6 +548,24 @@
 
 .ant-pagination-item-ellipsis,
 .anticon-double-right .ant-pagination-item-link-icon {
+  color: #ffffff;
+}
+
+.ant-pagination-jump-next
+  .ant-pagination-item-container
+  .ant-pagination-item-link-icon,
+.ant-pagination-jump-prev
+  .ant-pagination-item-container
+  .ant-pagination-item-link-icon {
+  color: #ffffff;
+}
+
+.ant-pagination-jump-next
+  .ant-pagination-item-container
+  .ant-pagination-item-ellipsis,
+.ant-pagination-jump-prev
+  .ant-pagination-item-container
+  .ant-pagination-item-ellipsis {
   color: #ffffff;
 }
 
