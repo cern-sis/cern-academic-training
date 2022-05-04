@@ -132,9 +132,6 @@
   letter-spacing: 1px;
   color: #ffffff;
   opacity: 1;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
   text-overflow: ellipsis;
   overflow: hidden;
   line-height: 1.5em;
@@ -147,9 +144,6 @@
   letter-spacing: 0.9px;
   color: #ffffff;
   opacity: 0.5;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
   text-overflow: ellipsis;
   overflow: hidden;
 }
