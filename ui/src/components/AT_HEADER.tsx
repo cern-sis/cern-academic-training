@@ -74,12 +74,26 @@ function AT_HEADER() {
       className="menu"
       overflowedIndicator={false}
     >
+      <Menu.Item className="contact-us" key="contact-us">
+        <Typography.Link href="mailto:atc-contact@cern.ch" target="_blank">
+          <Title level={2} className="contact-us-link">
+            Contact Us
+          </Title>
+        </Typography.Link>
+      </Menu.Item>
+
       <Menu.Item className="about-us" key="about-us">
         <LinkRouter to={`/about-us`}>
           <Title level={2} className="about-us-link">
             About Us
           </Title>
         </LinkRouter>
+      </Menu.Item>
+
+      <Menu.Item className="search-text" key="search-text">
+        <Title level={2} className="search-text">
+          | Search
+        </Title>
       </Menu.Item>
 
       <Menu.Item className="search-icon" key="icon">
@@ -134,9 +148,9 @@ function AT_HEADER() {
             md={12}
             lg={12}
           >
-            {(toggleMenu || screenWidth >= 1200) && <div>{menu}</div>}
+            {(toggleMenu || screenWidth >= 1500) && <div>{menu}</div>}
 
-            {(toggleMenu || screenWidth < 1200) && (
+            {(toggleMenu || screenWidth < 1500) && (
               <Drawer
                 placement="right"
                 width="100%"

@@ -61,7 +61,7 @@ function AboutUs() {
               <div className="frame">
                 <div id="atc-logo">
                   <img
-                    src="../white-atc-logo.png"
+                    src="../academicTrainingLogo.png"
                     alt="Academic Training Logo"
                   />
                 </div>
@@ -151,7 +151,7 @@ function AboutUs() {
               <Divider className="divider" />
             </div>
 
-            <Row style={style} justify="space-around" gutter={[16, 52]}>
+            <Row style={style} justify="center" gutter={[16, 52]}>
               {members.slice(2, 3).map((member: any) => {
                 return (
                   <Space>
@@ -385,7 +385,7 @@ function AboutUs() {
               <Title level={3}>Observers</Title>
               <Divider className="divider" />
             </div>
-            <Row style={style} justify="space-around" gutter={[16, 42]}>
+            <Row style={style} justify="center" gutter={[16, 52]}>
               {members.slice(11, 12).map((member: any) => {
                 return (
                   <Space>

@@ -78,7 +78,10 @@ function App() {
             <div className="responsive">
               <div className="frame">
                 <div id="atc-logo">
-                  <img src="white-atc-logo.png" alt="Academic Training Logo" />
+                  <img
+                    src="academicTrainingLogo.png"
+                    alt="Academic Training Logo"
+                  />
                 </div>
                 <Title>
                   <Typography.Link href="/" style={{ color: "#fff" }}>
@@ -100,9 +103,10 @@ function App() {
                   return (
                     <Col
                       key={lecture.lecture_id}
-                      span={6}
                       xs={24}
+                      sm={24}
                       md={12}
+                      lg={8}
                       xl={6}
                     >
                       <nav>
@@ -129,10 +133,15 @@ function App() {
                               hoverable={false}
                             >
                               <div className="video-content">
+                                <Title level={4}>{lecture.speaker}</Title>
+                              </div>
+                              <div className="video-content">
                                 <Title level={2}>{lecture.title}</Title>
                               </div>
                               <div className="video-content">
-                                <p>{lecture.speaker}</p>
+                                <Title level={3}>
+                                  Posted on {lecture.date}
+                                </Title>
                               </div>
                             </Card.Grid>
                           </Card>
