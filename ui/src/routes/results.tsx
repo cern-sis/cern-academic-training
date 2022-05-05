@@ -68,11 +68,11 @@ function Results() {
                 </Col>
 
                 <Col xs={24} sm={12} md={12} lg={12}>
-                  <Title level={3}>({total} results)</Title>
+                  <Title level={5}>({total} results)</Title>
                 </Col>
               </Row>
 
-              <Row justify="space-between" gutter={[12, 12]}>
+              <Row justify="space-between" gutter={[12, 1]}>
                 {loading ? (
                   <LOADING_ICON />
                 ) : !lectures.length ? (
@@ -99,9 +99,10 @@ function Results() {
                               </div>
                             </Col>
 
-                            <Col>
+                            <Col className="list-content">
+                              <Title level={4}>{lecture.speaker}</Title>
                               <Title level={2}>{lecture.title}</Title>
-                              <p>{lecture.speaker}</p>
+                              <Title level={3}>{lecture.date}</Title>
                             </Col>
                           </div>
                         </Link>
