@@ -14,6 +14,7 @@ import {
 import "../App.css";
 import { getMembers } from "../photos/members/members";
 import { getPhotos } from "../photos/carousel/photos";
+import { getReveal } from "../events/reveal";
 
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
@@ -26,7 +27,9 @@ function AboutUs() {
   const members = getMembers();
   const photos = getPhotos();
 
-  const baseURL = "../photos/members/profiles/";
+  window.scrollTo(0, 0);
+
+  getReveal();
 
   const style = { display: "flex", alignItems: "center", padding: "10px" };
 
@@ -72,13 +75,11 @@ function AboutUs() {
                 </Title>
               </div>
             </div>
-
-            <div className="atc-title">
+            <div className="atc-title reveal">
               <Title level={2}>ACADEMIC TRAINING COMMITTEE</Title>
               <Divider className="divider" />
             </div>
-
-            <div className="our-mission">
+            <div className="our-mission reveal">
               <Title level={4}>
                 The CERN Academic Training lectures cover physics and technology
                 research results, as well as leading-edge news from other
@@ -91,12 +92,17 @@ function AboutUs() {
                 is archived since 1968.
               </Title>
             </div>
-
-            <div className="atc-title">
+            .{" "}
+            <div className="atc-title reveal">
               <Title level={2}>Members</Title>
               <Divider className="divider" />
             </div>
-            <Row style={style} justify="center" gutter={[16, 52]}>
+            <Row
+              className="reveal"
+              style={style}
+              justify="center"
+              gutter={[16, 52]}
+            >
               {members.slice(0, 1).map((member: any) => {
                 return (
                   <Space>
@@ -146,12 +152,17 @@ function AboutUs() {
                 );
               })}
             </Row>
-            <div className="atc-title">
+            .{" "}
+            <div className="atc-title reveal">
               <Title level={3}>Departments</Title>
               <Divider className="divider" />
             </div>
-
-            <Row style={style} justify="center" gutter={[16, 52]}>
+            <Row
+              className="reveal"
+              style={style}
+              justify="center"
+              gutter={[16, 52]}
+            >
               {members.slice(2, 3).map((member: any) => {
                 return (
                   <Space>
@@ -321,11 +332,12 @@ function AboutUs() {
                 );
               })}
             </Row>
-            <div className="atc-title">
+            .{" "}
+            <div className="atc-title reveal">
               <Title level={3}>Users</Title>
               <Divider className="divider" />
             </div>
-            <Row style={style} justify="center" gutter={16}>
+            <Row className="reveal" style={style} justify="center" gutter={16}>
               {members.slice(9, 10).map((member: any) => {
                 return (
                   <Space>
@@ -351,11 +363,12 @@ function AboutUs() {
                 );
               })}
             </Row>
-            <div className="atc-title">
+            .{" "}
+            <div className="atc-title reveal">
               <Title level={3}>Staff Association</Title>
               <Divider className="divider" />
             </div>
-            <Row style={style} justify="center" gutter={16}>
+            <Row className="reveal" style={style} justify="center" gutter={16}>
               {members.slice(10, 11).map((member: any) => {
                 return (
                   <Space>
@@ -381,11 +394,17 @@ function AboutUs() {
                 );
               })}
             </Row>
-            <div className="atc-title">
+            .{" "}
+            <div className="atc-title reveal">
               <Title level={3}>Observers</Title>
               <Divider className="divider" />
             </div>
-            <Row style={style} justify="center" gutter={[16, 52]}>
+            <Row
+              className="reveal"
+              style={style}
+              justify="center"
+              gutter={[16, 52]}
+            >
               {members.slice(11, 12).map((member: any) => {
                 return (
                   <Space>

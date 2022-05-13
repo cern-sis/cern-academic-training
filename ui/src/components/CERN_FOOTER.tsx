@@ -99,7 +99,7 @@ function CERN_FOOTER() {
 
                   <Menu className="menu nav">
                     <Menu.Item>
-                      <Link to={`/about-us/`}>About Us</Link>
+                      <Link to={`/about-us/`}>About</Link>
                     </Menu.Item>
 
                     <Menu.Item>
@@ -110,7 +110,7 @@ function CERN_FOOTER() {
 
                     <Menu.Item>
                       <Typography.Link href="https://indico.cern.ch/category/72/">
-                        Indico
+                        Events
                       </Typography.Link>
                     </Menu.Item>
 
@@ -119,7 +119,7 @@ function CERN_FOOTER() {
                         href="mailto:atc-contact@cern.ch"
                         target="_blank"
                       >
-                        Contact Us
+                        Contact
                       </Typography.Link>
                     </Menu.Item>
                   </Menu>

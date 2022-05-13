@@ -28,5 +28,6 @@ class LectureDocument(Document):
             "language",
             "subject_category",
             "lecture_note",
+            "imprint",
             "license",
         ]

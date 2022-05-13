@@ -44,6 +44,8 @@ function App() {
     fetchLectures();
   }, []);
 
+  window.scrollTo(0, 0);
+
   return (
     <Layout className="layout">
       <CERN_TOOLBAR />
@@ -55,19 +57,15 @@ function App() {
           <div className="carousel-container">
             <div className="photo-carousel" data-preload>
               <Carousel autoplay dots={false}>
-                {loading ? (
-                  <Spin />
-                ) : (
-                  photos.map((photo) => {
-                    return (
-                      <div key={photo.src} className="container-fluid">
-                        <div className="content">
-                          <img alt={photo.alt} src={photo.src} />
-                        </div>
+                {photos.map((photo) => {
+                  return (
+                    <div key={photo.src} className="container-fluid">
+                      <div className="content">
+                        <img alt={photo.alt} src={photo.src} />
                       </div>
-                    );
-                  })
-                )}
+                    </div>
+                  );
+                })}
               </Carousel>
             </div>
           </div>
@@ -126,6 +124,12 @@ function App() {
                           >
                             <div className="play">
                               <PlayCircleOutlined />
+                            </div>
+
+                            <div className="duration">
+                              <Title level={5}>
+                                {lecture.imprint.substring(12, 20)}
+                              </Title>
                             </div>
 
                             <Card.Grid

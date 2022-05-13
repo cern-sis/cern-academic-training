@@ -1,53 +1,22 @@
 import React, { useState, useEffect } from "react";
 
-import {
-  Link as LinkRouter,
-  useNavigate,
-  useSearchParams,
-} from "react-router-dom";
-import {
-  Layout,
-  Input,
-  Button,
-  Typography,
-  Menu,
-  Row,
-  Col,
-  Drawer,
-} from "antd";
-import { SearchOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons";
+import { Layout, Button, Typography, Row, Col, Drawer } from "antd";
+import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
 
 import "./AT_HEADER.css";
+import SEARCH_BAR from "./SEARCH_BAR";
+import MENU from "./MENU";
 
 const { Header } = Layout;
 const { Title } = Typography;
 
 function AT_HEADER() {
-  let navigate = useNavigate();
-  const [searchQuery] = useSearchParams();
-  const searchValue = searchQuery.get("search") || "";
-  let [searchTerm, setSearchTerm] = useState(searchValue);
   const [toggleMenu, setToggleMenu] = useState(false);
   const [state, setState] = useState({ collapsed: true });
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [current, setCurrent] = React.useState("icon");
-
-  const onKeyDown = (ev: any) => {
-    const searchValue = ev.target.value;
-    if (searchValue) {
-      setSearchTerm(ev.target.value);
-      navigate(`/search?search=${ev.target.value}&page=1`);
-    } else {
-      navigate("/search");
-    }
-  };
-
-  const handleClick = (e: any) => {
-    setCurrent(e.key);
-  };
+  const [header, setHeader] = useState(false);
 
   const toggleCollapsed = (e: any) => {
-    setToggleMenu(!toggleMenu);
     setState((state) => {
       return {
         collapsed: !state.collapsed,
@@ -67,100 +36,44 @@ function AT_HEADER() {
     };
   }, []);
 
-  const menu = (
-    <Menu
-      onClick={handleClick}
-      mode="horizontal"
-      className="menu"
-      overflowedIndicator={false}
-    >
-      <Menu.Item className="contact-us" key="contact-us">
-        <Typography.Link href="mailto:atc-contact@cern.ch" target="_blank">
-          <Title level={2} className="contact-us-link">
-            Contact Us
-          </Title>
-        </Typography.Link>
-      </Menu.Item>
+  const changeBackground = () => {
+    if (window.scrollY >= 40) {
+      setHeader(true);
+    } else {
+      setHeader(false);
+    }
+  };
 
-      <Menu.Item className="about-us" key="about-us">
-        <LinkRouter to={`/about-us`}>
-          <Title level={2} className="about-us-link">
-            About Us
-          </Title>
-        </LinkRouter>
-      </Menu.Item>
-
-      <Menu.Item className="search-text" key="search-text">
-        <Title level={2} className="search-text">
-          | Search
-        </Title>
-      </Menu.Item>
-
-      <Menu.Item className="search-icon" key="icon">
-        <LinkRouter to={`/search/?search=${searchTerm}&page=1`}>
-          <Button
-            className="search-button"
-            type="primary"
-            style={{
-              backgroundColor: "transparent",
-              border: "none",
-              boxShadow: "none",
-            }}
-          >
-            <SearchOutlined style={{ color: "white", fontSize: "200%" }} />
-          </Button>
-        </LinkRouter>
-      </Menu.Item>
-      <Menu.Item className="search-box" key="input">
-        <Input
-          className="search-input"
-          bordered={false}
-          placeholder="Search..."
-          onPressEnter={onKeyDown}
-          defaultValue={searchValue || ""}
-        />
-      </Menu.Item>
-    </Menu>
-  );
+  window.addEventListener("scroll", changeBackground);
 
   return (
     <Header id="atc-header">
-      <div className="header">
-        <Row className="row" justify="space-between" gutter={12}>
-          <Col
-            className="header-title"
-            key="header-title"
-            xs={24}
-            sm={24}
-            md={12}
-            lg={12}
-          >
+      <div className={header ? "header active" : "header"}>
+        <Row justify="space-around" wrap={false}>
+          <Col className="header-title" key="header-title">
             <Title>
               <Typography.Link href="/">ACADEMIC TRAINING</Typography.Link>
             </Title>
           </Col>
 
-          <Col
-            className="header-menu"
-            key="header-menu"
-            xs={24}
-            sm={24}
-            md={12}
-            lg={12}
-          >
-            {(toggleMenu || screenWidth >= 1500) && <div>{menu}</div>}
+          <Col className="header-search" key="header-search">
+            {(toggleMenu || screenWidth >= 992) && <SEARCH_BAR />}
+          </Col>
 
-            {(toggleMenu || screenWidth < 1500) && (
+          <Col className="header-menu" key="header-menu">
+            {(toggleMenu || screenWidth >= 992) && <MENU />}
+
+            {(toggleMenu || screenWidth < 992) && (
               <Drawer
                 placement="right"
-                width="100%"
+                width="300px"
                 className="drawer"
                 onClose={toggleCollapsed}
                 visible={!state.collapsed}
                 destroyOnClose={true}
                 closeIcon={<CloseOutlined style={{ color: "#fff" }} />}
               >
-                {menu}
+                <SEARCH_BAR />. <MENU />
               </Drawer>
             )}
 

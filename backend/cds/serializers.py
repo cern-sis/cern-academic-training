@@ -28,5 +28,6 @@ class LectureDocumentSerializer(DocumentSerializer):
             "language",
             "subject_category",
             "lecture_note",
+            "imprint",
             "license",
         )

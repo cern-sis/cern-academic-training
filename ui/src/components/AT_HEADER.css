@@ -1,26 +1,39 @@
 /* Academic Training Header */
 
 @import "antd/dist/antd.css";
-#atc-header .header {
+.ant-layout-header {
+  padding: 0;
+}
+
+.header {
   width: 100%;
+  height: 150px;
+  position: sticky;
   padding-top: 60px;
+  background: linear-gradient(180deg, #000d29 0%, transparent 100%) 0% 0%
+    no-repeat padding-box;
+  transition: all 0.2s;
+}
+
+.header.active {
+  background: #191919;
+  height: 150px;
+  transition: all 0.2s;
 }
 
 #atc-header {
   margin-top: -26px;
-  z-index: 1;
+  z-index: 8;
   width: 100%;
-}
-
-.ant-layout-header {
-  left: 0;
-  right: 0;
-  z-index: 999;
+  background-color: transparent;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -26px;
 }
 
 #atc-header h1 {
-  padding-top: 30px;
-  padding-left: 60px;
+  padding-left: 30px;
+  padding-top: 25px;
   text-align: left;
   letter-spacing: 0px;
   color: #ffffff;
@@ -36,22 +49,23 @@
 }
 
 #atc-header h2 {
-  padding-top: 40px;
+  padding-top: 35px;
   color: #fff;
   font: normal normal normal 25px/28px Abolition;
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.877));
 }
 
 .search-input {
+  top: 0;
+  width: 500px;
   color: #fff;
-  font: normal normal normal 14px/28px Open Sans;
+  font: normal normal normal 16px/28px Open Sans;
   bottom: 12px;
 }
 
 #atc-header .ant-menu > .search-icon {
   position: relative;
-  left: 20px;
-  top: 40px;
+  top: 30px;
   width: 40px;
   height: 40px;
   background-color: transparent;
@@ -64,22 +78,26 @@
 }
 
 #atc-header .ant-menu > .search-box {
-  position: relative;
-  width: 40px;
+  top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
-  left: 60px;
-  top: 35px;
+  width: 500px;
+  transition: all 0.5s;
+  z-index: 3;
   background: transparent;
-  border-radius: 10px;
-  transition: 0.5s;
-  font-style: #fff;
-  background-color: transparent;
-  z-index: 1;
-  border: 1px solid rgba(255, 255, 255, 0);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.555);
+  border-radius: 0;
+  visibility: visible;
+}
+
+#atc-header .ant-menu > .search-box:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.692);
+  transition: all 0.5s;
 }
 
 #atc-header .ant-menu {
-  padding-right: 60px;
   width: 100%;
   background-color: transparent;
   border: none;
@@ -102,82 +120,129 @@
   visibility: hidden;
 }
 
-#atc-header .ant-menu > .search-box:hover {
-  left: 60px;
-  width: 280px;
-  transition: all 0.5s;
-  z-index: 3;
-  background-color: rgba(0, 0, 0, 0.253);
-  border: 1px solid rgba(255, 255, 255, 0.144);
-  visibility: visible;
-}
-
 .ant-drawer-body {
   background: linear-gradient(180deg, #0f1d3d 0%, #0b1117 100%) 0% 0% no-repeat
     padding-box;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.ant-drawer-body .ant-menu {
+  padding-right: 0;
+  overflow: hidden;
+  flex-direction: column;
+  border: none;
+  background: transparent;
+  transition: all 0.5s;
+}
+
+.ant-drawer-body .ant-menu-item {
+  height: auto;
+  text-align: center;
+  margin: 0;
+  border: none;
+  line-height: 100px;
+}
+
+.ant-drawer-body .ant-menu > .search-box {
+  background-color: transparent;
+  width: 220px;
+  float: left;
+  margin-right: 60px;
+}
+
+.ant-drawer-body .ant-menu > .search-icon {
+  background-color: transparent;
+  top: 110px;
+  float: right;
+}
+
+.ant-drawer-body .ant-menu-item h2 {
+  font: normal normal normal 36px/42px Abolition;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.ant-drawer-body .ant-menu-item:hover {
+  border: none;
+}
+
+.ant-drawer .ant-picker-clear {
+  background-color: black;
+}
+
+.ant-drawer-content {
+  background: linear-gradient(180deg, #0f1d3d 0%, #0b1117 100%) 0% 0% no-repeat
+    padding-box;
+}
+
+.ant-btn-primary {
+  border-color: transparent;
+  background: transparent;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  color: #fff;
+  border-color: transparent;
+  background: transparent;
+}
+
+.ant-btn:hover,
+.ant-btn:focus {
+  color: #fff;
+  border-color: transparent;
+  background: transparent;
+}
+
+.ant-menu-item-selected {
+  color: transparent;
+}
+
+[ant-click-animating-without-extra-node="true"]::after,
+.ant-click-animating-node {
+  box-shadow: none;
+}
+
+@-webkit-keyframes waveEffect {
+  100% {
+    box-shadow: none;
+  }
+}
+
+@keyframes waveEffect {
+  100% {
+    box-shadow: none;
+  }
 }
 
 /* Responsive resize */
 
-@media only screen and (max-width: 1500px) {
-  .menu-mobile {
-    visibility: visible;
-    top: 27px;
-    float: right;
-    right: 60px;
-  }
-  .ant-drawer-body .ant-menu {
-    padding-right: 0;
-    overflow: hidden;
-    flex-direction: column;
-    border: none;
-    background: transparent;
-    transition: all 0.5s;
-  }
-  .ant-drawer-body .ant-menu-item {
-    height: auto;
-    text-align: center;
-    margin: 0;
-    border: none;
-    line-height: 100px;
-  }
-  .ant-drawer-body .ant-menu-item h2 {
-    font: normal normal normal 36px/42px Abolition;
-    color: #fff;
-    opacity: 0.6;
-  }
+@media only screen and (max-width: 1200px) {
+  #atc-header .ant-menu > .search-box,
   .search-input {
-    font: normal normal normal 36px/42px Abolition;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .menu-mobile {
+    padding-right: 30px;
+    visibility: visible;
+    top: 23px;
+    float: right;
+    right: 0;
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.877));
-    opacity: 0.7;
-  }
-  .ant-drawer-body .ant-menu-item:hover {
-    border: none;
-    text-decoration: transparent;
-    color: #fff;
-  }
-  .ant-drawer-body .search-icon {
-    top: 85px;
-    left: 120px;
-    opacity: 0.8;
-  }
-  .ant-drawer-body .search-box {
-    width: auto;
-  }
-  .ant-drawer-body .search-text {
-    visibility: hidden;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .menu-mobile {
-    top: -68px;
-    right: 0;
-  }
-  #atc-header h1 {
-    padding-left: 0;
+  #atc-header .ant-menu > .search-box {
+    width: 100px;
   }
 }

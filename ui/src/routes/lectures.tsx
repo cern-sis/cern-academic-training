@@ -15,6 +15,8 @@ function Lectures() {
 
   const [lectures, setLectures] = React.useState<any>();
 
+  window.scrollTo(0, 0);
+
   React.useEffect(() => {
     apiInstance.get(`/search/lectures/`).then((response) => {
       if (response.data.error) {
