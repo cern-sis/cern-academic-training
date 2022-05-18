@@ -20,12 +20,12 @@ function MENU() {
       className="menu"
       overflowedIndicator={false}
     >
-      <Menu.Item className="contact-us" key="contact-us">
-        <Typography.Link href="mailto:atc-contact@cern.ch" target="_blank">
-          <Title level={2} className="contact-us-link">
-            Contact
+      <Menu.Item className="about-us" key="about-us">
+        <LinkRouter to={`/about-us`}>
+          <Title level={2} className="about-us-link">
+            About
           </Title>
-        </Typography.Link>
+        </LinkRouter>
       </Menu.Item>
 
       <Menu.Item className="events" key="events">
@@ -36,12 +36,12 @@ function MENU() {
         </Typography.Link>
       </Menu.Item>
 
-      <Menu.Item className="about-us" key="about-us">
-        <LinkRouter to={`/about-us`}>
-          <Title level={2} className="about-us-link">
-            About
+      <Menu.Item className="contact-us" key="contact-us">
+        <Typography.Link href="mailto:atc-contact@cern.ch" target="_blank">
+          <Title level={2} className="contact-us-link">
+            Contact
           </Title>
-        </LinkRouter>
+        </Typography.Link>
       </Menu.Item>
     </Menu>
   );

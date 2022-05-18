@@ -670,7 +670,7 @@
 
 .video-box {
   min-height: 850px;
-  padding: 50px 40px 20px;
+  padding: 0px 40px 20px;
   background: transparent linear-gradient(0deg, #0033a0 0%, transparent 100%) 0%
     0% no-repeat padding-box;
   opacity: 0.9999999;
@@ -722,6 +722,7 @@ iframe {
   opacity: 1;
   padding-top: 20px;
   max-width: 1000px;
+  word-break: break-word;
 }
 
 .lecture-details a {
@@ -922,8 +923,7 @@ iframe {
   .video-box {
     padding-top: 0;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 160px;
     width: 700px;
   }
   .video-box h2 {
@@ -933,6 +933,7 @@ iframe {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 120px;
+    margin-top: 0;
   }
   .photo-carousel img {
     height: 800px;
@@ -949,7 +950,7 @@ iframe {
   .container {
     margin-left: 60px;
     margin-right: 60px;
-    margin-top: 100px;
+    margin-top: 140px;
     width: auto;
     height: auto;
     padding: 40px;
@@ -991,14 +992,11 @@ iframe {
     margin-bottom: 250px;
   }
   .photo-carousel img {
-    height: 680px;
+    height: 800px;
   }
   .container {
     margin-left: 30px;
     margin-right: 30px;
-    margin-top: 100px;
-    width: auto;
-    height: auto;
     padding: 40px;
   }
   .container-content h1 {
@@ -1011,7 +1009,7 @@ iframe {
     top: -20px;
   }
   .recent {
-    margin-top: -100px;
+    margin-top: 0;
   }
   #thumbnail-box img {
     height: 80px;
@@ -1064,14 +1062,6 @@ iframe {
   .photo-carousel img {
     height: 680px;
   }
-  .container {
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 100px;
-    width: auto;
-    height: auto;
-    padding: 40px;
-  }
   .container-content h1 {
     padding-bottom: 0;
   }
@@ -1082,6 +1072,9 @@ iframe {
   }
   .pagination {
     top: -20px;
+  }
+  .recent {
+    margin-top: -100px;
   }
   #thumbnail-box img {
     height: 40px;
@@ -1123,11 +1116,11 @@ iframe {
     margin-right: 10px;
     font: normal normal normal 50px/90px Abolition;
   }
-  .recent {
-    margin-top: 10px;
-  }
   .video-card img {
     min-height: 250px;
+  }
+  .recent {
+    margin-top: 0px;
   }
 }
 
@@ -1222,23 +1215,12 @@ iframe {
   .photo-carousel img {
     height: 700px;
   }
-  .atc-title {
-    margin-top: 50px;
-  }
   .recent {
     margin-top: 100px;
   }
   .pagination {
     width: 80%;
     top: -40px;
-  }
-  .container {
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 100px;
-    width: auto;
-    height: auto;
-    padding: 40px;
   }
   .video-card img {
     min-height: 150px;

@@ -49,21 +49,36 @@ function AT_HEADER() {
   return (
     <Header id="atc-header">
       <div className={header ? "header active" : "header"}>
-        <Row justify="space-around" wrap={false}>
-          <Col className="header-title" key="header-title">
+        <Row justify="space-around">
+          <Col
+            xs={{ span: 22, order: 1 }}
+            lg={{ span: 7, order: 1 }}
+            className="header-title"
+            key="header-title"
+          >
             <Title>
               <Typography.Link href="/">ACADEMIC TRAINING</Typography.Link>
             </Title>
           </Col>
 
-          <Col className="header-search" key="header-search">
-            {(toggleMenu || screenWidth >= 992) && <SEARCH_BAR />}
+          <Col
+            xs={{ span: 24, order: 3 }}
+            lg={{ span: 10, order: 2 }}
+            className="header-search"
+            key="header-search"
+          >
+            <SEARCH_BAR />
           </Col>
 
-          <Col className="header-menu" key="header-menu">
-            {(toggleMenu || screenWidth >= 992) && <MENU />}
+          <Col
+            xs={{ span: 2, order: 2 }}
+            lg={{ span: 7, order: 3 }}
+            className="header-menu"
+            key="header-menu"
+          >
+            {(toggleMenu || screenWidth > 992) && <MENU />}
 
-            {(toggleMenu || screenWidth < 992) && (
+            {(toggleMenu || screenWidth <= 992) && (
               <Drawer
                 placement="right"
                 width="300px"
@@ -73,7 +88,7 @@ function AT_HEADER() {
                 destroyOnClose={true}
                 closeIcon={<CloseOutlined style={{ color: "#fff" }} />}
               >
-                <SEARCH_BAR />. <MENU />
+                <MENU />
               </Drawer>
             )}
 

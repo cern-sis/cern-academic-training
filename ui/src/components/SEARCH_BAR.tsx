@@ -23,6 +23,15 @@ function SEARCH_BAR() {
 
   return (
     <Menu className="search">
+      <Menu.Item className="search-box" key="input">
+        <Input
+          className="search-input"
+          bordered={false}
+          placeholder="Search a lecture..."
+          onPressEnter={onKeyDown}
+          defaultValue={searchValue || ""}
+        />
+      </Menu.Item>
       <Menu.Item className="search-icon" key="icon">
         <Button
           className="search-button"
@@ -37,15 +46,6 @@ function SEARCH_BAR() {
         >
           <SearchOutlined style={{ color: "white", fontSize: "200%" }} />
         </Button>
-      </Menu.Item>
-      <Menu.Item className="search-box" key="input">
-        <Input
-          className="search-input"
-          bordered={false}
-          placeholder="Search a lecture..."
-          onPressEnter={onKeyDown}
-          defaultValue={searchValue || ""}
-        />
       </Menu.Item>
     </Menu>
   );
