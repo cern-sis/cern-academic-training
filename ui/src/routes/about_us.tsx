@@ -91,8 +91,7 @@ function AboutUs() {
                 complete catalogue of the Academic Training Programme lectures
                 is archived since 1968.
               </Title>
-            </div>
-            .{" "}
+            </div>{" "}
             <div className="atc-title reveal">
               <Title level={2}>Members</Title>
               <Divider className="divider" />
@@ -151,8 +150,7 @@ function AboutUs() {
                   </Space>
                 );
               })}
-            </Row>
-            .{" "}
+            </Row>{" "}
             <div className="atc-title reveal">
               <Title level={3}>Departments</Title>
               <Divider className="divider" />
@@ -331,8 +329,7 @@ function AboutUs() {
                   </Space>
                 );
               })}
-            </Row>
-            .{" "}
+            </Row>{" "}
             <div className="atc-title reveal">
               <Title level={3}>Users</Title>
               <Divider className="divider" />
@@ -362,8 +359,7 @@ function AboutUs() {
                   </Space>
                 );
               })}
-            </Row>
-            .{" "}
+            </Row>{" "}
             <div className="atc-title reveal">
               <Title level={3}>Staff Association</Title>
               <Divider className="divider" />
@@ -393,8 +389,7 @@ function AboutUs() {
                   </Space>
                 );
               })}
-            </Row>
-            .{" "}
+            </Row>{" "}
             <div className="atc-title reveal">
               <Title level={3}>Observers</Title>
               <Divider className="divider" />

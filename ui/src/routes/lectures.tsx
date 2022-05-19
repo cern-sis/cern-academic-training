@@ -1,7 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import "../App.css";
 import { Layout, Card } from "antd";
-import "antd/dist/antd.css";
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";

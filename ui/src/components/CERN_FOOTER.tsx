@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Layout, Row, Col, Typography, Menu } from "antd";
-import "antd/dist/antd.css";
 import "./CERN_FOOTER.css";
 
 const { Footer } = Layout;

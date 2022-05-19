@@ -831,6 +831,10 @@ iframe {
   margin-bottom: 50px;
 }
 
+.atc-title {
+  padding-top: 30px;
+}
+
 .atc-title h2 {
   margin-left: auto;
   margin-right: auto;

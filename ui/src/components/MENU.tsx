@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { Link as LinkRouter } from "react-router-dom";
 import { Typography, Menu } from "antd";
 import "./AT_HEADER.css";
-import "antd/dist/antd.css";
 
 const { Title } = Typography;
 
 function MENU() {
-  const [current, setCurrent] = React.useState("icon");
+  const [current, setCurrent] = useState("icon");
 
   const handleClick = (e: any) => {
     setCurrent(e.key);
