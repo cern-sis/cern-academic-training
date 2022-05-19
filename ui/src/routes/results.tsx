@@ -98,9 +98,6 @@ function Results() {
                                   alt="thumbnail"
                                   src={lecture.thumbnail_picture}
                                 />
-                                {/* <div className="duration">
-                                  <Title level={5}>{lecture.imprint.substring(12, 20)}</Title>
-                                </div> */}
                               </div>
                             </Col>
 

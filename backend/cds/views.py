@@ -15,7 +15,7 @@ from .serializers import LectureDocumentSerializer, LectureSerializer
 
 
 class LectureViewSet(viewsets.ModelViewSet):
-    queryset = Lecture.objects.all().order_by("-date")
+    queryset = Lecture.objects.all()
     serializer_class = LectureSerializer
     permission_classes = (IsAuthenticatedOrReadOnly,)
     lookup_field = "lecture_id"

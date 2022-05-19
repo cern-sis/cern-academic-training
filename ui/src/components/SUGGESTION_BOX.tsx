@@ -11,7 +11,7 @@ function SUGGESTION_BOX() {
   };
 
   return (
-    <div className={"suggestion-box"}>
+    <div className="suggestion-box">
       <Title>Submit a suggestion for future topics</Title>
       <div className="suggestion-box-window">
         <TextArea
