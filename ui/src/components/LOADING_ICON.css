@@ -10,7 +10,7 @@
   height: 200px;
   background: radial-gradient(
     center,
-    ellipse cover,
+    ellipse farthest-corner,
     #000000 0%,
     #000000 5%,
     #ffffff 5%,

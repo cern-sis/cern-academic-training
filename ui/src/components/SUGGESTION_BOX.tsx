@@ -1,14 +1,15 @@
+import React from "react";
 import { Typography, Input } from "antd";
 import "./SUGGESTION_BOX.css";
 
 const { Title } = Typography;
 const { TextArea } = Input;
 
-const handleKeyPress = (ev: React.KeyboardEvent<HTMLTextAreaElement>) => {
-  console.log("handleKeyPress", ev);
-};
-
 function SUGGESTION_BOX() {
+  const handleKeyPress = (ev: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    console.log("handleKeyPress", ev);
+  };
+
   return (
     <div className="suggestion-box">
       <Title>Submit a suggestion for future topics</Title>

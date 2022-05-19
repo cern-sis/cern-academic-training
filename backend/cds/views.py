@@ -49,4 +49,4 @@ class LectureDocumentView(DocumentViewSet):
         "lecture_id": None,
     }
 
-    ordering = ("lecture_id",)
+    ordering = ("-date",)

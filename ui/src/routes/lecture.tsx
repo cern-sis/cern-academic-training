@@ -27,6 +27,8 @@ function Lecture() {
     fetchLecture();
   }, []);
 
+  window.scrollTo(0, 0);
+
   return (
     <Layout className="layout">
       <CERN_TOOLBAR />
@@ -39,7 +41,7 @@ function Lecture() {
             <iframe
               title={lecture.title}
               src={`https://cds.cern.ch/video/${lectureId}?showTitle=true`}
-              allow-fullscreen="true"
+              allowFullScreen
             ></iframe>
           </div>
 

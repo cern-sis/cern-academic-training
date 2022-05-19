@@ -10,7 +10,7 @@ const photos = [
     key: 2,
     alt: "Data Centre",
     photographer: "Franciska-Leonora Torok",
-    src: "https://cds.cern.ch/record/2788598/files/IMG_0004.jpg?subformat=icon-1440",
+    src: "https://cds.cern.ch/record/2788598/files/IMG_0045.jpg?subformat=icon-1440",
   },
 
   {

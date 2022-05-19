@@ -125,7 +125,7 @@
 
 /* Responsive resize */
 
-@media only screen and (max-width: 751px) {
+@media only screen and (max-width: 768px) {
   #cern-toolbar a span {
     visibility: hidden;
   }

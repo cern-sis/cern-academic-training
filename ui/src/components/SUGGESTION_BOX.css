@@ -6,6 +6,7 @@
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 90px;
+  transition: all 0.5s;
 }
 
 .suggestion-box h1 {
@@ -26,10 +27,11 @@
   margin-right: auto;
   max-width: 704px;
   height: 200px;
-  background: transparent linear-gradient(105deg, #3c5fa1 0%, #010306 100%) 0%
-    0% no-repeat padding-box;
+  background: transparent
+    linear-gradient(160deg, #0093e9 0%, #0033a0 40%, #0b1117 100%) 0% 0%
+    no-repeat padding-box;
   border-radius: 16px;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .suggestion-box-window p {

@@ -1,5 +1,4 @@
 import { Typography } from "antd";
-import "antd/dist/antd.css";
 import "./LOADING_ICON.css";
 
 const { Title } = Typography;
