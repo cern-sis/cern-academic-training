@@ -15,7 +15,7 @@ jobs:
         working-directory: backend
     strategy:
       matrix:
-        python-version: [3.8, 3.9]
+        python-version: [3.9]
     services:
       elasticsearch:
         image: elasticsearch:7.10.1
