@@ -128,7 +128,7 @@ function App() {
 
                             <div className="duration">
                               <Title level={5}>
-                                {lecture.imprint.substring(12, 20)}
+                                {lecture.imprint.split(" - ")[1]}
                               </Title>
                             </div>
 
