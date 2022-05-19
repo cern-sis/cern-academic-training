@@ -38,7 +38,8 @@ $ docker-compose up -d
 $ poetry install
 $ python manage.py migrate
 $ python manage.py runserver
-$ python manage.py search_index --rebuild
+$ python  manage.py opensearch index rebuild
+$ python  manage.py opensearch document index
 ```
 
 ### Add users
@@ -53,7 +54,8 @@ $ python manage.py loaddata users.json
 
 ```bash
 $ python manage.py loaddata lectures.json
-$ python manage.py search_index --rebuild
+$ python  manage.py opensearch index rebuild
+$ python  manage.py opensearch document index
 ```
 
 ## UI
