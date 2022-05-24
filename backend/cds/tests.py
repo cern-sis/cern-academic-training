@@ -1,7 +1,6 @@
 # -*- coding: UTF-8 -*-
 import json
 
-from bleach import clean
 from django.contrib.auth.models import User
 from rest_framework import status
 from rest_framework.authtoken.models import Token
@@ -24,7 +23,7 @@ class LectureTest(APITestCase):
             "title": "REMOTE: Federated Data Architectures",
             "date": "2021-10-22",
             "corporate_author": "This is an author",
-            "abstract": "TEST",
+            "abstract": "<h2><div>TEST</div></h2>",
             "series": "(Academic Training Lecture Regular Programme ; 202",
             "speaker": "de Jong, Michiel",
             "speaker_details": "Speakers details",
@@ -76,34 +75,4 @@ class LectureTest(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
         response = self.client.get(f"{self.url}2800620/", format="json")
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-
-    def test_bleach_abstract(self):
-        response = self.client.post(self.url, self.data, format="json")
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-
-        response = self.client.get(self.url, format="json")
-
-        data = {
-            "id": 2,
-            "lecture_id": 2800620,
-            "title": "REMOTE: Federated Data Architectures",
-            "date": "2021-10-22",
-            "corporate_author": "This is an author",
-            "abstract": "<h2><div>TEST</div></h2>",
-            "series": "(Academic Training Lecture Regular Programme ; 202",
-            "speaker": "de Jong, Michiel",
-            "speaker_details": "Speakers details",
-            "event_details": "Event Details",
-            "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049666/1049666-presenter-cover.png",
-            "language": "eng",
-            "subject_category": "Academic Training Lecture Regular Programme",
-            "lecture_note": "2021-10-22T11:59:35Z",
-            "imprint": "01:03:18",
-            "license": "2021 CERN",
-        }
-
-        cleaned_data = clean(data, strip=True)
-
-        self.assertEqual(json.loads(response.content)["results"][0], cleaned_data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
