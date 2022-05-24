@@ -17,7 +17,7 @@ django-cors-headers = "^3.11.0"
 django-opensearch-dsl = "^0.2.0"
 django-elasticsearch-dsl-drf = {git = "https://github.com/cern-sis/django-elasticsearch-dsl-drf.git", rev = "opensearch"}
 ipython = "^8.0.1"
-bleach = "~=5.0.0"
+bleach = "~=4.1.0"
 
 [tool.poetry.dev-dependencies]
 
