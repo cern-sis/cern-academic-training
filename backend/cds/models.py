@@ -1,3 +1,4 @@
+from bleach import clean
 from django.db import models  # noqa: F401
 
 
@@ -17,6 +18,10 @@ class Lecture(models.Model):
     lecture_note = models.DateTimeField(blank=True)
     imprint = models.CharField(max_length=250)
     license = models.CharField(max_length=250)
+
+    def save(self, *args, **kwargs):
+        self.abstract = clean(self.abstract, strip=True)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.lecture_id} - {self.title} ({self.id})"
