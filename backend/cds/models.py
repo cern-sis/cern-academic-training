@@ -20,7 +20,13 @@ class Lecture(models.Model):
     license = models.CharField(max_length=250)
 
     def save(self, *args, **kwargs):
-        self.abstract = clean(self.abstract, strip=True)
+        self.abstract = clean(
+            self.abstract,
+            strip=True,
+            tags=["p", "div", "strong", "span", "ul", "li"],
+            attributes={"a": ["href"]},
+            strip_comments=True,
+        )
         super().save(*args, **kwargs)
 
     def __str__(self):
