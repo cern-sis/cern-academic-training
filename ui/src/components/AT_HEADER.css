@@ -85,7 +85,6 @@
   width: 100%;
   transition: all 0.5s;
   z-index: 3;
-  display: flex;
   justify-content: start;
   align-items: center;
   background: transparent;

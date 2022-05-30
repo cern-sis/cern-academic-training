@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 import json
 
 from django.contrib.auth.models import User
@@ -22,7 +23,7 @@ class LectureTest(APITestCase):
             "title": "REMOTE: Federated Data Architectures",
             "date": "2021-10-22",
             "corporate_author": "This is an author",
-            "abstract": "TEST",
+            "abstract": "<h2><div>TEST</div></h2>",
             "series": "(Academic Training Lecture Regular Programme ; 202",
             "speaker": "de Jong, Michiel",
             "speaker_details": "Speakers details",
@@ -32,7 +33,7 @@ class LectureTest(APITestCase):
             "subject_category": "Academic Training Lecture Regular Programme",
             "lecture_note": "2021-10-22T11:59:35Z",
             "imprint": "01:03:18",
-            "license": "© 2021 CERN",
+            "license": "2021 CERN",
             "lecture_id": 2800620,
         }
 
@@ -63,7 +64,7 @@ class LectureTest(APITestCase):
             "subject_category": "Academic Training Lecture Regular Programme",
             "lecture_note": "2021-10-22T11:59:35Z",
             "imprint": "01:03:18",
-            "license": "© 2021 CERN",
+            "license": "2021 CERN",
         }
 
         self.assertEqual(json.loads(response.content)["results"][0], expected_data)
