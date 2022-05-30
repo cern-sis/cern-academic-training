@@ -30,4 +30,6 @@ class LectureDocumentSerializer(DocumentSerializer):
             "lecture_note",
             "imprint",
             "license",
+            "sponsor",
+            "keywords",
         )

@@ -1,4 +1,5 @@
 from bleach import clean
+from django.contrib.postgres.fields import ArrayField
 from django.db import models  # noqa: F401
 
 
@@ -18,6 +19,8 @@ class Lecture(models.Model):
     lecture_note = models.DateTimeField(blank=True)
     imprint = models.CharField(max_length=250)
     license = models.CharField(max_length=250)
+    sponsor = models.CharField(max_length=250, blank=True)
+    keywords = ArrayField(models.CharField(max_length=500), blank=True, default=list)
 
     def save(self, *args, **kwargs):
         self.abstract = clean(
