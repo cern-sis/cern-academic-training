@@ -54,7 +54,7 @@ class LectureTest(APITestCase):
             "title": "REMOTE: Federated Data Architectures",
             "date": "2021-10-22",
             "corporate_author": "This is an author",
-            "abstract": "TEST",
+            "abstract": "<div>TEST</div>",
             "series": "(Academic Training Lecture Regular Programme ; 202",
             "speaker": "de Jong, Michiel",
             "speaker_details": "Speakers details",
