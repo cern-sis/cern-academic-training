@@ -36,6 +36,10 @@ class LectureDocumentView(DocumentViewSet):
         SearchFilterBackend,
     ]
 
+    simple_query_string_options = {
+        "default_operator": "and",
+    }
+
     search_fields = {
         "title": {
             "boost": 4,
