@@ -36,10 +36,12 @@ class LectureDocumentView(DocumentViewSet):
         SearchFilterBackend,
     ]
 
-    search_fields = (
-        "title",
-        "abstract",
-    )
+    search_fields = {
+        "title": {
+            "boost": 4,
+        },
+        "abstract": {"boost": 2},
+    }
 
     filter_fields = {
         "lecture_id": None,
@@ -49,4 +51,7 @@ class LectureDocumentView(DocumentViewSet):
         "lecture_id": None,
     }
 
-    ordering = ("-date",)
+    ordering = (
+        "_score",
+        "-date",
+    )
