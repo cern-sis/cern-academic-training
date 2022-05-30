@@ -1,5 +1,5 @@
 from django.conf import settings
-from django_opensearch_dsl import Document
+from django_opensearch_dsl import Document, fields
 from django_opensearch_dsl.registries import registry
 
 from .models import Lecture
@@ -11,6 +11,11 @@ class LectureDocument(Document):
         name = f"{settings.OPENSEARCH_INDEX_PREFIX}-lectures"
 
     settings = {"number_of_shards": 1, "number_of_replicas": 0}
+
+    keywords = fields.NestedField(properties={"keywords": fields.KeywordField()})
+
+    def prepare_keywords(self, instance):
+        return [{"keywords": kw} for kw in instance.keywords]
 
     class Django:
         model = Lecture
@@ -30,4 +35,5 @@ class LectureDocument(Document):
             "lecture_note",
             "imprint",
             "license",
+            "sponsor",
         ]
