@@ -15,12 +15,12 @@ class Lecture(models.Model):
     event_details = models.CharField(max_length=250, blank=True)
     thumbnail_picture = models.TextField()
     language = models.CharField(max_length=3)
-    subject_category = models.CharField(max_length=520)
+    subject_category = models.CharField(max_length=250)
     lecture_note = models.DateTimeField(blank=True)
     imprint = models.CharField(max_length=250)
     license = models.CharField(max_length=250)
     sponsor = models.CharField(max_length=250, blank=True)
-    keywords = ArrayField(models.CharField(max_length=500), blank=True, default=list)
+    keywords = ArrayField(models.CharField(max_length=250), blank=True, default=list)
 
     def save(self, *args, **kwargs):
         self.abstract = clean(
