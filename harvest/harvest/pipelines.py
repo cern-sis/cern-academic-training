@@ -5,6 +5,7 @@
 
 
 import logging
+import re
 
 import backoff
 import requests
@@ -27,7 +28,7 @@ class HarvestPipeline:
 
         sponsor = None
         try:
-            sponsor = data["results"][0]["organizer"].split("/\\-")[0].strip()
+            sponsor = re.split(r"[\/|-]", data["results"][0]["organizer"])[0].strip()
         except Exception:
             LOGGER.error(f"Cannot get sponsor for Indico event: {indico_id}")
 
@@ -39,7 +40,7 @@ class HarvestPipeline:
         return sponsor, keywords
 
     def process_item(self, item, spider):
-        indico_id = item.get("event_details")
+        indico_id = item.get("event_details", "").split("/")[-1]
         if indico_id:
             item["sponsor"], item["keywords"] = self.__indico(indico_id)
         return item
