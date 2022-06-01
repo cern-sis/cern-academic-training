@@ -8,6 +8,7 @@ authors = ["Harris Tzovanakis <me@drjova.com>"]
 python = "^3.8"
 hepcrawl = "^13.0.43"
 backoff = "^1.11.1"
+structlog = "^21.5.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
