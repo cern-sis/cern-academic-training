@@ -57,7 +57,10 @@ class HarvestPipeline:
                 LOGGER.info("Send successfully", lecture_id=lecture_id, lecture=record)
             except Exception as e:
                 LOGGER.exception(
-                    "Failed", lecture_id=lecture_id, lecture=record, exception=e
+                    "Failed to send record.",
+                    lecture_id=lecture_id,
+                    lecture=record,
+                    exception=e,
                 )
 
     def process_item(self, item, spider):

@@ -14,13 +14,13 @@ CDS_LAST_RUN_PATH = "/data/cds_last_run"
 DATE_FORMAT = "%Y-%m-%d"
 
 
-class CDSSPider(Spider):
+class CDSSpider(Spider):
 
     name = "CDS"
 
     def __init__(
         self,
-        sets,
+        sets="forSciTalks",
         from_date=None,
         until_date=None,
         url="https://cds.cern.ch/oai2d",
