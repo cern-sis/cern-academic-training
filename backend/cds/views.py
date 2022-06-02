@@ -51,6 +51,8 @@ class LectureDocumentView(DocumentViewSet):
 
     filter_fields = {
         "lecture_id": None,
+        "type": None,
+        "keywords": None,
     }
 
     ordering_fields = {
