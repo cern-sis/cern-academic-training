@@ -13,7 +13,7 @@ class Lecture(models.Model):
     speaker = models.CharField(max_length=250, blank=True)
     speaker_details = models.CharField(max_length=250, blank=True)
     event_details = models.CharField(max_length=250, blank=True)
-    thumbnail_picture = models.TextField()
+    thumbnail_picture = models.TextField(blank=True)
     language = models.CharField(max_length=3)
     subject_category = models.CharField(max_length=250)
     lecture_note = models.DateTimeField(blank=True)

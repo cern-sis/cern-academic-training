@@ -49,19 +49,22 @@ class HarvestPipeline:
         if lecture_id:
             try:
                 record["lecture_id"] = int(lecture_id)
-                requests.post(
+                response = requests.post(
                     "{}/api/v1/lectures/".format(host),
                     json=record,
                     headers={"Authorization": "Token {}".format(token)},
                 )
-                LOGGER.info("Send successfully", lecture_id=lecture_id, lecture=record)
-            except Exception as e:
-                LOGGER.exception(
+                response.raise_for_status()
+            except Exception:
+                LOGGER.error(
                     "Failed to send record.",
                     lecture_id=lecture_id,
                     lecture=record,
-                    exception=e,
+                    message=response.json(),
+                    status_code=response.status_code,
                 )
+            else:
+                LOGGER.info("Send successfully", lecture_id=lecture_id, lecture=record)
 
     def process_item(self, item, spider):
         try:
@@ -71,8 +74,5 @@ class HarvestPipeline:
         except Exception as e:
             LOGGER.exception("Cannot get indico", exception=e)
 
-        try:
-            self.__send_to_backend(item)
-        except Exception as e:
-            LOGGER.exception("Failed to send.", exception=e)
+        self.__send_to_backend(item)
         return item

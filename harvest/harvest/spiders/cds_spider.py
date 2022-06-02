@@ -123,9 +123,16 @@ class CDSSpider(Spider):
             '//datafield[@tag=856][subfield[@code="y"]="Event details"]/subfield[@code="u"]/text()'
         ).get()
 
-        record["thumbnail_picture"] = selector.xpath(
+        cover_image = selector.xpath(
             '//datafield[@tag=856][subfield[@code="x"]="jpgthumbnail"]/subfield[@code="u"]/text()'
         ).get()
+
+        if not cover_image:
+            cover_image = selector.xpath(
+                '//datafield[@tag=856][subfield[@code="x"]="pngthumbnail"]/subfield[@code="u"]/text()'
+            ).get()
+
+        record["thumbnail_picture"] = cover_image
 
         record["language"] = selector.xpath(
             '//datafield[@tag=041]/subfield[@code="a"]/text()'
