@@ -68,7 +68,7 @@ class HarvestPipeline:
 
     def process_item(self, item, spider):
         try:
-            indico_id = item.get("event_details", "").split("/")[-1]
+            indico_id = item.get("event_details", "").rstrip("/").split("/")[-1]
             if indico_id:
                 item["sponsor"], item["keywords"] = self.__indico(indico_id)
         except Exception as e:

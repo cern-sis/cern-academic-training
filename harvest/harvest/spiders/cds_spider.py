@@ -163,6 +163,7 @@ class CDSSpider(Spider):
             '//datafield[@tag=542]/subfield[@code="g"]/text()'
         ).get()
         record["license"] = "{} {}".format(license_name, license_year)
+        record["type"] = ["video"]
 
         LOGGER.info("Parsed record", lecture=record)
         return record
