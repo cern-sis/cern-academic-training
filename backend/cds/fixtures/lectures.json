@@ -19,7 +19,8 @@
       "imprint": "2021-09-29 - 1:10:36",
       "license": "CERN 2021",
       "sponsor": "Maria Dimou",
-      "keywords": []
+      "keywords": ["one", "two", "three"],
+      "type": ["video"]
     }
   },
   {
@@ -41,8 +42,7 @@
       "lecture_note": "2021-09-30T11:00:00Z",
       "imprint": "2021-09-30 - 1:03:18",
       "license": "CERN 2021",
-      "sponsor": "Maria Dimou",
-      "keywords": []
+      "sponsor": "Maria Dimou"
     }
   },
   {

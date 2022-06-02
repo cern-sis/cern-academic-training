@@ -32,4 +32,6 @@ class LectureDocumentSerializer(DocumentSerializer):
             "license",
             "sponsor",
             "keywords",
+            "type",
+            "files",
         )
