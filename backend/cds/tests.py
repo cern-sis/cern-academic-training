@@ -49,22 +49,26 @@ class LectureTest(APITestCase):
         response = self.client.get(self.url, format="json")
 
         expected_data = {
-            "id": 2,
-            "lecture_id": 2800620,
-            "title": "REMOTE: Federated Data Architectures",
-            "date": "2021-10-22",
-            "corporate_author": "This is an author",
             "abstract": "<div>TEST</div>",
+            "corporate_author": "This is an author",
+            "date": "2021-10-22",
+            "event_details": "Event Details",
+            "files": [],
+            "id": 2,
+            "imprint": "01:03:18",
+            "keywords": [],
+            "language": "eng",
+            "lecture_id": 2800620,
+            "lecture_note": "2021-10-22T11:59:35Z",
+            "license": "2021 CERN",
             "series": "(Academic Training Lecture Regular Programme ; 202",
             "speaker": "de Jong, Michiel",
             "speaker_details": "Speakers details",
-            "event_details": "Event Details",
-            "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049666/1049666-presenter-cover.png",
-            "language": "eng",
+            "sponsor": "",
             "subject_category": "Academic Training Lecture Regular Programme",
-            "lecture_note": "2021-10-22T11:59:35Z",
-            "imprint": "01:03:18",
-            "license": "2021 CERN",
+            "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049666/1049666-presenter-cover.png",
+            "title": "REMOTE: Federated Data Architectures",
+            "type": [],
         }
 
         self.assertEqual(json.loads(response.content)["results"][0], expected_data)
