@@ -1,6 +1,11 @@
+import json
+
 import mock
 import pytest
-from scrapy import Selector
+from scrapy import Selector, signals
+from scrapy.crawler import CrawlerProcess
+from scrapy.signalmanager import dispatcher
+from scrapy.utils.project import get_project_settings
 
 from harvest.pipelines import HarvestPipeline
 from harvest.spiders.cds_spider import CDSSpider
@@ -118,3 +123,22 @@ def test_pipelines(mock_send_to_backend):
     )
 
     assert results == expected_data
+
+
+@pytest.mark.vcr()
+@mock.patch("harvest.pipelines.requests.post")
+def xtest_the_whole_process(mock_send_to_backend, shared_datadir):
+    content = (shared_datadir / "expected_records.json").read_text()
+    expected_records = json.loads(content)
+    results = []
+
+    def crawler_results(signal, sender, item, response, spider):
+        results.append(item)
+
+    dispatcher.connect(crawler_results, signal=signals.item_scraped)
+
+    process = CrawlerProcess(get_project_settings())
+    process.crawl("CDS", from_date="2022-04-01", until_date="2022-05-01")
+    process.start()
+
+    assert expected_records == results

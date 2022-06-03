@@ -2,33 +2,25 @@ from datetime import datetime, timedelta
 from time import sleep
 
 import structlog
+from dojson.contrib.marc21.utils import create_record
+from inspire_dojson.cds import cds2hep_marc
 from inspire_dojson.utils import strip_empty_values
 from scrapy import Spider
-from scrapy.http import Request, XmlResponse
-from scrapy.selector import Selector
-from sickle import Sickle
-from sickle.oaiexceptions import NoRecordsMatch
+from scrapy.http import Request
 
 LOGGER = structlog.get_logger()
 
 CDS_LAST_RUN_PATH = "/data/cds_last_run"
 DATE_FORMAT = "%Y-%m-%d"
+SIZE = 100
+CDS_URL = "https://cds.cern.ch/search?ln=en&cc=Academic+Training+Lectures&p={query}&action_search=Search&op1=a&m1=a&p1=&f1=&c=Academic+Training+Lectures&c=&sf=&so=d&rm=&rg={size}&sc=0&of=xm"
 
 
 class CDSSpider(Spider):
 
     name = "CDS"
 
-    def __init__(
-        self,
-        sets="forSciTalks",
-        from_date=None,
-        until_date=None,
-        url="https://cds.cern.ch/oai2d",
-        *args,
-        **kwargs
-    ):
-        self.sets = sets.split(",")
+    def __init__(self, from_date=None, until_date=None, *args, **kwargs):
 
         if not from_date:
             try:
@@ -42,54 +34,36 @@ class CDSSpider(Spider):
                 self.from_date = datetime.utcnow().strftime(DATE_FORMAT)
         else:
             self.from_date = from_date
-
         self.until_date = until_date
-        self.url = url
+
+        self.query = []
+        if self.from_date:
+            self.query.append(self.from_date)
+        if self.until_date:
+            self.query.append(self.until_date)
+
         super().__init__(*args, **kwargs)
 
     def start_requests(self):
-        for _set in self.sets:
-            yield Request(self.url, meta={"set": _set}, callback=self.parse)
+        query = "->".join(self.query)
+        url = CDS_URL.format(query=query, size=SIZE)
+        yield Request(url, callback=self.parse)
 
     def parse(self, response):
         sleep(3)
 
-        sickle = Sickle(self.url)
-        params = {
-            "metadataPrefix": "marcxml",
-            "set": response.meta["set"],
-            "from": self.from_date,
-            "until": self.until_date,
-        }
-        try:
-            records = sickle.ListRecords(**params)
-        except NoRecordsMatch as err:
-            LOGGER.warning(err)
-            raise StopIteration()
-
-        records = list(records)
+        response.selector.remove_namespaces()
+        records = response.selector.xpath("//record")
 
         LOGGER.info("Harvested records", count=len(records))
-
-        for record in records:
-            xml_response = XmlResponse(self.url, encoding="utf-8", body=record.raw)
-            selector = Selector(xml_response, type="xml")
-            selector.remove_namespaces()
+        for selector in records:
             try:
-                yield self.parse_item(selector, original=record.raw)
+                yield self.parse_item(selector, original=selector.get())
             except Exception as err:
                 LOGGER.error(err)
 
     def parse_item(self, selector, original=None):
         record = {}
-        """
-        {'035__': [{'9': 'CDS', 'a': '318009'}], '100__': [{'a': 'Bonaudi, Franco'}], '245__': {'a': 'Introduction to particle accelerators', '9': 'CDS'}, '260__': {'c': '1969'}, '500__': [{'a': 'CERN, Geneva, 4, 11, 18 Dec 1969, 15, 22, 29 Jan 1970', '9': 'CDS'}], '65017': [{'2': 'INSPIRE', 'a': 'Accelerators', '9': 'CDS'}], 'FFT__': [{'t': 'CDS', 'a': 'http://cds.cern.ch/record/318009/files/AT00000721.pdf', 'n': 'AT00000721.pdf', 'f': '.pdf'}], '980__': [{'a': 'ConferencePaper'}, {'a': 'HEP'}, {'a': 'CORE'}], '693__': [{'a': 'CERN PS', 'e': 'CERN-PS'}]}
-
-
-
-        """
-        from dojson.contrib.marc21.utils import create_record
-        from inspire_dojson.cds import cds2hep_marc
 
         record["type"] = []
 

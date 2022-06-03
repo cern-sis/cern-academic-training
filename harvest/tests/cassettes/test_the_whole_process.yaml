@@ -1,0 +1,647 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.26.0
+      method: GET
+      uri: https://indico.cern.ch/export/event/1085621.json
+    response:
+      body:
+        string:
+          '{"results":[{"_type":"Conference","id":"1085621","title":"Your privacy
+          \u2013 where has it gone, and will it be back?","description":"<p class=\"part\"><span><span>In
+          recent years, a lot has been said about privacy \u2013 the rights to it, related
+          transgressions, reasons to worry. It seems like questions are multiplying
+          at a high rate, but the answers are not. Should we be concerned, and if so,
+          about what? Should I defend myself, can I defend myself? From whom? Are we
+          risking fundamental freedoms when using FAANG products? Is privacy the same
+          as anonymity? Is giving up privacy a necessary cost of technological progress?
+          Do I have a choice? Are governments and corporations fighting each other over
+          us or collaborating against us? Is \u201cmy phone\u201d truly \u201cmine\u201d?<\/span><\/span><\/p>\r\n\r\n<p
+          class=\"part\"><span><span>We propose to examine privacy with a dose of systematization
+          and in three parts. In the first part, we\u2019ll start weaving a story of
+          how we got here. Starting from the baselines, we\u2019ll journey through history,
+          philosophy and world changes \u2013 from the concept of walls in a house to
+          identity documents. In the second part, we\u2019ll discuss our current state,
+          where current worries stem from, current developments and options. We\u2019ll
+          look at what surveillance capitalism means for society (techies and non-techies
+          alike), how our cloud, Android and i-devices grew, and will look at the fringes.
+          In the third part, we\u2019ll take a closer look at emerging major trends,
+          future scenarios (dystopian and optimistic alike) and concrete possibilities
+          for reaction or resistance. We\u2019ll also touch on technical topics such
+          as, for example, the war-like evolution of cryptography.<\/span><\/span><\/p>\r\n\r\n<p
+          class=\"part\">&nbsp;<\/p>\r\n\r\n<p class=\"part\"><span><span>Short bio:<\/span><\/span><\/p>\r\n\r\n<div>\r\n<div
+          class=\"WordSection1\">\r\n<div><em>Andrzej Nowak spent the last 15 years
+          at the juncture of technology, business and innovation<\/em><em><span>. His
+          early experience was rooted in computer security, and shifted to more general
+          domains while working for CERN and at Intel. &nbsp;<\/span>Between 2007 and
+          2014<span>&nbsp;<\/span><\/em><em><span>Andrzej<\/span><span>&nbsp;<\/span>worked
+          at CERN openlab - a collaboration of CERN and industrial partners such as
+          Google, HP, Huawei, Intel, Oracle and Siemens<\/em><em><span>&nbsp;<\/span><span>\u2013
+          and managed one of openlab\u2019s innovation labs<\/span>. Andrzej was also
+          part of the openlab CTO office, where he helped set up next-generation technology
+          projects for CERN.<\/em><\/div>\r\n\r\n<p><em>More recently, Andrzej founded
+          a small technology and innovation consultancy as well as a fintech start-up.
+          In the last few years, he worked in management consulting in finance and in
+          innovation management.<\/em><em><span><span>&nbsp;<\/span>Andrzej\u2019s current
+          topics of interest include the future of identity, privacy, and money.<\/span><\/em><\/p>\r\n<\/div>\r\n<\/div>","startDate":{"date":"2022-04-26","time":"11:00:00","tz":"Europe\/Zurich"},"timezone":"Europe\/Zurich","endDate":{"date":"2022-04-26","time":"12:00:00","tz":"Europe\/Zurich"},"room":"","location":"","address":"","type":"simple_event","references":[],"_fossil":"conferenceMetadata","categoryId":72,"category":"Academic
+          Training Lecture Regular Programme","note":{},"roomFullname":"","url":"https:\/\/indico.cern.ch\/event\/1085621\/","creationDate":{"date":"2021-10-08","time":"12:11:09.729413","tz":"Europe\/Zurich"},"creator":{"_type":"Avatar","_fossil":"conferenceChairMetadata","first_name":"Marika","last_name":"Flygar","fullName":"Flygar,
+          Marika","id":"7922","affiliation":"CERN","emailHash":"aec52e3445b7881d702f94ee9c8ba6b2"},"hasAnyProtection":false,"roomMapURL":null,"folders":[{"_type":"folder","id":2432935,"title":null,"description":"","attachments":[{"_type":"attachment","id":4195035,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195035\/go","title":"Recording","description":"","modified_dt":"2022-05-20T09:48:21.497281+00:00","type":"link","is_protected":false,"link_url":"https:\/\/cds.cern.ch\/record\/2809622"},{"_type":"attachment","id":4195036,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195036\/go","title":"Video
+          preview","description":"","modified_dt":"2022-05-20T09:48:28.017609+00:00","type":"link","is_protected":false,"link_url":"https:\/\/video-player-sec.web.cern.ch?mode=contribution&year=2022&id=1085621&origin=ceph"},{"_type":"attachment","id":4166401,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4166401\/Your%20privacy%20-%20where%20has%20it%20gone%2C%20and%20will%20it%20be%20back%20%28Part%201%20of%203%29%20-%20CERN%20Academic%20Training%20%28Andrzej%20Nowak%29.pdf","title":"Your
+          privacy - where has it gone, and will it be back  (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","description":"","modified_dt":"2022-04-27T15:24:12.383791+00:00","type":"file","is_protected":false,"filename":"Your
+          privacy - where has it gone, and will it be back (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","content_type":"application\/pdf","size":21635145,"checksum":"ebda0900bcfb21de8fd5652af1616c9a"}],"default_folder":true,"is_protected":false}],"chairs":[{"_type":"ConferenceChair","_fossil":"conferenceChairMetadata","first_name":"Andrzej","last_name":"Nowak","fullName":"Nowak,
+          Andrzej","id":"989052","affiliation":"","emailHash":"91a7b166168c686870eaf195d26b99a3","db_id":989052,"person_id":6225401}],"material":[],"keywords":[],"organizer":"Maria
+          Arsuaga Rios \/ 180 participants","visibility":{"id":"","name":"Everywhere"}}],"ts":1654264336,"url":"https:\/\/indico.cern.ch\/export\/event\/1085621.json","additionalInfo":{},"count":1,"_type":"HTTPAPIResult"}'
+      headers:
+        Cache-control:
+          - private
+        Content-Length:
+          - "5839"
+        Content-Type:
+          - application/json
+        Date:
+          - Fri, 03 Jun 2022 13:52:16 GMT
+        Server:
+          - nginx/1.22.0
+        Set-Cookie:
+          - indico-worker=indico-cern-wk3; path=/; HttpOnly
+        X-Indico-URL:
+          - /export/event/1085621.json
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.26.0
+      method: GET
+      uri: https://indico.cern.ch/export/event/1085621.json
+    response:
+      body:
+        string:
+          '{"count":1,"ts":1654264336,"results":[{"_type":"Conference","id":"1085621","title":"Your
+          privacy \u2013 where has it gone, and will it be back?","description":"<p
+          class=\"part\"><span><span>In recent years, a lot has been said about privacy
+          \u2013 the rights to it, related transgressions, reasons to worry. It seems
+          like questions are multiplying at a high rate, but the answers are not. Should
+          we be concerned, and if so, about what? Should I defend myself, can I defend
+          myself? From whom? Are we risking fundamental freedoms when using FAANG products?
+          Is privacy the same as anonymity? Is giving up privacy a necessary cost of
+          technological progress? Do I have a choice? Are governments and corporations
+          fighting each other over us or collaborating against us? Is \u201cmy phone\u201d
+          truly \u201cmine\u201d?<\/span><\/span><\/p>\r\n\r\n<p class=\"part\"><span><span>We
+          propose to examine privacy with a dose of systematization and in three parts.
+          In the first part, we\u2019ll start weaving a story of how we got here. Starting
+          from the baselines, we\u2019ll journey through history, philosophy and world
+          changes \u2013 from the concept of walls in a house to identity documents.
+          In the second part, we\u2019ll discuss our current state, where current worries
+          stem from, current developments and options. We\u2019ll look at what surveillance
+          capitalism means for society (techies and non-techies alike), how our cloud,
+          Android and i-devices grew, and will look at the fringes. In the third part,
+          we\u2019ll take a closer look at emerging major trends, future scenarios (dystopian
+          and optimistic alike) and concrete possibilities for reaction or resistance.
+          We\u2019ll also touch on technical topics such as, for example, the war-like
+          evolution of cryptography.<\/span><\/span><\/p>\r\n\r\n<p class=\"part\">&nbsp;<\/p>\r\n\r\n<p
+          class=\"part\"><span><span>Short bio:<\/span><\/span><\/p>\r\n\r\n<div>\r\n<div
+          class=\"WordSection1\">\r\n<div><em>Andrzej Nowak spent the last 15 years
+          at the juncture of technology, business and innovation<\/em><em><span>. His
+          early experience was rooted in computer security, and shifted to more general
+          domains while working for CERN and at Intel. &nbsp;<\/span>Between 2007 and
+          2014<span>&nbsp;<\/span><\/em><em><span>Andrzej<\/span><span>&nbsp;<\/span>worked
+          at CERN openlab - a collaboration of CERN and industrial partners such as
+          Google, HP, Huawei, Intel, Oracle and Siemens<\/em><em><span>&nbsp;<\/span><span>\u2013
+          and managed one of openlab\u2019s innovation labs<\/span>. Andrzej was also
+          part of the openlab CTO office, where he helped set up next-generation technology
+          projects for CERN.<\/em><\/div>\r\n\r\n<p><em>More recently, Andrzej founded
+          a small technology and innovation consultancy as well as a fintech start-up.
+          In the last few years, he worked in management consulting in finance and in
+          innovation management.<\/em><em><span><span>&nbsp;<\/span>Andrzej\u2019s current
+          topics of interest include the future of identity, privacy, and money.<\/span><\/em><\/p>\r\n<\/div>\r\n<\/div>","startDate":{"date":"2022-04-26","time":"11:00:00","tz":"Europe\/Zurich"},"timezone":"Europe\/Zurich","endDate":{"date":"2022-04-26","time":"12:00:00","tz":"Europe\/Zurich"},"room":"","location":"","address":"","type":"simple_event","references":[],"_fossil":"conferenceMetadata","categoryId":72,"category":"Academic
+          Training Lecture Regular Programme","note":{},"roomFullname":"","url":"https:\/\/indico.cern.ch\/event\/1085621\/","creationDate":{"date":"2021-10-08","time":"12:11:09.729413","tz":"Europe\/Zurich"},"creator":{"_type":"Avatar","_fossil":"conferenceChairMetadata","first_name":"Marika","last_name":"Flygar","fullName":"Flygar,
+          Marika","id":"7922","affiliation":"CERN","emailHash":"aec52e3445b7881d702f94ee9c8ba6b2"},"hasAnyProtection":false,"roomMapURL":null,"folders":[{"_type":"folder","id":2432935,"title":null,"description":"","attachments":[{"_type":"attachment","id":4195035,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195035\/go","title":"Recording","description":"","modified_dt":"2022-05-20T09:48:21.497281+00:00","type":"link","is_protected":false,"link_url":"https:\/\/cds.cern.ch\/record\/2809622"},{"_type":"attachment","id":4195036,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195036\/go","title":"Video
+          preview","description":"","modified_dt":"2022-05-20T09:48:28.017609+00:00","type":"link","is_protected":false,"link_url":"https:\/\/video-player-sec.web.cern.ch?mode=contribution&year=2022&id=1085621&origin=ceph"},{"_type":"attachment","id":4166401,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4166401\/Your%20privacy%20-%20where%20has%20it%20gone%2C%20and%20will%20it%20be%20back%20%28Part%201%20of%203%29%20-%20CERN%20Academic%20Training%20%28Andrzej%20Nowak%29.pdf","title":"Your
+          privacy - where has it gone, and will it be back  (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","description":"","modified_dt":"2022-04-27T15:24:12.383791+00:00","type":"file","is_protected":false,"filename":"Your
+          privacy - where has it gone, and will it be back (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","content_type":"application\/pdf","size":21635145,"checksum":"ebda0900bcfb21de8fd5652af1616c9a"}],"default_folder":true,"is_protected":false}],"chairs":[{"_type":"ConferenceChair","_fossil":"conferenceChairMetadata","first_name":"Andrzej","last_name":"Nowak","fullName":"Nowak,
+          Andrzej","id":"989052","affiliation":"","emailHash":"91a7b166168c686870eaf195d26b99a3","db_id":989052,"person_id":6225401}],"material":[],"keywords":[],"organizer":"Maria
+          Arsuaga Rios \/ 180 participants","visibility":{"id":"","name":"Everywhere"}}],"additionalInfo":{},"url":"https:\/\/indico.cern.ch\/export\/event\/1085621.json","_type":"HTTPAPIResult"}'
+      headers:
+        Cache-control:
+          - private
+        Content-Length:
+          - "5839"
+        Content-Type:
+          - application/json
+        Date:
+          - Fri, 03 Jun 2022 13:52:17 GMT
+        Server:
+          - nginx/1.22.0
+        Set-Cookie:
+          - indico-worker=indico-cern-wk0; path=/; HttpOnly
+        X-Indico-URL:
+          - /export/event/1085621.json
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.26.0
+      method: GET
+      uri: https://indico.cern.ch/export/event/1085621.json
+    response:
+      body:
+        string:
+          '{"count":1,"additionalInfo":{},"url":"https:\/\/indico.cern.ch\/export\/event\/1085621.json","ts":1654264336,"results":[{"_type":"Conference","id":"1085621","title":"Your
+          privacy \u2013 where has it gone, and will it be back?","description":"<p
+          class=\"part\"><span><span>In recent years, a lot has been said about privacy
+          \u2013 the rights to it, related transgressions, reasons to worry. It seems
+          like questions are multiplying at a high rate, but the answers are not. Should
+          we be concerned, and if so, about what? Should I defend myself, can I defend
+          myself? From whom? Are we risking fundamental freedoms when using FAANG products?
+          Is privacy the same as anonymity? Is giving up privacy a necessary cost of
+          technological progress? Do I have a choice? Are governments and corporations
+          fighting each other over us or collaborating against us? Is \u201cmy phone\u201d
+          truly \u201cmine\u201d?<\/span><\/span><\/p>\r\n\r\n<p class=\"part\"><span><span>We
+          propose to examine privacy with a dose of systematization and in three parts.
+          In the first part, we\u2019ll start weaving a story of how we got here. Starting
+          from the baselines, we\u2019ll journey through history, philosophy and world
+          changes \u2013 from the concept of walls in a house to identity documents.
+          In the second part, we\u2019ll discuss our current state, where current worries
+          stem from, current developments and options. We\u2019ll look at what surveillance
+          capitalism means for society (techies and non-techies alike), how our cloud,
+          Android and i-devices grew, and will look at the fringes. In the third part,
+          we\u2019ll take a closer look at emerging major trends, future scenarios (dystopian
+          and optimistic alike) and concrete possibilities for reaction or resistance.
+          We\u2019ll also touch on technical topics such as, for example, the war-like
+          evolution of cryptography.<\/span><\/span><\/p>\r\n\r\n<p class=\"part\">&nbsp;<\/p>\r\n\r\n<p
+          class=\"part\"><span><span>Short bio:<\/span><\/span><\/p>\r\n\r\n<div>\r\n<div
+          class=\"WordSection1\">\r\n<div><em>Andrzej Nowak spent the last 15 years
+          at the juncture of technology, business and innovation<\/em><em><span>. His
+          early experience was rooted in computer security, and shifted to more general
+          domains while working for CERN and at Intel. &nbsp;<\/span>Between 2007 and
+          2014<span>&nbsp;<\/span><\/em><em><span>Andrzej<\/span><span>&nbsp;<\/span>worked
+          at CERN openlab - a collaboration of CERN and industrial partners such as
+          Google, HP, Huawei, Intel, Oracle and Siemens<\/em><em><span>&nbsp;<\/span><span>\u2013
+          and managed one of openlab\u2019s innovation labs<\/span>. Andrzej was also
+          part of the openlab CTO office, where he helped set up next-generation technology
+          projects for CERN.<\/em><\/div>\r\n\r\n<p><em>More recently, Andrzej founded
+          a small technology and innovation consultancy as well as a fintech start-up.
+          In the last few years, he worked in management consulting in finance and in
+          innovation management.<\/em><em><span><span>&nbsp;<\/span>Andrzej\u2019s current
+          topics of interest include the future of identity, privacy, and money.<\/span><\/em><\/p>\r\n<\/div>\r\n<\/div>","startDate":{"date":"2022-04-26","time":"11:00:00","tz":"Europe\/Zurich"},"timezone":"Europe\/Zurich","endDate":{"date":"2022-04-26","time":"12:00:00","tz":"Europe\/Zurich"},"room":"","location":"","address":"","type":"simple_event","references":[],"_fossil":"conferenceMetadata","categoryId":72,"category":"Academic
+          Training Lecture Regular Programme","note":{},"roomFullname":"","url":"https:\/\/indico.cern.ch\/event\/1085621\/","creationDate":{"date":"2021-10-08","time":"12:11:09.729413","tz":"Europe\/Zurich"},"creator":{"_type":"Avatar","_fossil":"conferenceChairMetadata","first_name":"Marika","last_name":"Flygar","fullName":"Flygar,
+          Marika","id":"7922","affiliation":"CERN","emailHash":"aec52e3445b7881d702f94ee9c8ba6b2"},"hasAnyProtection":false,"roomMapURL":null,"folders":[{"_type":"folder","id":2432935,"title":null,"description":"","attachments":[{"_type":"attachment","id":4195035,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195035\/go","title":"Recording","description":"","modified_dt":"2022-05-20T09:48:21.497281+00:00","type":"link","is_protected":false,"link_url":"https:\/\/cds.cern.ch\/record\/2809622"},{"_type":"attachment","id":4195036,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195036\/go","title":"Video
+          preview","description":"","modified_dt":"2022-05-20T09:48:28.017609+00:00","type":"link","is_protected":false,"link_url":"https:\/\/video-player-sec.web.cern.ch?mode=contribution&year=2022&id=1085621&origin=ceph"},{"_type":"attachment","id":4166401,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4166401\/Your%20privacy%20-%20where%20has%20it%20gone%2C%20and%20will%20it%20be%20back%20%28Part%201%20of%203%29%20-%20CERN%20Academic%20Training%20%28Andrzej%20Nowak%29.pdf","title":"Your
+          privacy - where has it gone, and will it be back  (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","description":"","modified_dt":"2022-04-27T15:24:12.383791+00:00","type":"file","is_protected":false,"filename":"Your
+          privacy - where has it gone, and will it be back (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","content_type":"application\/pdf","size":21635145,"checksum":"ebda0900bcfb21de8fd5652af1616c9a"}],"default_folder":true,"is_protected":false}],"chairs":[{"_type":"ConferenceChair","_fossil":"conferenceChairMetadata","first_name":"Andrzej","last_name":"Nowak","fullName":"Nowak,
+          Andrzej","id":"989052","affiliation":"","emailHash":"91a7b166168c686870eaf195d26b99a3","db_id":989052,"person_id":6225401}],"material":[],"keywords":[],"organizer":"Maria
+          Arsuaga Rios \/ 180 participants","visibility":{"id":"","name":"Everywhere"}}],"_type":"HTTPAPIResult"}'
+      headers:
+        Cache-control:
+          - private
+        Content-Length:
+          - "5839"
+        Content-Type:
+          - application/json
+        Date:
+          - Fri, 03 Jun 2022 13:52:18 GMT
+        Server:
+          - nginx/1.22.0
+        Set-Cookie:
+          - indico-worker=indico-cern-wk1; path=/; HttpOnly
+        X-Indico-URL:
+          - /export/event/1085621.json
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.26.0
+      method: GET
+      uri: https://indico.cern.ch/export/event/1085621.json
+    response:
+      body:
+        string:
+          '{"count":1,"additionalInfo":{},"url":"https:\/\/indico.cern.ch\/export\/event\/1085621.json","ts":1654264336,"results":[{"_type":"Conference","id":"1085621","title":"Your
+          privacy \u2013 where has it gone, and will it be back?","description":"<p
+          class=\"part\"><span><span>In recent years, a lot has been said about privacy
+          \u2013 the rights to it, related transgressions, reasons to worry. It seems
+          like questions are multiplying at a high rate, but the answers are not. Should
+          we be concerned, and if so, about what? Should I defend myself, can I defend
+          myself? From whom? Are we risking fundamental freedoms when using FAANG products?
+          Is privacy the same as anonymity? Is giving up privacy a necessary cost of
+          technological progress? Do I have a choice? Are governments and corporations
+          fighting each other over us or collaborating against us? Is \u201cmy phone\u201d
+          truly \u201cmine\u201d?<\/span><\/span><\/p>\r\n\r\n<p class=\"part\"><span><span>We
+          propose to examine privacy with a dose of systematization and in three parts.
+          In the first part, we\u2019ll start weaving a story of how we got here. Starting
+          from the baselines, we\u2019ll journey through history, philosophy and world
+          changes \u2013 from the concept of walls in a house to identity documents.
+          In the second part, we\u2019ll discuss our current state, where current worries
+          stem from, current developments and options. We\u2019ll look at what surveillance
+          capitalism means for society (techies and non-techies alike), how our cloud,
+          Android and i-devices grew, and will look at the fringes. In the third part,
+          we\u2019ll take a closer look at emerging major trends, future scenarios (dystopian
+          and optimistic alike) and concrete possibilities for reaction or resistance.
+          We\u2019ll also touch on technical topics such as, for example, the war-like
+          evolution of cryptography.<\/span><\/span><\/p>\r\n\r\n<p class=\"part\">&nbsp;<\/p>\r\n\r\n<p
+          class=\"part\"><span><span>Short bio:<\/span><\/span><\/p>\r\n\r\n<div>\r\n<div
+          class=\"WordSection1\">\r\n<div><em>Andrzej Nowak spent the last 15 years
+          at the juncture of technology, business and innovation<\/em><em><span>. His
+          early experience was rooted in computer security, and shifted to more general
+          domains while working for CERN and at Intel. &nbsp;<\/span>Between 2007 and
+          2014<span>&nbsp;<\/span><\/em><em><span>Andrzej<\/span><span>&nbsp;<\/span>worked
+          at CERN openlab - a collaboration of CERN and industrial partners such as
+          Google, HP, Huawei, Intel, Oracle and Siemens<\/em><em><span>&nbsp;<\/span><span>\u2013
+          and managed one of openlab\u2019s innovation labs<\/span>. Andrzej was also
+          part of the openlab CTO office, where he helped set up next-generation technology
+          projects for CERN.<\/em><\/div>\r\n\r\n<p><em>More recently, Andrzej founded
+          a small technology and innovation consultancy as well as a fintech start-up.
+          In the last few years, he worked in management consulting in finance and in
+          innovation management.<\/em><em><span><span>&nbsp;<\/span>Andrzej\u2019s current
+          topics of interest include the future of identity, privacy, and money.<\/span><\/em><\/p>\r\n<\/div>\r\n<\/div>","startDate":{"date":"2022-04-26","time":"11:00:00","tz":"Europe\/Zurich"},"timezone":"Europe\/Zurich","endDate":{"date":"2022-04-26","time":"12:00:00","tz":"Europe\/Zurich"},"room":"","location":"","address":"","type":"simple_event","references":[],"_fossil":"conferenceMetadata","categoryId":72,"category":"Academic
+          Training Lecture Regular Programme","note":{},"roomFullname":"","url":"https:\/\/indico.cern.ch\/event\/1085621\/","creationDate":{"date":"2021-10-08","time":"12:11:09.729413","tz":"Europe\/Zurich"},"creator":{"_type":"Avatar","_fossil":"conferenceChairMetadata","first_name":"Marika","last_name":"Flygar","fullName":"Flygar,
+          Marika","id":"7922","affiliation":"CERN","emailHash":"aec52e3445b7881d702f94ee9c8ba6b2"},"hasAnyProtection":false,"roomMapURL":null,"folders":[{"_type":"folder","id":2432935,"title":null,"description":"","attachments":[{"_type":"attachment","id":4195035,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195035\/go","title":"Recording","description":"","modified_dt":"2022-05-20T09:48:21.497281+00:00","type":"link","is_protected":false,"link_url":"https:\/\/cds.cern.ch\/record\/2809622"},{"_type":"attachment","id":4195036,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195036\/go","title":"Video
+          preview","description":"","modified_dt":"2022-05-20T09:48:28.017609+00:00","type":"link","is_protected":false,"link_url":"https:\/\/video-player-sec.web.cern.ch?mode=contribution&year=2022&id=1085621&origin=ceph"},{"_type":"attachment","id":4166401,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4166401\/Your%20privacy%20-%20where%20has%20it%20gone%2C%20and%20will%20it%20be%20back%20%28Part%201%20of%203%29%20-%20CERN%20Academic%20Training%20%28Andrzej%20Nowak%29.pdf","title":"Your
+          privacy - where has it gone, and will it be back  (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","description":"","modified_dt":"2022-04-27T15:24:12.383791+00:00","type":"file","is_protected":false,"filename":"Your
+          privacy - where has it gone, and will it be back (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","content_type":"application\/pdf","size":21635145,"checksum":"ebda0900bcfb21de8fd5652af1616c9a"}],"default_folder":true,"is_protected":false}],"chairs":[{"_type":"ConferenceChair","_fossil":"conferenceChairMetadata","first_name":"Andrzej","last_name":"Nowak","fullName":"Nowak,
+          Andrzej","id":"989052","affiliation":"","emailHash":"91a7b166168c686870eaf195d26b99a3","db_id":989052,"person_id":6225401}],"material":[],"keywords":[],"organizer":"Maria
+          Arsuaga Rios \/ 180 participants","visibility":{"id":"","name":"Everywhere"}}],"_type":"HTTPAPIResult"}'
+      headers:
+        Cache-control:
+          - private
+        Content-Length:
+          - "5839"
+        Content-Type:
+          - application/json
+        Date:
+          - Fri, 03 Jun 2022 13:52:19 GMT
+        Server:
+          - nginx/1.22.0
+        Set-Cookie:
+          - indico-worker=indico-cern-wk1; path=/; HttpOnly
+        X-Indico-URL:
+          - /export/event/1085621.json
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.26.0
+      method: GET
+      uri: https://indico.cern.ch/export/event/1085621.json
+    response:
+      body:
+        string:
+          '{"results":[{"_type":"Conference","id":"1085621","title":"Your privacy
+          \u2013 where has it gone, and will it be back?","description":"<p class=\"part\"><span><span>In
+          recent years, a lot has been said about privacy \u2013 the rights to it, related
+          transgressions, reasons to worry. It seems like questions are multiplying
+          at a high rate, but the answers are not. Should we be concerned, and if so,
+          about what? Should I defend myself, can I defend myself? From whom? Are we
+          risking fundamental freedoms when using FAANG products? Is privacy the same
+          as anonymity? Is giving up privacy a necessary cost of technological progress?
+          Do I have a choice? Are governments and corporations fighting each other over
+          us or collaborating against us? Is \u201cmy phone\u201d truly \u201cmine\u201d?<\/span><\/span><\/p>\r\n\r\n<p
+          class=\"part\"><span><span>We propose to examine privacy with a dose of systematization
+          and in three parts. In the first part, we\u2019ll start weaving a story of
+          how we got here. Starting from the baselines, we\u2019ll journey through history,
+          philosophy and world changes \u2013 from the concept of walls in a house to
+          identity documents. In the second part, we\u2019ll discuss our current state,
+          where current worries stem from, current developments and options. We\u2019ll
+          look at what surveillance capitalism means for society (techies and non-techies
+          alike), how our cloud, Android and i-devices grew, and will look at the fringes.
+          In the third part, we\u2019ll take a closer look at emerging major trends,
+          future scenarios (dystopian and optimistic alike) and concrete possibilities
+          for reaction or resistance. We\u2019ll also touch on technical topics such
+          as, for example, the war-like evolution of cryptography.<\/span><\/span><\/p>\r\n\r\n<p
+          class=\"part\">&nbsp;<\/p>\r\n\r\n<p class=\"part\"><span><span>Short bio:<\/span><\/span><\/p>\r\n\r\n<div>\r\n<div
+          class=\"WordSection1\">\r\n<div><em>Andrzej Nowak spent the last 15 years
+          at the juncture of technology, business and innovation<\/em><em><span>. His
+          early experience was rooted in computer security, and shifted to more general
+          domains while working for CERN and at Intel. &nbsp;<\/span>Between 2007 and
+          2014<span>&nbsp;<\/span><\/em><em><span>Andrzej<\/span><span>&nbsp;<\/span>worked
+          at CERN openlab - a collaboration of CERN and industrial partners such as
+          Google, HP, Huawei, Intel, Oracle and Siemens<\/em><em><span>&nbsp;<\/span><span>\u2013
+          and managed one of openlab\u2019s innovation labs<\/span>. Andrzej was also
+          part of the openlab CTO office, where he helped set up next-generation technology
+          projects for CERN.<\/em><\/div>\r\n\r\n<p><em>More recently, Andrzej founded
+          a small technology and innovation consultancy as well as a fintech start-up.
+          In the last few years, he worked in management consulting in finance and in
+          innovation management.<\/em><em><span><span>&nbsp;<\/span>Andrzej\u2019s current
+          topics of interest include the future of identity, privacy, and money.<\/span><\/em><\/p>\r\n<\/div>\r\n<\/div>","startDate":{"date":"2022-04-26","time":"11:00:00","tz":"Europe\/Zurich"},"timezone":"Europe\/Zurich","endDate":{"date":"2022-04-26","time":"12:00:00","tz":"Europe\/Zurich"},"room":"","location":"","address":"","type":"simple_event","references":[],"_fossil":"conferenceMetadata","categoryId":72,"category":"Academic
+          Training Lecture Regular Programme","note":{},"roomFullname":"","url":"https:\/\/indico.cern.ch\/event\/1085621\/","creationDate":{"date":"2021-10-08","time":"12:11:09.729413","tz":"Europe\/Zurich"},"creator":{"_type":"Avatar","_fossil":"conferenceChairMetadata","first_name":"Marika","last_name":"Flygar","fullName":"Flygar,
+          Marika","id":"7922","affiliation":"CERN","emailHash":"aec52e3445b7881d702f94ee9c8ba6b2"},"hasAnyProtection":false,"roomMapURL":null,"folders":[{"_type":"folder","id":2432935,"title":null,"description":"","attachments":[{"_type":"attachment","id":4195035,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195035\/go","title":"Recording","description":"","modified_dt":"2022-05-20T09:48:21.497281+00:00","type":"link","is_protected":false,"link_url":"https:\/\/cds.cern.ch\/record\/2809622"},{"_type":"attachment","id":4195036,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195036\/go","title":"Video
+          preview","description":"","modified_dt":"2022-05-20T09:48:28.017609+00:00","type":"link","is_protected":false,"link_url":"https:\/\/video-player-sec.web.cern.ch?mode=contribution&year=2022&id=1085621&origin=ceph"},{"_type":"attachment","id":4166401,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4166401\/Your%20privacy%20-%20where%20has%20it%20gone%2C%20and%20will%20it%20be%20back%20%28Part%201%20of%203%29%20-%20CERN%20Academic%20Training%20%28Andrzej%20Nowak%29.pdf","title":"Your
+          privacy - where has it gone, and will it be back  (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","description":"","modified_dt":"2022-04-27T15:24:12.383791+00:00","type":"file","is_protected":false,"filename":"Your
+          privacy - where has it gone, and will it be back (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","content_type":"application\/pdf","size":21635145,"checksum":"ebda0900bcfb21de8fd5652af1616c9a"}],"default_folder":true,"is_protected":false}],"chairs":[{"_type":"ConferenceChair","_fossil":"conferenceChairMetadata","first_name":"Andrzej","last_name":"Nowak","fullName":"Nowak,
+          Andrzej","id":"989052","affiliation":"","emailHash":"91a7b166168c686870eaf195d26b99a3","db_id":989052,"person_id":6225401}],"material":[],"keywords":[],"organizer":"Maria
+          Arsuaga Rios \/ 180 participants","visibility":{"id":"","name":"Everywhere"}}],"ts":1654264336,"url":"https:\/\/indico.cern.ch\/export\/event\/1085621.json","additionalInfo":{},"count":1,"_type":"HTTPAPIResult"}'
+      headers:
+        Cache-control:
+          - private
+        Content-Length:
+          - "5839"
+        Content-Type:
+          - application/json
+        Date:
+          - Fri, 03 Jun 2022 13:52:22 GMT
+        Server:
+          - nginx/1.22.0
+        Set-Cookie:
+          - indico-worker=indico-cern-wk3; path=/; HttpOnly
+        X-Indico-URL:
+          - /export/event/1085621.json
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.26.0
+      method: GET
+      uri: https://indico.cern.ch/export/event/1085621.json
+    response:
+      body:
+        string:
+          '{"count":1,"additionalInfo":{},"url":"https:\/\/indico.cern.ch\/export\/event\/1085621.json","ts":1654264336,"results":[{"_type":"Conference","id":"1085621","title":"Your
+          privacy \u2013 where has it gone, and will it be back?","description":"<p
+          class=\"part\"><span><span>In recent years, a lot has been said about privacy
+          \u2013 the rights to it, related transgressions, reasons to worry. It seems
+          like questions are multiplying at a high rate, but the answers are not. Should
+          we be concerned, and if so, about what? Should I defend myself, can I defend
+          myself? From whom? Are we risking fundamental freedoms when using FAANG products?
+          Is privacy the same as anonymity? Is giving up privacy a necessary cost of
+          technological progress? Do I have a choice? Are governments and corporations
+          fighting each other over us or collaborating against us? Is \u201cmy phone\u201d
+          truly \u201cmine\u201d?<\/span><\/span><\/p>\r\n\r\n<p class=\"part\"><span><span>We
+          propose to examine privacy with a dose of systematization and in three parts.
+          In the first part, we\u2019ll start weaving a story of how we got here. Starting
+          from the baselines, we\u2019ll journey through history, philosophy and world
+          changes \u2013 from the concept of walls in a house to identity documents.
+          In the second part, we\u2019ll discuss our current state, where current worries
+          stem from, current developments and options. We\u2019ll look at what surveillance
+          capitalism means for society (techies and non-techies alike), how our cloud,
+          Android and i-devices grew, and will look at the fringes. In the third part,
+          we\u2019ll take a closer look at emerging major trends, future scenarios (dystopian
+          and optimistic alike) and concrete possibilities for reaction or resistance.
+          We\u2019ll also touch on technical topics such as, for example, the war-like
+          evolution of cryptography.<\/span><\/span><\/p>\r\n\r\n<p class=\"part\">&nbsp;<\/p>\r\n\r\n<p
+          class=\"part\"><span><span>Short bio:<\/span><\/span><\/p>\r\n\r\n<div>\r\n<div
+          class=\"WordSection1\">\r\n<div><em>Andrzej Nowak spent the last 15 years
+          at the juncture of technology, business and innovation<\/em><em><span>. His
+          early experience was rooted in computer security, and shifted to more general
+          domains while working for CERN and at Intel. &nbsp;<\/span>Between 2007 and
+          2014<span>&nbsp;<\/span><\/em><em><span>Andrzej<\/span><span>&nbsp;<\/span>worked
+          at CERN openlab - a collaboration of CERN and industrial partners such as
+          Google, HP, Huawei, Intel, Oracle and Siemens<\/em><em><span>&nbsp;<\/span><span>\u2013
+          and managed one of openlab\u2019s innovation labs<\/span>. Andrzej was also
+          part of the openlab CTO office, where he helped set up next-generation technology
+          projects for CERN.<\/em><\/div>\r\n\r\n<p><em>More recently, Andrzej founded
+          a small technology and innovation consultancy as well as a fintech start-up.
+          In the last few years, he worked in management consulting in finance and in
+          innovation management.<\/em><em><span><span>&nbsp;<\/span>Andrzej\u2019s current
+          topics of interest include the future of identity, privacy, and money.<\/span><\/em><\/p>\r\n<\/div>\r\n<\/div>","startDate":{"date":"2022-04-26","time":"11:00:00","tz":"Europe\/Zurich"},"timezone":"Europe\/Zurich","endDate":{"date":"2022-04-26","time":"12:00:00","tz":"Europe\/Zurich"},"room":"","location":"","address":"","type":"simple_event","references":[],"_fossil":"conferenceMetadata","categoryId":72,"category":"Academic
+          Training Lecture Regular Programme","note":{},"roomFullname":"","url":"https:\/\/indico.cern.ch\/event\/1085621\/","creationDate":{"date":"2021-10-08","time":"12:11:09.729413","tz":"Europe\/Zurich"},"creator":{"_type":"Avatar","_fossil":"conferenceChairMetadata","first_name":"Marika","last_name":"Flygar","fullName":"Flygar,
+          Marika","id":"7922","affiliation":"CERN","emailHash":"aec52e3445b7881d702f94ee9c8ba6b2"},"hasAnyProtection":false,"roomMapURL":null,"folders":[{"_type":"folder","id":2432935,"title":null,"description":"","attachments":[{"_type":"attachment","id":4195035,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195035\/go","title":"Recording","description":"","modified_dt":"2022-05-20T09:48:21.497281+00:00","type":"link","is_protected":false,"link_url":"https:\/\/cds.cern.ch\/record\/2809622"},{"_type":"attachment","id":4195036,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195036\/go","title":"Video
+          preview","description":"","modified_dt":"2022-05-20T09:48:28.017609+00:00","type":"link","is_protected":false,"link_url":"https:\/\/video-player-sec.web.cern.ch?mode=contribution&year=2022&id=1085621&origin=ceph"},{"_type":"attachment","id":4166401,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4166401\/Your%20privacy%20-%20where%20has%20it%20gone%2C%20and%20will%20it%20be%20back%20%28Part%201%20of%203%29%20-%20CERN%20Academic%20Training%20%28Andrzej%20Nowak%29.pdf","title":"Your
+          privacy - where has it gone, and will it be back  (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","description":"","modified_dt":"2022-04-27T15:24:12.383791+00:00","type":"file","is_protected":false,"filename":"Your
+          privacy - where has it gone, and will it be back (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","content_type":"application\/pdf","size":21635145,"checksum":"ebda0900bcfb21de8fd5652af1616c9a"}],"default_folder":true,"is_protected":false}],"chairs":[{"_type":"ConferenceChair","_fossil":"conferenceChairMetadata","first_name":"Andrzej","last_name":"Nowak","fullName":"Nowak,
+          Andrzej","id":"989052","affiliation":"","emailHash":"91a7b166168c686870eaf195d26b99a3","db_id":989052,"person_id":6225401}],"material":[],"keywords":[],"organizer":"Maria
+          Arsuaga Rios \/ 180 participants","visibility":{"id":"","name":"Everywhere"}}],"_type":"HTTPAPIResult"}'
+      headers:
+        Cache-control:
+          - private
+        Content-Length:
+          - "5839"
+        Content-Type:
+          - application/json
+        Date:
+          - Fri, 03 Jun 2022 13:52:24 GMT
+        Server:
+          - nginx/1.22.0
+        Set-Cookie:
+          - indico-worker=indico-cern-wk1; path=/; HttpOnly
+        X-Indico-URL:
+          - /export/event/1085621.json
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.26.0
+      method: GET
+      uri: https://indico.cern.ch/export/event/1085621.json
+    response:
+      body:
+        string:
+          '{"count":1,"additionalInfo":{},"url":"https:\/\/indico.cern.ch\/export\/event\/1085621.json","ts":1654264336,"results":[{"_type":"Conference","id":"1085621","title":"Your
+          privacy \u2013 where has it gone, and will it be back?","description":"<p
+          class=\"part\"><span><span>In recent years, a lot has been said about privacy
+          \u2013 the rights to it, related transgressions, reasons to worry. It seems
+          like questions are multiplying at a high rate, but the answers are not. Should
+          we be concerned, and if so, about what? Should I defend myself, can I defend
+          myself? From whom? Are we risking fundamental freedoms when using FAANG products?
+          Is privacy the same as anonymity? Is giving up privacy a necessary cost of
+          technological progress? Do I have a choice? Are governments and corporations
+          fighting each other over us or collaborating against us? Is \u201cmy phone\u201d
+          truly \u201cmine\u201d?<\/span><\/span><\/p>\r\n\r\n<p class=\"part\"><span><span>We
+          propose to examine privacy with a dose of systematization and in three parts.
+          In the first part, we\u2019ll start weaving a story of how we got here. Starting
+          from the baselines, we\u2019ll journey through history, philosophy and world
+          changes \u2013 from the concept of walls in a house to identity documents.
+          In the second part, we\u2019ll discuss our current state, where current worries
+          stem from, current developments and options. We\u2019ll look at what surveillance
+          capitalism means for society (techies and non-techies alike), how our cloud,
+          Android and i-devices grew, and will look at the fringes. In the third part,
+          we\u2019ll take a closer look at emerging major trends, future scenarios (dystopian
+          and optimistic alike) and concrete possibilities for reaction or resistance.
+          We\u2019ll also touch on technical topics such as, for example, the war-like
+          evolution of cryptography.<\/span><\/span><\/p>\r\n\r\n<p class=\"part\">&nbsp;<\/p>\r\n\r\n<p
+          class=\"part\"><span><span>Short bio:<\/span><\/span><\/p>\r\n\r\n<div>\r\n<div
+          class=\"WordSection1\">\r\n<div><em>Andrzej Nowak spent the last 15 years
+          at the juncture of technology, business and innovation<\/em><em><span>. His
+          early experience was rooted in computer security, and shifted to more general
+          domains while working for CERN and at Intel. &nbsp;<\/span>Between 2007 and
+          2014<span>&nbsp;<\/span><\/em><em><span>Andrzej<\/span><span>&nbsp;<\/span>worked
+          at CERN openlab - a collaboration of CERN and industrial partners such as
+          Google, HP, Huawei, Intel, Oracle and Siemens<\/em><em><span>&nbsp;<\/span><span>\u2013
+          and managed one of openlab\u2019s innovation labs<\/span>. Andrzej was also
+          part of the openlab CTO office, where he helped set up next-generation technology
+          projects for CERN.<\/em><\/div>\r\n\r\n<p><em>More recently, Andrzej founded
+          a small technology and innovation consultancy as well as a fintech start-up.
+          In the last few years, he worked in management consulting in finance and in
+          innovation management.<\/em><em><span><span>&nbsp;<\/span>Andrzej\u2019s current
+          topics of interest include the future of identity, privacy, and money.<\/span><\/em><\/p>\r\n<\/div>\r\n<\/div>","startDate":{"date":"2022-04-26","time":"11:00:00","tz":"Europe\/Zurich"},"timezone":"Europe\/Zurich","endDate":{"date":"2022-04-26","time":"12:00:00","tz":"Europe\/Zurich"},"room":"","location":"","address":"","type":"simple_event","references":[],"_fossil":"conferenceMetadata","categoryId":72,"category":"Academic
+          Training Lecture Regular Programme","note":{},"roomFullname":"","url":"https:\/\/indico.cern.ch\/event\/1085621\/","creationDate":{"date":"2021-10-08","time":"12:11:09.729413","tz":"Europe\/Zurich"},"creator":{"_type":"Avatar","_fossil":"conferenceChairMetadata","first_name":"Marika","last_name":"Flygar","fullName":"Flygar,
+          Marika","id":"7922","affiliation":"CERN","emailHash":"aec52e3445b7881d702f94ee9c8ba6b2"},"hasAnyProtection":false,"roomMapURL":null,"folders":[{"_type":"folder","id":2432935,"title":null,"description":"","attachments":[{"_type":"attachment","id":4195035,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195035\/go","title":"Recording","description":"","modified_dt":"2022-05-20T09:48:21.497281+00:00","type":"link","is_protected":false,"link_url":"https:\/\/cds.cern.ch\/record\/2809622"},{"_type":"attachment","id":4195036,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195036\/go","title":"Video
+          preview","description":"","modified_dt":"2022-05-20T09:48:28.017609+00:00","type":"link","is_protected":false,"link_url":"https:\/\/video-player-sec.web.cern.ch?mode=contribution&year=2022&id=1085621&origin=ceph"},{"_type":"attachment","id":4166401,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4166401\/Your%20privacy%20-%20where%20has%20it%20gone%2C%20and%20will%20it%20be%20back%20%28Part%201%20of%203%29%20-%20CERN%20Academic%20Training%20%28Andrzej%20Nowak%29.pdf","title":"Your
+          privacy - where has it gone, and will it be back  (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","description":"","modified_dt":"2022-04-27T15:24:12.383791+00:00","type":"file","is_protected":false,"filename":"Your
+          privacy - where has it gone, and will it be back (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","content_type":"application\/pdf","size":21635145,"checksum":"ebda0900bcfb21de8fd5652af1616c9a"}],"default_folder":true,"is_protected":false}],"chairs":[{"_type":"ConferenceChair","_fossil":"conferenceChairMetadata","first_name":"Andrzej","last_name":"Nowak","fullName":"Nowak,
+          Andrzej","id":"989052","affiliation":"","emailHash":"91a7b166168c686870eaf195d26b99a3","db_id":989052,"person_id":6225401}],"material":[],"keywords":[],"organizer":"Maria
+          Arsuaga Rios \/ 180 participants","visibility":{"id":"","name":"Everywhere"}}],"_type":"HTTPAPIResult"}'
+      headers:
+        Cache-control:
+          - private
+        Content-Length:
+          - "5839"
+        Content-Type:
+          - application/json
+        Date:
+          - Fri, 03 Jun 2022 13:52:27 GMT
+        Server:
+          - nginx/1.22.0
+        Set-Cookie:
+          - indico-worker=indico-cern-wk1; path=/; HttpOnly
+        X-Indico-URL:
+          - /export/event/1085621.json
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.26.0
+      method: GET
+      uri: https://indico.cern.ch/export/event/1085621.json
+    response:
+      body:
+        string:
+          '{"results":[{"_type":"Conference","id":"1085621","title":"Your privacy
+          \u2013 where has it gone, and will it be back?","description":"<p class=\"part\"><span><span>In
+          recent years, a lot has been said about privacy \u2013 the rights to it, related
+          transgressions, reasons to worry. It seems like questions are multiplying
+          at a high rate, but the answers are not. Should we be concerned, and if so,
+          about what? Should I defend myself, can I defend myself? From whom? Are we
+          risking fundamental freedoms when using FAANG products? Is privacy the same
+          as anonymity? Is giving up privacy a necessary cost of technological progress?
+          Do I have a choice? Are governments and corporations fighting each other over
+          us or collaborating against us? Is \u201cmy phone\u201d truly \u201cmine\u201d?<\/span><\/span><\/p>\r\n\r\n<p
+          class=\"part\"><span><span>We propose to examine privacy with a dose of systematization
+          and in three parts. In the first part, we\u2019ll start weaving a story of
+          how we got here. Starting from the baselines, we\u2019ll journey through history,
+          philosophy and world changes \u2013 from the concept of walls in a house to
+          identity documents. In the second part, we\u2019ll discuss our current state,
+          where current worries stem from, current developments and options. We\u2019ll
+          look at what surveillance capitalism means for society (techies and non-techies
+          alike), how our cloud, Android and i-devices grew, and will look at the fringes.
+          In the third part, we\u2019ll take a closer look at emerging major trends,
+          future scenarios (dystopian and optimistic alike) and concrete possibilities
+          for reaction or resistance. We\u2019ll also touch on technical topics such
+          as, for example, the war-like evolution of cryptography.<\/span><\/span><\/p>\r\n\r\n<p
+          class=\"part\">&nbsp;<\/p>\r\n\r\n<p class=\"part\"><span><span>Short bio:<\/span><\/span><\/p>\r\n\r\n<div>\r\n<div
+          class=\"WordSection1\">\r\n<div><em>Andrzej Nowak spent the last 15 years
+          at the juncture of technology, business and innovation<\/em><em><span>. His
+          early experience was rooted in computer security, and shifted to more general
+          domains while working for CERN and at Intel. &nbsp;<\/span>Between 2007 and
+          2014<span>&nbsp;<\/span><\/em><em><span>Andrzej<\/span><span>&nbsp;<\/span>worked
+          at CERN openlab - a collaboration of CERN and industrial partners such as
+          Google, HP, Huawei, Intel, Oracle and Siemens<\/em><em><span>&nbsp;<\/span><span>\u2013
+          and managed one of openlab\u2019s innovation labs<\/span>. Andrzej was also
+          part of the openlab CTO office, where he helped set up next-generation technology
+          projects for CERN.<\/em><\/div>\r\n\r\n<p><em>More recently, Andrzej founded
+          a small technology and innovation consultancy as well as a fintech start-up.
+          In the last few years, he worked in management consulting in finance and in
+          innovation management.<\/em><em><span><span>&nbsp;<\/span>Andrzej\u2019s current
+          topics of interest include the future of identity, privacy, and money.<\/span><\/em><\/p>\r\n<\/div>\r\n<\/div>","startDate":{"date":"2022-04-26","time":"11:00:00","tz":"Europe\/Zurich"},"timezone":"Europe\/Zurich","endDate":{"date":"2022-04-26","time":"12:00:00","tz":"Europe\/Zurich"},"room":"","location":"","address":"","type":"simple_event","references":[],"_fossil":"conferenceMetadata","categoryId":72,"category":"Academic
+          Training Lecture Regular Programme","note":{},"roomFullname":"","url":"https:\/\/indico.cern.ch\/event\/1085621\/","creationDate":{"date":"2021-10-08","time":"12:11:09.729413","tz":"Europe\/Zurich"},"creator":{"_type":"Avatar","_fossil":"conferenceChairMetadata","first_name":"Marika","last_name":"Flygar","fullName":"Flygar,
+          Marika","id":"7922","affiliation":"CERN","emailHash":"aec52e3445b7881d702f94ee9c8ba6b2"},"hasAnyProtection":false,"roomMapURL":null,"folders":[{"_type":"folder","id":2432935,"title":null,"description":"","attachments":[{"_type":"attachment","id":4195035,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195035\/go","title":"Recording","description":"","modified_dt":"2022-05-20T09:48:21.497281+00:00","type":"link","is_protected":false,"link_url":"https:\/\/cds.cern.ch\/record\/2809622"},{"_type":"attachment","id":4195036,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4195036\/go","title":"Video
+          preview","description":"","modified_dt":"2022-05-20T09:48:28.017609+00:00","type":"link","is_protected":false,"link_url":"https:\/\/video-player-sec.web.cern.ch?mode=contribution&year=2022&id=1085621&origin=ceph"},{"_type":"attachment","id":4166401,"download_url":"https:\/\/indico.cern.ch\/event\/1085621\/attachments\/2432935\/4166401\/Your%20privacy%20-%20where%20has%20it%20gone%2C%20and%20will%20it%20be%20back%20%28Part%201%20of%203%29%20-%20CERN%20Academic%20Training%20%28Andrzej%20Nowak%29.pdf","title":"Your
+          privacy - where has it gone, and will it be back  (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","description":"","modified_dt":"2022-04-27T15:24:12.383791+00:00","type":"file","is_protected":false,"filename":"Your
+          privacy - where has it gone, and will it be back (Part 1 of 3) - CERN Academic
+          Training (Andrzej Nowak).pdf","content_type":"application\/pdf","size":21635145,"checksum":"ebda0900bcfb21de8fd5652af1616c9a"}],"default_folder":true,"is_protected":false}],"chairs":[{"_type":"ConferenceChair","_fossil":"conferenceChairMetadata","first_name":"Andrzej","last_name":"Nowak","fullName":"Nowak,
+          Andrzej","id":"989052","affiliation":"","emailHash":"91a7b166168c686870eaf195d26b99a3","db_id":989052,"person_id":6225401}],"material":[],"keywords":[],"organizer":"Maria
+          Arsuaga Rios \/ 180 participants","visibility":{"id":"","name":"Everywhere"}}],"ts":1654264336,"url":"https:\/\/indico.cern.ch\/export\/event\/1085621.json","additionalInfo":{},"count":1,"_type":"HTTPAPIResult"}'
+      headers:
+        Cache-control:
+          - private
+        Content-Length:
+          - "5839"
+        Content-Type:
+          - application/json
+        Date:
+          - Fri, 03 Jun 2022 13:52:28 GMT
+        Server:
+          - nginx/1.22.0
+        Set-Cookie:
+          - indico-worker=indico-cern-wk3; path=/; HttpOnly
+        X-Indico-URL:
+          - /export/event/1085621.json
+      status:
+        code: 200
+        message: OK
+version: 1
