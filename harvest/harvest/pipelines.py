@@ -60,12 +60,11 @@ class HarvestPipeline:
                 LOGGER.error(
                     "Failed to send record.",
                     lecture_id=lecture_id,
-                    lecture=record,
-                    message=response.json(),
                     status_code=response.status_code,
+                    message=response.json(),
                 )
             else:
-                LOGGER.info("Send successfully", lecture_id=lecture_id, lecture=record)
+                LOGGER.info("Send successfully", lecture_id=lecture_id)
 
     def process_item(self, item, spider):
         item = strip_empty_values(item)

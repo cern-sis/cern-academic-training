@@ -179,7 +179,7 @@ class CDSSpider(Spider):
         if license_name and license_year:
             record["license"] = "{} {}".format(license_name, license_year)
 
-        LOGGER.info("Parsed record", lecture=record)
+        LOGGER.debug("Parsed record", lecture_id=record["lecture_id"], lecture=record)
 
         data = cds2hep_marc.do(create_record(original))
 
