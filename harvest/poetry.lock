@@ -513,7 +513,7 @@ python-versions = "*"
 
 [[package]]
 name = "inspire-dojson"
-version = "63.1.4"
+version = "63.1.5"
 description = "INSPIRE-specific rules to transform from MARCXML to JSON and back."
 category = "main"
 optional = false
@@ -1370,7 +1370,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "f38660def29c35e00a97740b8bc273c25b52cb6ff0aa08fa03416cf04a847b2a"
+content-hash = "12844379eb61034c2e7dfe7525016677c4aa83737d1c923c361aa1d4ae85c29f"
 
 [metadata.files]
 amqp = [
@@ -1587,8 +1587,8 @@ iniconfig = [
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
 ]
 inspire-dojson = [
-    {file = "inspire-dojson-63.1.4.tar.gz", hash = "sha256:66bd9bc8c295e684c6f8d3eb568cd373705842cc44eccf3ff92e9c4fe2a52728"},
-    {file = "inspire_dojson-63.1.4-py2-none-any.whl", hash = "sha256:2b77733df84c6362a0dff003e243bdd72a84733633a7659d513e836594e654dd"},
+    {file = "inspire-dojson-63.1.5.tar.gz", hash = "sha256:48b72b8852d8d3b78359b36b5cdce5d8e6987632497e86a5d88f98d839cc687a"},
+    {file = "inspire_dojson-63.1.5-py2-none-any.whl", hash = "sha256:21c25249e233e9b4d0461f6b5a55ef9f1a2504de6809e97ad5fac0f1980c3ec8"},
 ]
 inspire-schemas = [
     {file = "inspire_schemas-61.4.6-py2.py3-none-any.whl", hash = "sha256:30250e265e76ab7eba1234fa37878cfafedefd789eb7096ac76fd3dedb17b41c"},

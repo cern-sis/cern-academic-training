@@ -9,6 +9,7 @@ import re
 import backoff
 import requests
 import structlog
+from inspire_dojson.utils import strip_empty_values
 
 # useful for handling different item types with a single interface
 # from itemadapter import ItemAdapter  # noqa: F401
@@ -67,6 +68,7 @@ class HarvestPipeline:
                 LOGGER.info("Send successfully", lecture_id=lecture_id, lecture=record)
 
     def process_item(self, item, spider):
+        item = strip_empty_values(item)
         try:
             indico_id = item.get("event_details", "").rstrip("/").split("/")[-1]
             if indico_id:

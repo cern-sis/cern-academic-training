@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 from time import sleep
 
 import structlog
+from inspire_dojson.utils import strip_empty_values
 from scrapy import Spider
 from scrapy.http import Request, XmlResponse
 from scrapy.selector import Selector
@@ -75,12 +76,22 @@ class CDSSpider(Spider):
             selector = Selector(xml_response, type="xml")
             selector.remove_namespaces()
             try:
-                yield self.parse_item(selector)
+                yield self.parse_item(selector, original=record.raw)
             except Exception as err:
                 LOGGER.error(err)
 
-    def parse_item(self, selector):
+    def parse_item(self, selector, original=None):
         record = {}
+        """
+        {'035__': [{'9': 'CDS', 'a': '318009'}], '100__': [{'a': 'Bonaudi, Franco'}], '245__': {'a': 'Introduction to particle accelerators', '9': 'CDS'}, '260__': {'c': '1969'}, '500__': [{'a': 'CERN, Geneva, 4, 11, 18 Dec 1969, 15, 22, 29 Jan 1970', '9': 'CDS'}], '65017': [{'2': 'INSPIRE', 'a': 'Accelerators', '9': 'CDS'}], 'FFT__': [{'t': 'CDS', 'a': 'http://cds.cern.ch/record/318009/files/AT00000721.pdf', 'n': 'AT00000721.pdf', 'f': '.pdf'}], '980__': [{'a': 'ConferencePaper'}, {'a': 'HEP'}, {'a': 'CORE'}], '693__': [{'a': 'CERN PS', 'e': 'CERN-PS'}]}
+
+
+
+        """
+        from dojson.contrib.marc21.utils import create_record
+        from inspire_dojson.cds import cds2hep_marc
+
+        record["type"] = []
 
         record["lecture_id"] = selector.xpath("//controlfield[@tag=001]/text()").get()
 
@@ -108,7 +119,8 @@ class CDSSpider(Spider):
             '//datafield[@tag=490]/subfield[@code="v"]/text()'
         ).get()
 
-        record["series"] = "{} - {}".format(series_name, series_year)
+        if series_name and series_year:
+            record["series"] = "{} - {}".format(series_name, series_year)
 
         record["speaker"] = selector.xpath(
             '//datafield[@tag=700]/subfield[@code="a"]/text()'
@@ -154,7 +166,8 @@ class CDSSpider(Spider):
             '//datafield[@tag=269]/subfield[@code="c"]/text()'
         ).get()
 
-        record["imprint"] = "{} - {}".format(imprint_date, duration)
+        if imprint_date and duration:
+            record["imprint"] = "{} - {}".format(imprint_date, duration)
 
         license_name = selector.xpath(
             '//datafield[@tag=542]/subfield[@code="d"]/text()'
@@ -162,8 +175,24 @@ class CDSSpider(Spider):
         license_year = selector.xpath(
             '//datafield[@tag=542]/subfield[@code="g"]/text()'
         ).get()
-        record["license"] = "{} {}".format(license_name, license_year)
-        record["type"] = ["video"]
+
+        if license_name and license_year:
+            record["license"] = "{} {}".format(license_name, license_year)
 
         LOGGER.info("Parsed record", lecture=record)
+
+        data = cds2hep_marc.do(create_record(original))
+
+        record["files"] = [_file["a"] for _file in data.get("FFT__", [])]
+
+        record = strip_empty_values(record)
+        record["type"] = []
+        if "files" in record:
+            record["type"].append("file")
+
+        if "thumbnail_picture" in record:
+            record["type"].append("video")
+
+        if not record["type"]:
+            record.pop("type", None)
         return record
