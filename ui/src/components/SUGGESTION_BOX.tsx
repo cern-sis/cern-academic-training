@@ -1,35 +1,20 @@
 import React from "react";
-import { Typography, Input } from "antd";
+import { Typography } from "antd";
 import "./SUGGESTION_BOX.css";
+import { getReveal } from "../events/reveal";
 
 const { Title } = Typography;
-const { TextArea } = Input;
 
 function SUGGESTION_BOX() {
-  const handleKeyPress = (ev: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    console.log("handleKeyPress", ev);
-  };
+  getReveal();
 
   return (
-    <div className="suggestion-box">
-      <Title>Submit a suggestion for future topics</Title>
-      <div className="suggestion-box-window">
-        <TextArea
-          placeholder="What else would you see here?"
-          className="custom"
-          style={{
-            height: 150,
-            maxHeight: 150,
-            background: "transparent",
-            border: "none",
-            color: "white",
-          }}
-          onKeyPress={handleKeyPress}
-        />
-        <Typography.Link href="/">
-          <Title level={2}>Send</Title>
-        </Typography.Link>
-      </div>
+    <div className="suggestion reveal">
+      <Typography.Link href="mailto:atc-contact@cern.ch" target="_blank">
+        <Title className="hover-underline-animation">
+          Submit a suggestion for future topics
+        </Title>
+      </Typography.Link>
     </div>
   );
 }

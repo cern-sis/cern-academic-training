@@ -11,19 +11,19 @@
   background: radial-gradient(
     center,
     ellipse farthest-corner,
-    #000000 0%,
-    #000000 5%,
-    #ffffff 5%,
-    #ffffff 5%,
-    #ffffff 10%,
-    #ffffff 100%
+    #000 0,
+    #000 5%,
+    #fff 5%,
+    #fff 5%,
+    #fff 10%,
+    #fff 100%
   );
   border-radius: 100px;
   padding: 0 10px 10px 0;
 }
 
 #loading-icon h1 {
-  color: #ffffff;
+  color: #fff;
   font: normal normal normal 32px/42px Abolition;
   padding: 20px;
   letter-spacing: 1px;
@@ -37,16 +37,16 @@
   position: absolute;
   width: 200px;
   height: 200px;
-  background: transparent;
+  background: 0 0;
   border-radius: 150px;
-  border: 5px solid white;
-  box-shadow: 0 0 0 5px rgb(255, 255, 255) inset, 0 0 0 5px rgba(0, 0, 0, 0);
+  border: 5px solid #fff;
+  box-shadow: 0 0 0 5px #fff inset, 0 0 0 5px transparent;
   animation: electron1 1s linear infinite;
   transform: rotateY(60deg) rotateX(-60deg) rotate(0);
   line-height: 200px;
   text-align: center;
   font-size: 50px;
-  color: black;
+  color: #000;
 }
 
 #loading-icon .electron:before {
@@ -56,7 +56,7 @@
   width: 20px;
   height: 10px;
   border-radius: 5px;
-  background: black;
+  background: #000;
   top: -7.5px;
   left: 100px;
 }
