@@ -49,9 +49,11 @@ function Lecture() {
             <h2 style={{ lineHeight: 1.5 }}>{lecture.title}</h2>
             <h3>{lecture.speaker}</h3>
             <h4>{lecture.date}</h4>
-            <a href={lecture.event_details}>Event details (Indico)</a>
+            <a href={lecture.event_details}>Event details (Indico)</a>{" "}
+            <h4>
+              Sponsored by <strong>{lecture.sponsor}</strong>
+            </h4>
             <p
-              /* eslint-disable-next-line react/no-danger */
               dangerouslySetInnerHTML={{
                 __html: lecture.abstract,
               }}

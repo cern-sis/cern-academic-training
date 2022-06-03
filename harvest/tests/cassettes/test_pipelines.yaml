@@ -1,0 +1,72 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.26.0
+      method: GET
+      uri: https://indico.cern.ch/export/event/1052073.json
+    response:
+      body:
+        string:
+          '{"results":[{"_type":"Conference","id":"1052073","title":"REMOTE -
+          Distributed computing - A historical perspective - The Network(s)","description":"<p
+          class=\"MsoPlainText\"><strong>NB!! Internet father <a href=\"https:\/\/internethalloffame.org\/inductees\/vint-cerf\">Vint
+          Cerf<\/a> and Web inventor <a href=\"https:\/\/www.w3.org\/People\/Berners-Lee\/\">Sir
+          Tim Berners-Lee<\/a> will honour us with their presence!<\/strong><\/p>\r\n\r\n<p
+          class=\"MsoPlainText\"><span><span><strong>This lecture:<\/strong><\/span><\/span><\/p>\r\n\r\n<p
+          class=\"moz-quote-pre\">How trying to solve a straightforward problem - sharing
+          computer data at CERN in the 1980\u2019s - involved us unexpectedly with economic,
+          political and social issues. A study of disruption at CERN and beyond.<\/p>\r\n\r\n<p
+          class=\"moz-quote-pre\"><strong>This series:<\/strong><\/p>\r\n\r\n<p class=\"MsoPlainText\"><span><span>After
+          the ARPANET (Advanced Research Projects Agency Network) began in 1969, leading
+          to the TCP\/IP protocol development in the USA, a period of intense network
+          competition began between continents and companies. It lasted for more than
+          a decade and affected many protocols and applications. A number of EU-funded
+          projects were born and have kept re-incarnating until today. How was email
+          done in the early 1990\u2019s? When could we send photos by email for the
+          first time? What was the first decade of the World Wide Web like? How did
+          HEP move from mainframes to distributed computing? Which manufacturers have
+          since dominated the landscape in the process towards today\u2019s computing
+          cloud? In this series, we shall try to answer such questions, with contributions
+          by some of the makers and leaders of this technology.<\/span><\/span><\/p>\r\n\r\n<p
+          class=\"MsoPlainText\"><strong>Speaker''s bio:<\/strong><\/p>\r\n\r\n<p class=\"moz-quote-pre\">Ben
+          earned his BSc at Imperial College and his PhD at Stanford before coming to
+          CERN in 1971 to work on computer networking. He coordinated the 1980\u2019s
+          introduction of Internet protocols at CERN and taught them internationally
+          from 1986. He participated in CERN\u2019s major distributed computing efforts
+          from the 1990\u2019s, leading to the replacement of mainframes by clusters,
+          and then to the Grid and cloud computing. Ben is an honorary CERN member and
+          an active advocate of volunteer computing and citizen science.<\/p>","startDate":{"date":"2022-05-11","time":"16:00:00","tz":"Europe\/Zurich"},"timezone":"Europe\/Zurich","endDate":{"date":"2022-05-11","time":"17:30:00","tz":"Europe\/Zurich"},"room":"","location":"Zoom","address":"","type":"simple_event","references":[],"_fossil":"conferenceMetadata","categoryId":72,"category":"Academic
+          Training Lecture Regular Programme","note":{},"roomFullname":"","url":"https:\/\/indico.cern.ch\/event\/1052073\/","creationDate":{"date":"2021-06-22","time":"16:28:45.034241","tz":"Europe\/Zurich"},"creator":{"_type":"Avatar","_fossil":"conferenceChairMetadata","first_name":"Marika","last_name":"Flygar","fullName":"Flygar,
+          Marika","id":"7922","affiliation":"CERN","emailHash":"aec52e3445b7881d702f94ee9c8ba6b2"},"hasAnyProtection":false,"roomMapURL":null,"folders":[{"_type":"folder","id":2416333,"title":null,"description":"","attachments":[{"_type":"attachment","id":4181516,"download_url":"https:\/\/indico.cern.ch\/event\/1052073\/attachments\/2416333\/4181516\/BenSegal-TCPIPtalk-CERN-Academic-Training-20220511.pdf","title":"BenSegal-TCPIPtalk-CERN-Academic-Training-20220511.pdf","description":"","modified_dt":"2022-05-11T20:28:19.703269+00:00","type":"file","is_protected":false,"filename":"BenSegal-TCPIPtalk-CERN-Academic-Training-20220511.pdf","content_type":"application\/pdf","size":1635377,"checksum":"5e51ae59614a59158eddabbbe1c85afb"},{"_type":"attachment","id":4184514,"download_url":"https:\/\/indico.cern.ch\/event\/1052073\/attachments\/2416333\/4184514\/go","title":"Birth
+          of the Internet plaque mentioned at the talk","description":"","modified_dt":"2022-05-11T20:29:54.449856+00:00","type":"link","is_protected":false,"link_url":"http:\/\/ana-3.lcs.mit.edu\/~jnc\/history\/BirthInternetL.jpg"},{"_type":"attachment","id":4190445,"download_url":"https:\/\/indico.cern.ch\/event\/1052073\/attachments\/2416333\/4190445\/go","title":"Recording","description":"","modified_dt":"2022-05-17T10:10:39.154931+00:00","type":"link","is_protected":false,"link_url":"https:\/\/cds.cern.ch\/record\/2809460"},{"_type":"attachment","id":4190446,"download_url":"https:\/\/indico.cern.ch\/event\/1052073\/attachments\/2416333\/4190446\/go","title":"Video
+          preview","description":"","modified_dt":"2022-05-17T10:10:46.325797+00:00","type":"link","is_protected":false,"link_url":"https:\/\/video-player-sec.web.cern.ch?mode=contribution&year=2022&id=1052073&origin=ceph"}],"default_folder":true,"is_protected":false}],"chairs":[{"_type":"ConferenceChair","_fossil":"conferenceChairMetadata","first_name":"Ben","last_name":"Segal","fullName":"Segal,
+          Ben","id":"955622","affiliation":"","emailHash":"0d9ad4b39de12eb2860aea67e94aa054","db_id":955622,"person_id":5995773}],"material":[],"keywords":["Internet","Vint
+          Cerf","Tim Berners-Lee"],"organizer":"Maria Dimou \/ 141 Participants on Zoom
+          and 53 on Webcast","visibility":{"id":"","name":"Everywhere"}}],"url":"https:\/\/indico.cern.ch\/export\/event\/1052073.json","additionalInfo":{},"count":1,"ts":1654097827,"_type":"HTTPAPIResult"}'
+      headers:
+        Cache-control:
+          - private
+        Content-Length:
+          - "5393"
+        Content-Type:
+          - application/json
+        Date:
+          - Wed, 01 Jun 2022 15:40:48 GMT
+        Server:
+          - nginx/1.22.0
+        Set-Cookie:
+          - indico-worker=indico-cern-wk3; path=/; HttpOnly
+        X-Indico-URL:
+          - /export/event/1052073.json
+      status:
+        code: 200
+        message: OK
+version: 1

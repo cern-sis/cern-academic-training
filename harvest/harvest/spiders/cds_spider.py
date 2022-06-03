@@ -1,141 +1,71 @@
-import logging
-import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from time import sleep
 
-import backoff
-import requests
-from hepcrawl.spiders.common.oaipmh_spider import OAIPMHSpider
-from hepcrawl.utils import strict_kwargs
+import structlog
+from dojson.contrib.marc21.utils import create_record
+from inspire_dojson.cds import cds2hep_marc
+from inspire_dojson.utils import strip_empty_values
+from scrapy import Spider
 from scrapy.http import Request
 
-LOGGER = logging.getLogger(__name__)
+LOGGER = structlog.get_logger()
+
+CDS_LAST_RUN_PATH = "/data/cds_last_run"
+DATE_FORMAT = "%Y-%m-%d"
+SIZE = 100
+CDS_URL = "https://cds.cern.ch/search?ln=en&cc=Academic+Training+Lectures&p={query}&action_search=Search&op1=a&m1=a&p1=&f1=&c=Academic+Training+Lectures&c=&sf=&so=d&rm=&rg={size}&sc=0&of=xm"
 
 
-class OAIPMHSpiderOverride(OAIPMHSpider):
-    def parse_list(self, response):
-        # FIXME: Hack for demo purposes
-        sleep(3)
-        return super().parse_list(response)
-
-    def start_requests_sets(
-        self, url, format, sets=None, from_date=None, until_date=None
-    ):
-        started_at = datetime.utcnow()
-
-        LOGGER.info(
-            "Starting harvesting of {url} with sets={sets} and "
-            "metadataPrefix={metadata_prefix},"
-            "from={from_date}, "
-            "until={until_date}".format(
-                url=url,
-                sets=sets,
-                metadata_prefix=format,
-                from_date=from_date,
-                until_date=until_date,
-            )
-        )
-
-        if sets is None:
-            LOGGER.warn(
-                "Skipping harvest, no sets passed and cowardly refusing to "
-                "harvest all."
-            )
-            return
-
-        for oai_set in sets:
-            from_date = from_date or self.resume_from(set_=oai_set)
-
-            LOGGER.info(
-                "Starting harvesting of set={oai_set} from "
-                "{from_date}".format(
-                    oai_set=oai_set,
-                    from_date=from_date,
-                )
-            )
-
-            request = Request("%s" % url, self.parse)
-            request.meta["set"] = oai_set
-            request.meta["from_date"] = from_date
-            yield request
-
-            now = datetime.utcnow()
-            self.save_run(started_at=started_at, set_=oai_set)
-
-            LOGGER.info(
-                "Harvesting of set %s completed. Next time will resume from %s"
-                % (oai_set, until_date or now.strftime("%Y-%m-%d"))
-            )
-
-        LOGGER.info(
-            "Harvesting completed, harvested %s records.",
-            len(self._crawled_records),
-        )
-
-
-class CDSSpider(OAIPMHSpiderOverride):
-    """Spider for crawling CERN Document Server OAI-PMH.
-
-    Example:
-        Using OAI-PMH service::
-            $ scrapy crawl CDS \\
-                -a "sets=forSciTalks" -a "from_date=2017-12-13"
-    """
+class CDSSpider(Spider):
 
     name = "CDS"
-    source = "CDS"
 
-    @strict_kwargs
-    def __init__(
-        self,
-        url="https://cds.cern.ch/oai2d",
-        format="marcxml",
-        sets=None,
-        from_date=None,
-        until_date=None,
-        **kwargs,
-    ):
-        super(CDSSpider, self).__init__(
-            url=url,
-            format=format,
-            sets=sets,
-            from_date=from_date,
-            until_date=until_date,
-            **kwargs,
-        )
+    def __init__(self, from_date=None, until_date=None, *args, **kwargs):
 
-    def get_record_identifier(self, record):
-        return record.header.identifier
-
-    def parse_record(self, selector):
-        """Parse a CDS MARCXML record into a HEP record."""
-        selector.remove_namespaces()
-
-        record = self.parse_item(selector)
-        LOGGER.info(f"RECORD {record}")
-        self.create_record_on_backend(record)
-        return record
-
-    @backoff.on_exception(
-        backoff.expo, requests.exceptions.RequestException, max_tries=5
-    )
-    def create_record_on_backend(self, record):
-        token = os.environ["AUTH_TOKEN"]
-        host = os.environ.get("CAT_BACKEND", "http://localhost:8000")
-        if record.get("lecture_id"):
+        if not from_date:
             try:
-                record["lecture_id"] = int(record["lecture_id"])
-                requests.post(
-                    "{}/api/v1/lectures/".format(host),
-                    json=record,
-                    headers={"Authorization": "Token {}".format(token)},
-                )
-                LOGGER.info(f"Send successfully {record['lecture_id']}")
+                with open(CDS_LAST_RUN_PATH) as f:
+                    last_run_date = f.read()
+                    self.from_date = (
+                        datetime.strptime(last_run_date) + timedelta(days=1)
+                    ).strftime(DATE_FORMAT)
             except Exception:
-                LOGGER.error(f"Failed to send {record['lecture_id']}")
+                LOGGER.error("Cannot read the file using date now")
+                self.from_date = datetime.utcnow().strftime(DATE_FORMAT)
+        else:
+            self.from_date = from_date
+        self.until_date = until_date
 
-    def parse_item(self, selector):
+        self.query = []
+        if self.from_date:
+            self.query.append(self.from_date)
+        if self.until_date:
+            self.query.append(self.until_date)
+
+        super().__init__(*args, **kwargs)
+
+    def start_requests(self):
+        query = "->".join(self.query)
+        url = CDS_URL.format(query=query, size=SIZE)
+        yield Request(url, callback=self.parse)
+
+    def parse(self, response):
+        sleep(3)
+
+        response.selector.remove_namespaces()
+        records = response.selector.xpath("//record")
+
+        LOGGER.info("Harvested records", count=len(records))
+        for selector in records:
+            try:
+                yield self.parse_item(selector, original=selector.get())
+            except Exception as err:
+                LOGGER.error(err)
+
+    def parse_item(self, selector, original=None):
         record = {}
+
+        record["type"] = []
 
         record["lecture_id"] = selector.xpath("//controlfield[@tag=001]/text()").get()
 
@@ -163,7 +93,8 @@ class CDSSpider(OAIPMHSpiderOverride):
             '//datafield[@tag=490]/subfield[@code="v"]/text()'
         ).get()
 
-        record["series"] = "{} - {}".format(series_name, series_year)
+        if series_name and series_year:
+            record["series"] = "{} - {}".format(series_name, series_year)
 
         record["speaker"] = selector.xpath(
             '//datafield[@tag=700]/subfield[@code="a"]/text()'
@@ -178,9 +109,16 @@ class CDSSpider(OAIPMHSpiderOverride):
             '//datafield[@tag=856][subfield[@code="y"]="Event details"]/subfield[@code="u"]/text()'
         ).get()
 
-        record["thumbnail_picture"] = selector.xpath(
+        cover_image = selector.xpath(
             '//datafield[@tag=856][subfield[@code="x"]="jpgthumbnail"]/subfield[@code="u"]/text()'
         ).get()
+
+        if not cover_image:
+            cover_image = selector.xpath(
+                '//datafield[@tag=856][subfield[@code="x"]="pngthumbnail"]/subfield[@code="u"]/text()'
+            ).get()
+
+        record["thumbnail_picture"] = cover_image
 
         record["language"] = selector.xpath(
             '//datafield[@tag=041]/subfield[@code="a"]/text()'
@@ -202,7 +140,8 @@ class CDSSpider(OAIPMHSpiderOverride):
             '//datafield[@tag=269]/subfield[@code="c"]/text()'
         ).get()
 
-        record["imprint"] = "{} - {}".format(imprint_date, duration)
+        if imprint_date and duration:
+            record["imprint"] = "{} - {}".format(imprint_date, duration)
 
         license_name = selector.xpath(
             '//datafield[@tag=542]/subfield[@code="d"]/text()'
@@ -210,10 +149,24 @@ class CDSSpider(OAIPMHSpiderOverride):
         license_year = selector.xpath(
             '//datafield[@tag=542]/subfield[@code="g"]/text()'
         ).get()
-        record["license"] = "{} {}".format(license_name, license_year)
+
+        if license_name and license_year:
+            record["license"] = "{} {}".format(license_name, license_year)
+
+        LOGGER.debug("Parsed record", lecture_id=record["lecture_id"], lecture=record)
+
+        data = cds2hep_marc.do(create_record(original))
+
+        record["files"] = [_file["a"] for _file in data.get("FFT__", [])]
+
+        record = strip_empty_values(record)
+        record["type"] = []
+        if "files" in record:
+            record["type"].append("file")
+
+        if "thumbnail_picture" in record:
+            record["type"].append("video")
+
+        if not record["type"]:
+            record.pop("type", None)
         return record
-
-    def close_spider(self, item, spider):
-        import ipdb
-
-        ipdb.set_trace()

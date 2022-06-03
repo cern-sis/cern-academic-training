@@ -45,10 +45,14 @@ class LectureDocumentView(DocumentViewSet):
             "boost": 4,
         },
         "abstract": {"boost": 2},
+        "type": {"boost": 5},
+        "keywords": {"boost": 5},
     }
 
     filter_fields = {
         "lecture_id": None,
+        "type": None,
+        "keywords": None,
     }
 
     ordering_fields = {
