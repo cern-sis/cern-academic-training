@@ -3,33 +3,46 @@
   box-sizing: border-box;
 }
 
-/* Layout */
+.reveal,
+.reveal.active {
+  transition: all 1s ease;
+}
 
 .layout {
-  opacity: 1;
   min-height: 100em;
   z-index: -2;
-  background: linear-gradient(160deg, #0b1117 0%, #0033a0 100%) 0% 0% no-repeat
+  background: linear-gradient(160deg, #0b1117 0, #0033a0 100%) no-repeat
     padding-box;
 }
 
 .reveal {
-  transform: translateY(150px);
+  transform: translateY(100px);
   opacity: 0;
-  transition: all 1s ease;
 }
 
 .reveal.active {
-  transform: translateY(0px);
-  opacity: 1;
-  transition: all 1s ease;
+  transform: translateY(0);
 }
 
-/* Academic Training Main Content */
+.frame #atc-logo,
+.frame h1 {
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.938));
+}
 
-#atc-content {
+.frame h1,
+.recent h2,
+.video-content h4 {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.atc-content {
   justify-content: center;
   align-items: center;
+}
+
+.lecture-page {
+  display: flex;
 }
 
 .photo-carousel {
@@ -38,11 +51,7 @@
 
 .photo-carousel img {
   height: 900px;
-  width: 100%;
   margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
   object-fit: cover;
   object-position: 50% 50%;
   opacity: 0.9;
@@ -55,16 +64,11 @@
 
 .photo-carousel img:hover {
   object-position: 50% 50%;
-  opacity: 1;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   -ms-transition: all 1s ease;
   transition: all 0.5s ease-in;
-}
-
-.frame:hover .photo-carousel img {
-  filter: blur(0);
 }
 
 .frame {
@@ -73,13 +77,10 @@
   border-radius: 50px;
   opacity: 0.9999;
   width: auto;
-  margin-top: -30px;
-  margin-bottom: 160px;
   display: block;
-  margin-left: -20px;
-  margin-right: -20px;
   z-index: 2;
   transition: 1s;
+  margin: -30px -20px 160px;
 }
 
 .frame #atc-logo {
@@ -88,65 +89,58 @@
   width: 300px;
   margin: 0 20px;
   top: 320px;
-  opacity: 1;
   transition: 1s;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.938));
 }
 
 .frame h1 {
-  text-align: left;
   padding: 395px 80px;
   font: normal normal normal 98px/178px Abolition;
-  letter-spacing: 0px;
-  color: #ffffff;
-  text-transform: uppercase;
-  opacity: 1;
+  letter-spacing: 0;
   z-index: 6;
   transition: 1s;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.938));
 }
 
 .recent h2 {
-  text-align: left;
   font: normal normal normal 25px/16px Abolition;
   letter-spacing: 2px;
-  color: #ffffff;
   text-shadow: 2px 2px 10px #0a152d;
-  text-transform: uppercase;
   opacity: 0.78;
 }
 
+.video-content h3,
+.video-content h4 {
+  opacity: 0.4;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .divider {
-  background: linear-gradient(-90deg, #ffffffd0 0%, transparent 100%) 0% 0%
-    no-repeat padding-box;
+  background: linear-gradient(-90deg, #ffffffd0 0%, transparent 100%) no-repeat
+    padding-box;
   height: 3px;
-  width: 100%;
   border-radius: 50px;
   margin-bottom: 20px;
   float: right;
-}
-
-#atc-logo img {
-  width: 100%;
-}
-
-.ant-list {
-  width: 100%;
-}
-
-.video-content {
-  display: flex;
 }
 
 .video-content .list-thumbnail {
   padding-right: 10px;
 }
 
+.blank-thumbnail {
+  background: linear-gradient(210deg, #0094e9b7 0, #0033a0 40%, #0b1117a9 100%)
+    no-repeat padding-box;
+  width: 200px;
+  height: 120px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .video-content h2 {
   font: normal normal normal 16px/25px Open Sans;
   letter-spacing: 1px;
-  color: #ffffff;
-  opacity: 1;
   text-overflow: ellipsis;
   overflow: hidden;
   line-height: 1.5em;
@@ -156,23 +150,13 @@
 .video-content h3 {
   font: normal normal normal 13px/14px Open Sans;
   letter-spacing: 0;
-  color: #ffffff;
-  opacity: 0.4;
-  text-overflow: ellipsis;
-  overflow: hidden;
   line-height: 1.5em;
   max-height: 3em;
 }
 
 .video-content h4 {
-  text-align: left;
   font: bold normal normal 12px/16px Open Sans;
   letter-spacing: 0.2px;
-  color: #ffffff;
-  opacity: 0.4;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  text-transform: uppercase;
 }
 
 .no-results h4 {
@@ -180,22 +164,19 @@
   font: normal normal normal 26px/28px Abolition;
   text-align: center;
   letter-spacing: 1px;
-  color: #ffffff;
   opacity: 0.5;
 }
 
 .video-card {
   background-color: transparent;
-  border: none;
   border-radius: 5px;
   min-height: 150px;
 }
 
 .video-card .card-content {
-  width: 100%;
   padding: 0 0 0 12px;
   margin-left: -8px;
-  box-shadow: inset 0px 0px 80px transparent;
+  box-shadow: inset 0 0 80px transparent;
 }
 
 .video-card .duration {
@@ -207,37 +188,26 @@
   border-radius: 5px;
 }
 
-.video-card h5 {
-  font: normal normal normal 13px/14px Open Sans;
-  color: #ffffff;
-  padding: 4px 5px 0 5px;
-}
-
+.video-card h5,
 .video-content .list-thumbnail h5 {
   font: normal normal normal 13px/14px Open Sans;
-  color: #ffffff;
-  opacity: 1;
-  padding: 4px 5px 0 5px;
+  padding: 4px 5px 0;
 }
 
 .play {
   width: 1em;
-  color: #fff;
   font-size: 2.6em;
   opacity: 0.8;
   position: absolute;
   background-color: transparent;
-  border: none;
   top: 10px;
   left: 20px;
   transition: 0.3s;
 }
 
 .video-card:hover .play {
-  color: #fff;
   filter: drop-shadow(1px 1px 10px #00194e);
   font-size: 3.8em;
-  opacity: 1;
   transition: 0.3s;
 }
 
@@ -246,31 +216,8 @@
   transition: 0.5s;
 }
 
-#thumbnail-box {
-  box-shadow: inset 20px 0px 20px rgba(0, 0, 0, 0.747);
-  padding: 10px;
-  display: block;
-  max-height: 600px;
-  border-radius: 5px;
-  border: none;
-  margin-top: -25px;
-}
-
-#thumbnail-box img {
-  margin-top: -35px;
-  width: 100%;
-  object-fit: cover;
-  object-position: 20% 10%;
-  -o-filter: blur(1px);
-  -moz-filter: blur(1px);
-  -ms-filter: blur(1px);
-  filter: blur(1px);
-  z-index: 2;
-}
-
 .ant-card-cover img {
   border-radius: 5px;
-  width: 100%;
   height: 200px;
   object-fit: cover;
   object-position: 50% 10%;
@@ -294,24 +241,18 @@
 
 .responsive {
   padding: 15px 6px;
-  width: 100%;
   margin-top: 50px;
 }
 
 .content-lists {
   padding: 15px 6px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 80px;
+  margin-bottom: 30px;
   width: auto;
   max-width: 1400px;
   position: relative;
   top: -15px;
   transition: 2s;
-}
-
-.content-lists h1 a {
-  color: #fff;
 }
 
 .clearfix:after {
@@ -320,16 +261,18 @@
   clear: both;
 }
 
-/* Search results */
+.ant-list,
+.ant-list img,
+.ant-list:hover,
+.ant-list:hover img {
+  transition: all 0.5s;
+}
 
 .container {
-  background: transparent
-    linear-gradient(150deg, #0093e9 0%, #0033a0 20%, #0b1117 100%) 0% 0%
+  background: linear-gradient(150deg, #0093e9 0, #0033a0 20%, #0b1117 100%)
     no-repeat padding-box;
   border-radius: 30px;
   opacity: 0.96;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 120px;
   margin-bottom: 50px;
   min-width: 40px;
@@ -344,8 +287,7 @@
   padding-bottom: 20px;
   font: normal normal normal 35px/40px Abolition;
   letter-spacing: 1px;
-  color: #ffffff;
-  opacity: 1;
+  color: #fff;
 }
 
 .container-content h5 {
@@ -354,50 +296,39 @@
   font: normal normal normal 26px/32px Abolition;
   text-align: center;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: #fff;
   opacity: 0.5;
 }
 
 .list-content h3 {
-  width: 100%;
   padding: 0;
   margin: 0;
   position: relative;
-  display: flex;
 }
 
 .list-content h2 {
-  width: 100%;
   padding: 0;
   margin: 0;
   text-overflow: ellipsis;
 }
 
 .ant-list {
-  width: 100%;
   left: -10px;
   padding: 10px;
   margin: 0;
-  transition: all 0.5s;
   border-radius: 10px;
 }
 
 .ant-list:hover {
   background: #0c183373;
-  transition: all 0.5s;
-}
-
-.ant-list:hover img {
-  transition: all 0.5s;
 }
 
 .ant-list img {
   border-radius: 5px;
-  width: 180px;
-  height: 100px;
+  width: 200px;
+  height: 120px;
   object-fit: cover;
   object-position: 50% 50%;
-  transition: all 0.5s;
 }
 
 .ant-pagination {
@@ -408,394 +339,229 @@
 
 .ant-pagination-item {
   background-color: #769fff50;
-  border: none;
   font: normal normal normal 20px/28px Abolition;
 }
 
 .ant-pagination-item a {
-  color: white;
   transition: all 0.3s;
 }
 
-.ant-pagination-item:hover a {
-  color: white;
-}
-
-.ant-pagination-item-active {
-  background: #8dafff7e;
-  border: none;
-}
-
-.ant-pagination-item-active a {
-  color: #ffffff;
-}
-
-.ant-pagination-item-active:focus-visible a,
-.ant-pagination-item-active:hover a {
-  color: #ffffff;
-}
-
-.ant-pagination-prev:focus-visible .ant-pagination-item-link,
 .ant-pagination-next:focus-visible .ant-pagination-item-link,
-.ant-pagination-prev:hover .ant-pagination-item-link,
-.ant-pagination-next:hover .ant-pagination-item-link {
-  color: white;
+.ant-pagination-next:hover .ant-pagination-item-link,
+.ant-pagination-prev:focus-visible .ant-pagination-item-link,
+.ant-pagination-prev:hover .ant-pagination-item-link {
   background-color: #5267977e;
-  border: none;
 }
 
 .ant-pagination-disabled .ant-pagination-item-link,
-.ant-pagination-disabled:hover .ant-pagination-item-link,
-.ant-pagination-disabled:focus-visible .ant-pagination-item-link {
+.ant-pagination-disabled:focus-visible .ant-pagination-item-link,
+.ant-pagination-disabled:hover .ant-pagination-item-link {
   background-color: #8dafff2a;
   color: #0f15227e;
-  border: none;
 }
 
-.ant-pagination-prev,
-.ant-pagination-next,
+.ant-pagination-jump-next,
 .ant-pagination-jump-prev,
-.ant-pagination-jump-next {
+.ant-pagination-next,
+.ant-pagination-prev {
   color: #8dafff7e;
-  border: none;
-}
-
-.ant-pagination-prev button,
-.ant-pagination-next button {
-  color: white;
-}
-
-.ant-pagination-prev:hover button,
-.ant-pagination-next:hover button {
-  border-color: #ffffff;
 }
 
 .ant-pagination.ant-pagination-disabled .ant-pagination-simple-pager {
   color: rgba(255, 255, 255, 0.25);
 }
 
-.ant-pagination-prev .ant-pagination-item-link,
-.ant-pagination-next .ant-pagination-item-link {
+.ant-pagination-next .ant-pagination-item-link,
+.ant-pagination-prev .ant-pagination-item-link {
   background-color: #4051797e;
-  border: none;
-}
-
-.ant-select:not(.ant-select-customize-input) .ant-select-selector,
-.ant-pagination-options,
-.ant-pagination-options-size-changer.ant-select {
-  font: normal normal normal 20px/28px Abolition;
-  letter-spacing: 0.5px;
-  background-color: #3745667e;
-  border: none;
-  color: rgba(255, 255, 255, 0.986);
-}
-
-.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
-  border-color: #363636;
-}
-
-.ant-select-arrow {
-  color: white;
 }
 
 .ant-select-dropdown {
-  background-color: #405179;
   position: sticky;
 }
 
 .ant-select-item {
   font: normal normal normal 18px/28px Abolition;
   color: rgba(255, 255, 255, 0.986);
-  background-color: #405179;
 }
 
 .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
   background-color: #5d6c8f;
 }
 
-.ant-select-item-option-selected:not(.ant-select-item-option-disabled)
-  .ant-select-item-option-state {
-  color: #ffffff;
-}
-
-.ant-pagination-item-ellipsis,
-.anticon-double-right .ant-pagination-item-link-icon {
-  color: #ffffff;
-}
-
-.ant-pagination-item {
-  background-color: #769fff50;
-  border: none;
+.ant-pagination-options,
+.ant-pagination-options-size-changer.ant-select,
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
   font: normal normal normal 20px/28px Abolition;
-}
-
-.ant-pagination-item a {
-  color: white;
-  transition: all 0.3s;
-}
-
-.ant-pagination-item:hover a {
-  color: white;
+  letter-spacing: 0.5px;
+  background-color: #3745667e;
+  color: rgba(255, 255, 255, 0.986);
 }
 
 .ant-pagination-item-active {
   background: #8dafff7e;
-  border: none;
-}
-
-.ant-pagination-item-active a {
-  color: #ffffff;
-}
-
-.ant-pagination-item-active:focus-visible a,
-.ant-pagination-item-active:hover a {
-  color: #ffffff;
-}
-
-.ant-pagination-prev:focus-visible .ant-pagination-item-link,
-.ant-pagination-next:focus-visible .ant-pagination-item-link,
-.ant-pagination-prev:hover .ant-pagination-item-link,
-.ant-pagination-next:hover .ant-pagination-item-link {
-  color: white;
-  background-color: #5267977e;
-  border: none;
-}
-
-.ant-pagination-disabled .ant-pagination-item-link,
-.ant-pagination-disabled:hover .ant-pagination-item-link,
-.ant-pagination-disabled:focus-visible .ant-pagination-item-link {
-  background-color: #8dafff2a;
-  color: #0f15227e;
-  border: none;
-}
-
-.ant-pagination-prev,
-.ant-pagination-next,
-.ant-pagination-jump-prev,
-.ant-pagination-jump-next {
-  color: #8dafff7e;
-  border: none;
-}
-
-.ant-pagination-prev button,
-.ant-pagination-next button {
-  color: white;
-}
-
-.ant-pagination-prev:hover button,
-.ant-pagination-next:hover button {
-  border-color: #ffffff;
-}
-
-.ant-pagination.ant-pagination-disabled .ant-pagination-simple-pager {
-  color: rgba(255, 255, 255, 0.25);
-}
-
-.ant-pagination-prev .ant-pagination-item-link,
-.ant-pagination-next .ant-pagination-item-link {
-  background-color: #4051797e;
-  border: none;
-}
-
-.ant-select:not(.ant-select-customize-input) .ant-select-selector,
-.ant-pagination-options,
-.ant-pagination-options-size-changer.ant-select {
-  font: normal normal normal 20px/28px Abolition;
-  letter-spacing: 0.5px;
-  background-color: #3745667e;
-  border: none;
-  color: rgba(255, 255, 255, 0.986);
 }
 
 .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
   border-color: #363636;
-}
-
-.ant-select-arrow {
-  color: white;
-}
-
-.ant-select-dropdown {
-  background-color: #405179;
-  position: sticky;
-}
-
-.ant-select-item {
-  font: normal normal normal 18px/28px Abolition;
-  color: rgba(255, 255, 255, 0.986);
-  background-color: #405179;
-}
-
-.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
-  background-color: #5d6c8f;
-}
-
-.ant-select-item-option-selected:not(.ant-select-item-option-disabled)
-  .ant-select-item-option-state {
-  color: #ffffff;
-}
-
-.ant-pagination-item-ellipsis,
-.anticon-double-right .ant-pagination-item-link-icon {
-  color: #ffffff;
-}
-
-.ant-pagination-jump-next
-  .ant-pagination-item-container
-  .ant-pagination-item-link-icon,
-.ant-pagination-jump-prev
-  .ant-pagination-item-container
-  .ant-pagination-item-link-icon {
-  color: #ffffff;
-}
-
-.ant-pagination-jump-next
-  .ant-pagination-item-container
-  .ant-pagination-item-ellipsis,
-.ant-pagination-jump-prev
-  .ant-pagination-item-container
-  .ant-pagination-item-ellipsis {
-  color: #ffffff;
 }
 
 .empty {
   font: normal normal normal 32px/42px Abolition;
-  color: #ffffff;
   opacity: 0.2;
-  margin-left: auto;
-  margin-right: auto;
 }
-
-/* Lecture Video page */
 
 .video-box {
   min-height: 850px;
-  padding: 0px 40px 20px;
-  background: transparent linear-gradient(0deg, #0033a0 0%, transparent 100%) 0%
-    0% no-repeat padding-box;
-  opacity: 0.9999999;
+  padding: 50px;
+  background: linear-gradient(30deg, #0093e9 0, #0033a0 25%, #0b1117 100%)
+    no-repeat padding-box;
   width: auto;
   max-width: 1300px;
   margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 80px;
-  border-radius: 0 0 50px 50px;
+  border-radius: 50px;
 }
 
 .video-window {
-  max-height: 500px;
   margin: 0 auto;
   text-align: center;
 }
 
 iframe {
   margin: 0 auto;
-  width: 1000px;
-  height: 600px;
-  border: none;
+  height: 700px;
 }
 
-.video-box h2 {
-  padding-top: 150px;
-  text-align: left;
-  font: normal normal bold 28px/17px Open Sans;
-  color: #ffffff;
-  max-width: 1000px;
-  opacity: 1;
+.lecture-details h1.ant-typography {
+  margin-top: 0.5em;
+  font: normal normal bold 30px/40px Open Sans;
 }
 
-.video-box h3 {
-  text-align: left;
-  margin-top: -10px;
-  font: normal normal normal 15px/43px Open Sans;
-  letter-spacing: 0px;
-  color: #ffffff;
-  opacity: 0.52;
-}
-
-.video-box p {
-  text-align: left;
-  font: normal normal normal 14px/30px Open Sans;
-  letter-spacing: 0px;
-  color: #ffffff;
-  opacity: 1;
+.lecture-details h2.ant-typography {
   padding-top: 20px;
-  max-width: 1000px;
+  padding-left: 5px;
+  font: normal normal bold 25px/25px Open Sans;
+}
+
+.lecture-details h3.ant-typography {
+  padding-top: 40px;
+  text-transform: uppercase;
+  font: bold normal normal 14px/14px Open Sans;
+  letter-spacing: 0.2px;
+  opacity: 0.6;
+}
+
+.lecture-details h4.ant-typography {
+  font: normal normal normal 16px/16px Open Sans;
+  opacity: 0.6;
+}
+
+.lecture-details p {
+  font: normal normal normal 14px/30px Open Sans;
+  letter-spacing: 0;
   word-break: break-word;
 }
 
 .lecture-details a {
-  text-align: left;
   text-decoration: underline;
-  font: normal normal normal 14px/28px Open Sans;
-  letter-spacing: 0px;
-  color: #ffffff;
+  font: normal normal normal 16px/16px Open Sans;
+  opacity: 0.6;
+}
+
+.files .ant-list-item,
+.files .ant-list-item a {
+  font: normal normal normal 15px/15px Open Sans;
+}
+
+.lecture-details .details {
+  flex-direction: row;
+  padding: 5px 0 40px;
+}
+
+.lecture-details #bullet {
+  padding: 0 10px;
   opacity: 0.52;
 }
 
-.lecture-details h4 {
-  text-align: left;
-  margin-top: -5px;
-  font: normal normal normal 14px/28px Open Sans;
-  letter-spacing: 0px;
-  color: #ffffff;
-  opacity: 0.52;
-}
-
-/* About Us */
-
-.member-card {
-  top: 35px;
-  background: transparent
-    linear-gradient(160deg, #0094e9d7 0%, #0033a0 40%, #0b1117 100%) 0% 0%
-    no-repeat padding-box;
-  border: none;
+.files .download-title {
   align-items: center;
-  border-radius: 30px;
-  width: 310px;
-  padding-bottom: 40px;
-  border-bottom: 10px outset #0b1117ad;
+  justify-content: start;
+}
+
+.files .ant-list {
+  left: 30px;
+  padding-bottom: 20px;
+}
+
+.files .ant-list-item a {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.files .ant-list-item a:hover {
+  transition: 0.5s;
+}
+
+.files .ant-list:hover {
+  background: 0 0;
+}
+
+#about-us-content,
+.member-card,
+.member-card:hover {
   -webkit-appearance: auto;
   -moz-appearance: auto;
   -o-appearance: auto;
   -ms-appearance: auto;
+}
+
+.atc-title h2,
+.atc-title h3 {
+  text-align: center;
+  letter-spacing: 0;
+  color: #dbe2e9;
+  text-transform: uppercase;
+}
+
+.member-card {
+  top: 35px;
+  background: linear-gradient(160deg, #0094e9d7 0, #0033a0 40%, #0b1117 100%)
+    no-repeat padding-box;
+  align-items: center;
+  border-radius: 30px;
+  width: 310px;
+  padding-bottom: 40px;
   transition: all 0.5s;
 }
 
 .member-card .ant-avatar {
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 10px;
-  display: flex;
   align-content: center;
   align-items: center;
   justify-content: center;
   object-fit: cover;
   object-position: 50% 50%;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   z-index: 2;
 }
 
 .member-card .grid-style {
-  width: 100%;
   height: 150px;
   position: relative;
   bottom: 70px;
-  box-shadow: inset 0px -80px 80px transparent;
+  box-shadow: inset 0 -80px 80px transparent;
   border-radius: 30px;
 }
 
 .member-card .member-content h2 {
   text-align: center;
   font: bold normal normal 16px/18px Open Sans;
-  color: white;
   padding-top: 30px;
 }
 
 .member-card .member-content h3 {
   font: normal normal normal 20px/25px Open Sans;
-  color: white;
   float: right;
   opacity: 0.7;
   padding-top: 70px;
@@ -807,27 +573,17 @@ iframe {
 .member-card .member-content p {
   text-align: center;
   font: normal normal normal 14px/18px Open Sans;
-  color: white;
   z-index: 5;
 }
 
 .member-card:hover {
   top: 23px;
-  -webkit-appearance: auto;
-  -moz-appearance: auto;
-  -o-appearance: auto;
-  -ms-appearance: auto;
   transition: all 0.5s;
-  border-bottom: 10px outset #0b1117ad;
 }
 
 #about-us-content {
   justify-content: center;
   align-items: center;
-  -webkit-appearance: auto;
-  -moz-appearance: auto;
-  -o-appearance: auto;
-  -ms-appearance: auto;
   margin-bottom: 50px;
 }
 
@@ -836,33 +592,159 @@ iframe {
 }
 
 .atc-title h2 {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
   font: normal normal normal 52px/94px Abolition;
-  letter-spacing: 0px;
-  color: #dbe2e9;
-  text-transform: uppercase;
 }
 
 .atc-title h3 {
   margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
   font: normal normal normal 32px/52px Abolition;
-  letter-spacing: 0px;
-  color: #dbe2e9;
-  text-transform: uppercase;
 }
 
 .our-mission h4 {
   font: normal normal normal 16px/22px Open Sans;
-  color: rgb(255, 255, 255);
+  color: #fff;
   padding: 40px;
 }
 
-/* Responsive resize */
+#atc-logo img,
+.ant-card-cover img,
+.ant-list,
+.divider,
+.list-content h2,
+.list-content h3,
+.member-card .grid-style,
+.photo-carousel img,
+.responsive,
+.video-card .card-content,
+iframe {
+  width: 100%;
+}
+
+.files .download-title,
+.lecture-details .details,
+.list-content h3,
+.member-card .ant-avatar,
+.photo-carousel img,
+.video-content {
+  display: flex;
+}
+
+.container-content h1,
+.files .ant-list-item a:hover,
+.frame #atc-logo,
+.frame h1,
+.layout,
+.lecture-details h1.ant-typography,
+.lecture-details h2.ant-typography,
+.lecture-details p,
+.photo-carousel img:hover,
+.reveal.active,
+.video-box,
+.video-card:hover .play,
+.video-content .list-thumbnail h5,
+.video-content h2 {
+  opacity: 1;
+}
+
+.ant-select-dropdown,
+.ant-select-item {
+  background-color: #405179;
+}
+
+.atc-title h2,
+.atc-title h3,
+.container,
+.content-lists,
+.empty,
+.member-card .ant-avatar,
+.photo-carousel img,
+.video-box {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ant-pagination-disabled .ant-pagination-item-link,
+.ant-pagination-disabled:focus-visible .ant-pagination-item-link,
+.ant-pagination-disabled:hover .ant-pagination-item-link,
+.ant-pagination-item,
+.ant-pagination-item-active,
+.ant-pagination-jump-next,
+.ant-pagination-jump-prev,
+.ant-pagination-next,
+.ant-pagination-next .ant-pagination-item-link,
+.ant-pagination-next:focus-visible .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link,
+.ant-pagination-options,
+.ant-pagination-options-size-changer.ant-select,
+.ant-pagination-prev,
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-prev:focus-visible .ant-pagination-item-link,
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+.member-card,
+.play,
+.video-card,
+iframe {
+  border: none;
+}
+
+.ant-pagination-item a,
+.ant-pagination-item-active a,
+.ant-pagination-item-active:focus-visible a,
+.ant-pagination-item-active:hover a,
+.ant-pagination-item-ellipsis,
+.ant-pagination-item:hover a,
+.ant-pagination-jump-next
+  .ant-pagination-item-container
+  .ant-pagination-item-ellipsis,
+.ant-pagination-jump-next
+  .ant-pagination-item-container
+  .ant-pagination-item-link-icon,
+.ant-pagination-jump-prev
+  .ant-pagination-item-container
+  .ant-pagination-item-ellipsis,
+.ant-pagination-jump-prev
+  .ant-pagination-item-container
+  .ant-pagination-item-link-icon,
+.ant-pagination-next button,
+.ant-pagination-next:focus-visible .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link,
+.ant-pagination-next:hover button,
+.ant-pagination-prev button,
+.ant-pagination-prev:focus-visible .ant-pagination-item-link,
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-prev:hover button,
+.ant-select-arrow,
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled)
+  .ant-select-item-option-state,
+.anticon-double-right .ant-pagination-item-link-icon,
+.content-lists h1 a,
+.empty,
+.ant-pagination-item-active,
+.files .ant-list-item,
+.files .ant-list-item a,
+.frame h1,
+.lecture-details #bullet,
+.lecture-details a,
+.lecture-details h1.ant-typography,
+.lecture-details h2.ant-typography,
+.lecture-details h3.ant-typography,
+.lecture-details h4.ant-typography,
+.lecture-details p,
+.member-card .member-content h2,
+.member-card .member-content h3,
+.member-card .member-content p,
+.no-results h4,
+.play,
+.recent h2,
+.video-card h5,
+.video-card:hover .play,
+.video-content .list-thumbnail h5,
+.video-content h2,
+.video-content h3,
+.video-content h4 {
+  color: #fff;
+}
 
 @media only screen and (max-width: 1500px) {
   .content-lists {
@@ -871,17 +753,11 @@ iframe {
     margin-right: auto;
   }
   .video-window iframe {
-    width: 800px;
     height: 500px;
   }
   .video-box {
-    margin-left: auto;
-    margin-right: auto;
     height: auto;
-    width: 900px;
-  }
-  .video-box h2 {
-    padding-top: 40px;
+    width: 1000px;
   }
   .frame {
     margin-left: 5px;
@@ -921,35 +797,19 @@ iframe {
     font: normal normal normal 80px/90px Abolition;
   }
   .video-window iframe {
-    width: 620px;
     height: 400px;
   }
   .video-box {
-    padding-top: 0;
-    height: auto;
-    margin-top: 160px;
-    width: 700px;
-  }
-  .video-box h2 {
-    padding-top: 30px;
+    margin-top: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: auto;
   }
   .frame {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 120px;
-    margin-top: 0;
-  }
-  .photo-carousel img {
-    height: 800px;
-  }
-  #thumbnail-box img {
-    height: 100px;
-  }
-  #thumbnail-box:after {
-    height: 120px;
+    margin: 0 auto 120px;
   }
   .video-card img {
-    min-height: 250px;
+    height: 250px;
   }
   .container {
     margin-left: 60px;
@@ -963,108 +823,97 @@ iframe {
 
 @media only screen and (max-width: 768px) {
   .video-window iframe {
-    margin-left: auto;
-    margin-right: auto;
-    width: 460px;
-    height: 220px;
+    height: 300px;
   }
-  .frame h1 {
-    padding: 280px 80px;
-    position: relative;
-    margin-left: 0;
-    margin-right: 10px;
-    font: normal normal normal 50px/90px Abolition;
+  .lecture-details h1.ant-typography {
+    font: normal normal bold 26px/36px Open Sans;
   }
-  .video-box {
-    padding-top: 0;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: 550px;
+  .lecture-details h3.ant-typography,
+  .lecture-details h4.ant-typography {
+    font: bold normal normal 14px/16px Open Sans;
   }
-  .video-box h2 {
-    padding-top: 30px;
+  .lecture-details a {
+    font: normal normal normal 14px/16px Open Sans;
   }
-  .frame #atc-logo {
-    top: 280px;
-    width: 30%;
-  }
-  .frame {
-    margin-left: 0;
-    margin-right: 0;
-    height: 450px;
-    margin-bottom: 250px;
-  }
-  .photo-carousel img {
-    height: 800px;
+  .lecture-details h2.ant-typography {
+    font: normal normal bold 20px/25px Open Sans;
   }
   .container {
-    margin-left: 30px;
-    margin-right: 30px;
-    padding: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
   .container-content h1 {
     padding-bottom: 10px;
   }
-  .list-content h4 {
-    padding-top: 15px;
-  }
-  .pagination {
-    top: -20px;
-  }
-  .recent {
-    margin-top: 0;
-  }
-  #thumbnail-box img {
-    height: 80px;
-  }
-  #thumbnail-box:after {
-    height: 100px;
-  }
   .video-card img {
-    min-height: 300px;
+    min-height: 350px;
   }
-  .video-content {
-    display: inline-table;
+  .frame h1 {
+    padding-left: 70px;
+    font: normal normal normal 62px/80px Abolition;
+  }
+}
+
+@media only screen and (height: 1080px) and (width: 1920px) {
+  .frame {
+    height: 850px;
+  }
+  .frame #atc-logo {
+    top: 420px;
+    width: 400px;
+  }
+  .frame h1 {
+    padding: 550px 0 0 100px;
+    font: normal normal normal 120px/120px Abolition;
+  }
+  .photo-carousel img {
+    height: 1060px;
+  }
+}
+
+@media only screen and (height: 720px) and (width: 1280px) {
+  .frame {
+    height: 500px;
+  }
+  .frame #atc-logo {
+    top: 240px;
+    width: 280px;
+  }
+  .frame h1 {
+    padding: 340px 0 0 80px;
+    font: normal normal normal 80px/80px Abolition;
+  }
+  .photo-carousel img {
+    height: 700px;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .video-window iframe {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    height: 220px;
-  }
-  .frame h1 {
-    padding: 260px 50px;
-    position: relative;
-    margin-left: 0;
-    margin-right: 10px;
-    font: normal normal normal 50px/90px Abolition;
-  }
-  .video-box {
-    padding-top: 0;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-  }
-  .video-box h2 {
+    height: 210px;
     padding-top: 20px;
   }
+  .video-box {
+    padding: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(80deg, #0093e9 0, #0033a0 30%, #0b1117 100%)
+      no-repeat padding-box;
+  }
+  .video-content {
+    display: inline-table;
+  }
+  .frame h1 {
+    font: normal normal normal 45px/60px Abolition;
+  }
   .frame #atc-logo {
-    top: 260px;
-    width: 32%;
+    top: 340px;
+    width: 250px;
   }
-  .frame {
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 190px;
-    height: 500px;
-  }
-  .photo-carousel img {
-    height: 680px;
+  .container {
+    background: linear-gradient(110deg, #0093e9 0, #0033a0 20%, #0b1117 100%)
+      no-repeat padding-box;
   }
   .container-content h1 {
     padding-bottom: 0;
@@ -1074,17 +923,8 @@ iframe {
     font-size: 22px;
     float: left;
   }
-  .pagination {
-    top: -20px;
-  }
-  .recent {
-    margin-top: -100px;
-  }
-  #thumbnail-box img {
-    height: 40px;
-  }
-  #thumbnail-box:after {
-    height: 80px;
+  .container-content h4 {
+    padding-top: 20px;
   }
   .video-card img {
     min-height: 250px;
@@ -1093,140 +933,77 @@ iframe {
 
 @media only screen and (max-width: 480px) {
   .frame #atc-logo {
-    top: 320px;
-    left: -30px;
-    width: 40%;
+    top: 270px;
+    width: 200px;
   }
   .frame {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 80px;
-    height: 500px;
-  }
-  .video-box {
-    padding-top: 0;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-  }
-  .video-box h2 {
-    padding-top: 20px;
+    height: 450px;
   }
   .frame h1 {
-    padding: 320px 30px;
-    position: relative;
-    margin-left: 0;
-    margin-right: 10px;
+    padding: 280px 0 0 50px;
     font: normal normal normal 50px/90px Abolition;
   }
-  .video-card img {
-    min-height: 250px;
+  .photo-carousel img {
+    height: 680px;
   }
   .recent {
-    margin-top: 0px;
+    margin-top: 30px;
   }
 }
 
 @media only screen and (max-width: 414px) {
   .frame #atc-logo {
-    top: 460px;
     left: -20px;
-    width: 45%;
-    height: 85%;
   }
   .frame h1 {
-    padding: 10px;
-    position: relative;
-    display: inline-block;
-    top: -60px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font: normal normal normal 40px/50px Abolition;
-  }
-  .frame {
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 620px;
-    margin-bottom: 130px;
-    border: 1px solid #ffffffab;
-    border-radius: 50px;
-  }
-  .video-box {
-    padding-top: 0;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-  }
-  .video-box h2 {
-    padding-top: 20px;
-  }
-  .photo-carousel img {
-    height: 800px;
-  }
-  .recent {
-    margin-top: -20px;
-  }
-  .video-card img {
-    min-height: 200px;
+    padding: 270px 0 0 40px;
+    font: normal normal normal 40px/90px Abolition;
   }
 }
 
 @media only screen and (max-width: 375px) {
-  .video-window {
-    margin-top: 0;
-    margin-left: 0;
-  }
-  .video-window iframe {
-    width: auto;
-    height: 180px;
-  }
-  .video-box {
-    height: auto;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 30px;
-  }
-  .video-box h2 {
-    padding-top: 20px;
-  }
   .frame #atc-logo {
-    top: 380px;
-    left: -30px;
-    width: 45%;
-    height: 78%;
+    width: 180px;
   }
   .frame h1 {
-    position: relative;
-    top: -60px;
-    margin-left: 15px;
-    margin-right: 10px;
-    font: normal normal normal 40px/80px Abolition;
+    font: normal normal normal 35px/90px Abolition;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .video-window iframe {
+    height: 180px;
+  }
+  .lecture-details h1.ant-typography {
+    font: normal normal bold 20px/36px Open Sans;
   }
   .frame {
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 550px;
-    margin-bottom: 0;
-    border: 1px solid #ffffffab;
-    border-radius: 50px;
+    height: 360px;
+  }
+  .frame #atc-logo {
+    top: 190px;
+    width: 140px;
+  }
+  .frame h1 {
+    padding: 160px 0 0 30px;
+    font: normal normal normal 35px/90px Abolition;
   }
   .photo-carousel img {
-    height: 700px;
+    height: 550px;
+  }
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 30px;
+  }
+  .container-content h1 {
+    padding-bottom: 0;
+    font: normal normal normal 30px/40px Abolition;
   }
   .recent {
-    margin-top: 100px;
-  }
-  .pagination {
-    width: 80%;
-    top: -40px;
-  }
-  .video-card img {
-    min-height: 150px;
+    margin-top: 0;
   }
 }

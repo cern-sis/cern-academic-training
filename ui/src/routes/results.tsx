@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, Link, useSearchParams } from "react-router-dom";
 import { Layout, Pagination, List, Typography, Row, Col, Empty } from "antd";
+import { FileFilled } from "@ant-design/icons";
 
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
 import { getApiRoot } from "../api/api_root";
-import SUGGESTION_BOX from "../components/SUGGESTION_BOX";
 import LOADING_ICON from "../components/LOADING_ICON";
 
 const { Content } = Layout;
@@ -18,6 +18,8 @@ function Results() {
   const [searchTerm] = useSearchParams();
   const searchValue = searchTerm.get("search");
   const [lectures, setLectures] = useState([]);
+  const [showThumbnail, setShowThumbnail] = useState(false);
+  const [showBlank, setShowBlank] = useState(false);
   const [total, setTotal] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [pageSize, setPageSize] = useState<number>(10);
@@ -38,9 +40,22 @@ function Results() {
     }
   };
 
+  const renderThumbnail = async () => {
+    lectures.map((lecture: any) => {
+      if (lecture.thumbnail_picture != null) {
+        setShowThumbnail(true);
+        setShowBlank(false);
+      } else {
+        setShowThumbnail(false);
+        setShowBlank(true);
+      }
+    });
+  };
+
   useEffect(() => {
     searchLectures();
-  }, [searchValue, currentPage, pageSize]);
+    renderThumbnail();
+  }, [searchValue, currentPage, pageSize, showThumbnail, showBlank]);
 
   const onChange = (page: number) => {
     setCurrentPage(page);
@@ -81,7 +96,16 @@ function Results() {
                   <Col span={24} className="no-results">
                     <Empty className="empty" description="No results found" />{" "}
                     <Title level={4}>Not what you are looking for?</Title>
-                    <SUGGESTION_BOX />
+                    <div className="suggestion">
+                      <Typography.Link
+                        href="mailto:atc-contact@cern.ch"
+                        target="_blank"
+                      >
+                        <Title className="hover-underline-animation">
+                          Submit a suggestion for future topics
+                        </Title>
+                      </Typography.Link>
+                    </div>
                   </Col>
                 ) : (
                   lectures.map((lecture: any) => {
@@ -93,12 +117,26 @@ function Results() {
                         >
                           <div className="video-content">
                             <Col>
-                              <div className="list-thumbnail">
-                                <img
-                                  alt="thumbnail"
-                                  src={lecture.thumbnail_picture}
-                                />
-                              </div>
+                              {showThumbnail && (
+                                <div className="list-thumbnail">
+                                  <img
+                                    alt="thumbnail"
+                                    src={lecture.thumbnail_picture}
+                                  />
+                                </div>
+                              )}
+                              {showBlank && (
+                                <div className="list-thumbnail">
+                                  <div className="blank-thumbnail">
+                                    <FileFilled
+                                      style={{
+                                        fontSize: "350%",
+                                        opacity: "0.6",
+                                      }}
+                                    />
+                                  </div>
+                                </div>
+                              )}
                             </Col>
 
                             <Col className="list-content">

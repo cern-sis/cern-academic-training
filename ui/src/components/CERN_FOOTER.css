@@ -1,4 +1,11 @@
-/* CERN Footer */
+#cern-footer,
+#cern-footer .logo,
+#cern-footer h2,
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
 
 #cern-footer {
   background: #191919;
@@ -14,7 +21,6 @@
   padding: 10px 10px 0;
   z-index: 100;
   top: -1px;
-  box-sizing: border-box;
   color: #fffeee;
 }
 
@@ -61,7 +67,7 @@
 
 #cern-footer .ant-menu-item a:before {
   line-height: 26px;
-  left: 0px;
+  left: 0;
   font-size: 14px;
   transition: all 0.6s ease-in-out 0s;
   content: ">";
@@ -72,8 +78,15 @@
   color: #fffefe;
 }
 
-#cern-footer #block-generalinfo-2-menu:after,
-#cern-footer #block-cernandyou-2-menu:after {
+#cern-footer h2,
+.visually-hidden {
+  color: #fffeee !important;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+#cern-footer #block-cernandyou-2-menu:after,
+#cern-footer #block-generalinfo-2-menu:after {
   content: "";
   width: 50%;
   height: 2px;
@@ -84,16 +97,13 @@
 }
 
 .visually-hidden {
-  color: #fffeee !important;
   font: bold normal normal 18px/24px Open Sans;
   position: absolute !important;
   overflow: hidden;
   height: 1px;
   word-wrap: normal;
-  text-transform: uppercase;
   display: inline-block;
-  margin: 0rem 0 2.5rem 0;
-  padding: 0;
+  margin: 0 0 2.5rem;
 }
 
 #cern-footer .footer-first-col:after {
@@ -107,29 +117,19 @@
   left: 150px;
 }
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
 .mb-4 {
   margin-bottom: 1rem !important;
 }
 
 #cern-footer h2 {
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  box-sizing: border-box;
-  color: #fffeee !important;
+  -webkit-tap-highlight-color: transparent;
   font: bold normal normal 18px/30px Open Sans;
   min-width: 200px;
   width: 30%;
   line-height: 20px;
-  text-transform: uppercase;
   position: relative;
-  margin: 0rem 0 2.5rem 0;
-  padding: 0;
+  margin: 0 0 2.5rem;
 }
 
 #cern-footer h2:after {
@@ -146,7 +146,6 @@
 
 #cern-footer .logo {
   opacity: 0.6;
-  box-sizing: border-box;
   background-color: transparent;
 }
 
@@ -162,7 +161,7 @@
 }
 
 #cern-footer .ant-menu-item:active {
-  background: transparent;
+  background: 0 0;
 }
 
 #cern-footer .ant-menu-item a {
@@ -170,7 +169,7 @@
 }
 
 #cern-footer .ant-menu-item a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 #cern-footer .ant-menu-item-selected {

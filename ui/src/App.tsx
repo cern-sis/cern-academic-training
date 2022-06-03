@@ -144,7 +144,7 @@ function App() {
                               </div>
                               <div className="video-content">
                                 <Title level={3}>
-                                  Posted on {lecture.date}
+                                  Posted on <strong>{lecture.date}</strong>
                                 </Title>
                               </div>
                             </Card.Grid>
