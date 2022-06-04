@@ -39,7 +39,7 @@ function Lectures() {
         }
       }
     });
-  }, []);
+  });
 
   if (!lectures) return null;
   return (

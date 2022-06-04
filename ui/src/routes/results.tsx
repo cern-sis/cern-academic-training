@@ -12,17 +12,15 @@ import LOADING_ICON from "../components/LOADING_ICON";
 const { Content } = Layout;
 const { Title } = Typography;
 
-const PAGE_SIZE = 5;
+const PAGE_SIZE = 10;
 
 function Results() {
   const [searchTerm] = useSearchParams();
   const searchValue = searchTerm.get("search");
   const [lectures, setLectures] = useState([]);
-  const [showThumbnail, setShowThumbnail] = useState(false);
-  const [showBlank, setShowBlank] = useState(false);
   const [total, setTotal] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [pageSize, setPageSize] = useState<number>(10);
+  const [pageSize, setPageSize] = useState<number>(PAGE_SIZE);
   const [loading, setLoading] = useState(false);
 
   const searchLectures = async () => {
@@ -40,22 +38,9 @@ function Results() {
     }
   };
 
-  const renderThumbnail = async () => {
-    lectures.map((lecture: any) => {
-      if (lecture.thumbnail_picture != null) {
-        setShowThumbnail(true);
-        setShowBlank(false);
-      } else {
-        setShowThumbnail(false);
-        setShowBlank(true);
-      }
-    });
-  };
-
   useEffect(() => {
     searchLectures();
-    renderThumbnail();
-  }, [searchValue, currentPage, pageSize, showThumbnail, showBlank]);
+  }, [searchValue, currentPage, pageSize]);
 
   const onChange = (page: number) => {
     setCurrentPage(page);
@@ -117,7 +102,7 @@ function Results() {
                         >
                           <div className="video-content">
                             <Col>
-                              {showThumbnail && (
+                              {lecture.thumbnail_picture && (
                                 <div className="list-thumbnail">
                                   <img
                                     alt="thumbnail"
@@ -125,7 +110,7 @@ function Results() {
                                   />
                                 </div>
                               )}
-                              {showBlank && (
+                              {!lecture.thumbnail_picture && (
                                 <div className="list-thumbnail">
                                   <div className="blank-thumbnail">
                                     <FileFilled
