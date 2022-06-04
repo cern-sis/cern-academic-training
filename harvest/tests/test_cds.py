@@ -41,7 +41,6 @@ def test_cds_translation_record_with_files(shared_datadir):
     expected_data = {
         "lecture_id": "318009",
         "title": "Introduction to particle accelerators",
-        "date": "1969-1970",
         "series": "CERN Academic Training Lecture - 45",
         "language": "eng",
         "subject_category": "Accelerators and Storage Rings",
@@ -60,7 +59,7 @@ def test_cds_translation_record_without_files_and_videos(shared_datadir):
     expected_data = {
         "lecture_id": "318608",
         "title": "Non-destructive material testing",
-        "date": "1973",
+        "date": "1973-01-01",
         "series": "CERN Academic Training Lecture - 67",
         "language": "eng",
         "subject_category": "Other Fields of Engineering",
