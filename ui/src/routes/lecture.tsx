@@ -13,10 +13,16 @@ import { getApiRoot } from "../api/api_root";
 const { Content } = Layout;
 const { Title } = Typography;
 
+function filenameFromUrl(url: string) {
+  try {
+    return url.substring(url.lastIndexOf("/") + 1);
+  } catch (error) {
+    return url;
+  }
+}
+
 function Lecture() {
   const [lecture, setLecture] = useState<any>({});
-  const [showVideo, setShowVideo] = useState(false);
-  const [showList, setShowList] = useState(false);
   const [loading, setLoading] = useState(false);
   let { lectureId } = useParams();
 
@@ -31,21 +37,9 @@ function Lecture() {
     }
   };
 
-  const renderContent = async () => {
-    if ((lecture.type = ["video"])) {
-      setShowVideo(true);
-    } else if (lecture.files != null) {
-      setShowList(true);
-    } else {
-      setShowVideo(false);
-      setShowList(false);
-    }
-  };
-
   useEffect(() => {
     fetchLecture();
-    renderContent();
-  }, []);
+  }, [lectureId]);
 
   window.scrollTo(0, 0);
 
@@ -60,7 +54,7 @@ function Lecture() {
           <LOADING_ICON />
         ) : (
           <div className="video-box">
-            {showVideo && (
+            {lecture.type && lecture.type.includes("video") && (
               <div className="video-window">
                 <iframe
                   title={lecture.title}
@@ -88,7 +82,7 @@ function Lecture() {
               />
               <Outlet />
 
-              {showList && (
+              {lecture.files && lecture.files.length > 0 && (
                 <div className="files">
                   <div className="download-title">
                     <DownloadOutlined
@@ -102,13 +96,23 @@ function Lecture() {
 
                   <List
                     itemLayout="horizontal"
-                    dataSource={[lecture.files]}
+                    dataSource={lecture.files || []}
                     split={false}
-                    renderItem={(item, index) => (
-                      <List.Item key={index}>
-                        {index + 1}. <a href={item}>{item.split("/")[6]}</a>
-                      </List.Item>
-                    )}
+                    renderItem={(item: string, index) => {
+                      return (
+                        <List.Item key={index}>
+                          {index + 1}.{" "}
+                          <a
+                            title={item}
+                            rel="noreferrer"
+                            target="_blank"
+                            href={item}
+                          >
+                            {filenameFromUrl(item)}
+                          </a>
+                        </List.Item>
+                      );
+                    }}
                   />
                 </div>
               )}
