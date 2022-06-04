@@ -561,7 +561,7 @@ tests = ["check-manifest", "coverage", "isort (>=4.3.0,<5.0)", "pytest-cache", "
 
 [[package]]
 name = "inspire-utils"
-version = "3.0.22"
+version = "3.0.25"
 description = "INSPIRE-specific utils."
 category = "main"
 optional = false
@@ -1370,7 +1370,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "12844379eb61034c2e7dfe7525016677c4aa83737d1c923c361aa1d4ae85c29f"
+content-hash = "c6e56f58c85926ecd4dab3e0db1230b1e8adabc497258a9ece2f1cfff139b846"
 
 [metadata.files]
 amqp = [
@@ -1594,8 +1594,8 @@ inspire-schemas = [
     {file = "inspire_schemas-61.4.6-py2.py3-none-any.whl", hash = "sha256:30250e265e76ab7eba1234fa37878cfafedefd789eb7096ac76fd3dedb17b41c"},
 ]
 inspire-utils = [
-    {file = "inspire-utils-3.0.22.tar.gz", hash = "sha256:5963d6ef1a16c1a8c4e7f700da32c408be3b608ed7309485ac994409f262afa0"},
-    {file = "inspire_utils-3.0.22-py2-none-any.whl", hash = "sha256:14952dd33c47399f3073af1a4113fb8c6360f1d0248d42c4d9be4e2adf316086"},
+    {file = "inspire-utils-3.0.25.tar.gz", hash = "sha256:55042ac7e3669e9710d218f8163b96f6f771fe670bf00fdb156ef774e1a7a5eb"},
+    {file = "inspire_utils-3.0.25-py2-none-any.whl", hash = "sha256:043827c41182413c82809656487025a5ab76a483046a59b2e946a5d9a9d2fbfe"},
 ]
 isbnid-fork = [
     {file = "isbnid_fork-0.5.2.tar.gz", hash = "sha256:8d878866aa0e7f06e700a37fce586c7398ce4837da8bca39683db7028a9c3837"},
