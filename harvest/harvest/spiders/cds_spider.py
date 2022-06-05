@@ -227,13 +227,15 @@ class CDSSpider(Spider):
             './/datafield[@tag=518]/subfield[@code="d"]/text()'
         ).get()
 
-        try:
-            if "T" not in lecture_note:
+        if "T" not in lecture_note:
+            try:
                 lecture_note = normalize_date(lecture_note)
-            lecture_note = fill_missing_date_parts(lecture_note)
-        except Exception:
-            LOGGER.error("Cannot parse lecture_note", lecture_note=lecture_note)
-            record["lecture_note"] = ""
+                lecture_note = fill_missing_date_parts(lecture_note)
+            except Exception:
+                LOGGER.error("Cannot parse lecture_note", lecture_note=lecture_note)
+                record["lecture_note"] = ""
+        if lecture_note:
+            record["lecture_note"] = lecture_note
 
         duration = selector.xpath(
             './/datafield[@tag=300]/subfield[@code="a"]/text()'
