@@ -24,6 +24,9 @@ class HarvestPipeline:
     def __indico(self, indico_id):
         response = requests.get(f"https://indico.cern.ch/export/event/{indico_id}.json")
 
+        if response.status_code == 404:
+            raise ValueError(f"indico id {indico_id} doesn't exit")
+
         response.raise_for_status()
         data = response.json()
 
