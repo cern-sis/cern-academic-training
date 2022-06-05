@@ -227,7 +227,7 @@ class CDSSpider(Spider):
             './/datafield[@tag=518]/subfield[@code="d"]/text()'
         ).get()
 
-        if lecture_note:
+        if lecture_note and "T" in lecture_note:
             record["lecture_note"] = lecture_note
         else:
             record["lecture_note"] = ""
