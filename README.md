@@ -68,9 +68,19 @@ $ yarn start
 
 # Harvest CDS
 
+## Harvest a specific date
 ```bash
 
 $ cd harvest
 $ poetry install
-$ scrapy crawl CDS -a "sets=forSciTalks" -a "from_date=2021-09-01"
+$ scrapy crawl CDS -a "from_date=2021-09-01"
+```
+
+
+## Harvest all lectures up until now
+```bash
+
+$ cd harvest
+$ poetry install
+$ scrapy crawl CDS -a "migrate_all=True"
 ```
