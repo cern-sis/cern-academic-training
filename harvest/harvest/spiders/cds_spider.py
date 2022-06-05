@@ -5,7 +5,7 @@ import structlog
 from dojson.contrib.marc21.utils import create_record
 from inspire_dojson.cds import cds2hep_marc
 from inspire_dojson.utils import strip_empty_values
-from inspire_utils.date import fill_missing_date_parts, normalize_date
+from inspire_utils.date import fill_missing_date_parts
 from scrapy import Spider
 from scrapy.http import Request
 
@@ -227,15 +227,10 @@ class CDSSpider(Spider):
             './/datafield[@tag=518]/subfield[@code="d"]/text()'
         ).get()
 
-        try:
-            if "T" not in lecture_note:
-                lecture_note = normalize_date(lecture_note)
-                lecture_note = fill_missing_date_parts(lecture_note)
-        except Exception:
-            LOGGER.error("Cannot parse lecture_note", lecture_note=lecture_note)
-            record["lecture_note"] = ""
         if lecture_note:
             record["lecture_note"] = lecture_note
+        else:
+            record["lecture_note"] = ""
 
         duration = selector.xpath(
             './/datafield[@tag=300]/subfield[@code="a"]/text()'
