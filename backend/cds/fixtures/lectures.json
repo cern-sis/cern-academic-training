@@ -425,7 +425,7 @@
       "series": "Academic Training Lecture Regular Programme - 2021-2022",
       "speaker": "Gamper, Hannes",
       "speaker_details": "Johannes Kepler University (AT)",
-      "event_details": "https://indico.cern.ch/event/1055753/",
+      "event_details": "",
       "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2022/1055753/1055753-presentation-legacy.jpg",
       "language": "eng",
       "subject_category": "Academic Training Lecture Regular Programme",
@@ -455,7 +455,7 @@
       "lecture_note": "2022-01-28T11:00:00Z",
       "imprint": "2022-01-28 - 0:59:10",
       "license": "CERN 2022",
-      "sponsor": "Massimo Giovannozzi",
+      "sponsor": "",
       "keywords": []
     }
   }
