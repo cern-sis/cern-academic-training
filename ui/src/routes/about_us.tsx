@@ -172,7 +172,7 @@ function AboutUs() {
                             <Avatar
                               size={120}
                               src={
-                                require("../photos/members/profiles/Andre_David.png")
+                                require("../photos/members/profiles/AndreDavid.JPG")
                                   .default
                               }
                             />
