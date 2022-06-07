@@ -3,14 +3,21 @@ const baseUrl = "./profiles/";
 const members = [
   {
     key: 1,
+    name: "Urs WIEDEMANN",
+    profile: baseUrl + "Urs_Wiedemann.jpg",
+    position: "Chair",
+    department: "TH",
+  },
+  {
+    key: 2,
     name: "Maria DIMOU",
     profile: baseUrl + "Maria_Dimou.png",
-    position: "Chair",
+    position: "Advisor",
     department: "IT",
   },
 
   {
-    key: 2,
+    key: 3,
     name: "Marika FLYGAR",
     profile: baseUrl + "Marika_Flygar.jpg",
     position: "Administrative Assistant",
@@ -18,7 +25,7 @@ const members = [
   },
 
   {
-    key: 3,
+    key: 4,
     name: "André DAVID",
     profile: baseUrl + "Andre_David.png",
     position: "Chair High Energy Physics Working Group",
@@ -26,7 +33,7 @@ const members = [
   },
 
   {
-    key: 4,
+    key: 5,
     name: "Massimo GIOVANNOZZI",
     profile: baseUrl + "MassimoGiovanozzi.png",
     position: "Chair Applied Physics Working Group",
@@ -34,19 +41,11 @@ const members = [
   },
 
   {
-    key: 5,
+    key: 6,
     name: "Maria ARSUAGA RIOS",
     profile: baseUrl + "Maria-Arsuaga-Rios.png",
     position: "",
     department: "IT",
-  },
-
-  {
-    key: 6,
-    name: "Urs WIEDEMANN",
-    profile: baseUrl + "Urs_Wiedemann.jpg",
-    position: "",
-    department: "TH",
   },
 
   {
