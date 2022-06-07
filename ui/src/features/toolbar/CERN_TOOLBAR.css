@@ -122,7 +122,7 @@
   }
   #cern-toolbar .ant-menu-item a:not(.cern-multiple-mobile-signin),
   #cern-toolbar a.cern-single-mobile-signin:not(.cern-multiple-mobile-signin) {
-    background-image: url(./toolbarsprite.png) !important;
+    background-image: url("./toolbarsprite.png") !important;
     background-repeat: no-repeat !important;
     top: 20px;
     height: 40px !important;

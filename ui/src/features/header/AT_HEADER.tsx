@@ -2,26 +2,25 @@ import React, { useState, useEffect } from "react";
 
 import { Layout, Button, Typography, Row, Col, Drawer } from "antd";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
+import { useAppSelector, useAppDispatch } from '../../hooks'
 
 import "./AT_HEADER.css";
-import SEARCH_BAR from "./SEARCH_BAR";
-import MENU from "./MENU";
+import SEARCH_BAR from "../search-bar/SEARCH_BAR";
+import MENU from "../menu/MENU";
+import { toggleMenu } from "./AT_HEADER_SLICE";
 
 const { Header } = Layout;
 const { Title } = Typography;
 
 function AT_HEADER() {
-  const [toggleMenu, setToggleMenu] = useState(false);
-  const [state, setState] = useState({ collapsed: true });
+  const collapsed = useAppSelector((state) => state.header.collapsed);
+  const dispatch = useAppDispatch();
+
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [header, setHeader] = useState(false);
 
-  const toggleCollapsed = (e: any) => {
-    setState((state) => {
-      return {
-        collapsed: !state.collapsed,
-      };
-    });
+  const toggleCollapsed = () => {
+    dispatch(toggleMenu());
   };
 
   useEffect(() => {
@@ -84,7 +83,7 @@ function AT_HEADER() {
                 width="300px"
                 className="drawer"
                 onClose={toggleCollapsed}
-                visible={!state.collapsed}
+                visible={!collapsed}
                 destroyOnClose={true}
                 closeIcon={<CloseOutlined style={{ color: "#fff" }} />}
               >

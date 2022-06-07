@@ -4,10 +4,10 @@ import { useParams, Outlet } from "react-router-dom";
 import { List, Layout, Typography } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
 
-import AT_HEADER from "../components/AT_HEADER";
-import CERN_FOOTER from "../components/CERN_FOOTER";
-import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
-import LOADING_ICON from "../components/LOADING_ICON";
+import AT_HEADER from "../features/header/AT_HEADER";
+import CERN_FOOTER from "../features/footer/CERN_FOOTER";
+import CERN_TOOLBAR from "../features/toolbar/CERN_TOOLBAR";
+import LOADING_ICON from "../features/loading-icon/LOADING_ICON";
 import { getApiRoot } from "../api/api_root";
 
 const { Content } = Layout;

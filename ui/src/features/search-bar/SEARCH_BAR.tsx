@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { Input, Button, Menu } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-import "./AT_HEADER.css";
+import "../header/AT_HEADER.css";
 
 function SEARCH_BAR() {
   let navigate = useNavigate();

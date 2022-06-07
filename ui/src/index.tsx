@@ -8,34 +8,39 @@ import Lecture from "./routes/lecture";
 import Results from "./routes/results";
 import reportWebVitals from "./reportWebVitals";
 import AboutUs from "./routes/about_us";
+import { store } from "./store";
+import { Provider } from "react-redux";
 
 render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="search" element={<Results />} />
-      <Route path="about-us" element={<AboutUs />} />
-      <Route path="lectures" element={<Lectures />}>
+  <Provider store={store}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="search" element={<Results />} />
+        <Route path="about-us" element={<AboutUs />} />
+        <Route path="lectures" element={<Lectures />}>
+          <Route
+            index
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>Select a lecture</p>
+              </main>
+            }
+          />
+        </Route>
+        <Route path="lectures/:lectureId" element={<Lecture />} />
         <Route
-          index
+          path="*"
           element={
             <main style={{ padding: "1rem" }}>
-              <p>Select a lecture</p>
+              <p>There's nothing here!</p>
             </main>
           }
         />
-      </Route>
-      <Route path="lectures/:lectureId" element={<Lecture />} />
-      <Route
-        path="*"
-        element={
-          <main style={{ padding: "1rem" }}>
-            <p>There's nothing here!</p>
-          </main>
-        }
-      />
-    </Routes>
-  </BrowserRouter>,
+      </Routes>
+    </BrowserRouter>
+    ,
+  </Provider>,
   document.getElementById("root")
 );
 
