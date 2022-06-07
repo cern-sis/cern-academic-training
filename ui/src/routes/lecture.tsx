@@ -67,13 +67,19 @@ function Lecture() {
               <Title level={3}>{lecture.speaker}</Title>
               <Title>{lecture.title}</Title>
               <div className="details">
-                <Title level={4}>{lecture.date}</Title>
-                <div id="bullet">•</div>
-                <a href={lecture.event_details}>Event details (Indico)</a>
-                <div id="bullet">•</div>
-                <Title level={4}>
-                  Sponsored by <strong>{lecture.sponsor}</strong>
-                </Title>
+                {lecture.date != null && (
+                  <Title level={4} id="date">
+                    {lecture.date}
+                  </Title>
+                )}
+                {lecture.event_details != null && (
+                  <a href={lecture.event_details}>Event details (Indico)</a>
+                )}
+                {lecture.sponsor != null && (
+                  <Title level={4} id="sponsor">
+                    Sponsored by <strong>{lecture.sponsor}</strong>
+                  </Title>
+                )}
               </div>
               <p
                 dangerouslySetInnerHTML={{
