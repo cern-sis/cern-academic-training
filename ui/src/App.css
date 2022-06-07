@@ -412,12 +412,12 @@
 }
 
 .video-box {
-  min-height: 850px;
+  height: auto;
   padding: 50px;
   background: linear-gradient(30deg, #0093e9 0, #0033a0 25%, #0b1117 100%)
     no-repeat padding-box;
   width: auto;
-  max-width: 1300px;
+  width: 1300px;
   margin-top: 100px;
   margin-bottom: 80px;
   border-radius: 50px;
@@ -469,6 +469,13 @@ iframe {
   opacity: 0.6;
 }
 
+#date:after,
+#sponsor:before {
+  content: "•";
+  padding: 0 10px;
+  visibility: visible;
+}
+
 .files .ant-list-item,
 .files .ant-list-item a {
   font: normal normal normal 15px/15px Open Sans;
@@ -477,11 +484,6 @@ iframe {
 .lecture-details .details {
   flex-direction: row;
   padding: 5px 0 40px;
-}
-
-.lecture-details #bullet {
-  padding: 0 10px;
-  opacity: 0.52;
 }
 
 .files .download-title {
@@ -724,7 +726,6 @@ iframe {
 .files .ant-list-item,
 .files .ant-list-item a,
 .frame h1,
-.lecture-details #bullet,
 .lecture-details a,
 .lecture-details h1.ant-typography,
 .lecture-details h2.ant-typography,
@@ -828,15 +829,17 @@ iframe {
   .lecture-details h1.ant-typography {
     font: normal normal bold 26px/36px Open Sans;
   }
-  .lecture-details h3.ant-typography,
-  .lecture-details h4.ant-typography {
+  .lecture-details h3.ant-typography {
     font: bold normal normal 14px/16px Open Sans;
   }
-  .lecture-details a {
+  .lecture-details h4.ant-typography {
     font: normal normal normal 14px/16px Open Sans;
   }
   .lecture-details h2.ant-typography {
     font: normal normal bold 20px/25px Open Sans;
+  }
+  .lecture-details a {
+    font: normal normal normal 14px/16px Open Sans;
   }
   .container {
     margin-left: 50px;
@@ -851,6 +854,23 @@ iframe {
   .frame h1 {
     padding-left: 70px;
     font: normal normal normal 62px/80px Abolition;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .lecture-details .details {
+    flex-direction: column;
+  }
+  .lecture-details a {
+    padding: 0 0 10px 0;
+  }
+  #date:after,
+  #sponsor:before {
+    padding: 0;
+    visibility: hidden;
+  }
+  #sponsor:before {
+    margin-left: -5px;
   }
 }
 
