@@ -464,13 +464,12 @@ iframe {
 }
 
 .lecture-details a {
-  text-decoration: underline;
   font: normal normal normal 16px/16px Open Sans;
   opacity: 0.6;
 }
 
 #date:after,
-#sponsor:before {
+#event:after {
   content: "•";
   padding: 0 10px;
   visibility: visible;
@@ -484,6 +483,10 @@ iframe {
 .lecture-details .details {
   flex-direction: row;
   padding: 5px 0 40px;
+}
+
+.lecture-details .ant-typography + h4.ant-typography {
+  margin-top: 0;
 }
 
 .files .download-title {
@@ -865,11 +868,11 @@ iframe {
     padding: 0 0 10px 0;
   }
   #date:after,
-  #sponsor:before {
+  #event:after {
     padding: 0;
     visibility: hidden;
   }
-  #sponsor:before {
+  #event:after {
     margin-left: -5px;
   }
 }
