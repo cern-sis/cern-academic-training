@@ -105,6 +105,30 @@ function AboutUs() {
               {members.slice(0, 1).map((member: any) => {
                 return (
                   <Space>
+                    <Col key={member.key} span={8}>
+                      <Card hoverable className="member-card">
+                        <Card.Grid className="grid-style">
+                          <div className="member-content">
+                            <Title level={3}>{member.department}</Title>
+                            <Avatar
+                              size={120}
+                              src={
+                                require("../photos/members/profiles/Urs_Wiedemann.jpg")
+                                  .default
+                              }
+                            />
+                            <Title level={2}>{member.name}</Title>
+                            <p>{member.position}</p>
+                          </div>
+                        </Card.Grid>
+                      </Card>
+                    </Col>
+                  </Space>
+                );
+              })}
+              {members.slice(1, 2).map((member: any) => {
+                return (
+                  <Space>
                     <Col key={member.key} span={12}>
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
@@ -126,7 +150,7 @@ function AboutUs() {
                   </Space>
                 );
               })}
-              {members.slice(1, 2).map((member: any) => {
+              {members.slice(2, 3).map((member: any) => {
                 return (
                   <Space>
                     <Col key={member.key} span={12}>
@@ -161,7 +185,7 @@ function AboutUs() {
               justify="center"
               gutter={[16, 52]}
             >
-              {members.slice(2, 3).map((member: any) => {
+              {members.slice(3, 4).map((member: any) => {
                 return (
                   <Space>
                     <Col key={member.key} span={8}>
@@ -185,7 +209,7 @@ function AboutUs() {
                   </Space>
                 );
               })}
-              {members.slice(3, 4).map((member: any) => {
+              {members.slice(4, 5).map((member: any) => {
                 return (
                   <Space>
                     <Col key={member.key} span={8}>
@@ -209,30 +233,6 @@ function AboutUs() {
                   </Space>
                 );
               })}
-              {members.slice(4, 5).map((member: any) => {
-                return (
-                  <Space>
-                    <Col key={member.key} span={8}>
-                      <Card hoverable className="member-card">
-                        <Card.Grid className="grid-style">
-                          <div className="member-content">
-                            <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/Maria-Arsuaga-Rios.png")
-                                  .default
-                              }
-                            />
-                            <Title level={2}>{member.name}</Title>
-                            <p>{member.position}</p>
-                          </div>
-                        </Card.Grid>
-                      </Card>
-                    </Col>
-                  </Space>
-                );
-              })}
               {members.slice(5, 6).map((member: any) => {
                 return (
                   <Space>
@@ -244,7 +244,7 @@ function AboutUs() {
                             <Avatar
                               size={120}
                               src={
-                                require("../photos/members/profiles/Urs_Wiedemann.jpg")
+                                require("../photos/members/profiles/Maria-Arsuaga-Rios.png")
                                   .default
                               }
                             />
