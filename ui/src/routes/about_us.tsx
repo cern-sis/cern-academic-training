@@ -16,9 +16,9 @@ import { getMembers } from "../photos/members/members";
 import { getPhotos } from "../photos/carousel/photos";
 import { getReveal } from "../events/reveal";
 
-import AT_HEADER from "../components/AT_HEADER";
-import CERN_FOOTER from "../components/CERN_FOOTER";
-import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
+import AT_HEADER from "../features/header/AT_HEADER";
+import CERN_FOOTER from "../features/footer/CERN_FOOTER";
+import CERN_TOOLBAR from "../features/toolbar/CERN_TOOLBAR";
 
 const { Content } = Layout;
 const { Title } = Typography;

@@ -1,9 +1,9 @@
 import { Outlet, Link } from "react-router-dom";
 import "../App.css";
 import { Layout, Card } from "antd";
-import AT_HEADER from "../components/AT_HEADER";
-import CERN_FOOTER from "../components/CERN_FOOTER";
-import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
+import AT_HEADER from "../features/header/AT_HEADER";
+import CERN_FOOTER from "../features/footer/CERN_FOOTER";
+import CERN_TOOLBAR from "../features/toolbar/CERN_TOOLBAR";
 import { getApiRoot } from "../api/api_root";
 import React from "react";
 

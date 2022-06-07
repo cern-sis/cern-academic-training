@@ -13,13 +13,13 @@ import {
 } from "antd";
 
 import { getPhotos } from "./photos/carousel/photos";
-import AT_HEADER from "./components/AT_HEADER";
-import CERN_FOOTER from "./components/CERN_FOOTER";
-import CERN_TOOLBAR from "./components/CERN_TOOLBAR";
+import AT_HEADER from "./features/header/AT_HEADER";
+import CERN_FOOTER from "./features/footer/CERN_FOOTER";
+import CERN_TOOLBAR from "./features/toolbar/CERN_TOOLBAR";
 import { PlayCircleOutlined } from "@ant-design/icons";
 import { getApiRoot } from "./api/api_root";
-import SUGGESTION_BOX from "./components/SUGGESTION_BOX";
-import LOADING_ICON from "./components/LOADING_ICON";
+import SUGGESTION_BOX from "./features/suggestion-box/SUGGESTION_BOX";
+import LOADING_ICON from "./features/loading-icon/LOADING_ICON";
 
 const { Content } = Layout;
 const { Title } = Typography;

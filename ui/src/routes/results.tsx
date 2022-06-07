@@ -3,11 +3,11 @@ import { Outlet, Link, useSearchParams } from "react-router-dom";
 import { Layout, Pagination, List, Typography, Row, Col, Empty } from "antd";
 import { FileFilled } from "@ant-design/icons";
 
-import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
-import AT_HEADER from "../components/AT_HEADER";
-import CERN_FOOTER from "../components/CERN_FOOTER";
+import CERN_TOOLBAR from "../features/toolbar/CERN_TOOLBAR";
+import AT_HEADER from "../features/header/AT_HEADER";
+import CERN_FOOTER from "../features/footer/CERN_FOOTER";
 import { getApiRoot } from "../api/api_root";
-import LOADING_ICON from "../components/LOADING_ICON";
+import LOADING_ICON from "../features/loading-icon/LOADING_ICON";
 
 const { Content } = Layout;
 const { Title } = Typography;
