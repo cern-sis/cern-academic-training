@@ -259,10 +259,17 @@ class CDSSpider(Spider):
 
         record["files"] = [_file["a"] for _file in data.get("FFT__", [])]
 
+        file_types = selector.xpath(
+            './/datafield[@tag=856]/subfield[@code="x"]/text()'
+        ).get()
+
         record = strip_empty_values(record)
         record["type"] = []
         if "files" in record:
             record["type"].append("file")
+
+        if "mp4slides" in file_types:
+            record["type"].append("slide")
 
         if "thumbnail_picture" in record:
             record["type"].append("video")
