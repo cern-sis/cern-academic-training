@@ -67,17 +67,17 @@ function Lecture() {
               <Title level={3}>{lecture.speaker}</Title>
               <Title>{lecture.title}</Title>
               <div className="details">
-                {lecture.date && lecture.date.length > 0 && (
+                {lecture.date && lecture.date !== "" && (
                   <Title level={4} id="date">
                     {lecture.date}
                   </Title>
                 )}
-                {lecture.event_details && lecture.event_details.length > 0 && (
+                {lecture.event_details && lecture.event_details !== "" && (
                   <a href={lecture.event_details} id="event">
                     Event details (Indico)
                   </a>
                 )}
-                {lecture.sponsor && lecture.sponsor.length > 0 && (
+                {lecture.sponsor && lecture.sponsor !== "" && (
                   <Title level={4} id="sponsor">
                     Sponsored by <strong>{lecture.sponsor}</strong>
                   </Title>
