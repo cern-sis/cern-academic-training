@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Outlet, Link, useSearchParams } from "react-router-dom";
-import { Layout, Pagination, List, Typography, Row, Col, Empty } from "antd";
 import { FileFilled } from "@ant-design/icons";
-
-import CERN_TOOLBAR from "../features/toolbar/CERN_TOOLBAR";
-import AT_HEADER from "../features/header/AT_HEADER";
-import CERN_FOOTER from "../features/footer/CERN_FOOTER";
+import { Col, Empty, Layout, List, Pagination, Row, Typography } from "antd";
+import React, { useEffect, useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 import { getApiRoot } from "../api/api_root";
-import LOADING_ICON from "../features/loading-icon/LOADING_ICON";
+import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR, LOADING_ICON } from '../features';
+import { useAppSelector } from "../hooks";
+
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -15,8 +13,7 @@ const { Title } = Typography;
 const PAGE_SIZE = 10;
 
 function Results() {
-  const [searchTerm] = useSearchParams();
-  const searchValue = searchTerm.get("search");
+  const searchTerm = useAppSelector((state) => state.search.searchTerm);
   const [lectures, setLectures] = useState([]);
   const [total, setTotal] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -26,8 +23,8 @@ function Results() {
   const searchLectures = async () => {
     try {
       setLoading(true);
-      const searchQuery = searchValue
-        ? `?search=${searchValue}&page=${currentPage}&page_size=${pageSize}`
+      const searchQuery = searchTerm
+        ? `?search=${searchTerm}&page=${currentPage}&page_size=${pageSize}`
         : `?page=${currentPage}&page_size=${pageSize}`;
       const results = await getApiRoot().get(`/search/lectures/${searchQuery}`);
       setLoading(false);
@@ -40,7 +37,7 @@ function Results() {
 
   useEffect(() => {
     searchLectures();
-  }, [searchValue, currentPage, pageSize]);
+  }, [searchTerm, currentPage, pageSize]);
 
   const onChange = (page: number) => {
     setCurrentPage(page);
@@ -65,7 +62,7 @@ function Results() {
               <Row justify="space-between">
                 <Col xs={24} sm={12} md={12} lg={12}>
                   <Title>
-                    Search results: {searchValue ? `"${searchValue}"` : null}{" "}
+                    Search results: {searchTerm ? `"${searchTerm}"` : null}{" "}
                   </Title>
                 </Col>
 

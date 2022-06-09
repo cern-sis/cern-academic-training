@@ -13,13 +13,9 @@ import {
 } from "antd";
 
 import { getPhotos } from "./photos/carousel/photos";
-import AT_HEADER from "./features/header/AT_HEADER";
-import CERN_FOOTER from "./features/footer/CERN_FOOTER";
-import CERN_TOOLBAR from "./features/toolbar/CERN_TOOLBAR";
 import { PlayCircleOutlined } from "@ant-design/icons";
 import { getApiRoot } from "./api/api_root";
-import SUGGESTION_BOX from "./features/suggestion-box/SUGGESTION_BOX";
-import LOADING_ICON from "./features/loading-icon/LOADING_ICON";
+import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR, LOADING_ICON, SUGGESTION_BOX } from "./features";
 
 const { Content } = Layout;
 const { Title } = Typography;

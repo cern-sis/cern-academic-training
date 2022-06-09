@@ -3,21 +3,20 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { Input, Button, Menu } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import "../header/AT_HEADER.css";
+import { useAppDispatch, useAppSelector } from "../../hooks";
+import { setSearchTerm } from "./search_slice";
 
 function SEARCH_BAR() {
   let navigate = useNavigate();
+  const searchValue = useAppSelector((state) => state.search.searchTerm);
+  const dispatch = useAppDispatch();
   const [searchQuery] = useSearchParams();
-  const searchValue = searchQuery.get("search") || "";
-  let [searchTerm, setSearchTerm] = useState(searchValue);
 
   const onKeyDown = (ev: any) => {
     const searchValue = ev.target.value;
-    if (searchValue) {
-      setSearchTerm(ev.target.value);
-      navigate(`/search/?search=${ev.target.value}&page=1`);
-    } else {
-      navigate("/search");
-    }
+    if (searchValue)
+      dispatch(setSearchTerm(searchValue))
+    navigate("/search");
   };
 
   return (
