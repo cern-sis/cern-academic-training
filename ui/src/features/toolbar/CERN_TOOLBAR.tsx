@@ -1,16 +1,31 @@
 import React from "react";
 import { Layout, Typography, Menu } from "antd";
 import "./CERN_TOOLBAR.css";
+import { useAppSelector } from "../../hooks";
+import { useDispatch } from "react-redux";
+import { logout } from "../login/login_slice";
 
 const { Header } = Layout;
 const { Title } = Typography;
 
 function CERN_TOOLBAR() {
+  const user = useAppSelector((state) => state.login.user);
+  const dispatch = useDispatch()
   const [current, setCurrent] = React.useState("icon");
 
   const handleClick = (e: any) => {
     setCurrent(e.key);
   };
+
+  const loginOrLogout = user ? (
+    <Typography.Link onClick={(e) => {e.preventDefault();dispatch(logout())}} className="cern-account cern-signin cern-single-mobile-signin">
+      Logout {user.username}
+    </Typography.Link>
+  ) : (
+    <Typography.Link href="/user/login" className="cern-account cern-signin cern-single-mobile-signin">
+      Sign in
+    </Typography.Link>
+  )
 
   return (
     <Header id="cern-toolbar" aria-label="CERN Toolbar">
@@ -43,12 +58,7 @@ function CERN_TOOLBAR() {
                 className="signin cern-account-links"
                 key="cern-account-links"
               >
-                <Typography.Link
-                  href="/user/login"
-                  className="cern-account cern-signin cern-single-mobile-signin"
-                >
-                  Sign in
-                </Typography.Link>
+                {loginOrLogout}
               </Menu.Item>
             </Menu>
           </div>

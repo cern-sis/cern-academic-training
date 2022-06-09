@@ -10,7 +10,6 @@ function SEARCH_BAR() {
   let navigate = useNavigate();
   const searchValue = useAppSelector((state) => state.search.searchTerm);
   const dispatch = useAppDispatch();
-  const [searchQuery] = useSearchParams();
 
   const onKeyDown = (ev: any) => {
     const searchValue = ev.target.value;
