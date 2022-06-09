@@ -211,11 +211,6 @@
   transition: 0.3s;
 }
 
-.video-card:hover {
-  max-height: 10px;
-  transition: 0.5s;
-}
-
 .ant-card-cover img {
   border-radius: 5px;
   height: 200px;

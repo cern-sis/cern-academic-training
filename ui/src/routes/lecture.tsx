@@ -1,11 +1,9 @@
 import { DownloadOutlined } from "@ant-design/icons";
-import { Layout, List, Typography } from "antd";
-import React, { useEffect, useState } from "react";
+import { Layout, List, Typography, Card } from "antd";
 import { Outlet, useParams } from "react-router-dom";
-import { getApiRoot } from "../api/api_root";
 import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR, LOADING_ICON } from '../features';
 
-
+import { useGetOneLectureQuery } from "../services/lecture.service";
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -19,24 +17,9 @@ function filenameFromUrl(url: string) {
 }
 
 function Lecture() {
-  const [lecture, setLecture] = useState<any>({});
-  const [loading, setLoading] = useState(false);
   let { lectureId } = useParams();
-
-  const fetchLecture = async () => {
-    try {
-      setLoading(true);
-      const results = await getApiRoot().get(`/lectures/${lectureId}/`);
-      setLoading(false);
-      setLecture(results.data);
-    } catch (error) {
-      setLecture({});
-    }
-  };
-
-  useEffect(() => {
-    fetchLecture();
-  }, [lectureId]);
+  const { data, error, isLoading } = useGetOneLectureQuery(lectureId ?? "");
+  const lecture = data;
 
   window.scrollTo(0, 0);
 
@@ -47,11 +30,13 @@ function Lecture() {
       <AT_HEADER />
 
       <Content className="atc-content lecture-page">
-        {loading ? (
+        {error ? (
+          <Card>Oh no, there was an error</Card>
+        ) : isLoading ? (
           <LOADING_ICON />
-        ) : (
+        ) : data ? (
           <div className="video-box">
-            {lecture.type && lecture.type.includes("video") && (
+            {lecture?.type && lecture?.type.includes("video") && (
               <div className="video-window">
                 <iframe
                   title={lecture.title}
@@ -61,25 +46,25 @@ function Lecture() {
               </div>
             )}
             <div className="lecture-details">
-              <Title level={3}>{lecture.speaker}</Title>
-              <Title>{lecture.title}</Title>
+              <Title level={3}>{lecture?.speaker}</Title>
+              <Title>{lecture?.title}</Title>
               <div className="details">
-                <Title level={4}>{lecture.date}</Title>
+                <Title level={4}>{lecture?.date}</Title>
                 <div id="bullet">•</div>
-                <a href={lecture.event_details}>Event details (Indico)</a>
+                <a href={lecture?.event_details}>Event details (Indico)</a>
                 <div id="bullet">•</div>
                 <Title level={4}>
-                  Sponsored by <strong>{lecture.sponsor}</strong>
+                  Sponsored by <strong>{lecture?.sponsor}</strong>
                 </Title>
               </div>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: lecture.abstract,
+                  __html: lecture?.abstract ?? '',
                 }}
               />
               <Outlet />
 
-              {lecture.files && lecture.files.length > 0 && (
+              {lecture?.files && lecture?.files.length > 0 && (
                 <div className="files">
                   <div className="download-title">
                     <DownloadOutlined
@@ -93,7 +78,7 @@ function Lecture() {
 
                   <List
                     itemLayout="horizontal"
-                    dataSource={lecture.files || []}
+                    dataSource={lecture?.files || []}
                     split={false}
                     renderItem={(item: string, index) => {
                       return (
@@ -115,7 +100,7 @@ function Lecture() {
               )}
             </div>
           </div>
-        )}
+        ) : null}
       </Content>
 
       <CERN_FOOTER />

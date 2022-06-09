@@ -1,46 +1,16 @@
 import { Card, Layout } from "antd";
-import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import { getApiRoot } from "../api/api_root";
 import "../App.css";
-import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR } from '../features';
-
+import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR, LOADING_ICON } from '../features';
+import { useGetLecturesQuery } from "../services/lectures.service";
 
 const { Content } = Layout;
 
 function Lectures() {
-  let apiInstance = getApiRoot();
-
-  const [lectures, setLectures] = React.useState<any>();
+  const { data, error, isLoading } = useGetLecturesQuery('');
 
   window.scrollTo(0, 0);
 
-  React.useEffect(() => {
-    apiInstance.get(`/search/lectures/`).then((response) => {
-      if (response.data.error) {
-        console.log(response.data.message);
-      } else {
-        console.log(response.data.results);
-        console.log(response.status);
-        console.log(response.statusText);
-        console.log(response.headers);
-        console.log(response.config);
-
-        let array = [response.data.results];
-
-        for (var i = 0; i < array.length; i++) {
-          try {
-            setLectures(array[i]);
-            console.log("It works");
-          } catch (error) {
-            console.log(error);
-          }
-        }
-      }
-    });
-  });
-
-  if (!lectures) return null;
   return (
     <Layout className="layout">
       <CERN_TOOLBAR />
@@ -48,25 +18,33 @@ function Lectures() {
       <AT_HEADER />
 
       <Content id="atc-content">
-        <div className="lecture">
-          {lectures.map((lecture: any) => {
-            return (
-              <nav>
-                <Link to={`/${lecture.lecture_id}`}>
-                  <Card
-                    hoverable
-                    className="video-card"
-                    cover={<img alt="thumbnail" src={lecture.thumbnail} />}
-                  >
-                    <div className="video-content">
-                      <h1>{lecture.title}</h1>
-                      <p>{lecture.speaker}</p>
-                    </div>
-                  </Card>
-                </Link>
-              </nav>
-            );
-          })}
+        <div className="lecture" style={{marginTop: '15rem'}}>
+          {error ? (
+            <Card>Oh no, there was an error</Card>
+          ) : isLoading ? (
+            <LOADING_ICON />
+          ) : data ? (
+            <>
+              {data?.map((lecture: any) => {
+                return (
+                  <div>
+                    <Link to={`/lectures/${lecture.lecture_id}`}>
+                      <Card className="video-card" style={{background: 'white', margin: '2rem'}}>
+                        <div className="video-content">
+                          <img
+                            alt="thumbnail"
+                            src={lecture.thumbnail_picture}
+                          />
+                          <h1>{lecture.title}</h1>
+                          <p>{lecture.speaker}</p>
+                        </div>
+                      </Card>
+                    </Link>
+                  </div>
+                );
+              })}
+            </>
+          ) : null}
           <Outlet />
         </div>
       </Content>
