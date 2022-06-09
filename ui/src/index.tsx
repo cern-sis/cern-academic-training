@@ -10,6 +10,7 @@ import reportWebVitals from "./reportWebVitals";
 import AboutUs from "./routes/about_us";
 import { store } from "./store";
 import { Provider } from "react-redux";
+import { Login } from "./routes/login";
 
 render(
   <Provider store={store}>
@@ -29,6 +30,9 @@ render(
           />
         </Route>
         <Route path="lectures/:lectureId" element={<Lecture />} />
+        <Route path="user">
+          <Route path="login" element={<Login />} />
+        </Route>
         <Route
           path="*"
           element={
@@ -39,7 +43,6 @@ render(
         />
       </Routes>
     </BrowserRouter>
-    ,
   </Provider>,
   document.getElementById("root")
 );
