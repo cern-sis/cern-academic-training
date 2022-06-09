@@ -1,11 +1,10 @@
-import { Outlet, Link } from "react-router-dom";
-import "../App.css";
-import { Layout, Card } from "antd";
-import AT_HEADER from "../features/header/AT_HEADER";
-import CERN_FOOTER from "../features/footer/CERN_FOOTER";
-import CERN_TOOLBAR from "../features/toolbar/CERN_TOOLBAR";
-import { getApiRoot } from "../api/api_root";
+import { Card, Layout } from "antd";
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
+import { getApiRoot } from "../api/api_root";
+import "../App.css";
+import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR } from '../features';
+
 
 const { Content } = Layout;
 

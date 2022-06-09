@@ -1,24 +1,15 @@
-import React, { Fragment } from "react";
 import {
-  Layout,
-  Card,
-  Row,
-  Col,
-  Carousel,
-  Avatar,
-  Space,
-  Typography,
-  Divider,
+  Avatar, Card, Carousel, Col, Divider, Layout, Row, Space,
+  Typography
 } from "antd";
-
+import React, { Fragment } from "react";
 import "../App.css";
-import { getMembers } from "../photos/members/members";
-import { getPhotos } from "../photos/carousel/photos";
 import { getReveal } from "../events/reveal";
+import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR } from '../features';
+import { getPhotos } from "../photos/carousel/photos";
+import { getMembers } from "../photos/members/members";
 
-import AT_HEADER from "../features/header/AT_HEADER";
-import CERN_FOOTER from "../features/footer/CERN_FOOTER";
-import CERN_TOOLBAR from "../features/toolbar/CERN_TOOLBAR";
+
 
 const { Content } = Layout;
 const { Title } = Typography;

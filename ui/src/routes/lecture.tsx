@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useParams, Outlet } from "react-router-dom";
-
-import { List, Layout, Typography } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
-
-import AT_HEADER from "../features/header/AT_HEADER";
-import CERN_FOOTER from "../features/footer/CERN_FOOTER";
-import CERN_TOOLBAR from "../features/toolbar/CERN_TOOLBAR";
-import LOADING_ICON from "../features/loading-icon/LOADING_ICON";
+import { Layout, List, Typography } from "antd";
+import React, { useEffect, useState } from "react";
+import { Outlet, useParams } from "react-router-dom";
 import { getApiRoot } from "../api/api_root";
+import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR, LOADING_ICON } from '../features';
+
+
 
 const { Content } = Layout;
 const { Title } = Typography;
