@@ -17,12 +17,8 @@ function Results() {
   const [total, setTotal] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [pageSize, setPageSize] = useState<number>(PAGE_SIZE);
-  
-  const searchQuery = searchTerm
-    ? `?search=${searchTerm}&page=${currentPage}&page_size=${pageSize}`
-    : `?page=${currentPage}&page_size=${pageSize}`;
 
-  const { data, error, isLoading } = useGetLecturesQuery(searchQuery);
+  const { data, error, isLoading } = useGetLecturesQuery({searchTerm, currentPage, pageSize});
 
   const onChange = (page: number) => {
     setCurrentPage(page);

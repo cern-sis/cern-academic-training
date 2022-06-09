@@ -7,7 +7,7 @@ import { useGetLecturesQuery } from "../services/lectures.service";
 const { Content } = Layout;
 
 function Lectures() {
-  const { data, error, isLoading } = useGetLecturesQuery('');
+  const { data, error, isLoading } = useGetLecturesQuery({});
 
   window.scrollTo(0, 0);
 
