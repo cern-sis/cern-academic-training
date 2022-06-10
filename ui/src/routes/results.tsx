@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR, LOADING_ICON } from '../features';
 import { useAppSelector } from "../hooks";
-import { useGetLecturesQuery } from "../services/lectures.service";
+import { useSearchLecturesQuery } from "../services/lectures.service";
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -18,7 +18,7 @@ function Results() {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [pageSize, setPageSize] = useState<number>(PAGE_SIZE);
 
-  const { data, error, isLoading } = useGetLecturesQuery({searchTerm, currentPage, pageSize});
+  const { data, error, isLoading } = useSearchLecturesQuery({searchTerm, currentPage, pageSize});
 
   const onChange = (page: number) => {
     setCurrentPage(page);

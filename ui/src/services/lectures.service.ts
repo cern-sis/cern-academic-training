@@ -12,7 +12,7 @@ export const lecturesApi = createApi({
   reducerPath: 'lecturesApi',
   baseQuery: fetchBaseQuery({ baseUrl: `/api/v1/` }),
   endpoints: (builder) => ({
-    getLectures: builder.query<Lecture[], LectureQuery>({
+    searchLectures: builder.query<Lecture[], LectureQuery>({
       query: ({searchTerm, currentPage, pageSize}: LectureQuery) => {
         let queryParams: string[] = []
         if(searchTerm)
@@ -30,7 +30,10 @@ export const lecturesApi = createApi({
       },
       transformResponse: (response: Lectures) => response.results,
     }),
+    getLectureById: builder.query<Lecture, string>({
+      query: (query) => `/lectures/${query}`,
+    }),
   }),
 });
 
-export const { useGetLecturesQuery } = lecturesApi;
+export const { useSearchLecturesQuery, useGetLectureByIdQuery } = lecturesApi;

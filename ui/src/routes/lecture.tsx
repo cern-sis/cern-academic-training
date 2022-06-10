@@ -3,7 +3,7 @@ import { Layout, List, Typography, Card } from "antd";
 import { Outlet, useParams } from "react-router-dom";
 import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR, LOADING_ICON } from '../features';
 
-import { useGetOneLectureQuery } from "../services/lecture.service";
+import { useGetLectureByIdQuery } from "../services/lectures.service";
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -18,7 +18,7 @@ function filenameFromUrl(url: string) {
 
 function Lecture() {
   let { lectureId } = useParams();
-  const { data, error, isLoading } = useGetOneLectureQuery(lectureId ?? "");
+  const { data, error, isLoading } = useGetLectureByIdQuery(lectureId ?? "");
   const lecture = data;
 
   window.scrollTo(0, 0);

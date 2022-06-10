@@ -2,12 +2,12 @@ import { Card, Layout } from "antd";
 import { Link, Outlet } from "react-router-dom";
 import "../App.css";
 import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR, LOADING_ICON } from '../features';
-import { useGetLecturesQuery } from "../services/lectures.service";
+import { useSearchLecturesQuery } from "../services/lectures.service";
 
 const { Content } = Layout;
 
 function Lectures() {
-  const { data, error, isLoading } = useGetLecturesQuery({});
+  const { data, error, isLoading } = useSearchLecturesQuery({});
 
   window.scrollTo(0, 0);
 

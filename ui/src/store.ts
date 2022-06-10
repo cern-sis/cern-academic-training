@@ -4,7 +4,6 @@ import { setupListeners } from '@reduxjs/toolkit/query'
 import headerReducer from './features/header/AT_HEADER_SLICE';
 import searchReducer from './features/search-bar/search_slice';
 import { lecturesApi } from './services/lectures.service';
-import { lectureApi } from './services/lecture.service';
 import loginReducer from './features/login/login_slice';
 
 export const store = configureStore({
@@ -12,11 +11,10 @@ export const store = configureStore({
     header: headerReducer,
     search: searchReducer,
     [lecturesApi.reducerPath]: lecturesApi.reducer,
-    [lectureApi.reducerPath]: lectureApi.reducer,
     login: loginReducer
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(lecturesApi.middleware, lectureApi.middleware),
+    getDefaultMiddleware().concat(lecturesApi.middleware),
 });
 
 setupListeners(store.dispatch);
