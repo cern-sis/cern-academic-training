@@ -14,19 +14,13 @@ export const lecturesApi = createApi({
   endpoints: (builder) => ({
     searchLectures: builder.query<Lecture[], LectureQuery>({
       query: ({searchTerm, currentPage, pageSize}: LectureQuery) => {
-        let queryParams: string[] = []
-        if(searchTerm)
-          queryParams.push(`search=${searchTerm}`)
-        if(currentPage)
-          queryParams.push(`page=${currentPage}`)
-        if(pageSize)
-          queryParams.push(`page_size=${pageSize}`)
+        const queryParams: string[] = [];
 
-        let queryString = ""
-        if(queryParams.length > 0)
-          queryString = "?" + queryParams.join("&")
+        searchTerm && queryParams.push(`search=${searchTerm}`);
+        currentPage && queryParams.push(`page=${currentPage}`);
+        pageSize && queryParams.push(`page_size=${pageSize}`);
 
-        return `/search/lectures/${queryString}`
+        return `/search/lectures/${queryParams.length > 0 ? "?" + queryParams.join("&") : ''}`;
       },
       transformResponse: (response: Lectures) => response.results,
     }),
