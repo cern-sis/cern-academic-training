@@ -1,11 +1,10 @@
 import { FileFilled } from "@ant-design/icons";
-import { Col, Empty, Layout, List, Pagination, Row, Typography } from "antd";
-import React, { useEffect, useState } from "react";
+import { Col, Empty, Layout, List, Pagination, Row, Typography, Card } from "antd";
+import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { getApiRoot } from "../api/api_root";
 import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR, LOADING_ICON } from '../features';
 import { useAppSelector } from "../hooks";
-
+import { useSearchLecturesQuery } from "../services/lectures.service";
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -14,30 +13,12 @@ const PAGE_SIZE = 10;
 
 function Results() {
   const searchTerm = useAppSelector((state) => state.search.searchTerm);
-  const [lectures, setLectures] = useState([]);
+  
   const [total, setTotal] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [pageSize, setPageSize] = useState<number>(PAGE_SIZE);
-  const [loading, setLoading] = useState(false);
 
-  const searchLectures = async () => {
-    try {
-      setLoading(true);
-      const searchQuery = searchTerm
-        ? `?search=${searchTerm}&page=${currentPage}&page_size=${pageSize}`
-        : `?page=${currentPage}&page_size=${pageSize}`;
-      const results = await getApiRoot().get(`/search/lectures/${searchQuery}`);
-      setLoading(false);
-      setLectures(results.data.results);
-      setTotal(results.data.count);
-    } catch (error) {
-      setLectures([]);
-    }
-  };
-
-  useEffect(() => {
-    searchLectures();
-  }, [searchTerm, currentPage, pageSize]);
+  const { data, error, isLoading } = useSearchLecturesQuery({searchTerm, currentPage, pageSize});
 
   const onChange = (page: number) => {
     setCurrentPage(page);
@@ -46,6 +27,10 @@ function Results() {
   const onPageSizeChage = (current: number, size: number) => {
     setPageSize(size);
   };
+
+  useEffect(() => {
+    data?.length && setTotal(data?.length);
+  }, [data]);
 
   window.scrollTo(0, 0);
 
@@ -72,9 +57,11 @@ function Results() {
               </Row>
 
               <Row justify="space-between" gutter={[12, 1]}>
-                {loading ? (
+                {error ? (
+                  <Card>Oh no, there was an error</Card>
+                ) : isLoading ? (
                   <LOADING_ICON />
-                ) : !lectures.length ? (
+                ) : !data?.length ? (
                   <Col span={24} className="no-results">
                     <Empty className="empty" description="No results found" />{" "}
                     <Title level={4}>Not what you are looking for?</Title>
@@ -90,7 +77,7 @@ function Results() {
                     </div>
                   </Col>
                 ) : (
-                  lectures.map((lecture: any) => {
+                  data?.map((lecture: any) => {
                     return (
                       <List key={lecture.lecture_id}>
                         <Link
