@@ -14,31 +14,17 @@ import {
 
 import { getPhotos } from "./photos/carousel/photos";
 import { PlayCircleOutlined } from "@ant-design/icons";
-import { getApiRoot } from "./api/api_root";
 import { AT_HEADER, CERN_FOOTER, CERN_TOOLBAR, LOADING_ICON, SUGGESTION_BOX } from "./features";
+import { useSearchLecturesQuery } from "./services/lectures.service";
+import { Lecture } from "./types/lecture";
 
 const { Content } = Layout;
 const { Title } = Typography;
 
 function App() {
   const photos = getPhotos();
-  const [lectures, setLectures] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const fetchLectures = async () => {
-    try {
-      setLoading(true);
-      const results = await getApiRoot().get(`/search/lectures/?page_size=12`);
-      setLoading(false);
-      setLectures(results.data.results);
-    } catch (error) {
-      setLectures([]);
-    }
-  };
-
-  useEffect(() => {
-    fetchLectures();
-  }, []);
+  const { data, error, isLoading } = useSearchLecturesQuery({searchTerm: undefined, currentPage: undefined, pageSize: 12});
+  error && console.error(error)
 
   window.scrollTo(0, 0);
 
@@ -90,10 +76,10 @@ function App() {
             </div>
             .{" "}
             <Row justify="center" gutter={[16, 42]}>
-              {loading ? (
+              {isLoading ? (
                 <LOADING_ICON />
               ) : (
-                lectures.map((lecture: any) => {
+                data?.map((lecture: any) => {
                   return (
                     <Col
                       key={lecture.lecture_id}
