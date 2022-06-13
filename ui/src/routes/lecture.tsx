@@ -24,8 +24,10 @@ function filenameFromUrl(url: string) {
 function Lecture() {
   const [lecture, setLecture] = useState<any>({});
   const [loading, setLoading] = useState(false);
-  const [year, setYear] = useState("");
-  const [indicoId, setIndicoId] = useState("");
+  let detail = {
+    year: "",
+    indicoId: "",
+  };
   let { lectureId } = useParams();
 
   const fetchLecture = async () => {
@@ -34,23 +36,19 @@ function Lecture() {
       const results = await getApiRoot().get(`/lectures/${lectureId}/`);
       setLecture(results.data);
 
-      const year = await results.data.date.slice(0, 4);
-      setYear(year);
-
-      const indicoId = await results.data.event_details.split("/")[4];
-      setIndicoId(indicoId);
+      const year = results.data.date.slice(0, 4);
+      const indicoId = results.data.event_details.split("/")[4];
+      console.log({ detail: [year, indicoId] });
 
       setLoading(false);
-      return;
+      return { detail: [year, indicoId] };
     } catch (error) {
-      return error;
+      setLecture({});
     }
   };
 
   useEffect(() => {
-    (async () => {
-      await fetchLecture();
-    })();
+    fetchLecture();
   }, [lectureId]);
 
   window.scrollTo(0, 0);
@@ -79,7 +77,7 @@ function Lecture() {
               <div className="video-window">
                 <iframe
                   title={lecture.title}
-                  src={`https://mediastream.cern.ch/MediaArchive/Video/Public2/weblecture-player/index.html?year=${year}&lecture=${indicoId}`}
+                  src={`https://mediastream.cern.ch/MediaArchive/Video/Public2/weblecture-player/index.html?year=${detail.year}&lecture=${detail.indicoId}`}
                   allowFullScreen
                   scrolling="no"
                   frameBorder="0"

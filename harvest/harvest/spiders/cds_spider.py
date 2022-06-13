@@ -261,7 +261,7 @@ class CDSSpider(Spider):
 
         file_types = selector.xpath(
             './/datafield[@tag=856]/subfield[@code="x"]/text()'
-        ).get()
+        ).getall()
 
         record = strip_empty_values(record)
         record["type"] = []
