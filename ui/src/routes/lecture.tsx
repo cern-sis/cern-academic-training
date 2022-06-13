@@ -24,7 +24,23 @@ function filenameFromUrl(url: string) {
 function Lecture() {
   const [lecture, setLecture] = useState<any>({});
   const [loading, setLoading] = useState(false);
-  const [details, setDetails] = useState({ year: "", indicoId: "" });
+
+  const isVideo = lecture.type && lecture.type.includes("video");
+  const isSlide = lecture.type && lecture.type.includes("slide");
+
+  let year = null;
+  let indicoId = null;
+
+  if (isSlide && lecture.date) {
+    year = lecture.date.slice(0, 4);
+  }
+
+  if (lecture.event_details) {
+    indicoId = lecture.event_details.split("/")[4];
+    console.log(indicoId);
+  }
+
+  const displaySlidePlayer = year && indicoId;
 
   let { lectureId } = useParams();
 
@@ -33,15 +49,8 @@ function Lecture() {
       setLoading(true);
       const results = await getApiRoot().get(`/lectures/${lectureId}/`);
       setLecture(results.data);
-
-      const details = {
-        year: results.data.date.slice(0, 4),
-        indicoId: results.data.event_details.split("/")[4],
-      };
-      setDetails({ year: details.year, indicoId: details.indicoId });
-
       setLoading(false);
-      return { ...details };
+      return;
     } catch (error) {
       setLecture({});
     }
@@ -64,7 +73,7 @@ function Lecture() {
           <LOADING_ICON />
         ) : (
           <div className="video-box">
-            {lecture.type && lecture.type.includes("video") && (
+            {isVideo && (
               <div className="video-window">
                 <iframe
                   title={lecture.title}
@@ -73,11 +82,11 @@ function Lecture() {
                 />
               </div>
             )}
-            {lecture.type && lecture.type.includes("slide") && (
+            {displaySlidePlayer && (
               <div className="video-window">
                 <iframe
                   title={lecture.title}
-                  src={`https://mediastream.cern.ch/MediaArchive/Video/Public2/weblecture-player/index.html?year=${details.year}&lecture=${details.indicoId}`}
+                  src={`https://mediastream.cern.ch/MediaArchive/Video/Public2/weblecture-player/index.html?year=${year}&lecture=${indicoId}`}
                   allowFullScreen
                   scrolling="no"
                   frameBorder="0"
