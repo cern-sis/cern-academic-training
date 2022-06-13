@@ -24,9 +24,9 @@ function filenameFromUrl(url: string) {
 function Lecture() {
   const [lecture, setLecture] = useState<any>({});
   const [loading, setLoading] = useState(false);
-  let detail = {
-    year: "",
-    indicoId: "",
+  const detail = {
+    year: lecture.date.slice(0, 4),
+    indicoId: lecture.event_details.split("/")[4],
   };
   let { lectureId } = useParams();
 
@@ -35,13 +35,8 @@ function Lecture() {
       setLoading(true);
       const results = await getApiRoot().get(`/lectures/${lectureId}/`);
       setLecture(results.data);
-
-      const year = results.data.date.slice(0, 4);
-      const indicoId = results.data.event_details.split("/")[4];
-      console.log({ detail: [year, indicoId] });
-
       setLoading(false);
-      return { detail: [year, indicoId] };
+      return detail;
     } catch (error) {
       setLecture({});
     }
