@@ -24,10 +24,8 @@ function filenameFromUrl(url: string) {
 function Lecture() {
   const [lecture, setLecture] = useState<any>({});
   const [loading, setLoading] = useState(false);
-  let detail = {
-    year: "",
-    indicoId: "",
-  };
+  const [details, setDetails] = useState({ year: "", indicoId: "" });
+
   let { lectureId } = useParams();
 
   const fetchLecture = async () => {
@@ -36,12 +34,14 @@ function Lecture() {
       const results = await getApiRoot().get(`/lectures/${lectureId}/`);
       setLecture(results.data);
 
-      const year = results.data.date.slice(0, 4);
-      const indicoId = results.data.event_details.split("/")[4];
-      console.log({ detail: [year, indicoId] });
+      const details = {
+        year: results.data.date.slice(0, 4),
+        indicoId: results.data.event_details.split("/")[4],
+      };
+      setDetails({ year: details.year, indicoId: details.indicoId });
 
       setLoading(false);
-      return { detail: [year, indicoId] };
+      return { ...details };
     } catch (error) {
       setLecture({});
     }
@@ -77,7 +77,7 @@ function Lecture() {
               <div className="video-window">
                 <iframe
                   title={lecture.title}
-                  src={`https://mediastream.cern.ch/MediaArchive/Video/Public2/weblecture-player/index.html?year=${detail.year}&lecture=${detail.indicoId}`}
+                  src={`https://mediastream.cern.ch/MediaArchive/Video/Public2/weblecture-player/index.html?year=${details.year}&lecture=${details.indicoId}`}
                   allowFullScreen
                   scrolling="no"
                   frameBorder="0"
