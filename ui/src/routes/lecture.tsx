@@ -35,7 +35,7 @@ function Lecture() {
     year = lecture.date.slice(0, 4);
   }
 
-  if (lecture.event_details) {
+  if (isSlide && lecture.event_details) {
     indicoId = lecture.event_details.split("/")[4];
     console.log(indicoId);
   }
