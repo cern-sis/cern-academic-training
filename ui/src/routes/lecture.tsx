@@ -37,7 +37,6 @@ function Lecture() {
 
   if (isSlide && lecture.event_details) {
     indicoId = lecture.event_details.split("/")[4];
-    console.log(indicoId);
   }
 
   const displaySlidePlayer = year && indicoId;
@@ -50,7 +49,6 @@ function Lecture() {
       const results = await getApiRoot().get(`/lectures/${lectureId}/`);
       setLecture(results.data);
       setLoading(false);
-      return;
     } catch (error) {
       setLecture({});
     }
