@@ -57,6 +57,9 @@ class LectureDocumentView(DocumentViewSet):
 
     ordering_fields = {
         "lecture_id": None,
+        "title": None,
+        "date": None,
+        "score": None,
     }
 
     ordering = (

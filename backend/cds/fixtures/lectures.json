@@ -458,5 +458,29 @@
       "sponsor": "",
       "keywords": []
     }
+  },
+  {
+    "model": "cds.lecture",
+    "pk": 21,
+    "fields": {
+      "lecture_id": 2806255,
+      "title": "Living Well Within Planetary Limits: is it possible? And what can physicists contribute?",
+      "date": "2022-04-05",
+      "corporate_author": "CERN. Geneva",
+      "abstract": "This seminar will report on several streams of research within the “Living Well Within Limits” project. The Living Well Within Limits project investigates the energy requirements of well-being, from quantitative, participatory and provisioning systems perspectives. In this presentation, I will communicate individual and cross-cutting findings from the project, and their implications for the physics research community. In particular, I will share our most recent results on the international distribution of energy footprints, results on the national characteristics that enable high well-being at low energy use, and modelling of universal well-being energy requirements. I will show that achieving low-carbon well-being, both from the beneficiary (“consumer”) and supply-chain (producer) sides, involves strong distributional and political elements. Simply researching this area from a technical or economic lens is insufficient to draw out the reasons for poor outcomes and most promising avenues for positive change. I will connect this research to potential contributions from the physics community to some of the most important challenges humanity has ever faced.",
+      "series": "Academic Training Lecture Regular Programme - 2021-2022",
+      "speaker": "Steinberger, Julia K.",
+      "speaker_details": "Institute of Geography & Sustainability, Faculty of Geosciences & Environment, University of Lausanne",
+      "event_details": "https://indico.cern.ch/event/1049148/",
+      "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/WebLectures/2022/1049148/1049148-presentation-cover.jpg",
+      "language": "eng",
+      "subject_category": "Academic Training Lecture Regular Programme",
+      "lecture_note": "2022-04-05T14:00:00Z",
+      "imprint": "2022-04-05 - 1:01:21",
+      "license": "CERN 2022",
+      "sponsor": "Urs Wiedermann",
+      "keywords": [],
+      "type": ["slide"]
+    }
   }
 ]

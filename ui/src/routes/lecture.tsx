@@ -24,14 +24,31 @@ function filenameFromUrl(url: string) {
 function Lecture() {
   const [lecture, setLecture] = useState<any>({});
   const [loading, setLoading] = useState(false);
+
+  const isVideo = lecture.type && lecture.type.includes("video");
+  const isSlide = lecture.type && lecture.type.includes("slide");
+
+  let year = null;
+  let indicoId = null;
+
+  if (isSlide && lecture.date) {
+    year = lecture.date.slice(0, 4);
+  }
+
+  if (isSlide && lecture.event_details) {
+    indicoId = lecture.event_details.split("/")[4];
+  }
+
+  const displaySlidePlayer = year && indicoId;
+
   let { lectureId } = useParams();
 
   const fetchLecture = async () => {
     try {
       setLoading(true);
       const results = await getApiRoot().get(`/lectures/${lectureId}/`);
-      setLoading(false);
       setLecture(results.data);
+      setLoading(false);
     } catch (error) {
       setLecture({});
     }
@@ -54,12 +71,23 @@ function Lecture() {
           <LOADING_ICON />
         ) : (
           <div className="video-box">
-            {lecture.type && lecture.type.includes("video") && (
+            {isVideo && (
               <div className="video-window">
                 <iframe
                   title={lecture.title}
                   src={`https://cds.cern.ch/video/${lectureId}?showTitle=true`}
                   allowFullScreen
+                />
+              </div>
+            )}
+            {displaySlidePlayer && (
+              <div className="video-window">
+                <iframe
+                  title={lecture.title}
+                  src={`https://mediastream.cern.ch/MediaArchive/Video/Public2/weblecture-player/index.html?year=${year}&lecture=${indicoId}`}
+                  allowFullScreen
+                  scrolling="no"
+                  frameBorder="0"
                 />
               </div>
             )}
