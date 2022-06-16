@@ -44,7 +44,6 @@ class LectureDocumentView(DocumentViewSet):
         "title": {
             "boost": 5,
         },
-        "lecture_id": {"boost": 1},
         "abstract": {"boost": 1},
         "type": {"boost": 5},
         "keywords": {"boost": 6},
