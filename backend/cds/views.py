@@ -44,7 +44,6 @@ class LectureDocumentView(DocumentViewSet):
         "title": {
             "boost": 5,
         },
-        "date": {"boost": 1},
         "lecture_id": {"boost": 1},
         "abstract": {"boost": 1},
         "type": {"boost": 5},
@@ -59,6 +58,9 @@ class LectureDocumentView(DocumentViewSet):
         "lecture_id": None,
         "type": None,
         "keywords": None,
+        "series": None,
+        "sponsor": None,
+        "speaker": None
     }
 
     ordering_fields = {
