@@ -42,11 +42,17 @@ class LectureDocumentView(DocumentViewSet):
 
     search_fields = {
         "title": {
-            "boost": 4,
+            "boost": 5,
         },
-        "abstract": {"boost": 2},
+        "date": {"boost": 1},
+        "lecture_id": {"boost": 1},
+        "abstract": {"boost": 1},
         "type": {"boost": 5},
-        "keywords": {"boost": 5},
+        "keywords": {"boost": 6},
+        "sponsor": {"boost": 10},
+        "speaker": {"boost": 10},
+        "series": {"boost": 10},
+        "subject_category": {"boost": 10},
     }
 
     filter_fields = {
