@@ -63,6 +63,20 @@
   font: normal normal normal 16px/28px Open Sans;
 }
 
+#atc-header .ant-menu > .help-tooltip {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right !important;
+  position: relative;
+  cursor: pointer;
+  z-index: 4;
+  top: -29px;
+  width: 40px;
+  height: 40px;
+}
+
 #atc-header .ant-menu > .search-icon {
   float: right !important;
   position: relative;
@@ -188,6 +202,10 @@
   color: transparent;
 }
 
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: transparent;
+}
+
 .ant-click-animating-node,
 [ant-click-animating-without-extra-node="true"]::after {
   box-shadow: none;
@@ -240,6 +258,9 @@
   }
   .header.active {
     height: 200px;
+  }
+  #atc-header .ant-menu > .help-tooltip {
+    top: -60px;
   }
 }
 
