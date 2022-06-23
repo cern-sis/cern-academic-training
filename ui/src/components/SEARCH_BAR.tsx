@@ -55,7 +55,6 @@ function SEARCH_BAR() {
           color="#0033a0"
           key="#0033a0"
           placement="bottomRight"
-          data-html="true"
           title={<span style={{ whiteSpace: "pre-line" }}>{helpText}</span>}
           arrowPointAtCenter
         >
