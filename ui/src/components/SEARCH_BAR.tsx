@@ -10,8 +10,16 @@ function SEARCH_BAR() {
   const searchValue = searchQuery.get("search") || "";
   let [searchTerm, setSearchTerm] = useState(searchValue);
 
-  let helpText =
-    'How to search:\n\nYou can search by title, speaker, date, abstract, sponsor and keywords.\n\nThe default search operator is AND.\n\nIf you want to search by multiple words, use OR between words, ex. "particle OR physics".\n\nFor exact match, use double quotes, like this: "dark matter"';
+  var helpText = `
+
+    You can search by title, speaker, date, abstract, sponsor and keywords.
+    
+    The default search operator is AND.
+    
+    If you want to search by multiple words, use OR between words, ex. particle OR physics
+    
+    For exact match, use double quotes, like this: "dark matter"
+    `;
 
   const onKeyDown = (ev: any) => {
     const searchValue = ev.target.value;
@@ -55,7 +63,12 @@ function SEARCH_BAR() {
           color="#0033a0"
           key="#0033a0"
           placement="bottomRight"
-          title={<span style={{ whiteSpace: "pre-line" }}>{helpText}</span>}
+          title={
+            <span style={{ whiteSpace: "pre-line" }}>
+              <strong>How to search:</strong>
+              {helpText}
+            </span>
+          }
           arrowPointAtCenter
         >
           <QuestionCircleOutlined />
