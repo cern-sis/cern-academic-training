@@ -1,0 +1,24 @@
+.sort-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sort-container .ant-select.ant-select-single.ant-select-show-arrow {
+  width: 160px;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.ant-select-dropdown.ant-select-dropdown-placement-bottomLeft {
+  position: static;
+}
+
+@media only screen and (max-width: 576px) {
+  .sort-container {
+    justify-content: flex-start;
+    margin-bottom: 1rem;;
+  }
+
+  .sort-container .ant-select.ant-select-single.ant-select-show-arrow {
+    width: 90%;
+  }
+}
