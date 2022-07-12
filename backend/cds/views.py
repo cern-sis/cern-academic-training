@@ -2,7 +2,7 @@ from django_elasticsearch_dsl_drf.filter_backends import (
     DefaultOrderingFilterBackend,
     FilteringFilterBackend,
     OrderingFilterBackend,
-    SearchFilterBackend,
+    SimpleQueryStringSearchFilterBackend
 )
 from django_elasticsearch_dsl_drf.viewsets import DocumentViewSet
 from rest_framework import viewsets
@@ -33,24 +33,11 @@ class LectureDocumentView(DocumentViewSet):
         FilteringFilterBackend,
         OrderingFilterBackend,
         DefaultOrderingFilterBackend,
-        SearchFilterBackend,
+        SimpleQueryStringSearchFilterBackend,
     ]
 
     simple_query_string_options = {
         "default_operator": "and",
-    }
-
-    search_fields = {
-        "title": {
-            "boost": 5,
-        },
-        "abstract": {"boost": 1},
-        "type": {"boost": 5},
-        "keywords": {"boost": 6},
-        "sponsor": {"boost": 10},
-        "speaker": {"boost": 10},
-        "series": {"boost": 10},
-        "subject_category": {"boost": 10},
     }
 
     filter_fields = {
@@ -59,7 +46,8 @@ class LectureDocumentView(DocumentViewSet):
         "keywords": None,
         "series": None,
         "sponsor": None,
-        "speaker": None
+        "speaker": None,
+        "subject_category": None,
     }
 
     ordering_fields = {
@@ -67,6 +55,19 @@ class LectureDocumentView(DocumentViewSet):
         "title": None,
         "date": None,
         "score": None,
+        "series": None,
+        "subject_category": None
+    }
+
+    simple_query_string_search_fields = {
+        "title": {"boost": 5},
+        "abstract": {"boost": 1},
+        "type": {"boost": 5},
+        "keywords": {"boost": 6},
+        "sponsor": {"boost": 10},
+        "speaker": {"boost": 10},
+        "series": {"boost": 10},
+        "subject_category": {"boost": 10},
     }
 
     ordering = (
