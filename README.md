@@ -33,13 +33,13 @@ $ yarn install
 ## Backend
 
 ```bash
-$ cd backend
-$ docker-compose up -d
-$ poetry install
-$ python manage.py migrate
-$ python manage.py runserver
-$ python  manage.py opensearch index rebuild
-$ python  manage.py opensearch document index
+cd backend
+docker-compose up -d
+poetry install
+python manage.py migrate
+python manage.py opensearch index rebuild
+python manage.py opensearch document index
+python manage.py runserver
 ```
 
 ### Add users
@@ -53,9 +53,9 @@ $ python manage.py loaddata users.json
 ### Add data
 
 ```bash
-$ python manage.py loaddata lectures.json
-$ python  manage.py opensearch index rebuild
-$ python  manage.py opensearch document index
+python manage.py loaddata lectures.json
+python manage.py opensearch index rebuild
+python manage.py opensearch document index
 ```
 
 ## UI
@@ -69,6 +69,7 @@ $ yarn start
 # Harvest CDS
 
 ## Harvest a specific date
+
 ```bash
 
 $ cd harvest
@@ -76,8 +77,8 @@ $ poetry install
 $ scrapy crawl CDS -a "from_date=2021-09-01"
 ```
 
-
 ## Harvest all lectures up until now
+
 ```bash
 
 $ cd harvest

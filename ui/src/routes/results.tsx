@@ -27,7 +27,7 @@ function Results() {
     try {
       setLoading(true);
       const searchQuery = searchValue
-        ? `?search=${searchValue}&page=${currentPage}&page_size=${pageSize}`
+        ? `?search_simple_query_string=${searchValue}&page=${currentPage}&page_size=${pageSize}`
         : `?page=${currentPage}&page_size=${pageSize}`;
       const results = await getApiRoot().get(`/search/lectures/${searchQuery}`);
       setLoading(false);
