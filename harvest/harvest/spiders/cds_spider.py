@@ -157,7 +157,8 @@ class CDSSpider(Spider):
 
         record["type"] = []
 
-        record["lecture_id"] = selector.xpath(".//controlfield[@tag=001]/text()").get()
+        record["lecture_id"] = selector.xpath(
+            ".//controlfield[@tag=001]/text()").get()
 
         record["title"] = selector.xpath(
             './/datafield[@tag=245]/subfield[@code="a"]/text()'
@@ -192,11 +193,12 @@ class CDSSpider(Spider):
             record["series"] = "{} - {}".format(series_name, series_year)
 
         record["speaker"] = selector.xpath(
-            './/datafield[@tag=700]/subfield[@code="a"]/text()'
+            './/datafield[@tag=700]/subfield[@code="a"]/text() | .//datafield[@tag=100]/subfield[@code="a"]/text()'
         ).get()
 
         record["speaker_details"] = (
-            selector.xpath('//datafield[@tag=700]/subfield[@code="u"]/text()').get()
+            selector.xpath(
+                '//datafield[@tag=700]/subfield[@code="u"]/text() | //datafield[@tag=100]/subfield[@code="u"]/text()').get()
             or ""
         )
 
@@ -253,7 +255,8 @@ class CDSSpider(Spider):
         if license_name and license_year:
             record["license"] = "{} {}".format(license_name, license_year)
 
-        LOGGER.debug("Parsed record", lecture_id=record["lecture_id"], lecture=record)
+        LOGGER.debug("Parsed record",
+                     lecture_id=record["lecture_id"], lecture=record)
 
         data = cds2hep_marc.do(create_record(original))
 
