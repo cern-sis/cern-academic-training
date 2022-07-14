@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { Input, Button, Menu } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
+import { Input, Button, Menu, Tooltip } from "antd";
+import { SearchOutlined, QuestionCircleOutlined } from "@ant-design/icons";
 import "./AT_HEADER.css";
 
 function SEARCH_BAR() {
@@ -9,6 +9,17 @@ function SEARCH_BAR() {
   const [searchQuery] = useSearchParams();
   const searchValue = searchQuery.get("search") || "";
   let [searchTerm, setSearchTerm] = useState(searchValue);
+
+  var helpText = `
+
+    You can search by title, speaker, series, abstract, sponsor and keywords.
+    
+    The default search operator is AND.
+    
+    If you want to search by multiple words, use | between words, ex. particle | physics
+    
+    For exact match, use double quotes, like this: "dark matter"
+    `;
 
   const onKeyDown = (ev: any) => {
     const searchValue = ev.target.value;
@@ -31,6 +42,7 @@ function SEARCH_BAR() {
           defaultValue={searchValue || ""}
         />
       </Menu.Item>
+
       <Menu.Item className="search-icon" key="icon">
         <Button
           className="search-button"
@@ -45,6 +57,22 @@ function SEARCH_BAR() {
         >
           <SearchOutlined style={{ color: "white", fontSize: "200%" }} />
         </Button>
+      </Menu.Item>
+      <Menu.Item className="help-tooltip" key="help">
+        <Tooltip
+          color="#0033a0"
+          key="#0033a0"
+          placement="bottomRight"
+          title={
+            <span style={{ whiteSpace: "pre-line" }}>
+              <strong>How to search:</strong>
+              {helpText}
+            </span>
+          }
+          arrowPointAtCenter
+        >
+          <QuestionCircleOutlined />
+        </Tooltip>
       </Menu.Item>
     </Menu>
   );
