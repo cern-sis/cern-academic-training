@@ -12,11 +12,11 @@ function SEARCH_BAR() {
 
   var helpText = `
 
-    You can search by title, speaker, date, abstract, sponsor and keywords.
+    You can search by title, speaker, series, abstract, sponsor and keywords.
     
     The default search operator is AND.
     
-    If you want to search by multiple words, use OR between words, ex. particle OR physics
+    If you want to search by multiple words, use | between words, ex. particle | physics
     
     For exact match, use double quotes, like this: "dark matter"
     `;
