@@ -43,6 +43,7 @@ def test_cds_translation_record_with_files(shared_datadir):
         "title": "Introduction to particle accelerators",
         "series": "CERN Academic Training Lecture - 45",
         "language": "eng",
+        "speaker": "Bonaudi, Franco",
         "subject_category": "Accelerators and Storage Rings",
         "license": "CERN 1969",
         "type": ["file"],
@@ -59,6 +60,7 @@ def test_cds_translation_record_without_files_and_videos(shared_datadir):
     expected_data = {
         "lecture_id": "318608",
         "title": "Non-destructive material testing",
+        "speaker": "De Meester, P",
         "date": "1973-01-01",
         "series": "CERN Academic Training Lecture - 67",
         "language": "eng",
@@ -122,6 +124,16 @@ def test_pipelines(mock_send_to_backend):
     )
 
     assert results == expected_data
+
+
+def test_speaker(shared_datadir):
+    content = (shared_datadir / "record_for_testing_speakers.xml").read_text()
+    expected_data = {"speaker": "Ellis, Jonathan Richard", "speaker_details": "CERN"}
+    node = Selector(text=content, type="xml")
+    node.remove_namespaces()
+    record = CDSSpider(from_date="2022-05-01").parse_item(node, content)
+    assert record["speaker"] == expected_data["speaker"]
+    assert record["speaker_details"] == expected_data["speaker_details"]
 
 
 @pytest.mark.vcr()
