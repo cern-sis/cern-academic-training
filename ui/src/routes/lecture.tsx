@@ -40,6 +40,7 @@ function Lecture() {
   }
 
   const displaySlidePlayer = year && indicoId;
+  const displayVideo = isVideo && !displaySlidePlayer;
 
   let { lectureId } = useParams();
 
@@ -71,7 +72,7 @@ function Lecture() {
           <LOADING_ICON />
         ) : (
           <div className="video-box">
-            {isVideo && (
+            {displayVideo && (
               <div className="video-window">
                 <iframe
                   title={lecture.title}
