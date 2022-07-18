@@ -15,8 +15,8 @@ interactions:
     response:
       body:
         string:
-          '{"results":[{"_type":"Conference","id":"1052073","title":"REMOTE -
-          Distributed computing - A historical perspective - The Network(s)","description":"<p
+          '{"url":"https:\/\/indico.cern.ch\/export\/event\/1052073.json","count":1,"ts":1658135430,"additionalInfo":{},"results":[{"_type":"Conference","id":"1052073","title":"REMOTE
+          - Distributed computing - A historical perspective - The Network(s)","description":"<p
           class=\"MsoPlainText\"><strong>NB!! Internet father <a href=\"https:\/\/internethalloffame.org\/inductees\/vint-cerf\">Vint
           Cerf<\/a> and Web inventor <a href=\"https:\/\/www.w3.org\/People\/Berners-Lee\/\">Sir
           Tim Berners-Lee<\/a> will honour us with their presence!<\/strong><\/p>\r\n\r\n<p
@@ -50,7 +50,7 @@ interactions:
           preview","description":"","modified_dt":"2022-05-17T10:10:46.325797+00:00","type":"link","is_protected":false,"link_url":"https:\/\/video-player-sec.web.cern.ch?mode=contribution&year=2022&id=1052073&origin=ceph"}],"default_folder":true,"is_protected":false}],"chairs":[{"_type":"ConferenceChair","_fossil":"conferenceChairMetadata","first_name":"Ben","last_name":"Segal","fullName":"Segal,
           Ben","id":"955622","affiliation":"","emailHash":"0d9ad4b39de12eb2860aea67e94aa054","db_id":955622,"person_id":5995773}],"material":[],"keywords":["Internet","Vint
           Cerf","Tim Berners-Lee"],"organizer":"Maria Dimou \/ 141 Participants on Zoom
-          and 53 on Webcast","visibility":{"id":"","name":"Everywhere"}}],"url":"https:\/\/indico.cern.ch\/export\/event\/1052073.json","additionalInfo":{},"count":1,"ts":1654097827,"_type":"HTTPAPIResult"}'
+          and 53 on Webcast","visibility":{"id":"","name":"Everywhere"}}],"_type":"HTTPAPIResult"}'
       headers:
         Cache-control:
           - private
@@ -59,14 +59,122 @@ interactions:
         Content-Type:
           - application/json
         Date:
-          - Wed, 01 Jun 2022 15:40:48 GMT
+          - Mon, 18 Jul 2022 09:15:13 GMT
         Server:
           - nginx/1.22.0
         Set-Cookie:
-          - indico-worker=indico-cern-wk3; path=/; HttpOnly
+          - indico-worker=indico-cern-wk2; path=/; HttpOnly
         X-Indico-URL:
           - /export/event/1052073.json
       status:
         code: 200
         message: OK
+  - request:
+      body:
+        '{"lecture_id": 2782493, "title": "REMOTE: Federated Data Architectures",
+        "date": "2021-09-29", "corporate_author": "CERN. Geneva", "abstract": "This
+        is a description.", "series": "Academic Training Lecture Regular Programme -
+        2021-2022", "speaker": "de Jong, Michiel", "event_details": "https://indico.cern.ch/event/1052073",
+        "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-10-percent.jpg",
+        "language": "eng", "subject_category": "Academic Training Lecture Regular Programme",
+        "lecture_note": "2021-09-29T11:00:00", "imprint": "2021-09-29 - 1:10:36", "license":
+        "CERN 2021", "sponsor": "Maria Dimou", "keywords": ["Internet", "Vint Cerf",
+        "Tim Berners-Lee"]}'
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "740"
+        Content-Type:
+          - application/json
+        User-Agent:
+          - python-requests/2.26.0
+      method: PUT
+      uri: http://localhost:8000/api/v1/lectures/2782493/
+    response:
+      body:
+        string: '{"detail":"Not found."}'
+      headers:
+        Allow:
+          - GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+        Content-Length:
+          - "23"
+        Content-Type:
+          - application/json
+        Date:
+          - Mon, 18 Jul 2022 09:15:13 GMT
+        Referrer-Policy:
+          - same-origin
+        Server:
+          - WSGIServer/0.2 CPython/3.8.9
+        Vary:
+          - Accept, Origin
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - DENY
+      status:
+        code: 404
+        message: Not Found
+  - request:
+      body:
+        '{"lecture_id": 2782493, "title": "REMOTE: Federated Data Architectures",
+        "date": "2021-09-29", "corporate_author": "CERN. Geneva", "abstract": "This
+        is a description.", "series": "Academic Training Lecture Regular Programme -
+        2021-2022", "speaker": "de Jong, Michiel", "event_details": "https://indico.cern.ch/event/1052073",
+        "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-10-percent.jpg",
+        "language": "eng", "subject_category": "Academic Training Lecture Regular Programme",
+        "lecture_note": "2021-09-29T11:00:00", "imprint": "2021-09-29 - 1:10:36", "license":
+        "CERN 2021", "sponsor": "Maria Dimou", "keywords": ["Internet", "Vint Cerf",
+        "Tim Berners-Lee"]}'
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "740"
+        Content-Type:
+          - application/json
+        User-Agent:
+          - python-requests/2.26.0
+      method: POST
+      uri: http://localhost:8000/api/v1/lectures/
+    response:
+      body:
+        string:
+          '{"id":1,"lecture_id":2782493,"title":"REMOTE: Federated Data Architectures","date":"2021-09-29","corporate_author":"CERN.
+          Geneva","abstract":"This is a description.","series":"Academic Training Lecture
+          Regular Programme - 2021-2022","speaker":"de Jong, Michiel","speaker_details":"","event_details":"https://indico.cern.ch/event/1052073","thumbnail_picture":"http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-10-percent.jpg","language":"eng","subject_category":"Academic
+          Training Lecture Regular Programme","lecture_note":"2021-09-29T11:00:00Z","imprint":"2021-09-29
+          - 1:10:36","license":"CERN 2021","sponsor":"Maria Dimou","keywords":["Internet","Vint
+          Cerf","Tim Berners-Lee"],"files":[],"type":[]}'
+      headers:
+        Allow:
+          - GET, POST, HEAD, OPTIONS
+        Content-Length:
+          - "757"
+        Content-Type:
+          - application/json
+        Date:
+          - Mon, 18 Jul 2022 09:15:13 GMT
+        Referrer-Policy:
+          - same-origin
+        Server:
+          - WSGIServer/0.2 CPython/3.8.9
+        Vary:
+          - Accept, Origin
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - DENY
+      status:
+        code: 201
+        message: Created
 version: 1

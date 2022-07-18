@@ -75,8 +75,7 @@ def test_cds_translation_record_without_files_and_videos(shared_datadir):
 
 
 @pytest.mark.vcr()
-@mock.patch("harvest.pipelines.requests.post")
-def test_pipelines(mock_send_to_backend):
+def test_pipelines():
     pipeline = HarvestPipeline()
     item = {
         "lecture_id": "2782493",
@@ -117,12 +116,6 @@ def test_pipelines(mock_send_to_backend):
 
     results = pipeline.process_item(item, "CDS")
 
-    mock_send_to_backend.assert_called_with(
-        "http://localhost:8000/api/v1/lectures/",
-        json=expected_data,
-        headers={"Authorization": "Token CHANGE_ME"},
-    )
-
     assert results == expected_data
 
 
@@ -138,7 +131,10 @@ def test_speaker(shared_datadir):
 
 @pytest.mark.vcr()
 @mock.patch("harvest.pipelines.requests.post")
-def xtest_the_whole_process(mock_send_to_backend, shared_datadir):
+@mock.patch("harvest.pipelines.requests.put")
+def xtest_the_whole_process(
+    mock_send_to_backend_post, mock_send_to_backend_put, shared_datadir
+):
     content = (shared_datadir / "expected_records.json").read_text()
     expected_records = json.loads(content)
     results = []
