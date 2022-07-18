@@ -53,11 +53,21 @@ class HarvestPipeline:
         if lecture_id:
             try:
                 record["lecture_id"] = int(lecture_id)
-                response = requests.post(
-                    "{}/api/v1/lectures/".format(host),
+                response = requests.put(
+                    "{}/api/v1/lectures/{}/".format(host, lecture_id),
                     json=record,
                     headers={"Authorization": "Token {}".format(token)},
                 )
+                # if it doesn't exist, create it
+                if response.status_code == 404:
+                    LOGGER.info(
+                        "Record does not exist, creating it.", lecture_id=lecture_id
+                    )
+                    response = requests.post(
+                        "{}/api/v1/lectures/".format(host),
+                        json=record,
+                        headers={"Authorization": "Token {}".format(token)},
+                    )
                 response.raise_for_status()
             except Exception:
                 LOGGER.error(
