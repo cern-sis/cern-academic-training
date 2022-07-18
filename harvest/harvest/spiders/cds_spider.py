@@ -14,7 +14,8 @@ LOGGER = structlog.get_logger()
 CDS_LAST_RUN_PATH = "/data/cds_last_run"
 DATE_FORMAT = "%Y-%m-%d"
 SIZE = 100
-CDS_URL = "https://cds.cern.ch/search?ln=en&cc=Academic+Training+Lectures&action_search=Search&op1=a&m1=a&p1=&f1=&c=Academic+Training+Lectures&c=&sf=&so=d&rm=&rg={size}&sc=0&of=xm&p={query}&f={field}"
+CDS_URL = "https://cds.cern.ch/search?ln=en&cc=Academic+Training+Lectures&action_search=Search&op1=a&m1=a&p1=&f1=&c=Academic+Training+Lectures&c=&sf=&so=d&rm=&rg={size}&sc=0&of=xm&p={query}"
+CDS_URL_WITH_FIELD = "https://cds.cern.ch/search?ln=en&cc=Academic+Training+Lectures&action_search=Search&op1=a&m1=a&p1=&f1=&c=Academic+Training+Lectures&c=&sf=&so=d&rm=&rg={size}&sc=0&of=xm&p={query}&f={field}"
 SEARCH_FIELD = "260__c"
 
 ALL_YEARS = [
@@ -113,8 +114,10 @@ class CDSSpider(Spider):
     def __gen_all_years(self):
         return (year for year in ALL_YEARS)
 
-    def __build_cds_url(self, query, field=SEARCH_FIELD, size=SIZE):
-        return CDS_URL.format(query=query, size=size, field=field)
+    def __build_cds_url(self, query, field=None, size=SIZE):
+        if field is not None:
+            return CDS_URL_WITH_FIELD.format(query=query, size=size, field=field)
+        return CDS_URL.format(query=query, size=size)
 
     def start_requests(self):
         if self.migrate_all:
@@ -157,8 +160,7 @@ class CDSSpider(Spider):
 
         record["type"] = []
 
-        record["lecture_id"] = selector.xpath(
-            ".//controlfield[@tag=001]/text()").get()
+        record["lecture_id"] = selector.xpath(".//controlfield[@tag=001]/text()").get()
 
         record["title"] = selector.xpath(
             './/datafield[@tag=245]/subfield[@code="a"]/text()'
@@ -198,7 +200,8 @@ class CDSSpider(Spider):
 
         record["speaker_details"] = (
             selector.xpath(
-                '//datafield[@tag=700]/subfield[@code="u"]/text() | //datafield[@tag=100]/subfield[@code="u"]/text()').get()
+                '//datafield[@tag=700]/subfield[@code="u"]/text() | //datafield[@tag=100]/subfield[@code="u"]/text()'
+            ).get()
             or ""
         )
 
@@ -255,8 +258,7 @@ class CDSSpider(Spider):
         if license_name and license_year:
             record["license"] = "{} {}".format(license_name, license_year)
 
-        LOGGER.debug("Parsed record",
-                     lecture_id=record["lecture_id"], lecture=record)
+        LOGGER.debug("Parsed record", lecture_id=record["lecture_id"], lecture=record)
 
         data = cds2hep_marc.do(create_record(original))
 
