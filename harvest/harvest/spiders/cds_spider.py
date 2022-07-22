@@ -195,14 +195,14 @@ class CDSSpider(Spider):
             record["series"] = "{} - {}".format(series_name, series_year)
 
         record["speaker"] = selector.xpath(
-            './/datafield[@tag=700]/subfield[@code="a"]/text() | .//datafield[@tag=100]/subfield[@code="a"]/text()'
-        ).get()
+            './/datafield[@tag=100]/subfield[@code="a"]/text() | .//datafield[@tag=700]/subfield[@code="a"]/text()'
+        ).getall() or []
 
         record["speaker_details"] = (
             selector.xpath(
-                '//datafield[@tag=700]/subfield[@code="u"]/text() | //datafield[@tag=100]/subfield[@code="u"]/text()'
-            ).get()
-            or ""
+                '//datafield[@tag=100]/subfield[@code="u"]/text() | //datafield[@tag=700]/subfield[@code="u"]/text()'
+            ).getall()
+            or []
         )
 
         record["event_details"] = selector.xpath(

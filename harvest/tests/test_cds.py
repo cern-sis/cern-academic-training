@@ -14,20 +14,21 @@ from harvest.spiders.cds_spider import CDSSpider
 def test_cds_translation_record_with_video(shared_datadir):
     content = (shared_datadir / "record.xml").read_text()
     expected_data = {
-        "lecture_id": "2782493",
-        "title": "REMOTE: Federated Data Architectures",
-        "date": "2021-09-29",
-        "corporate_author": "CERN. Geneva",
         "abstract": "This is a description.",
-        "series": "Academic Training Lecture Regular Programme - 2021-2022",
-        "speaker": "de Jong, Michiel",
+        "corporate_author": "CERN. Geneva",
+        "date": "2021-09-29",
         "event_details": "https://indico.cern.ch/event/1049663/",
-        "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-10-percent.jpg",
-        "language": "eng",
-        "subject_category": "Academic Training Lecture Regular Programme",
-        "lecture_note": "2021-09-29T11:00:00",
         "imprint": "2021-09-29 - 1:10:36",
+        "language": "eng",
+        "lecture_id": "2782493",
+        "lecture_note": "2021-09-29T11:00:00",
         "license": "CERN 2021",
+        "series": "Academic Training Lecture Regular Programme - 2021-2022",
+        "speaker": ["Ellis, Jonathan Richard", "de Jong, Michiel", "Dimou, Maria"],
+        "speaker_details": ["CERN"],
+        "subject_category": "Academic Training Lecture Regular Programme",
+        "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-10-percent.jpg",
+        "title": "REMOTE: Federated Data Architectures",
         "type": ["video"],
     }
     node = Selector(text=content, type="xml")
@@ -43,7 +44,7 @@ def test_cds_translation_record_with_files(shared_datadir):
         "title": "Introduction to particle accelerators",
         "series": "CERN Academic Training Lecture - 45",
         "language": "eng",
-        "speaker": "Bonaudi, Franco",
+        "speaker": ["Bonaudi, Franco"],
         "subject_category": "Accelerators and Storage Rings",
         "license": "CERN 1969",
         "type": ["file"],
@@ -60,7 +61,7 @@ def test_cds_translation_record_without_files_and_videos(shared_datadir):
     expected_data = {
         "lecture_id": "318608",
         "title": "Non-destructive material testing",
-        "speaker": "De Meester, P",
+        "speaker": ["De Meester, P"],
         "date": "1973-01-01",
         "series": "CERN Academic Training Lecture - 67",
         "language": "eng",
@@ -117,16 +118,6 @@ def test_pipelines():
     results = pipeline.process_item(item, "CDS")
 
     assert results == expected_data
-
-
-def test_speaker(shared_datadir):
-    content = (shared_datadir / "record_for_testing_speakers.xml").read_text()
-    expected_data = {"speaker": "Ellis, Jonathan Richard", "speaker_details": "CERN"}
-    node = Selector(text=content, type="xml")
-    node.remove_namespaces()
-    record = CDSSpider(from_date="2022-05-01").parse_item(node, content)
-    assert record["speaker"] == expected_data["speaker"]
-    assert record["speaker_details"] == expected_data["speaker_details"]
 
 
 @pytest.mark.vcr()
