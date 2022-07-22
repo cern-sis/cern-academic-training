@@ -12,6 +12,7 @@ class LectureDocument(Document):
     names_analyzer = analyzer(
         "name_analyzer",
         tokenizer="letter",
+        filter=[ "lowercase"],
     )
 
     class Index:

@@ -1,16 +1,7 @@
 import "./App.css";
 import React, { Fragment, useEffect, useState } from "react";
 import { Link as LinkRouter } from "react-router-dom";
-import {
-  Layout,
-  Row,
-  Col,
-  Card,
-  Carousel,
-  Typography,
-  Divider,
-  Spin,
-} from "antd";
+import { Layout, Row, Col, Card, Carousel, Typography, Divider } from "antd";
 
 import { getPhotos } from "./photos/carousel/photos";
 import AT_HEADER from "./components/AT_HEADER";
@@ -42,6 +33,10 @@ function App() {
 
   useEffect(() => {
     fetchLectures();
+  }, []);
+
+  useEffect(() => {
+    document.title = "Home | CERN Academic Training";
   }, []);
 
   window.scrollTo(0, 0);

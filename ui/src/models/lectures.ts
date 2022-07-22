@@ -11,8 +11,8 @@ export interface Lecture {
   lecture_note: string;
   license: string;
   series: string;
-  speaker: string;
-  speaker_details: string;
+  speaker: string[];
+  speaker_details: string[];
   sponsor: string;
   subject_category: string;
   thumbnail_picture: string;

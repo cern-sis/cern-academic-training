@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link as LinkRouter } from "react-router-dom";
 import { Typography, Menu } from "antd";
 import "./AT_HEADER.css";
@@ -6,15 +6,9 @@ import "./AT_HEADER.css";
 const { Title } = Typography;
 
 function MENU() {
-  const [current, setCurrent] = useState("icon");
-
-  const handleClick = (e: any) => {
-    setCurrent(e.key);
-  };
 
   return (
     <Menu
-      onClick={handleClick}
       mode="horizontal"
       className="menu"
       overflowedIndicator={false}

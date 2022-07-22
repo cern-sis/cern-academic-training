@@ -8,8 +8,9 @@ import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
 import LOADING_ICON from "../components/LOADING_ICON";
+import ErrorMessage from "../components/ErrorMessage";
 import { getApiRoot } from "../api/api_root";
-
+import { Lecture as LectureModel } from "../models/lectures";
 const { Content } = Layout;
 const { Title } = Typography;
 
@@ -21,12 +22,14 @@ function filenameFromUrl(url: string) {
   }
 }
 
-function Lecture() {
-  const [lecture, setLecture] = useState<any>({});
-  const [loading, setLoading] = useState(false);
-
+function LectureItem({ lecture }: { lecture: LectureModel }) {
   const isVideo = lecture.type && lecture.type.includes("video");
   const isSlide = lecture.type && lecture.type.includes("slide");
+  const lectureId = lecture.lecture_id;
+
+  useEffect(() => {
+    document.title = `${lecture.title} | CERN Academic Training`;
+  }, [lecture]);
 
   let year = null;
   let indicoId = null;
@@ -41,6 +44,100 @@ function Lecture() {
 
   const displaySlidePlayer = year && indicoId;
   const displayVideo = isVideo && !displaySlidePlayer;
+  return (
+   <>
+      {displayVideo && (
+        <div className="video-window">
+          <iframe
+            title={lecture.title}
+            src={`https://cds.cern.ch/video/${lectureId}?showTitle=true`}
+            allowFullScreen
+          />
+        </div>
+      )}
+      {displaySlidePlayer && (
+        <div className="video-window">
+          <iframe
+            title={lecture.title}
+            src={`https://mediastream.cern.ch/MediaArchive/Video/Public2/weblecture-player/index.html?year=${year}&lecture=${indicoId}`}
+            allowFullScreen
+            scrolling="no"
+            frameBorder="0"
+          />
+        </div>
+      )}
+      <div className="lecture-details">
+        <Title level={3}>
+          {lecture.speaker && lecture.speaker.join(" · ")}
+        </Title>
+        <Title>{lecture.title}</Title>
+        <div className="details">
+          {lecture.date && lecture.date !== "" && (
+            <Title level={4} id="date">
+              {lecture.date}
+            </Title>
+          )}
+          {lecture.event_details && lecture.event_details !== "" && (
+            <a href={lecture.event_details} id="event">
+              Event details (Indico)
+            </a>
+          )}
+          {lecture.sponsor && lecture.sponsor !== "" && (
+            <Title level={4} id="sponsor">
+              Sponsored by <strong>{lecture.sponsor}</strong>
+            </Title>
+          )}
+        </div>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: lecture.abstract,
+          }}
+        />
+        <Outlet />
+
+        {lecture.files && lecture.files.length > 0 && (
+          <div className="files">
+            <div className="download-title">
+              <DownloadOutlined
+                style={{
+                  color: "#fff",
+                  fontSize: "250%",
+                }}
+              />
+              <Title level={2}>Download files:</Title>
+            </div>
+
+            <List
+              itemLayout="horizontal"
+              dataSource={lecture.files || []}
+              split={false}
+              renderItem={(item: string, index) => {
+                return (
+                  <List.Item key={index}>
+                    {index + 1}.{" "}
+                    <a
+                      title={item}
+                      rel="noreferrer"
+                      target="_blank"
+                      href={item}
+                    >
+                      {filenameFromUrl(item)}
+                    </a>
+                  </List.Item>
+                );
+              }}
+            />
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
+
+function Lecture() {
+  const [lecture, setLecture] = useState<any>({});
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   let { lectureId } = useParams();
 
@@ -50,14 +147,22 @@ function Lecture() {
       const results = await getApiRoot().get(`/lectures/${lectureId}/`);
       setLecture(results.data);
       setLoading(false);
+      setLoading(false);
     } catch (error) {
       setLecture({});
+      setLoading(false);
+      setError(true);
     }
   };
 
   useEffect(() => {
     fetchLecture();
+    // eslint-disable-next-line
   }, [lectureId]);
+
+  useEffect(() => {
+    document.title = `Lecture | CERN Academic Training`;
+  }, [lectureId, error]);
 
   window.scrollTo(0, 0);
 
@@ -68,94 +173,11 @@ function Lecture() {
       <AT_HEADER />
 
       <Content className="atc-content lecture-page">
-        {loading ? (
-          <LOADING_ICON />
-        ) : (
-          <div className="video-box">
-            {displayVideo && (
-              <div className="video-window">
-                <iframe
-                  title={lecture.title}
-                  src={`https://cds.cern.ch/video/${lectureId}?showTitle=true`}
-                  allowFullScreen
-                />
-              </div>
-            )}
-            {displaySlidePlayer && (
-              <div className="video-window">
-                <iframe
-                  title={lecture.title}
-                  src={`https://mediastream.cern.ch/MediaArchive/Video/Public2/weblecture-player/index.html?year=${year}&lecture=${indicoId}`}
-                  allowFullScreen
-                  scrolling="no"
-                  frameBorder="0"
-                />
-              </div>
-            )}
-            <div className="lecture-details">
-              <Title level={3}>{lecture.speaker}</Title>
-              <Title>{lecture.title}</Title>
-              <div className="details">
-                {lecture.date && lecture.date !== "" && (
-                  <Title level={4} id="date">
-                    {lecture.date}
-                  </Title>
-                )}
-                {lecture.event_details && lecture.event_details !== "" && (
-                  <a href={lecture.event_details} id="event">
-                    Event details (Indico)
-                  </a>
-                )}
-                {lecture.sponsor && lecture.sponsor !== "" && (
-                  <Title level={4} id="sponsor">
-                    Sponsored by <strong>{lecture.sponsor}</strong>
-                  </Title>
-                )}
-              </div>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: lecture.abstract,
-                }}
-              />
-              <Outlet />
-
-              {lecture.files && lecture.files.length > 0 && (
-                <div className="files">
-                  <div className="download-title">
-                    <DownloadOutlined
-                      style={{
-                        color: "#fff",
-                        fontSize: "250%",
-                      }}
-                    />
-                    <Title level={2}>Download files:</Title>
-                  </div>
-
-                  <List
-                    itemLayout="horizontal"
-                    dataSource={lecture.files || []}
-                    split={false}
-                    renderItem={(item: string, index) => {
-                      return (
-                        <List.Item key={index}>
-                          {index + 1}.{" "}
-                          <a
-                            title={item}
-                            rel="noreferrer"
-                            target="_blank"
-                            href={item}
-                          >
-                            {filenameFromUrl(item)}
-                          </a>
-                        </List.Item>
-                      );
-                    }}
-                  />
-                </div>
-              )}
-            </div>
-          </div>
-        )}
+      <div className="video-box">
+        {loading && <LOADING_ICON />}
+        {lecture && <LectureItem lecture={lecture} />}
+        {error && <ErrorMessage/>}
+        </div>
       </Content>
 
       <CERN_FOOTER />

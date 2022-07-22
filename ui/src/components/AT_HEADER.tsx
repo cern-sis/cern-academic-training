@@ -11,7 +11,6 @@ const { Header } = Layout;
 const { Title } = Typography;
 
 function AT_HEADER() {
-  const [toggleMenu, setToggleMenu] = useState(false);
   const [state, setState] = useState({ collapsed: true });
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [header, setHeader] = useState(false);
@@ -76,9 +75,9 @@ function AT_HEADER() {
             className="header-menu"
             key="header-menu"
           >
-            {(toggleMenu || screenWidth > 992) && <MENU />}
+            {screenWidth > 992 && <MENU />}
 
-            {(toggleMenu || screenWidth <= 992) && (
+            {screenWidth <= 992 && (
               <Drawer
                 placement="right"
                 width="300px"

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { Input, Button, Menu, Tooltip } from "antd";
 import { SearchOutlined, QuestionCircleOutlined } from "@ant-design/icons";
@@ -8,23 +8,22 @@ function SEARCH_BAR() {
   let navigate = useNavigate();
   const [searchQuery] = useSearchParams();
   const searchValue = searchQuery.get("search") || "";
-  let [searchTerm, setSearchTerm] = useState(searchValue);
+
 
   var helpText = `
 
     You can search by title, speaker, abstract, sponsor and keywords.
-    
+
     The default search operator is AND.
-    
+
     For an OR search, use | between words, ex. particle | physics
-    
+
     For exact match, use double quotes, like this: "dark matter"
     `;
 
   const onKeyDown = (ev: any) => {
     const searchValue = ev.target.value;
     if (searchValue) {
-      setSearchTerm(ev.target.value);
       navigate(`/search/?search=${ev.target.value}&page=1`);
     } else {
       navigate("/search");

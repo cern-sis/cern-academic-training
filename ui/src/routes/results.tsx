@@ -42,7 +42,7 @@ const ResultItem = ({ lecture }: { lecture: Lecture }) => (
         </Col>
 
         <Col className="list-content">
-          <Title level={4}>{lecture.speaker}</Title>
+          <Title level={4}>{lecture.speaker.join(' · ')}</Title>
           <Title level={2}>{lecture.title}</Title>
           <Title level={3}>{lecture.date}</Title>
         </Col>
@@ -92,6 +92,11 @@ function Results() {
   useEffect(() => {
     searchLectures();
   }, [searchLectures]);
+
+
+  useEffect(() => {
+    document.title = 'Search | CERN Academic Training'
+  });
 
   window.scrollTo(0, 0);
 

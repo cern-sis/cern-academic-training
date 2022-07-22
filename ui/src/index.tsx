@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import "antd/dist/antd.css";
 import App from "./App";
-import Lectures from "./routes/lectures";
 import Lecture from "./routes/lecture";
 import Results from "./routes/results";
 import reportWebVitals from "./reportWebVitals";
@@ -15,16 +14,6 @@ render(
       <Route path="/" element={<App />} />
       <Route path="search" element={<Results />} />
       <Route path="about-us" element={<AboutUs />} />
-      <Route path="lectures" element={<Lectures />}>
-        <Route
-          index
-          element={
-            <main style={{ padding: "1rem" }}>
-              <p>Select a lecture</p>
-            </main>
-          }
-        />
-      </Route>
       <Route path="lectures/:lectureId" element={<Lecture />} />
       <Route
         path="*"
