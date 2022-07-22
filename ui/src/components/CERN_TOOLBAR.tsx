@@ -6,11 +6,7 @@ const { Header } = Layout;
 const { Title } = Typography;
 
 function CERN_TOOLBAR() {
-  const [current, setCurrent] = React.useState("icon");
 
-  const handleClick = (e: any) => {
-    setCurrent(e.key);
-  };
 
   return (
     <Header id="cern-toolbar" aria-label="CERN Toolbar">
@@ -22,7 +18,6 @@ function CERN_TOOLBAR() {
       </Title>
 
       <Menu
-        onClick={handleClick}
         mode="horizontal"
         defaultSelectedKeys={["footer"]}
       >

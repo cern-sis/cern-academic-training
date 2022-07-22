@@ -10,6 +10,12 @@
     <datafield tag="041" ind1=" " ind2=" ">
         <subfield code="a">eng</subfield>
     </datafield>
+        <datafield tag="100" ind1=" " ind2=" ">
+        <subfield code="a">Ellis, Jonathan Richard</subfield>
+        <subfield code="u">CERN</subfield>
+        <subfield code="0">AUTHOR|(CDS)2108556</subfield>
+        <subfield code="9">#BEARD#</subfield>
+    </datafield>
     <datafield tag="110" ind1=" " ind2=" ">
         <subfield code="a">CERN. Geneva</subfield>
     </datafield>
@@ -63,6 +69,10 @@
     </datafield>
     <datafield tag="700" ind1=" " ind2=" ">
         <subfield code="a">de Jong, Michiel</subfield>
+        <subfield code="e">speaker</subfield>
+    </datafield>
+    <datafield tag="700" ind1=" " ind2=" ">
+        <subfield code="a">Dimou, Maria</subfield>
         <subfield code="e">speaker</subfield>
     </datafield>
     <datafield tag="856" ind1="4" ind2=" ">

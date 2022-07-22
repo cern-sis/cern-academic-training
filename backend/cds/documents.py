@@ -12,6 +12,7 @@ class LectureDocument(Document):
     names_analyzer = analyzer(
         "name_analyzer",
         tokenizer="letter",
+        filter=[ "lowercase"],
     )
 
     class Index:
@@ -24,7 +25,8 @@ class LectureDocument(Document):
     keywords = KeywordField(multi=True)
     series = TextField()
     sponsor = TextField(analyzer=names_analyzer)
-    speaker = TextField(analyzer=names_analyzer)
+    speaker = TextField(analyzer=names_analyzer, multi=True)
+    speaker_details = TextField(multi=True)
     subject_category = TextField()
     class Django:
         model = Lecture
@@ -34,7 +36,6 @@ class LectureDocument(Document):
             "date",
             "corporate_author",
             "abstract",
-            "speaker_details",
             "event_details",
             "thumbnail_picture",
             "language",
