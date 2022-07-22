@@ -10,7 +10,7 @@ import { getApiRoot } from "../api/api_root";
 import LOADING_ICON from "../components/LOADING_ICON";
 import { SortMenu } from "../components/SortMenu";
 import { Lectures, Lecture, SortOptions } from "../models/lectures";
-import { pluralizeUnlessSingle } from '../common/utils';
+import { pluralizeUnlessSingle } from "../common/utils";
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -42,7 +42,7 @@ const ResultItem = ({ lecture }: { lecture: Lecture }) => (
         </Col>
 
         <Col className="list-content">
-          <Title level={4}>{lecture.speaker.join(' · ')}</Title>
+          <Title level={4}>{lecture.speaker.join(" · ")}</Title>
           <Title level={2}>{lecture.title}</Title>
           <Title level={3}>{lecture.date}</Title>
         </Col>
@@ -93,9 +93,8 @@ function Results() {
     searchLectures();
   }, [searchLectures]);
 
-
   useEffect(() => {
-    document.title = 'Search | CERN Academic Training'
+    document.title = "Search | CERN Academic Training";
   });
 
   window.scrollTo(0, 0);
@@ -113,7 +112,7 @@ function Results() {
               <Row justify="space-between">
                 <Col xs={24} sm={12} md={12} lg={12}>
                   <Title>
-                    {total} Search {pluralizeUnlessSingle('result', total)}:{" "}
+                    {total} Search {pluralizeUnlessSingle("result", total)}:{" "}
                     {searchValue ? `"${searchValue}"` : null}{" "}
                   </Title>
                 </Col>
@@ -148,7 +147,6 @@ function Results() {
                 )}
                 <Outlet />
               </Row>
-
               <Row justify="end">
                 <Col>
                   <Pagination

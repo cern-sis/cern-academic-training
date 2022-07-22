@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Outlet } from "react-router-dom";
 
-import { List, Layout, Typography } from "antd";
+import { List, Row, Layout, Typography } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
 
 import AT_HEADER from "../components/AT_HEADER";
@@ -45,7 +45,7 @@ function LectureItem({ lecture }: { lecture: LectureModel }) {
   const displaySlidePlayer = year && indicoId;
   const displayVideo = isVideo && !displaySlidePlayer;
   return (
-   <>
+    <>
       {displayVideo && (
         <div className="video-window">
           <iframe
@@ -173,10 +173,12 @@ function Lecture() {
       <AT_HEADER />
 
       <Content className="atc-content lecture-page">
-      <div className="video-box">
-        {loading && <LOADING_ICON />}
-        {lecture && <LectureItem lecture={lecture} />}
-        {error && <ErrorMessage/>}
+        <div className="video-box">
+          <Row justify="space-between" gutter={[12, 1]}>
+            {loading && <LOADING_ICON />}
+          </Row>
+          {lecture && <LectureItem lecture={lecture} />}
+          {error && <ErrorMessage />}
         </div>
       </Content>
 
