@@ -268,6 +268,10 @@ class CDSSpider(Spider):
             './/datafield[@tag=856]/subfield[@code="x"]/text()'
         ).getall()
 
+        multi_file_types = selector.xpath(
+            './/datafield[@tag=852]/subfield[@code="8"]/text()'
+        ).getall()
+
         record = strip_empty_values(record)
         record["type"] = []
         if "files" in record:
@@ -278,6 +282,9 @@ class CDSSpider(Spider):
 
         if "thumbnail_picture" in record:
             record["type"].append("video")
+
+        if multi_file_types:
+            record["type"].append("multivideo")
 
         if not record["type"]:
             record.pop("type", None)
