@@ -10,6 +10,7 @@ import {
   Typography,
   Divider,
 } from "antd";
+import { Helmet } from "react-helmet";
 
 import "../App.css";
 import { getMembers } from "../photos/members/members";
@@ -19,6 +20,7 @@ import { getReveal } from "../events/reveal";
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
+import { HOME_PAGE_METATAG_CONTENT } from "../common/constants";
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -35,6 +37,9 @@ function AboutUs() {
 
   return (
     <Layout className="layout">
+      <Helmet>
+        <meta name="description" content={HOME_PAGE_METATAG_CONTENT} />
+      </Helmet>
       <CERN_TOOLBAR />
 
       <AT_HEADER />

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Outlet } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import { List, Row, Layout, Typography } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
@@ -44,8 +45,34 @@ function LectureItem({ lecture }: { lecture: LectureModel }) {
 
   const displaySlidePlayer = year && indicoId;
   const displayVideo = isVideo && !displaySlidePlayer;
+
+  const get_trimmed_abstract = () => {
+    const trimmed_abstract = lecture.abstract
+      .replace(/(<([^>]+)>)/gi, "")
+      .substring(0, 161);
+    if (trimmed_abstract.slice(-1) === " ") {
+      return trimmed_abstract.substring(0, 160);
+    } else {
+      return trimmed_abstract.substring(0, trimmed_abstract.lastIndexOf(" "));
+    }
+  };
+
+  const get_description = () => {
+    if (lecture.abstract.length > 160) {
+      return get_trimmed_abstract();
+    } else {
+      return lecture.abstract;
+    }
+  };
+
+  const meta_tag_description = lecture.abstract ? get_description() : "";
+
   return (
     <>
+      <Helmet>
+        <title>{lecture.title}</title>
+        <meta name="description" content={meta_tag_description} />
+      </Helmet>
       {displayVideo && (
         <div className="video-window">
           <iframe
