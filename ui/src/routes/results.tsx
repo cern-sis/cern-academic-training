@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Outlet, Link, useSearchParams } from "react-router-dom";
 import { Layout, Pagination, List, Typography, Row, Col, Empty } from "antd";
 import { FileFilled } from "@ant-design/icons";
+import { Helmet } from "react-helmet";
 
 import CERN_TOOLBAR from "../components/CERN_TOOLBAR";
 import AT_HEADER from "../components/AT_HEADER";
@@ -11,6 +12,7 @@ import LOADING_ICON from "../components/LOADING_ICON";
 import { SortMenu } from "../components/SortMenu";
 import { Lectures, Lecture, SortOptions } from "../models/lectures";
 import { pluralizeUnlessSingle } from "../common/utils";
+import { HOME_PAGE_METATAG_CONTENT } from "../common/constants";
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -101,6 +103,9 @@ function Results() {
 
   return (
     <Layout className="layout">
+      <Helmet>
+        <meta name="description" content={HOME_PAGE_METATAG_CONTENT} />
+      </Helmet>
       <CERN_TOOLBAR />
 
       <AT_HEADER />

@@ -2,6 +2,7 @@ import "./App.css";
 import React, { Fragment, useEffect, useState } from "react";
 import { Link as LinkRouter } from "react-router-dom";
 import { Layout, Row, Col, Card, Carousel, Typography, Divider } from "antd";
+import { Helmet } from "react-helmet";
 
 import { getPhotos } from "./photos/carousel/photos";
 import AT_HEADER from "./components/AT_HEADER";
@@ -11,6 +12,7 @@ import { PlayCircleOutlined } from "@ant-design/icons";
 import { getApiRoot } from "./api/api_root";
 import SUGGESTION_BOX from "./components/SUGGESTION_BOX";
 import LOADING_ICON from "./components/LOADING_ICON";
+import { HOME_PAGE_METATAG_CONTENT } from "./common/constants";
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -48,6 +50,9 @@ function App() {
       <AT_HEADER />
 
       <Content id="atc-content">
+        <Helmet>
+          <meta name="description" content={HOME_PAGE_METATAG_CONTENT} />
+        </Helmet>
         <Fragment>
           <div className="carousel-container">
             <div className="photo-carousel" data-preload>
