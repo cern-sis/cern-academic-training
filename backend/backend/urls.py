@@ -31,4 +31,5 @@ urlpatterns = [
     path("api/v1/", include(router.urls)),
     # re_path(r"^search/", include(router_search.urls)),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework_auth")),
+    path('', include('django_prometheus.urls')),
 ]
