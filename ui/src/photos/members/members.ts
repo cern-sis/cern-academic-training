@@ -42,8 +42,8 @@ const members = [
 
   {
     key: 6,
-    name: "Maria ARSUAGA RIOS",
-    profile: baseUrl + "Maria-Arsuaga-Rios.png",
+    name: "To be appointed",
+    profile: baseUrl + "",
     position: "",
     department: "IT",
   },
@@ -74,8 +74,8 @@ const members = [
 
   {
     key: 10,
-    name: "Evangelia DIMOVASILI",
-    profile: baseUrl + "Evangelia_Dimovasili.jpeg",
+    name: "To be appointed",
+    profile: baseUrl + "",
     position: "",
     department: "EP",
   },
