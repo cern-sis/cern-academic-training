@@ -10,6 +10,7 @@ import {
   Typography,
   Divider,
 } from "antd";
+import { UserOutlined } from "@ant-design/icons";
 import { Helmet } from "react-helmet";
 
 import "../App.css";
@@ -248,10 +249,7 @@ function AboutUs() {
                             <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              src={
-                                require("../photos/members/profiles/Maria-Arsuaga-Rios.png")
-                                  .default
-                              }
+                              icon={<UserOutlined />}
                             />
                             <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
@@ -350,10 +348,7 @@ function AboutUs() {
                             <Title level={3}>{member.department}</Title>
                             <Avatar
                               size={120}
-                              src={
-                                require("../photos/members/profiles/Evangelia_Dimovasili.jpeg")
-                                  .default
-                              }
+                              icon={<UserOutlined />}
                             />
                             <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
