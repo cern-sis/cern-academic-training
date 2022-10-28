@@ -9,7 +9,7 @@ on:
 jobs:
   Test_Backend:
     name: Test Backend
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     defaults:
       run:
         working-directory: backend
@@ -61,7 +61,7 @@ jobs:
 
   Test_Harvest:
     name: Test Harvest
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     defaults:
       run:
         working-directory: harvest
@@ -95,7 +95,7 @@ jobs:
 
   backend_build:
     name: Backend build
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     needs: [Test_Harvest, Test_Backend]
     if: ${{ github.event_name == 'push' }}
     steps:
@@ -135,7 +135,7 @@ jobs:
 
   ui_build:
     name: UI build
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     needs: [Test_Harvest, Test_Backend]
     if: ${{ github.event_name == 'push' }}
     steps:
@@ -175,7 +175,7 @@ jobs:
 
   harvest_build:
     name: Harvest build
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     needs: [Test_Harvest, Test_Backend]
     if: ${{ github.event_name == 'push' }}
     steps:
