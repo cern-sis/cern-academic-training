@@ -652,10 +652,21 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[[package]]
+name = "whitenoise"
+version = "6.2.0"
+description = "Radically simplified static file serving for WSGI applications"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+brotli = ["Brotli"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "47f5d61895e0d46aeaf30027ca5ed534bc6e01f71dfaeb246f012a4f4335b724"
+content-hash = "2966a08339167ee3da199f5b3349cc389c6150892cf2b5d7ce9d9db858492b24"
 
 [metadata.files]
 appnope = [
@@ -902,4 +913,8 @@ wcwidth = [
 webencodings = [
     {file = "webencodings-0.5.1-py2.py3-none-any.whl", hash = "sha256:a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78"},
     {file = "webencodings-0.5.1.tar.gz", hash = "sha256:b36a1c245f2d304965eb4e0a82848379241dc04b865afcc4aab16748587e1923"},
+]
+whitenoise = [
+    {file = "whitenoise-6.2.0-py3-none-any.whl", hash = "sha256:8e9c600a5c18bd17655ef668ad55b5edf6c24ce9bdca5bf607649ca4b1e8e2c2"},
+    {file = "whitenoise-6.2.0.tar.gz", hash = "sha256:8fa943c6d4cd9e27673b70c21a07b0aa120873901e099cd46cab40f7cc96d567"},
 ]

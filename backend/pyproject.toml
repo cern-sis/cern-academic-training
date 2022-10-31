@@ -19,6 +19,7 @@ django-elasticsearch-dsl-drf = {git = "https://github.com/cern-sis/django-elasti
 ipython = "^8.0.1"
 bleach = "~=4.1.0"
 django-prometheus = "^2.2.0"
+whitenoise = "^6.2.0"
 
 [tool.poetry.dev-dependencies]
 
