@@ -23,7 +23,7 @@ RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poet
 
 COPY poetry.lock pyproject.toml ./
 RUN pip install --upgrade pip &&  \
-    pip install --upgrade setuptools && \
+    pip install --force-reinstall setuptools && \
     poetry install --no-root
 
 COPY . /code/

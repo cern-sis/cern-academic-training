@@ -21,6 +21,7 @@ bleach = "~=4.1.0"
 django-prometheus = "^2.2.0"
 whitenoise = "^6.2.0"
 psycopg2-binary = "^2.9.5"
+setuptools = "^65.5.0"
 
 [tool.poetry.dev-dependencies]
 
