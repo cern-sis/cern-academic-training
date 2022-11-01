@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.9
 
 WORKDIR /code
 
@@ -22,7 +22,9 @@ RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poet
  && poetry --version
 
 COPY poetry.lock pyproject.toml ./
-RUN pip install --upgrade pip && poetry install --no-root
+RUN pip install --upgrade pip &&  \
+    pip install --upgrade setuptools && \
+    poetry install --no-root
 
 COPY . /code/
 
