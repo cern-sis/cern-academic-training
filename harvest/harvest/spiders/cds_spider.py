@@ -194,9 +194,12 @@ class CDSSpider(Spider):
         if series_name and series_year:
             record["series"] = "{} - {}".format(series_name, series_year)
 
-        record["speaker"] = selector.xpath(
-            './/datafield[@tag=100]/subfield[@code="a"]/text() | .//datafield[@tag=700]/subfield[@code="a"]/text()'
-        ).getall() or []
+        record["speaker"] = (
+            selector.xpath(
+                './/datafield[@tag=100]/subfield[@code="a"]/text() | .//datafield[@tag=700]/subfield[@code="a"]/text()'
+            ).getall()
+            or []
+        )
 
         record["speaker_details"] = (
             selector.xpath(
@@ -268,17 +271,35 @@ class CDSSpider(Spider):
             './/datafield[@tag=856]/subfield[@code="x"]/text()'
         ).getall()
 
+        video_parts = selector.xpath(
+            './/datafield[@tag=300]/subfield[@code="2"]/text()'
+        ).getall()
+
+        record["video_parts"] = []
+        if video_parts:
+            all_files = selector.xpath(
+                './/datafield[@tag=856]/subfield[@code="u"]/text()'
+            ).getall()
+            for video in all_files:
+                if ".mp4" in video:
+                    for part in video_parts:
+                        if part in video:
+                            record["video_parts"].append(video)
+
         record = strip_empty_values(record)
-        record["type"] = []
+        record["types"] = []
         if "files" in record:
-            record["type"].append("file")
+            record["types"].append("file")
 
         if "mp4slides" in file_types:
-            record["type"].append("slide")
+            record["types"].append("slide")
 
         if "thumbnail_picture" in record:
-            record["type"].append("video")
+            record["types"].append("video")
 
-        if not record["type"]:
-            record.pop("type", None)
+        if "video_parts" in record:
+            record["types"].append("parts")
+
+        if not record["types"]:
+            record.pop("types", None)
         return record

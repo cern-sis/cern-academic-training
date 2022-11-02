@@ -1,0 +1,1447 @@
+<record>
+  <controlfield tag="001">341905</controlfield>
+  <controlfield tag="003">SzGeCERN</controlfield>
+  <controlfield tag="005">20221020160135.0</controlfield>
+  <datafield tag="024" ind1="8" ind2=" ">
+    <subfield code="a">oai:cds.cern.ch:341905</subfield>
+    <subfield code="p">cerncds:FULLTEXT</subfield>
+    <subfield code="p">forSciTalks</subfield>
+    <subfield code="p">cerncds:TALK</subfield>
+    <subfield code="p">cerncds:TALK:FULLTEXT</subfield>
+    <subfield code="p">cerncds:MEMORIAV</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">0265709CERCER</subfield>
+  </datafield>
+  <datafield tag="041" ind1=" " ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="a">eng</subfield>
+  </datafield>
+  <datafield tag="088" ind1=" " ind2=" ">
+    <subfield code="9">CERN-VIDEO-C-348-A</subfield>
+  </datafield>
+  <datafield tag="088" ind1=" " ind2=" ">
+    <subfield code="9">CERN-VIDEO-C-348-B</subfield>
+  </datafield>
+  <datafield tag="088" ind1=" " ind2=" ">
+    <subfield code="9">CERN-VIDEO-C-348-C</subfield>
+  </datafield>
+  <datafield tag="088" ind1=" " ind2=" ">
+    <subfield code="9">CERN-VIDEO-C-348-D</subfield>
+  </datafield>
+  <datafield tag="088" ind1=" " ind2=" ">
+    <subfield code="9">CERN-VIDEO-C-348-E</subfield>
+  </datafield>
+  <datafield tag="100" ind1=" " ind2=" ">
+    <subfield code="a">Mangano, Michelangelo L</subfield>
+  </datafield>
+  <datafield tag="245" ind1=" " ind2=" ">
+    <subfield code="a">Quantum chromodynamics</subfield>
+  </datafield>
+  <datafield tag="250" ind1=" " ind2=" ">
+    <subfield code="a">1997 ed.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">Geneva</subfield>
+    <subfield code="b">CERN</subfield>
+    <subfield code="c">1997</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="c">1997</subfield>
+  </datafield>
+  <datafield tag="269" ind1=" " ind2=" ">
+    <subfield code="c">1997-11-24</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">Transparencies ; 1 DVD video ; 2 VHS video</subfield>
+    <subfield code="b">720x576 4/3, 25</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="2">CERN-VIDEO-C-348-C</subfield>
+    <subfield code="8">C</subfield>
+    <subfield code="a">01:09:09:00</subfield>
+    <subfield code="b">720x576 4/3, 25</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="2">CERN-VIDEO-C-348-A</subfield>
+    <subfield code="8">A</subfield>
+    <subfield code="a">01:02:18:00</subfield>
+    <subfield code="b">720x576 4/3, 25</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="2">CERN-VIDEO-C-348-E</subfield>
+    <subfield code="8">E</subfield>
+    <subfield code="a">00:58:00:00</subfield>
+    <subfield code="b">720x576 4/3, 25</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="2">CERN-VIDEO-C-348-D</subfield>
+    <subfield code="8">D</subfield>
+    <subfield code="a">01:04:02:00</subfield>
+    <subfield code="b">720x576 4/3, 25</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="2">CERN-VIDEO-C-348-B</subfield>
+    <subfield code="8">B</subfield>
+    <subfield code="a">01:00:18:00</subfield>
+    <subfield code="b">720x576 4/3, 25</subfield>
+  </datafield>
+  <datafield tag="337" ind1=" " ind2=" ">
+    <subfield code="a">Video</subfield>
+  </datafield>
+  <datafield tag="340" ind1=" " ind2=" ">
+    <subfield code="a">paper</subfield>
+  </datafield>
+  <datafield tag="340" ind1=" " ind2=" ">
+    <subfield code="8">A</subfield>
+    <subfield code="9">MANGANO-1</subfield>
+    <subfield code="a">Betacam</subfield>
+    <subfield code="j">Master</subfield>
+    <subfield code="k">19971124</subfield>
+  </datafield>
+  <datafield tag="340" ind1=" " ind2=" ">
+    <subfield code="8">B</subfield>
+    <subfield code="9">MANGANO-2</subfield>
+    <subfield code="a">Betacam</subfield>
+    <subfield code="j">Master</subfield>
+    <subfield code="k">19971125</subfield>
+  </datafield>
+  <datafield tag="340" ind1=" " ind2=" ">
+    <subfield code="8">C</subfield>
+    <subfield code="9">MANGANO-3</subfield>
+    <subfield code="a">Betacam</subfield>
+    <subfield code="j">Master</subfield>
+    <subfield code="k">19971126</subfield>
+  </datafield>
+  <datafield tag="340" ind1=" " ind2=" ">
+    <subfield code="8">D</subfield>
+    <subfield code="9">MANGANO-4</subfield>
+    <subfield code="a">Betacam</subfield>
+    <subfield code="j">Master</subfield>
+    <subfield code="k">19971127</subfield>
+  </datafield>
+  <datafield tag="340" ind1=" " ind2=" ">
+    <subfield code="8">E</subfield>
+    <subfield code="9">MANGANO-5</subfield>
+    <subfield code="a">Betacam</subfield>
+    <subfield code="j">Master</subfield>
+    <subfield code="k">19971128</subfield>
+  </datafield>
+  <datafield tag="490" ind1=" " ind2=" ">
+    <subfield code="a">CERN Academic Training Lecture</subfield>
+    <subfield code="v">345</subfield>
+  </datafield>
+  <datafield tag="490" ind1=" " ind2=" ">
+    <subfield code="a">Lectures for Postgraduate Students</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">The video was digitized from its original recording as part of the CERN Digital Memory project</subfield>
+  </datafield>
+  <datafield tag="511" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">Michelangelo Mangano</subfield>
+  </datafield>
+  <datafield tag="511" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">c</subfield>
+    <subfield code="a">Michelangelo Mangano</subfield>
+  </datafield>
+  <datafield tag="511" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">d</subfield>
+    <subfield code="a">Michelangelo Mangano</subfield>
+  </datafield>
+  <datafield tag="511" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">b</subfield>
+    <subfield code="a">Michelangelo Mangano</subfield>
+  </datafield>
+  <datafield tag="511" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">e</subfield>
+    <subfield code="a">Michelangelo Mangano</subfield>
+  </datafield>
+  <datafield tag="511" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">M. Mangano</subfield>
+  </datafield>
+  <datafield tag="511" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">c</subfield>
+    <subfield code="a">M. Mangano</subfield>
+  </datafield>
+  <datafield tag="511" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">d</subfield>
+    <subfield code="a">M. Mangano</subfield>
+  </datafield>
+  <datafield tag="511" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">b</subfield>
+    <subfield code="a">M. Mangano</subfield>
+  </datafield>
+  <datafield tag="511" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">e</subfield>
+    <subfield code="a">M. Mangano</subfield>
+  </datafield>
+  <datafield tag="514" ind1=" " ind2=" ">
+    <subfield code="a">Audio present but not on all channels -  Low RF, noisy picture -  No Audio Right Channel (silence) -  </subfield>
+    <subfield code="8">a</subfield>
+  </datafield>
+  <datafield tag="514" ind1=" " ind2=" ">
+    <subfield code="a">Audio present but not on all channels -  </subfield>
+    <subfield code="8">c</subfield>
+  </datafield>
+  <datafield tag="514" ind1=" " ind2=" ">
+    <subfield code="a">Low RF, noisy picture -  </subfield>
+    <subfield code="8">d</subfield>
+  </datafield>
+  <datafield tag="514" ind1=" " ind2=" ">
+    <subfield code="a">Low RF, noisy picture -  Video tracking issue -  </subfield>
+    <subfield code="8">b</subfield>
+  </datafield>
+  <datafield tag="514" ind1=" " ind2=" ">
+    <subfield code="a">Low RF, noisy picture -  </subfield>
+    <subfield code="8">e</subfield>
+  </datafield>
+  <datafield tag="518" ind1=" " ind2=" ">
+    <subfield code="a">CERN, Geneva, 24 - 28 Nov 1997</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">1. Gauge invariance and Feynman rules for QCD. 2. Renormalization, running coupling and operator product expansion. 3. QCD in $e^{+] e^{-}$ collisions: from quarks and gluons to hadrons; R, jets and shape variables. 4. QCD in lepton-hadron collisions: DIS structure functions, sum rules and parton evolution. 5. QCD in hadron-hadron collisions: DY, W and Z production, Jets, heavy quarks.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">An introduction to some basic aspects and concepts of the QCD</subfield>
+  </datafield>
+  <datafield tag="542" ind1=" " ind2=" ">
+    <subfield code="d">CERN</subfield>
+    <subfield code="g">1997</subfield>
+  </datafield>
+  <datafield tag="542" ind1="1" ind2=" ">
+    <subfield code="g">1997</subfield>
+    <subfield code="9">review</subfield>
+    <subfield code="d">CERN</subfield>
+  </datafield>
+  <datafield tag="583" ind1="1" ind2=" ">
+    <subfield code="i">CREATE-MARC-run20180622_170802</subfield>
+    <subfield code="a">digitized</subfield>
+    <subfield code="2">pda</subfield>
+    <subfield code="f">CERN Digital Memory Project</subfield>
+    <subfield code="k">PICTURAE</subfield>
+    <subfield code="u">https://cds.cern.ch/record/2257246</subfield>
+    <subfield code="5">SzGeCERN</subfield>
+    <subfield code="6">WEEK14-public</subfield>
+    <subfield code="b">S1V1: SDI Signal - Digital Betacam, Betacam SP, Betacam, Betacam SX, DVCAM, DVCPRO, DV/Mini DV</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="3"> Betacam </subfield>
+    <subfield code="f">public</subfield>
+    <subfield code="z">
+ - VISUAL INSPECTION TABLE of Betacam () true  -
+ - RTI VT 4100 of Betacam () true  -
+ - MAC-V018 of Betacam () true Audio present but not on all channels | No Audio Right Channel (silence) | Low RF, noisy picture -
+ - MANUAL QC GEN of Betacam () true  -
+ - FILE_PRESENCE of Betacam () true  -
+      </subfield>
+    <subfield code="x">
+ - VISUAL INSPECTION TABLE timing: from 09/02/2018 13:37 to 09/02/2018 13:37 -
+ - RTI VT 4100 timing: from 09/02/2018 13:37 to 09/02/2018 13:48 -
+ - MAC-V018 timing: from 09/02/2018 13:53 to 09/02/2018 15:00 -
+ - MANUAL QC GEN timing: from 09/02/2018 22:54 to 09/02/2018 22:54 -
+ - FILE_PRESENCE timing: from 09/02/2018 22:54 to 09/02/2018 22:54 -
+       </subfield>
+    <subfield code="c">20180209</subfield>
+  </datafield>
+  <datafield tag="583" ind1="1" ind2=" ">
+    <subfield code="i">CREATE-MARC-run20180626_115725</subfield>
+    <subfield code="a">digitized</subfield>
+    <subfield code="2">pda</subfield>
+    <subfield code="f">CERN Digital Memory Project</subfield>
+    <subfield code="k">PICTURAE</subfield>
+    <subfield code="u">https://cds.cern.ch/record/2257246</subfield>
+    <subfield code="5">SzGeCERN</subfield>
+    <subfield code="6">WEEK19-public</subfield>
+    <subfield code="b">S1V1: SDI Signal - Digital Betacam, Betacam SP, Betacam, Betacam SX, DVCAM, DVCPRO, DV/Mini DV</subfield>
+    <subfield code="8">c</subfield>
+    <subfield code="3"> Betacam </subfield>
+    <subfield code="f">public</subfield>
+    <subfield code="z">
+ - VISUAL INSPECTION TABLE of Betacam () true  -
+ - RTI VT 4100 of Betacam () true  -
+ - MAC-V012 of Betacam () true Audio present but not on all channels -
+ - MANUAL QC GEN of Betacam () true  -
+ - FILE_PRESENCE of Betacam () true  -
+      </subfield>
+    <subfield code="x">
+ - VISUAL INSPECTION TABLE timing: from 09/02/2018 13:55 to 09/02/2018 13:55 -
+ - RTI VT 4100 timing: from 09/02/2018 13:55 to 09/02/2018 14:04 -
+ - MAC-V012 timing: from 15/02/2018 13:22 to 15/02/2018 14:38 -
+ - MANUAL QC GEN timing: from 16/02/2018 02:47 to 16/02/2018 02:47 -
+ - FILE_PRESENCE timing: from 16/02/2018 02:47 to 16/02/2018 02:47 -
+       </subfield>
+    <subfield code="c">20180216</subfield>
+  </datafield>
+  <datafield tag="583" ind1="1" ind2=" ">
+    <subfield code="i">CREATE-MARC-run20180626_115725</subfield>
+    <subfield code="a">digitized</subfield>
+    <subfield code="2">pda</subfield>
+    <subfield code="f">CERN Digital Memory Project</subfield>
+    <subfield code="k">PICTURAE</subfield>
+    <subfield code="u">https://cds.cern.ch/record/2257246</subfield>
+    <subfield code="5">SzGeCERN</subfield>
+    <subfield code="6">WEEK19-public</subfield>
+    <subfield code="b">S1V1: SDI Signal - Digital Betacam, Betacam SP, Betacam, Betacam SX, DVCAM, DVCPRO, DV/Mini DV</subfield>
+    <subfield code="8">d</subfield>
+    <subfield code="3"> Betacam </subfield>
+    <subfield code="f">public</subfield>
+    <subfield code="z">
+ - VISUAL INSPECTION TABLE of Betacam () true  -
+ - RTI VT 4100 of Betacam () true  -
+ - MAC-V012 of Betacam () true Low RF, noisy picture -
+ - MANUAL QC GEN of Betacam () true Low RF, noisy picture -
+ - MANUAL QC GEN of Betacam () true  -
+ - FILE_PRESENCE of Betacam () true  -
+      </subfield>
+    <subfield code="x">
+ - VISUAL INSPECTION TABLE timing: from 09/02/2018 13:48 to 09/02/2018 13:48 -
+ - RTI VT 4100 timing: from 09/02/2018 13:48 to 09/02/2018 13:54 -
+ - MAC-V012 timing: from 10/02/2018 08:23 to 10/02/2018 09:39 -
+ - MANUAL QC GEN timing: from 10/02/2018 09:39 to 10/02/2018 09:39 -
+ - MANUAL QC GEN timing: from 14/02/2018 00:41 to 14/02/2018 00:41 -
+ - FILE_PRESENCE timing: from 14/02/2018 00:41 to 14/02/2018 00:41 -
+       </subfield>
+    <subfield code="c">20180214</subfield>
+  </datafield>
+  <datafield tag="583" ind1="1" ind2=" ">
+    <subfield code="i">CREATE-MARC-run20180626_121202</subfield>
+    <subfield code="a">digitized</subfield>
+    <subfield code="2">pda</subfield>
+    <subfield code="f">CERN Digital Memory Project</subfield>
+    <subfield code="k">PICTURAE</subfield>
+    <subfield code="u">https://cds.cern.ch/record/2257246</subfield>
+    <subfield code="5">SzGeCERN</subfield>
+    <subfield code="6">WEEK20-public</subfield>
+    <subfield code="b">S1V1: SDI Signal - Digital Betacam, Betacam SP, Betacam, Betacam SX, DVCAM, DVCPRO, DV/Mini DV</subfield>
+    <subfield code="8">b</subfield>
+    <subfield code="3"> Betacam </subfield>
+    <subfield code="f">public</subfield>
+    <subfield code="z">
+ - VISUAL INSPECTION TABLE of Betacam () true  -
+ - RTI VT 4100 of Betacam () true  -
+ - MAC-V017 of Betacam () true Low RF, noisy picture | Video tracking issue -
+ - MANUAL QC GEN of Betacam () true Low RF, noisy picture | Video tracking issue -
+ - MANUAL QC GEN of Betacam () true  -
+ - FILE_PRESENCE of Betacam () true  -
+      </subfield>
+    <subfield code="x">
+ - VISUAL INSPECTION TABLE timing: from 09/02/2018 12:40 to 09/02/2018 12:40 -
+ - RTI VT 4100 timing: from 09/02/2018 12:40 to 09/02/2018 12:49 -
+ - MAC-V017 timing: from 10/02/2018 09:56 to 10/02/2018 11:03 -
+ - MANUAL QC GEN timing: from 10/02/2018 11:04 to 10/02/2018 11:04 -
+ - MANUAL QC GEN timing: from 14/02/2018 00:01 to 14/02/2018 00:01 -
+ - FILE_PRESENCE timing: from 14/02/2018 00:01 to 14/02/2018 00:01 -
+       </subfield>
+    <subfield code="c">20180214</subfield>
+  </datafield>
+  <datafield tag="583" ind1="1" ind2=" ">
+    <subfield code="i">CREATE-MARC-run20180626_121202</subfield>
+    <subfield code="a">digitized</subfield>
+    <subfield code="2">pda</subfield>
+    <subfield code="f">CERN Digital Memory Project</subfield>
+    <subfield code="k">PICTURAE</subfield>
+    <subfield code="u">https://cds.cern.ch/record/2257246</subfield>
+    <subfield code="5">SzGeCERN</subfield>
+    <subfield code="6">WEEK20-public</subfield>
+    <subfield code="b">S1V1: SDI Signal - Digital Betacam, Betacam SP, Betacam, Betacam SX, DVCAM, DVCPRO, DV/Mini DV</subfield>
+    <subfield code="8">e</subfield>
+    <subfield code="3"> Betacam </subfield>
+    <subfield code="f">public</subfield>
+    <subfield code="z">
+ - VISUAL INSPECTION TABLE of Betacam () true  -
+ - RTI VT 4100 of Betacam () true  -
+ - MAC-V013 of Betacam () true Low RF, noisy picture -
+ - MANUAL QC GEN of Betacam () true Low RF, noisy picture -
+ - MANUAL QC GEN of Betacam () true  -
+ - FILE_PRESENCE of Betacam () true  -
+      </subfield>
+    <subfield code="x">
+ - VISUAL INSPECTION TABLE timing: from 09/02/2018 13:48 to 09/02/2018 13:48 -
+ - RTI VT 4100 timing: from 09/02/2018 13:48 to 09/02/2018 13:54 -
+ - MAC-V013 timing: from 10/02/2018 08:23 to 10/02/2018 09:32 -
+ - MANUAL QC GEN timing: from 10/02/2018 09:32 to 10/02/2018 09:32 -
+ - MANUAL QC GEN timing: from 14/02/2018 01:45 to 14/02/2018 01:45 -
+ - FILE_PRESENCE timing: from 14/02/2018 01:45 to 14/02/2018 01:45 -
+       </subfield>
+    <subfield code="c">20180214</subfield>
+  </datafield>
+  <datafield tag="590" ind1=" " ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">Une introduction à certains aspects et concepts de base du DCQ</subfield>
+  </datafield>
+  <datafield tag="590" ind1=" " ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">Conférence sur la chromodynamique quantique QCD</subfield>
+  </datafield>
+  <datafield tag="594" ind1=" " ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="a">Conference Speech</subfield>
+  </datafield>
+  <datafield tag="595" ind1=" " ind2=" ">
+    <subfield code="a">VHS video</subfield>
+  </datafield>
+  <datafield tag="595" ind1=" " ind2=" ">
+    <subfield code="a">VIDEO-MF</subfield>
+  </datafield>
+  <datafield tag="650" ind1="1" ind2="7">
+    <subfield code="2">SzGeCERN</subfield>
+    <subfield code="a">Particle Physics</subfield>
+  </datafield>
+  <datafield tag="650" ind1="2" ind2="7">
+    <subfield code="9">review</subfield>
+    <subfield code="a">Inside the lab</subfield>
+  </datafield>
+  <datafield tag="650" ind1="2" ind2="7">
+    <subfield code="9">review</subfield>
+    <subfield code="a">Portraits of science</subfield>
+  </datafield>
+  <datafield tag="653" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">QCD</subfield>
+  </datafield>
+  <datafield tag="653" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">collisions</subfield>
+  </datafield>
+  <datafield tag="653" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">experiments</subfield>
+  </datafield>
+  <datafield tag="653" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">Chromodynamique quantique</subfield>
+  </datafield>
+  <datafield tag="653" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">particules</subfield>
+  </datafield>
+  <datafield tag="653" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">quarks</subfield>
+  </datafield>
+  <datafield tag="653" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">gluons</subfield>
+  </datafield>
+  <datafield tag="653" ind1="1" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="8">a</subfield>
+    <subfield code="a">hadrons</subfield>
+  </datafield>
+  <datafield tag="690" ind1="C" ind2=" ">
+    <subfield code="a">ACAD</subfield>
+  </datafield>
+  <datafield tag="690" ind1="C" ind2=" ">
+    <subfield code="a">CERN</subfield>
+  </datafield>
+  <datafield tag="690" ind1="C" ind2=" ">
+    <subfield code="a">movingimages</subfield>
+  </datafield>
+  <datafield tag="690" ind1="C" ind2=" ">
+    <subfield code="9">CERN QA</subfield>
+    <subfield code="a">quality-controlled</subfield>
+  </datafield>
+  <datafield tag="690" ind1="C" ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="a">reviewed</subfield>
+  </datafield>
+  <datafield tag="710" ind1=" " ind2=" ">
+    <subfield code="5">TH</subfield>
+  </datafield>
+  <datafield tag="710" ind1=" " ind2=" ">
+    <subfield code="a">CERN. Geneva</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="c">CERN Central Library</subfield>
+    <subfield code="h">Acad. Train. 345</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="c">CERN Depot 1, bldg. 2 (DE1)</subfield>
+    <subfield code="h">1997 Mangano 1</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="c">CERN Depot 1, bldg. 2 (DE1)</subfield>
+    <subfield code="h">1997 Mangano 2</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="c">CERN Depot 2, bldg. 2 (DE2)</subfield>
+    <subfield code="h">1997 Mangano</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="c">CERN Central Library</subfield>
+    <subfield code="h">345</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="8">A</subfield>
+    <subfield code="a">60</subfield>
+    <subfield code="b">Z0211</subfield>
+    <subfield code="c">CM-A00000322</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="8">B</subfield>
+    <subfield code="a">60</subfield>
+    <subfield code="b">Z0211</subfield>
+    <subfield code="c">CM-A00000322</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="8">C</subfield>
+    <subfield code="a">60</subfield>
+    <subfield code="b">Z0211</subfield>
+    <subfield code="c">CM-A00000322</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="8">D</subfield>
+    <subfield code="a">60</subfield>
+    <subfield code="b">Z0211</subfield>
+    <subfield code="c">CM-A00000322</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="8">E</subfield>
+    <subfield code="a">60</subfield>
+    <subfield code="b">Z0211</subfield>
+    <subfield code="c">CM-A00000322</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2=" ">
+    <subfield code="u">http://cds.cern.ch/record/341905/files/AT00000481.tif</subfield>
+    <subfield code="y">Transparencies, pt. 1</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2=" ">
+    <subfield code="u">http://cds.cern.ch/record/341905/files/AT00000482.tif</subfield>
+    <subfield code="y">Transparencies, pt. 2</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="d">\\cern.ch\dfs\Services\MediaArchive\Video\Masters\Conferences\1997\CERN-VIDEO-C-348-A.avi</subfield>
+    <subfield code="x">Absolute master path</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-0480-kbps-384x288-25-fps-audio-128-kbps-48-kHz-stereo.wmv</subfield>
+    <subfield code="x">wmv0480</subfield>
+    <subfield code="y">0480 kbps 384x288 25 fps audio 128 kbps 48 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-0600-kbps-maxH-360-25-fps-audio-128-kbps-48-kHz-stereo.mp4</subfield>
+    <subfield code="x">mp40600</subfield>
+    <subfield code="y">0600 kbps maxH 360 25 fps audio 128 kbps 48 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-0753-kbps-480x360-25-fps-audio-64-kbps-44-kHz-stereo.flv</subfield>
+    <subfield code="x">flv0753</subfield>
+    <subfield code="y">0753 kbps 480x360 25 fps audio 64 kbps 44 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-0753-kbps-480x360-25-fps-audio-64-kbps-48-kHz-stereo.wmv</subfield>
+    <subfield code="x">wmv0753</subfield>
+    <subfield code="y">0753 kbps 480x360 25 fps audio 64 kbps 48 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-Multirate-200-to-753-kbps-480x360.wmv</subfield>
+    <subfield code="x">wmvMultirate</subfield>
+    <subfield code="y">Multirate 200 to 753 kbps 480x360</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-posterframe-480x360-at-0-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 0 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-posterframe-480x360-at-10-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 10 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-posterframe-480x360-at-20-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 20 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-posterframe-480x360-at-30-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 30 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-posterframe-480x360-at-40-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 40 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-posterframe-480x360-at-50-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 50 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-posterframe-480x360-at-60-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 60 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-posterframe-480x360-at-70-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 70 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-posterframe-480x360-at-80-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 80 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-posterframe-480x360-at-90-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 90 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-thumbnail-180x135-at-05-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 180x135 at 05 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-thumbnail-80x60-at-10-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 10 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-thumbnail-80x60-at-20-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 20 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-thumbnail-80x60-at-30-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 30 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-thumbnail-80x60-at-40-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 40 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-thumbnail-80x60-at-50-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 50 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-thumbnail-80x60-at-60-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 60 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-thumbnail-80x60-at-70-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 70 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-thumbnail-80x60-at-80-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 80 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-thumbnail-80x60-at-90-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 90 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="d">\\cern.ch\dfs\Services\MediaArchive\Video\Masters\Conferences\1997\CERN-VIDEO-C-348-C.avi</subfield>
+    <subfield code="x">Absolute master path</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-0480-kbps-384x288-25-fps-audio-128-kbps-48-kHz-stereo.wmv</subfield>
+    <subfield code="x">wmv0480</subfield>
+    <subfield code="y">0480 kbps 384x288 25 fps audio 128 kbps 48 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-0600-kbps-maxH-360-25-fps-audio-128-kbps-48-kHz-stereo.mp4</subfield>
+    <subfield code="x">mp40600</subfield>
+    <subfield code="y">0600 kbps maxH 360 25 fps audio 128 kbps 48 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-0753-kbps-480x360-25-fps-audio-64-kbps-44-kHz-stereo.flv</subfield>
+    <subfield code="x">flv0753</subfield>
+    <subfield code="y">0753 kbps 480x360 25 fps audio 64 kbps 44 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-posterframe-480x360-at-0-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 0 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-posterframe-480x360-at-10-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 10 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-posterframe-480x360-at-20-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 20 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-posterframe-480x360-at-30-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 30 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-posterframe-480x360-at-40-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 40 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-posterframe-480x360-at-50-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 50 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-posterframe-480x360-at-60-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 60 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-posterframe-480x360-at-70-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 70 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-posterframe-480x360-at-80-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 80 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-posterframe-480x360-at-90-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 90 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-thumbnail-180x135-at-05-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 180x135 at 05 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-thumbnail-80x60-at-10-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 10 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-thumbnail-80x60-at-20-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 20 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-thumbnail-80x60-at-30-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 30 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-thumbnail-80x60-at-40-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 40 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-thumbnail-80x60-at-50-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 50 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-thumbnail-80x60-at-60-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 60 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-thumbnail-80x60-at-70-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 70 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-thumbnail-80x60-at-80-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 80 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-thumbnail-80x60-at-90-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 90 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="d">\\cern.ch\dfs\Services\MediaArchive\Video\Masters\Conferences\1997\CERN-VIDEO-C-348-B.avi</subfield>
+    <subfield code="x">Absolute master path</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-0480-kbps-384x288-25-fps-audio-128-kbps-48-kHz-stereo.wmv</subfield>
+    <subfield code="x">wmv0480</subfield>
+    <subfield code="y">0480 kbps 384x288 25 fps audio 128 kbps 48 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-0600-kbps-maxH-360-25-fps-audio-128-kbps-48-kHz-stereo.mp4</subfield>
+    <subfield code="x">mp40600</subfield>
+    <subfield code="y">0600 kbps maxH 360 25 fps audio 128 kbps 48 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-0753-kbps-480x360-25-fps-audio-64-kbps-44-kHz-stereo.flv</subfield>
+    <subfield code="x">flv0753</subfield>
+    <subfield code="y">0753 kbps 480x360 25 fps audio 64 kbps 44 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-0753-kbps-480x360-25-fps-audio-64-kbps-48-kHz-stereo.wmv</subfield>
+    <subfield code="x">wmv0753</subfield>
+    <subfield code="y">0753 kbps 480x360 25 fps audio 64 kbps 48 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-posterframe-480x360-at-0-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 0 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-posterframe-480x360-at-10-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 10 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-posterframe-480x360-at-20-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 20 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-posterframe-480x360-at-30-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 30 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-posterframe-480x360-at-40-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 40 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-posterframe-480x360-at-50-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 50 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-posterframe-480x360-at-60-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 60 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-posterframe-480x360-at-70-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 70 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-posterframe-480x360-at-80-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 80 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-posterframe-480x360-at-90-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 90 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-thumbnail-180x135-at-05-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 180x135 at 05 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-thumbnail-80x60-at-10-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 10 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-thumbnail-80x60-at-20-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 20 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-thumbnail-80x60-at-30-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 30 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-thumbnail-80x60-at-40-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 40 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-thumbnail-80x60-at-50-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 50 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-thumbnail-80x60-at-60-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 60 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-thumbnail-80x60-at-70-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 70 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-thumbnail-80x60-at-80-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 80 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-thumbnail-80x60-at-90-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 90 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="d">\\cern.ch\dfs\Services\MediaArchive\Video\Masters\Conferences\1997\CERN-VIDEO-C-348-E.avi</subfield>
+    <subfield code="x">Absolute master path</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-0480-kbps-384x288-25-fps-audio-128-kbps-48-kHz-stereo.wmv</subfield>
+    <subfield code="x">wmv0480</subfield>
+    <subfield code="y">0480 kbps 384x288 25 fps audio 128 kbps 48 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-0600-kbps-maxH-360-25-fps-audio-128-kbps-48-kHz-stereo.mp4</subfield>
+    <subfield code="x">mp40600</subfield>
+    <subfield code="y">0600 kbps maxH 360 25 fps audio 128 kbps 48 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-0753-kbps-480x360-25-fps-audio-64-kbps-44-kHz-stereo.flv</subfield>
+    <subfield code="x">flv0753</subfield>
+    <subfield code="y">0753 kbps 480x360 25 fps audio 64 kbps 44 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-Multirate-200-to-753-kbps-480x360.wmv</subfield>
+    <subfield code="x">wmvMultirate</subfield>
+    <subfield code="y">Multirate 200 to 753 kbps 480x360</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-posterframe-480x360-at-0-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 0 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-posterframe-480x360-at-10-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 10 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-posterframe-480x360-at-20-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 20 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-posterframe-480x360-at-30-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 30 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-posterframe-480x360-at-40-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 40 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-posterframe-480x360-at-50-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 50 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-posterframe-480x360-at-60-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 60 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-posterframe-480x360-at-70-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 70 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-posterframe-480x360-at-80-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 80 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-posterframe-480x360-at-90-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 90 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-thumbnail-180x135-at-05-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 180x135 at 05 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-thumbnail-80x60-at-10-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 10 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-thumbnail-80x60-at-20-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 20 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-thumbnail-80x60-at-30-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 30 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-thumbnail-80x60-at-40-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 40 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-thumbnail-80x60-at-50-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 50 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-thumbnail-80x60-at-60-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 60 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-thumbnail-80x60-at-70-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 70 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-thumbnail-80x60-at-80-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 80 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-thumbnail-80x60-at-90-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 90 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="d">\\cern.ch\dfs\Services\MediaArchive\Video\Masters\Conferences\1997\CERN-VIDEO-C-348-D.avi</subfield>
+    <subfield code="x">Absolute master path</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-0480-kbps-384x288-25-fps-audio-128-kbps-48-kHz-stereo.wmv</subfield>
+    <subfield code="x">wmv0480</subfield>
+    <subfield code="y">0480 kbps 384x288 25 fps audio 128 kbps 48 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-0600-kbps-maxH-360-25-fps-audio-128-kbps-48-kHz-stereo.mp4</subfield>
+    <subfield code="x">mp40600</subfield>
+    <subfield code="y">0600 kbps maxH 360 25 fps audio 128 kbps 48 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-0753-kbps-480x360-25-fps-audio-64-kbps-44-kHz-stereo.flv</subfield>
+    <subfield code="x">flv0753</subfield>
+    <subfield code="y">0753 kbps 480x360 25 fps audio 64 kbps 44 kHz stereo</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-Multirate-200-to-753-kbps-480x360.wmv</subfield>
+    <subfield code="x">wmvMultirate</subfield>
+    <subfield code="y">Multirate 200 to 753 kbps 480x360</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-posterframe-480x360-at-0-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 0 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-posterframe-480x360-at-10-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 10 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-posterframe-480x360-at-20-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 20 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-posterframe-480x360-at-30-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 30 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-posterframe-480x360-at-40-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 40 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-posterframe-480x360-at-50-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 50 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-posterframe-480x360-at-60-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 60 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-posterframe-480x360-at-70-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 70 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-posterframe-480x360-at-80-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 80 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-posterframe-480x360-at-90-percent.jpg</subfield>
+    <subfield code="x">jpgposterframe</subfield>
+    <subfield code="y">posterframe 480x360 at 90 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-thumbnail-180x135-at-05-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 180x135 at 05 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-thumbnail-80x60-at-10-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 10 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-thumbnail-80x60-at-20-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 20 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-thumbnail-80x60-at-30-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 30 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-thumbnail-80x60-at-40-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 40 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-thumbnail-80x60-at-50-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 50 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-thumbnail-80x60-at-60-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 60 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-thumbnail-80x60-at-70-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 70 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-thumbnail-80x60-at-80-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 80 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">MediaArchive</subfield>
+    <subfield code="u">http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-thumbnail-80x60-at-90-percent.jpg</subfield>
+    <subfield code="x">jpgthumbnail</subfield>
+    <subfield code="y">thumbnail 80x60 at 90 percent</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MP4</subfield>
+    <subfield code="u">https://cern.ch/digital-memory/media-archive/video/open/mp4/341905-a.mp4</subfield>
+    <subfield code="s">605541929</subfield>
+    <subfield code="y">Video-341905-a</subfield>
+    <subfield code="z">mp4 video format (640x360)</subfield>
+    <subfield code="w">(PICTURAE:MD5)ac_S1V1_341905-a.mp4;a9ad3e8e94f9d2ec159573e0c689529d</subfield>
+    <subfield code="8">a</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MKV</subfield>
+    <subfield code="d">/eos/media/cds/public/www/digital-memory/media-archive/video/open/mkv/341905-a.mkv</subfield>
+    <subfield code="s">50792165325</subfield>
+    <subfield code="w">(PICTURAE:MD5)pm_S1V1_341905-a.mkv;89d71cc64068d924aa9671470d323da4</subfield>
+    <subfield code="8">a</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MOV</subfield>
+    <subfield code="d">/eos/media/cds/public/www/digital-memory/media-archive/video/open/mov/341905-a.mov</subfield>
+    <subfield code="s">15461718332</subfield>
+    <subfield code="w">(PICTURAE:MD5)am_S1V1_341905-a.mov;e8c8cb1ba5e8499eee61ed231469b993</subfield>
+    <subfield code="8">a</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MP4</subfield>
+    <subfield code="u">https://cern.ch/digital-memory/media-archive/video/open/mp4/341905-c.mp4</subfield>
+    <subfield code="s">665612708</subfield>
+    <subfield code="y">Video-341905-c</subfield>
+    <subfield code="z">mp4 video format (640x360)</subfield>
+    <subfield code="w">(PICTURAE:MD5)ac_S1V1_341905-c.mp4;fd9de31f5214584509138b90e25b631d</subfield>
+    <subfield code="8">c</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MKV</subfield>
+    <subfield code="d">/eos/media/cds/public/www/digital-memory/media-archive/video/open/mkv/341905-c.mkv</subfield>
+    <subfield code="s">54682872537</subfield>
+    <subfield code="w">(PICTURAE:MD5)pm_S1V1_341905-c.mkv;bc7dd4beea09363d180bc8421b97f7ac</subfield>
+    <subfield code="8">c</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MOV</subfield>
+    <subfield code="d">/eos/media/cds/public/www/digital-memory/media-archive/video/open/mov/341905-c.mov</subfield>
+    <subfield code="s">16518212639</subfield>
+    <subfield code="w">(PICTURAE:MD5)am_S1V1_341905-c.mov;aeddfe30d706c2b76779a695ae2db815</subfield>
+    <subfield code="8">c</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MP4</subfield>
+    <subfield code="u">https://cern.ch/digital-memory/media-archive/video/open/mp4/341905-d.mp4</subfield>
+    <subfield code="s">613900465</subfield>
+    <subfield code="y">Video-341905-d</subfield>
+    <subfield code="z">mp4 video format (640x360)</subfield>
+    <subfield code="w">(PICTURAE:MD5)ac_S1V1_341905-d.mp4;c02f0dc5fee1897eb75c107176b5d750</subfield>
+    <subfield code="8">d</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MKV</subfield>
+    <subfield code="d">/eos/media/cds/public/www/digital-memory/media-archive/video/open/mkv/341905-d.mkv</subfield>
+    <subfield code="s">52323345725</subfield>
+    <subfield code="w">(PICTURAE:MD5)pm_S1V1_341905-d.mkv;81e5f3ef00950966029b688488d1c97c</subfield>
+    <subfield code="8">d</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MOV</subfield>
+    <subfield code="d">/eos/media/cds/public/www/digital-memory/media-archive/video/open/mov/341905-d.mov</subfield>
+    <subfield code="s">15277303150</subfield>
+    <subfield code="w">(PICTURAE:MD5)am_S1V1_341905-d.mov;52c8041c43be53cf0438176c252ee35b</subfield>
+    <subfield code="8">d</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MP4</subfield>
+    <subfield code="u">https://cern.ch/digital-memory/media-archive/video/open/mp4/341905-b.mp4</subfield>
+    <subfield code="s">580526681</subfield>
+    <subfield code="y">Video-341905-b</subfield>
+    <subfield code="z">mp4 video format (640x360)</subfield>
+    <subfield code="w">(PICTURAE:MD5)ac_S1V1_341905-b.mp4;dbfee97cc640da5a2e0c597d70de85a1</subfield>
+    <subfield code="8">b</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MKV</subfield>
+    <subfield code="d">/eos/media/cds/public/www/digital-memory/media-archive/video/open/mkv/341905-b.mkv</subfield>
+    <subfield code="s">51437439101</subfield>
+    <subfield code="w">(PICTURAE:MD5)pm_S1V1_341905-b.mkv;68788258192def9c12e4f74a8e051419</subfield>
+    <subfield code="8">b</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MOV</subfield>
+    <subfield code="d">/eos/media/cds/public/www/digital-memory/media-archive/video/open/mov/341905-b.mov</subfield>
+    <subfield code="s">14422496162</subfield>
+    <subfield code="w">(PICTURAE:MD5)am_S1V1_341905-b.mov;4f5a2741c1420a7625af36d026a32276</subfield>
+    <subfield code="8">b</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MP4</subfield>
+    <subfield code="u">https://cern.ch/digital-memory/media-archive/video/open/mp4/341905-e.mp4</subfield>
+    <subfield code="s">545626150</subfield>
+    <subfield code="y">Video-341905-e</subfield>
+    <subfield code="z">mp4 video format (640x360)</subfield>
+    <subfield code="w">(PICTURAE:MD5)ac_S1V1_341905-e.mp4;be69946136d55b380ea4192564ca431d</subfield>
+    <subfield code="8">e</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MKV</subfield>
+    <subfield code="d">/eos/media/cds/public/www/digital-memory/media-archive/video/open/mkv/341905-e.mkv</subfield>
+    <subfield code="s">45966145721</subfield>
+    <subfield code="w">(PICTURAE:MD5)pm_S1V1_341905-e.mkv;bffd5dcfb60a706f6bc6dca3abf49d93</subfield>
+    <subfield code="8">e</subfield>
+  </datafield>
+  <datafield tag="856" ind1="7" ind2=" ">
+    <subfield code="2">EOS</subfield>
+    <subfield code="q">MOV</subfield>
+    <subfield code="d">/eos/media/cds/public/www/digital-memory/media-archive/video/open/mov/341905-e.mov</subfield>
+    <subfield code="s">13883081080</subfield>
+    <subfield code="w">(PICTURAE:MD5)am_S1V1_341905-e.mov;88cb29764c58a14ff60ceed5a6559c1c</subfield>
+    <subfield code="8">e</subfield>
+  </datafield>
+  <datafield tag="916" ind1=" " ind2=" ">
+    <subfield code="s">n</subfield>
+    <subfield code="w">200143</subfield>
+  </datafield>
+  <datafield tag="961" ind1=" " ind2=" ">
+    <subfield code="c">20080515</subfield>
+    <subfield code="h">0858</subfield>
+    <subfield code="l">CER01</subfield>
+    <subfield code="x">19980106</subfield>
+  </datafield>
+  <datafield tag="962" ind1=" " ind2=" ">
+    <subfield code="b">523478</subfield>
+    <subfield code="n">cern970901</subfield>
+  </datafield>
+  <datafield tag="963" ind1=" " ind2=" ">
+    <subfield code="a">PUBLIC</subfield>
+  </datafield>
+  <datafield tag="963" ind1=" " ind2=" ">
+    <subfield code="9">review</subfield>
+    <subfield code="a">PUBLIC</subfield>
+  </datafield>
+  <datafield tag="964" ind1=" " ind2=" ">
+    <subfield code="a">0008</subfield>
+  </datafield>
+  <datafield tag="970" ind1=" " ind2=" ">
+    <subfield code="a">000265709CER</subfield>
+  </datafield>
+  <datafield tag="980" ind1=" " ind2=" ">
+    <subfield code="a">ACAD</subfield>
+  </datafield>
+  <datafield tag="980" ind1=" " ind2=" ">
+    <subfield code="a">VIDEOARC</subfield>
+  </datafield>
+  <datafield tag="980" ind1=" " ind2=" ">
+    <subfield code="a">Indico</subfield>
+    <subfield code="b">ACAD</subfield>
+  </datafield>
+</record>

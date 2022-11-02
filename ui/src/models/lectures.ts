@@ -17,7 +17,8 @@ export interface Lecture {
   subject_category: string;
   thumbnail_picture: string;
   title: string;
-  type: string[];
+  types: string[];
+  video_parts: string[];
 }
 
 export type Lectures = Lecture[];

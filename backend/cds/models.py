@@ -22,7 +22,7 @@ class Lecture(models.Model):
     sponsor = models.CharField(max_length=250, blank=True, default="")
     keywords = ArrayField(models.CharField(max_length=250), blank=True, default=list)
     files = ArrayField(models.CharField(max_length=250), blank=True, default=list)
-    type = ArrayField(models.CharField(max_length=250), blank=True, default=list)
+    types = ArrayField(models.CharField(max_length=250), blank=True, default=list)
 
     def save(self, *args, **kwargs):
         try:

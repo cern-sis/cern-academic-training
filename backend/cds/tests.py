@@ -68,7 +68,7 @@ class LectureTest(APITestCase):
             "subject_category": "Academic Training Lecture Regular Programme",
             "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049666/1049666-presenter-cover.png",
             "title": "REMOTE: Federated Data Architectures",
-            "type": [],
+            "types": [],
         }
 
         self.assertEqual(json.loads(response.content)["results"][0], expected_data)

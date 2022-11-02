@@ -24,8 +24,9 @@ function filenameFromUrl(url: string) {
 }
 
 function LectureItem({ lecture }: { lecture: LectureModel }) {
-  const isVideo = lecture.type && lecture.type.includes("video");
-  const isSlide = lecture.type && lecture.type.includes("slide");
+  const isVideo = lecture.types && lecture.types.includes("video");
+  const isSlide = lecture.types && lecture.types.includes("slide");
+  const isParts = lecture.types && lecture.types.includes("parts");
   const lectureId = lecture.lecture_id;
 
   useEffect(() => {
@@ -45,6 +46,7 @@ function LectureItem({ lecture }: { lecture: LectureModel }) {
 
   const displaySlidePlayer = year && indicoId;
   const displayVideo = isVideo && !displaySlidePlayer;
+  const displayParts = isParts && lecture.video_parts.length > 0;
 
   const get_trimmed_abstract = () => {
     const trimmed_abstract = lecture.abstract
@@ -73,7 +75,18 @@ function LectureItem({ lecture }: { lecture: LectureModel }) {
         <title>{lecture.title}</title>
         <meta name="description" content={meta_tag_description} />
       </Helmet>
-      {displayVideo && (
+
+      {displayParts && (
+        <div className="video-window">
+          <iframe
+            title={lecture.title}
+            src={lecture.video_parts[0]}
+            allowFullScreen
+          />
+        </div>
+      )}
+
+      {displayVideo && !displayParts && (
         <div className="video-window">
           <iframe
             title={lecture.title}
