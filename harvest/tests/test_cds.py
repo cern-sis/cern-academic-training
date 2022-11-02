@@ -29,7 +29,7 @@ def test_cds_translation_record_with_video(shared_datadir):
         "subject_category": "Academic Training Lecture Regular Programme",
         "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/2021/1049663/1049663-thumbnail-161x101-at-10-percent.jpg",
         "title": "REMOTE: Federated Data Architectures",
-        "type": ["video"],
+        "types": ["video"],
     }
     node = Selector(text=content, type="xml")
     node.remove_namespaces()
@@ -47,7 +47,7 @@ def test_cds_translation_record_with_files(shared_datadir):
         "speaker": ["Bonaudi, Franco"],
         "subject_category": "Accelerators and Storage Rings",
         "license": "CERN 1969",
-        "type": ["file"],
+        "types": ["file"],
         "files": ["http://cds.cern.ch/record/318009/files/AT00000721.pdf"],
     }
     node = Selector(text=content, type="xml")

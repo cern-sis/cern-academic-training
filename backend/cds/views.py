@@ -42,7 +42,7 @@ class LectureDocumentView(DocumentViewSet):
 
     filter_fields = {
         "lecture_id": None,
-        "type": None,
+        "types": None,
         "keywords": None,
         "series": None,
         "sponsor": None,
@@ -62,7 +62,7 @@ class LectureDocumentView(DocumentViewSet):
     simple_query_string_search_fields = {
         "title": {"boost": 5},
         "abstract": {"boost": 1},
-        "type": {"boost": 5},
+        "types": {"boost": 5},
         "keywords": {"boost": 6},
         "sponsor": {"boost": 10},
         "speaker": {"boost": 10},

@@ -24,8 +24,8 @@ function filenameFromUrl(url: string) {
 }
 
 function LectureItem({ lecture }: { lecture: LectureModel }) {
-  const isVideo = lecture.type && lecture.type.includes("video");
-  const isSlide = lecture.type && lecture.type.includes("slide");
+  const isVideo = lecture.types && lecture.types.includes("video");
+  const isSlide = lecture.types && lecture.types.includes("slide");
   const lectureId = lecture.lecture_id;
 
   useEffect(() => {

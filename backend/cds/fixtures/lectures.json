@@ -19,7 +19,7 @@
       "license": "CERN 2021",
       "sponsor": "Maria Dimou",
       "keywords": ["one", "two", "three"],
-      "type": ["video"]
+      "types": ["video"]
     }
   },
   {
@@ -478,7 +478,7 @@
       "license": "CERN 2022",
       "sponsor": "Urs Wiedermann",
       "keywords": [],
-      "type": ["slide"]
+      "types": ["slide"]
     }
   }
 ]
