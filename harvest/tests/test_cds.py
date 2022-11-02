@@ -140,3 +140,33 @@ def xtest_the_whole_process(
     process.start()
 
     assert expected_records == results
+
+
+def test_cds_translation_record_with_parts(shared_datadir):
+    content = (shared_datadir / "record_with_parts.xml").read_text()
+    expected_data = {
+        "lecture_id": "341905",
+        "title": "Quantum chromodynamics",
+        "date": "1997-11-24",
+        "abstract": "1. Gauge invariance and Feynman rules for QCD. 2. Renormalization, running coupling and operator product expansion. 3. QCD in $e^{+] e^{-}$ collisions: from quarks and gluons to hadrons; R, jets and shape variables. 4. QCD in lepton-hadron collisions: DIS structure functions, sum rules and parton evolution. 5. QCD in hadron-hadron collisions: DY, W and Z production, Jets, heavy quarks.",
+        "series": "CERN Academic Training Lecture - 345",
+        "speaker": ["Mangano, Michelangelo L"],
+        "thumbnail_picture": "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-thumbnail-180x135-at-05-percent.jpg",
+        "language": "eng",
+        "subject_category": "Particle Physics",
+        "imprint": "1997-11-24 - Transparencies ; 1 DVD video ; 2 VHS video",
+        "license": "CERN 1997",
+        "video_parts": [
+            "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-A/CERN-VIDEO-C-348-A-0600-kbps-maxH-360-25-fps-audio-128-kbps-48-kHz-stereo.mp4",
+            "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-C/CERN-VIDEO-C-348-C-0600-kbps-maxH-360-25-fps-audio-128-kbps-48-kHz-stereo.mp4",
+            "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-B/CERN-VIDEO-C-348-B-0600-kbps-maxH-360-25-fps-audio-128-kbps-48-kHz-stereo.mp4",
+            "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-E/CERN-VIDEO-C-348-E-0600-kbps-maxH-360-25-fps-audio-128-kbps-48-kHz-stereo.mp4",
+            "http://mediaarchive.cern.ch/MediaArchive/Video/Public/Conferences/1997/CERN-VIDEO-C-348-D/CERN-VIDEO-C-348-D-0600-kbps-maxH-360-25-fps-audio-128-kbps-48-kHz-stereo.mp4",
+        ],
+        "types": ["video", "parts"],
+    }
+    node = Selector(text=content, type="xml")
+    node.remove_namespaces()
+
+    record = CDSSpider(from_date="2022-05-01").parse_item(node, content)
+    assert record == expected_data

@@ -18,6 +18,7 @@ export interface Lecture {
   thumbnail_picture: string;
   title: string;
   types: string[];
+  video_parts: string[];
 }
 
 export type Lectures = Lecture[];

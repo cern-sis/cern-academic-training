@@ -15,7 +15,7 @@
     "lecture_note": "2022-04-26T11:00:00",
     "imprint": "2022-04-26 - 1:06:27",
     "license": "CERN 2022",
-    "type": ["video"],
+    "types": ["video"],
     "sponsor": "Maria Arsuaga Rios",
     "keywords": []
   },
@@ -35,7 +35,7 @@
     "lecture_note": "2022-04-26T11:00:00",
     "imprint": "2022-04-26 - 1:06:27",
     "license": "CERN 2022",
-    "type": ["video"],
+    "types": ["video"],
     "sponsor": "Maria Arsuaga Rios",
     "keywords": []
   },
@@ -55,7 +55,7 @@
     "lecture_note": "2022-04-26T11:00:00",
     "imprint": "2022-04-26 - 1:06:27",
     "license": "CERN 2022",
-    "type": ["video"],
+    "types": ["video"],
     "sponsor": "Maria Arsuaga Rios",
     "keywords": []
   },
@@ -75,7 +75,7 @@
     "lecture_note": "2022-04-26T11:00:00",
     "imprint": "2022-04-26 - 1:06:27",
     "license": "CERN 2022",
-    "type": ["video"],
+    "types": ["video"],
     "sponsor": "Maria Arsuaga Rios",
     "keywords": []
   },
@@ -95,7 +95,7 @@
     "lecture_note": "2022-04-26T11:00:00",
     "imprint": "2022-04-26 - 1:06:27",
     "license": "CERN 2022",
-    "type": ["video"],
+    "types": ["video"],
     "sponsor": "Maria Arsuaga Rios",
     "keywords": []
   },
@@ -115,7 +115,7 @@
     "lecture_note": "2022-04-26T11:00:00",
     "imprint": "2022-04-26 - 1:06:27",
     "license": "CERN 2022",
-    "type": ["video"],
+    "types": ["video"],
     "sponsor": "Maria Arsuaga Rios",
     "keywords": []
   },
@@ -135,7 +135,7 @@
     "lecture_note": "2022-04-26T11:00:00",
     "imprint": "2022-04-26 - 1:06:27",
     "license": "CERN 2022",
-    "type": ["video"],
+    "types": ["video"],
     "sponsor": "Maria Arsuaga Rios",
     "keywords": []
   },
@@ -155,7 +155,7 @@
     "lecture_note": "2022-04-26T11:00:00",
     "imprint": "2022-04-26 - 1:06:27",
     "license": "CERN 2022",
-    "type": ["video"],
+    "types": ["video"],
     "sponsor": "Maria Arsuaga Rios",
     "keywords": []
   }
