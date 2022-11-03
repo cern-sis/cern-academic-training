@@ -12,7 +12,7 @@ class LectureDocument(Document):
     names_analyzer = analyzer(
         "name_analyzer",
         tokenizer="letter",
-        filter=[ "lowercase"],
+        filter=["lowercase"],
     )
 
     class Index:
@@ -21,13 +21,15 @@ class LectureDocument(Document):
     settings = {"number_of_shards": 1, "number_of_replicas": 0}
 
     files = TextField(multi=True)
-    type = KeywordField(multi=True)
+    types = KeywordField(multi=True)
+    video_parts = KeywordField(multi=True)
     keywords = KeywordField(multi=True)
     series = TextField()
     sponsor = TextField(analyzer=names_analyzer)
     speaker = TextField(analyzer=names_analyzer, multi=True)
     speaker_details = TextField(multi=True)
     subject_category = TextField()
+
     class Django:
         model = Lecture
         fields = [

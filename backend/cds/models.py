@@ -10,8 +10,12 @@ class Lecture(models.Model):
     corporate_author = models.CharField(max_length=250, blank=True, default="")
     abstract = models.TextField(blank=True, default="")
     series = models.CharField(max_length=250, blank=True, default="")
-    speaker = ArrayField(models.CharField(max_length=250, blank=True, default=""), default=list)
-    speaker_details = ArrayField(models.CharField(max_length=250, blank=True, default=""), default=list)
+    speaker = ArrayField(
+        models.CharField(max_length=250, blank=True, default=""), default=list
+    )
+    speaker_details = ArrayField(
+        models.CharField(max_length=250, blank=True, default=""), default=list
+    )
     event_details = models.CharField(max_length=250, blank=True, default="")
     thumbnail_picture = models.TextField(blank=True, default="")
     language = models.CharField(max_length=3, blank=True, default="")
@@ -23,6 +27,7 @@ class Lecture(models.Model):
     keywords = ArrayField(models.CharField(max_length=250), blank=True, default=list)
     files = ArrayField(models.CharField(max_length=250), blank=True, default=list)
     types = ArrayField(models.CharField(max_length=250), blank=True, default=list)
+    video_parts = ArrayField(models.CharField(max_length=250), blank=True, default=list)
 
     def save(self, *args, **kwargs):
         try:

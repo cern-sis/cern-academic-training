@@ -34,4 +34,5 @@ class LectureDocumentSerializer(DocumentSerializer):
             "keywords",
             "types",
             "files",
+            "video_parts",
         )
