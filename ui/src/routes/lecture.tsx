@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams, Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-import { List, Row, Layout, Typography } from "antd";
+import { List, Row, Layout, Tabs, Typography } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
+import { Player } from "video-react";
+import "video-react/dist/video-react.css";
 
 import AT_HEADER from "../components/AT_HEADER";
 import CERN_FOOTER from "../components/CERN_FOOTER";
@@ -70,20 +72,24 @@ function LectureItem({ lecture }: { lecture: LectureModel }) {
   const meta_tag_description = lecture.abstract ? get_description() : "";
 
   return (
-    <>
+    <div className="__LECTURE_DETAIL__">
       <Helmet>
         <title>{lecture.title}</title>
         <meta name="description" content={meta_tag_description} />
       </Helmet>
 
       {displayParts && (
-        <div className="video-window">
-          <iframe
-            title={lecture.title}
-            src={lecture.video_parts[0]}
-            allowFullScreen
-          />
-        </div>
+        <Tabs tabPosition={"bottom"} defaultActiveKey="1">
+          {lecture.video_parts.map((video, index) => (
+            <Tabs.TabPane tab={`Part ${index + 1}`} key={`video_${index}`}>
+              <div className="video-window">
+                <Player height={300} playsInline>
+                  <source src={video} />
+                </Player>
+              </div>
+            </Tabs.TabPane>
+          ))}
+        </Tabs>
       )}
 
       {displayVideo && !displayParts && (
@@ -170,7 +176,7 @@ function LectureItem({ lecture }: { lecture: LectureModel }) {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
 

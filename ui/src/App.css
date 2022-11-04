@@ -1030,3 +1030,14 @@ iframe {
     margin-top: 0;
   }
 }
+
+.__LECTURE_DETAIL__ .ant-tabs-tab {
+  font-weight: bold;
+  color: #fff;
+}
+
+.__LECTURE_DETAIL__ .ant-tabs-tab-active .ant-tabs-tab-btn {
+  font-weight: bold !important;
+  text-decoration: underline;
+  color: #fff;
+}
