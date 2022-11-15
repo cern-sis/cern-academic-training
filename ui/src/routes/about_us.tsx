@@ -14,7 +14,7 @@ import { UserOutlined } from "@ant-design/icons";
 import { Helmet } from "react-helmet";
 
 import "../App.css";
-import { getMembers } from "../photos/members/members";
+import { getMemebers } from "../photos/members/members";
 import { getPhotos } from "../photos/carousel/photos";
 import { getReveal } from "../events/reveal";
 
@@ -26,10 +26,15 @@ import { HOME_PAGE_METATAG_CONTENT } from "../common/constants";
 const { Content } = Layout;
 const { Title } = Typography;
 
-function AboutUs() {
-  const members = getMembers();
-  const photos = getPhotos();
+// MEMBERS.keys().map((section: any) => {
+//   console.log("section", MEMBERS[section], section);
+// });
+console.log("s", getMemebers());
+// getMemebers().map(({ key, value }: any) => console.log(key, value));
+const MEMBERS = getMemebers();
 
+const photos = getPhotos();
+function AboutUs() {
   window.scrollTo(0, 0);
 
   getReveal();
@@ -108,7 +113,7 @@ function AboutUs() {
               justify="center"
               gutter={[16, 52]}
             >
-              {members.slice(0, 1).map((member: any) => {
+              {MEMBERS["core"].map((member: any) => {
                 return (
                   <Space>
                     <Col key={member.key} span={8}>
@@ -116,61 +121,7 @@ function AboutUs() {
                         <Card.Grid className="grid-style">
                           <div className="member-content">
                             <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/Urs_Wiedemann.jpg")
-                                  .default
-                              }
-                            />
-                            <Title level={2}>{member.name}</Title>
-                            <p>{member.position}</p>
-                          </div>
-                        </Card.Grid>
-                      </Card>
-                    </Col>
-                  </Space>
-                );
-              })}
-              {members.slice(1, 2).map((member: any) => {
-                return (
-                  <Space>
-                    <Col key={member.key} span={12}>
-                      <Card hoverable className="member-card">
-                        <Card.Grid className="grid-style">
-                          <div className="member-content">
-                            <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/Maria_Dimou.png")
-                                  .default
-                              }
-                            />
-                            <Title level={2}>{member.name}</Title>
-                            <p>{member.position}</p>
-                          </div>
-                        </Card.Grid>
-                      </Card>
-                    </Col>
-                  </Space>
-                );
-              })}
-              {members.slice(2, 3).map((member: any) => {
-                return (
-                  <Space>
-                    <Col key={member.key} span={12}>
-                      <Card hoverable className="member-card">
-                        <Card.Grid className="grid-style">
-                          <div className="member-content">
-                            <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/Marika_Flygar.jpg")
-                                  .default
-                              }
-                            />
+                            <Avatar size={120} src={member.profile.default} />
                             <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
@@ -191,7 +142,7 @@ function AboutUs() {
               justify="center"
               gutter={[16, 52]}
             >
-              {members.slice(3, 4).map((member: any) => {
+              {MEMBERS["departments"].map((member: any) => {
                 return (
                   <Space>
                     <Col key={member.key} span={8}>
@@ -199,130 +150,7 @@ function AboutUs() {
                         <Card.Grid className="grid-style">
                           <div className="member-content">
                             <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/AndreDavid.JPG")
-                                  .default
-                              }
-                            />
-                            <Title level={2}>{member.name}</Title>
-                            <p>{member.position}</p>
-                          </div>
-                        </Card.Grid>
-                      </Card>
-                    </Col>
-                  </Space>
-                );
-              })}
-              {members.slice(4, 5).map((member: any) => {
-                return (
-                  <Space>
-                    <Col key={member.key} span={8}>
-                      <Card hoverable className="member-card">
-                        <Card.Grid className="grid-style">
-                          <div className="member-content">
-                            <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/MassimoGiovanozzi.png")
-                                  .default
-                              }
-                            />
-                            <Title level={2}>{member.name}</Title>
-                            <p>{member.position}</p>
-                          </div>
-                        </Card.Grid>
-                      </Card>
-                    </Col>
-                  </Space>
-                );
-              })}
-              {members.slice(5, 6).map((member: any) => {
-                return (
-                  <Space>
-                    <Col key={member.key} span={8}>
-                      <Card hoverable className="member-card">
-                        <Card.Grid className="grid-style">
-                          <div className="member-content">
-                            <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              icon={<UserOutlined />}
-                            />
-                            <Title level={2}>{member.name}</Title>
-                            <p>{member.position}</p>
-                          </div>
-                        </Card.Grid>
-                      </Card>
-                    </Col>
-                  </Space>
-                );
-              })}
-              {members.slice(6, 7).map((member: any) => {
-                return (
-                  <Space>
-                    <Col key={member.key} span={8}>
-                      <Card hoverable className="member-card">
-                        <Card.Grid className="grid-style">
-                          <div className="member-content">
-                            <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/Bertrand_Nicquevert.jpeg")
-                                  .default
-                              }
-                            />
-                            <Title level={2}>{member.name}</Title>
-                            <p>{member.position}</p>
-                          </div>
-                        </Card.Grid>
-                      </Card>
-                    </Col>
-                  </Space>
-                );
-              })}
-              {members.slice(7, 8).map((member: any) => {
-                return (
-                  <Space>
-                    <Col key={member.key} span={8}>
-                      <Card hoverable className="member-card">
-                        <Card.Grid className="grid-style">
-                          <div className="member-content">
-                            <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/Valeria_Perez_Reale.png")
-                                  .default
-                              }
-                            />
-                            <Title level={2}>{member.name}</Title>
-                            <p>{member.position}</p>
-                          </div>
-                        </Card.Grid>
-                      </Card>
-                    </Col>
-                  </Space>
-                );
-              })}
-              {members.slice(8, 9).map((member: any) => {
-                return (
-                  <Space>
-                    <Col key={member.key} span={8}>
-                      <Card hoverable className="member-card">
-                        <Card.Grid className="grid-style">
-                          <div className="member-content">
-                            <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/Antonio_Perillo_Marcone.jpeg")
-                                  .default
-                              }
-                            />
+                            <Avatar size={120} src={member.profile.default} />
                             <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
@@ -338,7 +166,7 @@ function AboutUs() {
               <Divider className="divider" />
             </div>
             <Row className="reveal" style={style} justify="center" gutter={16}>
-              {members.slice(9, 10).map((member: any) => {
+              {MEMBERS["users"].map((member: any) => {
                 return (
                   <Space>
                     <Col key={member.key} span={24}>
@@ -346,10 +174,7 @@ function AboutUs() {
                         <Card.Grid className="grid-style">
                           <div className="member-content">
                             <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              icon={<UserOutlined />}
-                            />
+                            <Avatar size={120} icon={<UserOutlined />} />
                             <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
@@ -365,7 +190,7 @@ function AboutUs() {
               <Divider className="divider" />
             </div>
             <Row className="reveal" style={style} justify="center" gutter={16}>
-              {members.slice(10, 11).map((member: any) => {
+              {MEMBERS["staff association"].map((member: any) => {
                 return (
                   <Space>
                     <Col key={member.key} span={24}>
@@ -373,13 +198,7 @@ function AboutUs() {
                         <Card.Grid className="grid-style">
                           <div className="member-content">
                             <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/Lynda-Meichtry.jpg")
-                                  .default
-                              }
-                            />
+                            <Avatar size={120} src={member.profile.default} />
                             <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
@@ -400,7 +219,7 @@ function AboutUs() {
               justify="center"
               gutter={[16, 52]}
             >
-              {members.slice(11, 12).map((member: any) => {
+              {MEMBERS["observers"].map((member: any) => {
                 return (
                   <Space>
                     <Col key={member.key} span={6}>
@@ -408,85 +227,7 @@ function AboutUs() {
                         <Card.Grid className="grid-style">
                           <div className="member-content">
                             <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/Maria_Fiascaris.jpeg")
-                                  .default
-                              }
-                            />
-                            <Title level={2}>{member.name}</Title>
-                            <p>{member.position}</p>
-                          </div>
-                        </Card.Grid>
-                      </Card>
-                    </Col>
-                  </Space>
-                );
-              })}
-              {members.slice(12, 13).map((member: any) => {
-                return (
-                  <Space>
-                    <Col key={member.key} span={6}>
-                      <Card hoverable className="member-card">
-                        <Card.Grid className="grid-style">
-                          <div className="member-content">
-                            <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/Martijn_Mulders.jpg")
-                                  .default
-                              }
-                            />
-                            <Title level={2}>{member.name}</Title>
-                            <p>{member.position}</p>
-                          </div>
-                        </Card.Grid>
-                      </Card>
-                    </Col>
-                  </Space>
-                );
-              })}
-              {members.slice(13, 14).map((member: any) => {
-                return (
-                  <Space>
-                    <Col key={member.key} span={6}>
-                      <Card hoverable className="member-card">
-                        <Card.Grid className="grid-style">
-                          <div className="member-content">
-                            <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/Sebastian_Lopienski.jpeg")
-                                  .default
-                              }
-                            />
-                            <Title level={2}>{member.name}</Title>
-                            <p>{member.position}</p>
-                          </div>
-                        </Card.Grid>
-                      </Card>
-                    </Col>
-                  </Space>
-                );
-              })}
-              {members.slice(14, 15).map((member: any) => {
-                return (
-                  <Space>
-                    <Col key={member.key} span={6}>
-                      <Card hoverable className="member-card">
-                        <Card.Grid className="grid-style">
-                          <div className="member-content">
-                            <Title level={3}>{member.department}</Title>
-                            <Avatar
-                              size={120}
-                              src={
-                                require("../photos/members/profiles/Frank_Tecker.jpg")
-                                  .default
-                              }
-                            />
+                            <Avatar size={120} src={member.profile.default} />
                             <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
