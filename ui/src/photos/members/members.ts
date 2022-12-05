@@ -108,8 +108,8 @@ const MEMBERS: any = {
     },
     {
       key: 14,
-      name: "Sebastian LOPIENSKI",
-      profile: require("./profiles/Sebastian_Lopienski.jpeg"),
+      name: "Alberto PACE",
+      profile: require("./profiles/Alberto.jpg"),
       position: "CERN School of Computing",
       department: "IT",
     },
