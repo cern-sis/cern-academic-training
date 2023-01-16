@@ -42,10 +42,10 @@ jobs:
 
   Test_Backend:
     name: Test Backend
+    needs: [backend_build, ui_build, harvest_build]
     runs-on: ubuntu-latest
     env:
       BACKEND_IMAGE: registry.cern.ch/cern-sis/cat-backend:${{ github.sha }}
-    needs: [backend_build, ui_build, harvest_build]
     defaults:
       run:
         working-directory: backend
