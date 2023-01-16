@@ -11,7 +11,7 @@ ENV PYTHONBUFFERED=0 \
 ARG POETRY_VERSION
 ENV POETRY_VERSION="${POETRY_VERSION:-1.1.6}"
 RUN curl -sSL https://install.python-poetry.org/ \
-  | python - --version "${POETRY_VERSION}"
+  | python3 - --version "${POETRY_VERSION}"
 
 ENV PATH="/home/test/.local/bin:${PATH}"
 ENV PATH="/root/.local/bin:$PATH"
