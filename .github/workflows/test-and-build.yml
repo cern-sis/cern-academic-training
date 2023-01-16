@@ -43,6 +43,8 @@ jobs:
   Test_Backend:
     name: Test Backend
     runs-on: ubuntu-latest
+    env:
+      BACKEND_IMAGE: registry.cern.ch/cern-sis/cat-backend:${{ github.sha }}
     needs: [backend_build, ui_build, harvest_build]
     defaults:
       run:
@@ -74,29 +76,16 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
-
-      - name: Install python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install poetry
-          poetry install
-
-      - name: Show python dependencies
-        run: |
-          pip freeze
-
       - name: Run tests
         run: |
-          poetry run python manage.py test
+          docker run --network=host --name=cat-backend poetry $BACKEND_IMAGE run python manage.py test
 
   Test_Harvest:
     name: Test Harvest
     needs: [backend_build, ui_build, harvest_build]
     runs-on: ubuntu-latest
+    env:
+      HARVEST_IMAGE: registry.cern.ch/cern-sis/cat-harvest:${{ github.sha }}
     defaults:
       run:
         working-directory: harvest
@@ -109,24 +98,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
-
-      - name: Install python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install poetry
-          poetry install
-
-      - name: Show python dependencies
-        run: |
-          pip freeze
-
       - name: Run tests
         run: |
-          poetry run pytest tests
+          docker run --network=host --name=cat-harvest --entrypoint poetry $HARVEST_IMAGE run pytest tests
 
   Deploy_Backend:
     needs: [Test_Harvest, Test_Backend]
