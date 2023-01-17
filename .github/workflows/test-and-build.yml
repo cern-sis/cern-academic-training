@@ -7,42 +7,8 @@ on:
     branches: [master]
 
 jobs:
-  backend_build:
-    uses: cern-sis/gh-workflows/.github/workflows/build-image.yml@main
-    with:
-      registry: registry.cern.ch
-      context: ./backend/
-      tags: registry.cern.ch/cern-sis/cat-backend:latest,registry.cern.ch/cern-sis/cat-backend:${{ github.sha }}
-      push: true
-    secrets:
-      registry_username: ${{ secrets.HARBOR_USERNAME }}
-      registry_password: ${{ secrets.HARBOR_PASSWORD }}
-  
-  ui_build:
-    uses: cern-sis/gh-workflows/.github/workflows/build-image.yml@main
-    with:
-      registry: registry.cern.ch
-      context: ./ui/
-      tags: registry.cern.ch/cern-sis/cat-ui:latest,registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
-      push: true
-    secrets:
-      registry_username: ${{ secrets.HARBOR_USERNAME }}
-      registry_password: ${{ secrets.HARBOR_PASSWORD }}
-
-  harvest_build:
-    uses: cern-sis/gh-workflows/.github/workflows/build-image.yml@main
-    with:
-      registry: registry.cern.ch
-      context: ./harvest/
-      push: true
-      tags: registry.cern.ch/cern-sis/cat-harvest:latest,registry.cern.ch/cern-sis/cat-harvest:${{ github.sha }}
-    secrets:
-      registry_username: ${{ secrets.HARBOR_USERNAME }}
-      registry_password: ${{ secrets.HARBOR_PASSWORD }}
-
-  Test_Backend:
-    name: Test Backend
-    needs: [backend_build, ui_build, harvest_build]
+  backend_build_test:
+    name: Backend Build and Test
     runs-on: ubuntu-latest
     env:
       BACKEND_IMAGE: registry.cern.ch/cern-sis/cat-backend:${{ github.sha }}
@@ -70,19 +36,40 @@ jobs:
           POSTGRES_DB: cat
         ports:
           - 5432:5432
+
+    if: ${{ github.event_name == 'push' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
           python-version: ${{ matrix.python-version }}
 
+      - name: Build Image
+        uses: cern-sis/gh-workflows/.github/actions/build-docker
+        with:
+          context: ./backend/
+          tags: registry.cern.ch/cern-sis/cat-backend:${{ github.sha }}
+
       - name: Run tests
         run: |
           docker run --network=host --name=cat-backend poetry $BACKEND_IMAGE run python manage.py test
 
-  Test_Harvest:
-    name: Test Harvest
-    needs: [backend_build, ui_build, harvest_build]
+  ui_build_test:
+    name: UI Build and Test
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build Image
+        uses: cern-sis/gh-workflows/.github/actions/build-docker
+        with:
+          context: ./ui/
+          tags: registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
+
+  harvest_build_test:
+    name: Harvest Build and Test
     runs-on: ubuntu-latest
     env:
       HARVEST_IMAGE: registry.cern.ch/cern-sis/cat-harvest:${{ github.sha }}
@@ -92,18 +79,25 @@ jobs:
     strategy:
       matrix:
         python-version: [3.9]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          python-version: ${{ matrix.python-version }}
+    if: ${{ github.event_name == 'push' }}
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+          with:
+            python-version: ${{ matrix.python-version }}
 
-      - name: Run tests
-        run: |
-          docker run --network=host --name=cat-harvest --entrypoint poetry $HARVEST_IMAGE run pytest tests
+        - name: Build Image
+          uses: cern-sis/gh-workflows/.github/actions/build-docker
+          with:
+            context: ./harvest/
+            tags: registry.cern.ch/cern-sis/cat-harvest:${{ github.sha }}
+
+        - name: Run tests
+          run: |
+            docker run --network=host --name=cat-harvest --entrypoint poetry $HARVEST_IMAGE run pytest tests
 
   Deploy_Backend:
-    needs: [Test_Harvest, Test_Backend]
+    needs: [backend_build_test]
     uses: cern-sis/gh-workflows/.github/workflows/deploy-qa.yml@main
     with:
       project: cat
@@ -114,7 +108,7 @@ jobs:
       PAT: ${{ secrets.PATH_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
 
   Deploy_UI:
-    needs: [Test_Harvest, Test_Backend]
+    needs: [ui_build_test]
     uses: cern-sis/gh-workflows/.github/workflows/deploy-qa.yml@main
     with:
       project: cat
@@ -125,7 +119,7 @@ jobs:
       PAT: ${{ secrets.PATH_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
 
   Deploy_Harvest:
-    needs: [Test_Harvest, Test_Backend]
+    needs: [harvest_build_test]
     uses: cern-sis/gh-workflows/.github/workflows/deploy-qa.yml@main
     with:
       project: cat
