@@ -17,9 +17,12 @@ RUN apt update && apt install poppler-utils -y
 
 ARG POETRY_VERSION
 ENV POETRY_VERSION="${POETRY_VERSION:-1.1.6}"
-RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py \
-  | python - --version "${POETRY_VERSION}" \
-  && poetry --version
+RUN curl -sSL https://install.python-poetry.org/ \
+    | python3 - --version "${POETRY_VERSION}"
+
+ENV PATH="/root/.local/bin:$PATH"
+
+RUN poetry --version
 
 COPY poetry.lock pyproject.toml ./
 RUN pip install --upgrade pip &&  \

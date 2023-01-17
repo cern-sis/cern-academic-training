@@ -10,11 +10,11 @@ ENV PYTHONBUFFERED=0 \
 
 ARG POETRY_VERSION
 ENV POETRY_VERSION="${POETRY_VERSION:-1.1.6}"
-RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py \
-  | python - --version "${POETRY_VERSION}" \
- && poetry --version
+RUN curl -sSL https://install.python-poetry.org/ \
+  | python3 - --version "${POETRY_VERSION}"
 
 ENV PATH="/home/test/.local/bin:${PATH}"
+ENV PATH="/root/.local/bin:$PATH"
 
 COPY poetry.lock pyproject.toml ./
 
