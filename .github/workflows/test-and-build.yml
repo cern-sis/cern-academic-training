@@ -80,21 +80,21 @@ jobs:
       matrix:
         python-version: [3.9]
     if: ${{ github.event_name == 'push' }}
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-          with:
-            python-version: ${{ matrix.python-version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          python-version: ${{ matrix.python-version }}
 
-        - name: Build Image
-          uses: cern-sis/gh-workflows/.github/actions/build-docker
-          with:
-            context: ./harvest/
-            tags: registry.cern.ch/cern-sis/cat-harvest:${{ github.sha }}
+      - name: Build Image
+        uses: cern-sis/gh-workflows/.github/actions/build-docker
+        with:
+          context: ./harvest/
+          tags: registry.cern.ch/cern-sis/cat-harvest:${{ github.sha }}
 
-        - name: Run tests
-          run: |
-            docker run --network=host --name=cat-harvest --entrypoint poetry $HARVEST_IMAGE run pytest tests
+      - name: Run tests
+        run: |
+          docker run --network=host --name=cat-harvest --entrypoint poetry $HARVEST_IMAGE run pytest tests
 
   Deploy_Backend:
     needs: [backend_build_test]
