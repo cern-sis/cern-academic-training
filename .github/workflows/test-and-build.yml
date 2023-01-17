@@ -49,7 +49,6 @@ jobs:
         with:
           context: ./backend/
           tags: registry.cern.ch/cern-sis/cat-backend:${{ github.sha }}
-          load: true
 
       - name: Run tests
         run: |
@@ -68,7 +67,6 @@ jobs:
         with:
           context: ./ui/
           tags: registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
-          load: true
 
   harvest_build_test:
     name: Harvest Build and Test
@@ -93,7 +91,6 @@ jobs:
           with:
             context: ./harvest/
             tags: registry.cern.ch/cern-sis/cat-harvest:${{ github.sha }}
-            load: true
 
         - name: Run tests
           run: |
