@@ -48,9 +48,8 @@ jobs:
         uses: cern-sis/gh-workflows/.github/actions/build-docker
         with:
           context: ./backend/
-          registry: registry.cern.ch
           tags: registry.cern.ch/cern-sis/cat-backend:${{ github.sha }}
-          push: true
+          load: true
 
       - name: Run tests
         run: |
@@ -68,9 +67,8 @@ jobs:
         uses: cern-sis/gh-workflows/.github/actions/build-docker
         with:
           context: ./ui/
-          registry: registry.cern.ch
           tags: registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
-          push: true
+          load: true
 
   harvest_build_test:
     name: Harvest Build and Test
@@ -94,9 +92,8 @@ jobs:
           uses: cern-sis/gh-workflows/.github/actions/build-docker
           with:
             context: ./harvest/
-            registry: registry.cern.ch
             tags: registry.cern.ch/cern-sis/cat-harvest:${{ github.sha }}
-            push: true
+            load: true
 
         - name: Run tests
           run: |
