@@ -52,7 +52,7 @@ jobs:
 
       - name: Run tests
         run: |
-          docker run --network=host --name=cat-backend poetry $BACKEND_IMAGE run python manage.py test
+          docker run --network=host --name=cat-backend --entrypoint poetry $BACKEND_IMAGE run python manage.py test
 
   ui_build_test:
     name: UI Build and Test
@@ -105,7 +105,7 @@ jobs:
       namespace: cat-qa
       image: registry.cern.ch/cern-sis/cat-backend
     secrets:
-      PAT: ${{ secrets.PATH_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
+      PAT: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
 
   Deploy_UI:
     needs: [ui_build_test]
@@ -116,7 +116,7 @@ jobs:
       namespace: cat-qa
       image: registry.cern.ch/cern-sis/cat-ui
     secrets:
-      PAT: ${{ secrets.PATH_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
+      PAT: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
 
   Deploy_Harvest:
     needs: [harvest_build_test]
@@ -127,5 +127,5 @@ jobs:
       namespace: cat-qa
       image: registry.cern.ch/cern-sis/cat-harvest
     secrets:
-      PAT: ${{ secrets.PATH_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
+      PAT: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
 
