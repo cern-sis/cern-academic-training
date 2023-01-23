@@ -1,0 +1,29 @@
+name: "Push Image"
+inputs:
+  registry:
+    required: true
+    description: "The image registry to push the image to"
+  username:
+    required: true
+    description: "Registry username"
+  password:
+    required: true
+    description: "Registry password"
+  image:
+    required: true
+    description: "Image to push"
+runs:
+  using: "composite"
+  steps:
+    - name: Login to DockerHub
+      uses: docker/login-action@v1
+      with:
+        registry: ${{ inputs.registry }}
+        username: ${{ inputs.username }}
+        password: ${{ inputs.password }}
+    - name: Push
+      shell: bash
+      env:
+        IMAGE: ${{ inputs.image }}
+      run: |
+        docker push $IMAGE
