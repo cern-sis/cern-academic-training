@@ -54,7 +54,7 @@ jobs:
           docker run --network=host --name=cat-backend --entrypoint poetry $BACKEND_IMAGE run python manage.py test
 
       - name: Push to Registry
-        if: ${{ .github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' }}
         uses: ./.github/actions/push
         with:
           registry: registry.cern.ch
@@ -67,7 +67,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       UI_IMAGE: registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
-    if: ${{ github.event_name == 'push' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -79,7 +78,7 @@ jobs:
           tags: registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
 
       - name: Push to Registry
-        if: ${{ .github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' }}
         uses: ./.github/actions/push
         with:
           registry: registry.cern.ch
@@ -98,7 +97,6 @@ jobs:
     strategy:
       matrix:
         python-version: [3.9]
-    if: ${{ github.event_name == 'push' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -116,7 +114,7 @@ jobs:
           docker run --network=host --name=cat-harvest --entrypoint poetry $HARVEST_IMAGE run pytest tests
 
       - name: Push to Registry
-        if: ${{ .github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' }}
         uses: ./.github/actions/push
         with:
           registry: registry.cern.ch
