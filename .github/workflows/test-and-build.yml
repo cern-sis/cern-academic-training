@@ -54,9 +54,22 @@ jobs:
         run: |
           docker run --network=host --name=cat-backend --entrypoint poetry $BACKEND_IMAGE run python manage.py test
 
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          registry: registry.cern.ch
+          username: ${{ secrets.HARBOR_USERNAME }}
+          password: ${{ secrets.HARBOR_PASSWORD }}
+
+      - name: Push
+        run: |
+          docker push $BACKEND_IMAGE
+
   ui_build_test:
     name: UI Build and Test
     runs-on: ubuntu-latest
+    env:
+      UI_IMAGE: registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
     if: ${{ github.event_name == 'push' }}
     steps:
       - name: Checkout
@@ -67,6 +80,17 @@ jobs:
         with:
           context: ./ui/
           tags: registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          registry: registry.cern.ch
+          username: ${{ secrets.HARBOR_USERNAME }}
+          password: ${{ secrets.HARBOR_PASSWORD }}
+
+      - name: Push
+        run: |
+          docker push $UI_IMAGE
 
   harvest_build_test:
     name: Harvest Build and Test
@@ -95,6 +119,17 @@ jobs:
       - name: Run tests
         run: |
           docker run --network=host --name=cat-harvest --entrypoint poetry $HARVEST_IMAGE run pytest tests
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          registry: registry.cern.ch
+          username: ${{ secrets.HARBOR_USERNAME }}
+          password: ${{ secrets.HARBOR_PASSWORD }}
+
+      - name: Push
+        run: |
+          docker push $HARVEST_IMAGE
 
   Deploy_Backend:
     needs: [backend_build_test]
