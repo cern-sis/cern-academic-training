@@ -37,7 +37,6 @@ jobs:
         ports:
           - 5432:5432
 
-    if: ${{ github.event_name == 'push' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -54,9 +53,20 @@ jobs:
         run: |
           docker run --network=host --name=cat-backend --entrypoint poetry $BACKEND_IMAGE run python manage.py test
 
+      - name: Push to Registry
+        if: ${{ .github.event_name == 'push' }}
+        uses: ./.github/actions/push
+        with:
+          registry: registry.cern.ch
+          username: ${{ secrets.HARBOR_USERNAME }}
+          password: ${{ secrets.HARBOR_PASSWORD }}
+          image: $BACKEND_IMAGE
+
   ui_build_test:
     name: UI Build and Test
     runs-on: ubuntu-latest
+    env:
+      UI_IMAGE: registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
     if: ${{ github.event_name == 'push' }}
     steps:
       - name: Checkout
@@ -67,6 +77,15 @@ jobs:
         with:
           context: ./ui/
           tags: registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
+
+      - name: Push to Registry
+        if: ${{ .github.event_name == 'push' }}
+        uses: ./.github/actions/push
+        with:
+          registry: registry.cern.ch
+          username: ${{ secrets.HARBOR_USERNAME }}
+          password: ${{ secrets.HARBOR_PASSWORD }}
+          image: $UI_IMAGE
 
   harvest_build_test:
     name: Harvest Build and Test
@@ -95,6 +114,15 @@ jobs:
       - name: Run tests
         run: |
           docker run --network=host --name=cat-harvest --entrypoint poetry $HARVEST_IMAGE run pytest tests
+
+      - name: Push to Registry
+        if: ${{ .github.event_name == 'push' }}
+        uses: ./.github/actions/push
+        with:
+          registry: registry.cern.ch
+          username: ${{ secrets.HARBOR_USERNAME }}
+          password: ${{ secrets.HARBOR_PASSWORD }}
+          image: $HARVEST_IMAGE
 
   Deploy_Backend:
     needs: [backend_build_test]
