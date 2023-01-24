@@ -60,7 +60,7 @@ jobs:
           registry: registry.cern.ch
           username: ${{ secrets.HARBOR_USERNAME }}
           password: ${{ secrets.HARBOR_PASSWORD }}
-          image: $BACKEND_IMAGE
+          image: registry.cern.ch/cern-sis/cat-backend:${{ github.sha }}
 
   ui_build_test:
     name: UI Build and Test
@@ -84,7 +84,7 @@ jobs:
           registry: registry.cern.ch
           username: ${{ secrets.HARBOR_USERNAME }}
           password: ${{ secrets.HARBOR_PASSWORD }}
-          image: $UI_IMAGE
+          image: registry.cern.ch/cern-sis/cat-ui:${{ github.sha }}
 
   harvest_build_test:
     name: Harvest Build and Test
@@ -120,7 +120,7 @@ jobs:
           registry: registry.cern.ch
           username: ${{ secrets.HARBOR_USERNAME }}
           password: ${{ secrets.HARBOR_PASSWORD }}
-          image: $HARVEST_IMAGE
+          image: registry.cern.ch/cern-sis/cat-harvest:${{ github.sha }}
 
   Deploy_Backend:
     needs: [backend_build_test]
