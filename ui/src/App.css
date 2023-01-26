@@ -468,8 +468,8 @@ iframe {
   opacity: 0.6;
 }
 
-#date:after,
-#event:after {
+.details #date:not(:last-child)::after,
+.details #event:not(:last-child)::after {
   content: "•";
   padding: 0 10px;
   visibility: visible;
