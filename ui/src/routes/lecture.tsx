@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 import { List, Row, Layout, Tabs, Typography } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
-import { Player } from "video-react";
+import { Player, BigPlayButton } from "video-react";
 import "video-react/dist/video-react.css";
 
 import AT_HEADER from "../components/AT_HEADER";
@@ -84,6 +84,7 @@ function LectureItem({ lecture }: { lecture: LectureModel }) {
             <Tabs.TabPane tab={`Part ${index + 1}`} key={`video_${index}`}>
               <div className="video-window">
                 <Player height={300} playsInline>
+                  <BigPlayButton position="center" />
                   <source src={video} />
                 </Player>
               </div>
