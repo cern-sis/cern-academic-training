@@ -8,6 +8,8 @@ ENV PYTHONBUFFERED=0 \
   PATH="/root/.poetry/bin:${PATH}" \
   POETRY_VIRTUALENVS_CREATE=false
 
+ENTRYPOINT ["poetry", "run"]
+
 COPY CERN_Root_Certification_Authority_2.pem /usr/local/share/ca-certificates/CERN_Root_Certification_Authority_2.crt
 
 RUN update-ca-certificates \
@@ -20,7 +22,7 @@ ENV POETRY_VERSION="${POETRY_VERSION:-1.1.6}"
 RUN curl -sSL https://install.python-poetry.org/ \
     | python3 - --version "${POETRY_VERSION}"
 
-ENV PATH="/root/.local/bin:$PATH"
+ENV PATH="${PATH}:/root/.local/bin"
 
 RUN poetry --version
 
