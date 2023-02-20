@@ -18,7 +18,7 @@ RUN update-ca-certificates \
 RUN apt update && apt install poppler-utils -y
 
 ARG POETRY_VERSION
-ENV POETRY_VERSION="${POETRY_VERSION:-1.1.6}"
+ENV POETRY_VERSION="${POETRY_VERSION:-1.3.2}"
 RUN curl -sSL https://install.python-poetry.org/ \
     | python3 - --version "${POETRY_VERSION}"
 
@@ -26,14 +26,11 @@ ENV PATH="${PATH}:/root/.local/bin"
 
 RUN poetry --version
 
-COPY poetry.lock pyproject.toml ./
-RUN pip install --upgrade pip &&  \
-  poetry install --no-root
-
 COPY . /code/
 
 ARG VERSION
 ENV VERSION="${VERSION}"
 
-RUN poetry install && \
-  pip install --upgrade setuptools
+COPY poetry.lock pyproject.toml ./
+RUN pip install --upgrade pip &&  \
+  poetry install --no-root
