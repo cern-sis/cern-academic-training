@@ -1,3 +1,4 @@
+from copy import deepcopy
 from datetime import datetime, timedelta
 from time import sleep
 
@@ -19,21 +20,6 @@ CDS_URL_WITH_FIELD = "https://cds.cern.ch/search?ln=en&cc=Academic+Training+Lect
 SEARCH_FIELD = "260__c"
 
 ALL_YEARS = [
-    {"year": "2022", "field": "260__c"},
-    {"year": "2021", "field": "260__c"},
-    {"year": "2020", "field": "260__c"},
-    {"year": "2019", "field": "260__c"},
-    {"year": "2018", "field": "260__c"},
-    {"year": "2017", "field": "260__c"},
-    {"year": "2016", "field": "260__c"},
-    {"year": "2015", "field": "260__c"},
-    {"year": "2014", "field": "260__c"},
-    {"year": "2013", "field": "260__c"},
-    {"year": "2012", "field": "260__c"},
-    {"year": "2011", "field": "260__c"},
-    {"year": "2010", "field": "260__c"},
-    {"year": "2009", "field": "260__c"},
-    {"year": "2008", "field": "260__c"},
     {"year": "cern20070901", "field": "962__n"},
     {"year": "cern20060901", "field": "962__n"},
     {"year": "cern20050901", "field": "962__n"},
@@ -78,13 +64,11 @@ ALL_YEARS = [
 
 
 class CDSSpider(Spider):
-
     name = "CDS"
 
     def __init__(
         self, from_date=None, until_date=None, migrate_all=False, *args, **kwargs
     ):
-
         self.migrate_all = migrate_all
         self.all_years_gen = None
         self.until_date = until_date
@@ -110,9 +94,23 @@ class CDSSpider(Spider):
 
         super().__init__(*args, **kwargs)
 
+    def all_years(self):
+        """Generate all years from 2008 to current year.
+
+        Note:: it returns all the years of academic training lectures, previously on
+        CDS, and the years where with weird value of the field 260__c. That's why are
+        hardcoded. From 2008 to now the field 260__c is properly filled. Hence, we copy
+        the list of all years and we append the years from 2008 to now.
+        """
+        current_year = datetime.now().year
+        all_years = deepcopy(ALL_YEARS)
+        for year in range(2008, current_year + 1):
+            all_years.append({"year": str(year), "field": "260__c"})
+        return all_years
+
     @property
     def __gen_all_years(self):
-        return (year for year in ALL_YEARS)
+        return (year for year in self.all_years())
 
     def __build_cds_url(self, query, field=None, size=SIZE):
         if field is not None:
