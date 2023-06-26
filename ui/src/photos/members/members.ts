@@ -50,8 +50,8 @@ const MEMBERS: any = {
 
     {
       key: 7,
-      name: "Bertrand NICQUEVERT",
-      profile: require("./profiles/Bertrand_Nicquevert.jpeg"),
+      name: "Anne Laure PERROT",
+      profile: require("./profiles/Anne_Laure_Perrot.jpg"),
       position: "",
       department: "EN",
     },
