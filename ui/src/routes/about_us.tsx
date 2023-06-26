@@ -45,6 +45,7 @@ function AboutUs() {
     <Layout className="layout">
       <Helmet>
         <meta name="description" content={HOME_PAGE_METATAG_CONTENT} />
+        <title>About | CERN Academic Training</title>
       </Helmet>
       <CERN_TOOLBAR />
 
