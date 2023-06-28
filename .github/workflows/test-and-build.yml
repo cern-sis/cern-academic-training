@@ -61,10 +61,10 @@ jobs:
       - name: Run tests
         run: >
           docker run
-            --network=host
-            --name=cat-backend
-            $REGISTRY/$IMAGE_BACKEND@${{ steps.build.outputs.image-digest }}
-            python manage.py test
+          --network=host
+          --name=cat-backend
+          $REGISTRY/$IMAGE_BACKEND@${{ steps.build.outputs.image-digest }}
+          python manage.py test
 
   ui_build_test:
     name: UI Build and Test
