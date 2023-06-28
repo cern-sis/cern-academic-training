@@ -63,9 +63,8 @@ jobs:
           docker run
             --network=host
             --name=cat-backend
-            --entrypoint poetry
             $REGISTRY/$IMAGE_BACKEND@${{ steps.build.outputs.image-digest }}
-            run python manage.py test
+            python manage.py test
 
   ui_build_test:
     name: UI Build and Test
