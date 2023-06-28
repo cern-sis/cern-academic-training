@@ -134,7 +134,7 @@ jobs:
         with:
           event-type: update
           images: |
-            ${{needs.backend_build_test.outputs.image_backend}}
-            ${{needs.ui_build_test.outputs.image_ui}}
-            ${{needs.harvest_build_test.outputs.image_harvest}}
+            $REGISTRY/$IMAGE_BACKEND:${{needs.backend_build_test.outputs.image_backend}}
+            $REGISTRY/$IMAGE_UI:${{needs.ui_build_test.outputs.image_ui}}
+            $REGISTRY/$IMAGE_HARVEST:${{needs.harvest_build_test.outputs.image_harvest}}
           token: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
