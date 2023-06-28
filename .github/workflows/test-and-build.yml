@@ -64,7 +64,7 @@ jobs:
             --network=host
             --name=cat-backend
             --entrypoint poetry
-            $REGISTRY/$IMAGE@${{ steps.build.outputs.image-digest }}
+            $REGISTRY/$IMAGE_BACKEND@${{ steps.build.outputs.image-digest }}
             run python manage.py test
 
   ui_build_test:
@@ -122,7 +122,7 @@ jobs:
           --network=host
           --name=cat-harvest
           --entrypoint poetry
-          $REGISTRY/$IMAGE@${{ steps.build.outputs.image-digest }}
+          $REGISTRY/$IMAGE_HARVEST@${{ steps.build.outputs.image-digest }}
           run pytest tests
 
   push_to_QA:
