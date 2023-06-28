@@ -126,6 +126,7 @@ jobs:
 
   push_to_QA:
     name: Push to QA
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     needs: [backend_build_test, ui_build_test, harvest_build_test]
     steps:
