@@ -33,7 +33,7 @@ function CERN_FOOTER() {
               </Title>
 
               <Menu className="menu nav">
-                <Menu.Item>
+                <Menu.Item key='home'>
                   <Typography.Link href="https://home.cern">
                     CERN
                   </Typography.Link>
@@ -61,12 +61,12 @@ function CERN_FOOTER() {
                     General info
                   </Title>
                   <Menu className="menu nav">
-                    <Menu.Item>
+                    <Menu.Item key='policy'>
                       <Typography.Link href="https://home.cern/data-privacy-protection-policy">
                         Privacy policy
                       </Typography.Link>
                     </Menu.Item>
-                    <Menu.Item>
+                    <Menu.Item key="copyright">
                       <Typography.Link href="https://copyright.web.cern.ch/">
                         Copyright and terms of use{" "}
                       </Typography.Link>
@@ -97,23 +97,23 @@ function CERN_FOOTER() {
                   </Title>
 
                   <Menu className="menu nav">
-                    <Menu.Item>
+                    <Menu.Item key="about-us">
                       <Link to={`/about-us/`}>About</Link>
                     </Menu.Item>
 
-                    <Menu.Item>
+                    <Menu.Item key="server">
                       <Typography.Link href="https://cds.cern.ch/collection/Academic%20Training%20Lectures?ln=en">
                         CERN Document Server
                       </Typography.Link>
                     </Menu.Item>
 
-                    <Menu.Item>
+                    <Menu.Item key="events">
                       <Typography.Link href="https://indico.cern.ch/category/72/">
                         Events
                       </Typography.Link>
                     </Menu.Item>
 
-                    <Menu.Item>
+                    <Menu.Item key="contact">
                       <Typography.Link
                         href="mailto:atc-contact@cern.ch"
                         target="_blank"
