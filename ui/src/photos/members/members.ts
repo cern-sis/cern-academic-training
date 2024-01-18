@@ -75,10 +75,10 @@ const MEMBERS: any = {
   users: [
     {
       key: 10,
-      name: "To be appointed",
-      profile: "",
+      name: "Kerstin Hoepfner",
+      profile: require("./profiles/Kerstin_Hoepfner.jpeg"),
       position: "",
-      department: "EP",
+      department: "ACCU",
     },
   ],
 

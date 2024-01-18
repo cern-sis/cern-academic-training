@@ -10,7 +10,6 @@ import {
   Typography,
   Divider,
 } from "antd";
-import { UserOutlined } from "@ant-design/icons";
 import { Helmet } from "react-helmet";
 
 import "../App.css";
@@ -26,14 +25,10 @@ import { HOME_PAGE_METATAG_CONTENT } from "../common/constants";
 const { Content } = Layout;
 const { Title } = Typography;
 
-// MEMBERS.keys().map((section: any) => {
-//   console.log("section", MEMBERS[section], section);
-// });
-console.log("s", getMemebers());
-// getMemebers().map(({ key, value }: any) => console.log(key, value));
 const MEMBERS = getMemebers();
 
 const photos = getPhotos();
+
 function AboutUs() {
   window.scrollTo(0, 0);
 
@@ -116,8 +111,8 @@ function AboutUs() {
             >
               {MEMBERS["core"].map((member: any) => {
                 return (
-                  <Space>
-                    <Col key={member.key} span={8}>
+                  <Space key={member.key}>
+                    <Col span={8}>
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
@@ -145,8 +140,8 @@ function AboutUs() {
             >
               {MEMBERS["departments"].map((member: any) => {
                 return (
-                  <Space>
-                    <Col key={member.key} span={8}>
+                  <Space key={member.key}>
+                    <Col span={8}>
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
@@ -169,13 +164,13 @@ function AboutUs() {
             <Row className="reveal" style={style} justify="center" gutter={16}>
               {MEMBERS["users"].map((member: any) => {
                 return (
-                  <Space>
-                    <Col key={member.key} span={24}>
+                  <Space key={member.key}>
+                    <Col span={24}>
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
                             <Title level={3}>{member.department}</Title>
-                            <Avatar size={120} icon={<UserOutlined />} />
+                            <Avatar size={120} src={member.profile.default} />
                             <Title level={2}>{member.name}</Title>
                             <p>{member.position}</p>
                           </div>
@@ -193,8 +188,8 @@ function AboutUs() {
             <Row className="reveal" style={style} justify="center" gutter={16}>
               {MEMBERS["staff association"].map((member: any) => {
                 return (
-                  <Space>
-                    <Col key={member.key} span={24}>
+                  <Space key={member.key}>
+                    <Col span={24}>
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
@@ -222,8 +217,8 @@ function AboutUs() {
             >
               {MEMBERS["observers"].map((member: any) => {
                 return (
-                  <Space>
-                    <Col key={member.key} span={6}>
+                  <Space key={member.key}>
+                    <Col span={6}>
                       <Card hoverable className="member-card">
                         <Card.Grid className="grid-style">
                           <div className="member-content">
