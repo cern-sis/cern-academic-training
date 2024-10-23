@@ -37,7 +37,7 @@ OPENSEARCH_DSL = {
         "verify_certs": False,
         "timeout": 30,
         "http_compress": True,
-        "url_prefix": "es",
+        "url_prefix": "os",
     },
 }
 
