@@ -1,4 +1,3 @@
-
 FROM python:3.9
 
 WORKDIR /code
@@ -18,6 +17,8 @@ ENV PATH="/home/test/.local/bin:${PATH}"
 ENV PATH="/root/.local/bin:${PATH}"
 
 COPY poetry.lock pyproject.toml ./
+
+RUN pip install --no-build-isolation --no-cache-dir 'isbnid-fork>=0.5.2,<1.0'
 
 RUN poetry install --no-root
 
