@@ -128,7 +128,7 @@ jobs:
     name: Push to QA
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
-    needs: [backend_build_test, ui_build_test, harvest_build_test]
+    needs: [backend_build_test, ui_build_test]
     steps:
       - name: send event
         uses: cern-sis/gh-workflows/.github/actions/kubernetes-project-new-images@v6
@@ -137,5 +137,4 @@ jobs:
           images: |
             $REGISTRY/$IMAGE_BACKEND:${{needs.backend_build_test.outputs.image_backend}}
             $REGISTRY/$IMAGE_UI:${{needs.ui_build_test.outputs.image_ui}}
-            $REGISTRY/$IMAGE_HARVEST:${{needs.harvest_build_test.outputs.image_harvest}}
           token: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
