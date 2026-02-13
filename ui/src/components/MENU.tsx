@@ -30,11 +30,11 @@ function MENU() {
       </Menu.Item>
 
       <Menu.Item className="contact-us" key="contact-us">
-        <Typography.Link href="mailto:atc-contact@cern.ch" target="_blank">
+        <LinkRouter to={`/contact`}>
           <Title level={2} className="contact-us-link">
             Contact
           </Title>
-        </Typography.Link>
+        </LinkRouter>
       </Menu.Item>
     </Menu>
   );

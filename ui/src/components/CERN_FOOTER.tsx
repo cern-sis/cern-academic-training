@@ -12,37 +12,6 @@ function CERN_FOOTER() {
       <div className="footer">
         <Row className="row" justify="space-between" gutter={12}>
           <Col
-            className="footer-first-col"
-            key="footer-first-col"
-            xs={24}
-            sm={24}
-            md={8}
-            lg={6}
-          >
-            <nav
-              role="navigation"
-              aria-labelledby="block-cernclean-footer-menu"
-              id="block-cernclean-footer"
-            >
-              <Title
-                level={2}
-                className="visually-hidden"
-                id="block-cernclean-footer-menu"
-              >
-                Footer menu
-              </Title>
-
-              <Menu className="menu nav">
-                <Menu.Item key='home'>
-                  <Typography.Link href="https://home.cern">
-                    CERN
-                  </Typography.Link>
-                </Menu.Item>
-              </Menu>
-            </nav>
-          </Col>
-
-          <Col
             className="footer-second-col"
             key="footer-second-col"
             xs={24}
@@ -112,13 +81,37 @@ function CERN_FOOTER() {
                         Events
                       </Typography.Link>
                     </Menu.Item>
+                  </Menu>
+                </nav>
+              </div>
+            </div>
+          </Col>
 
-                    <Menu.Item key="contact">
+          <Col
+            className="footer-fourth-col"
+            key="footer-fourth-col"
+            xs={24}
+            sm={24}
+            md={8}
+            lg={6}
+          >
+            <div className="mb-4">
+              <div className="region region-footercolumn4">
+                <nav
+                  role="navigation"
+                  aria-labelledby="block-contactinfo-menu"
+                  id="block-contactinfo"
+                >
+                  <Title level={2} id="block-contactinfo-menu">
+                    Contact info
+                  </Title>
+                  <Menu className="menu nav">
+                    <Menu.Item key="email">
                       <Typography.Link
                         href="mailto:atc-contact@cern.ch"
                         target="_blank"
                       >
-                        Contact
+                        atc-contact@cern.ch
                       </Typography.Link>
                     </Menu.Item>
                   </Menu>
@@ -127,7 +120,7 @@ function CERN_FOOTER() {
             </div>
           </Col>
 
-          <Col className="logo" key="logo" xs={24} sm={24} md={1} lg={6}>
+          <Col className="logo" key="logo" xs={24} sm={24} md={24} lg={6}>
             <Typography.Link
               href="https://home.cern/"
               title="CERN"
